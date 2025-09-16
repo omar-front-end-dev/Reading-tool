@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Kufi+Arabic:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box !important;
+  font-family: "Inter", sans-serif !important;
+  scroll-behavior: smooth !important;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+.arabic_font {
+  font-family: "Noto Kufi Arabic", sans-serif !important;
+}
+a {
+  text-decoration: none;
+}
+
+:root {
+  --primary-color: #63a29b !important;
+  --secondary-color: #275151 !important;
+  --main-bg-color: #f4f5f6 !important;
+}
+
+.section-padding {
+  padding: 32px 0;
+}
+
+.container {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 576px) {
+  .container-sm {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-md {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-lg {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-xl {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .container-xxl {
+    max-width: 1320px;
+  }
+}
+
+@media (min-width: 1320px) {
+  .container-full {
+    max-width: 1400px;
+  }
+}
