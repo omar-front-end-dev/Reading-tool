@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import PropTypes from "prop-types";
 import { X, Volume2, BookOpen } from "lucide-react";
 import { Link, useParams } from "react-router-dom";

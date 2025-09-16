@@ -1,4 +1,5 @@
-import React, { useState, useRef, useEffect, useCallback } from "react";
+// ShowLesson.jsx
+import React, { useState, useRef, useEffect, useCallback, useMemo } from "react";
 import PropTypes from "prop-types";
 import {
   X,
@@ -8,36 +9,32 @@ import {
   Volume2,
   BookOpen,
   Trash2,
+  Globe2,
+  Loader2,
+  Turtle,
 } from "lucide-react";
-import { IoIosSend } from "react-icons/io";
+import { IoIosSend, IoIosMic } from "react-icons/io";
 import { Link, useParams } from "react-router-dom";
 import { levelsAndLesson } from "../../config/levelsAndLesson/levelsAndLesson";
 import { PiExam } from "react-icons/pi";
-import { IoIosMic } from "react-icons/io";
 
-// ✅ Speech Synthesis support check
+/* ========================== TTS Support & Voice Pref ========================== */
 const supportsTTS =
   typeof window !== "undefined" &&
   "speechSynthesis" in window &&
   "SpeechSynthesisUtterance" in window;
 
-// 🟨 Preferred voice (can be changed)
 const PREFERRED_VOICE_NAME = "Google UK English Female";
 const PREFERRED_VOICE_LANG = "en-GB";
 
-/* ----------------------- MicrophonePermissionAlert ----------------------- */
+/* =================== Permission Banner (unchanged logic) =================== */
 const MicrophonePermissionAlert = ({ permission, onRequestPermission }) => {
   if (permission !== "denied") return null;
-
   return (
     <div className="fixed top-4 left-1/2 -translate-x-1/2 bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded shadow-lg z-50 max-w-md w-full">
       <div className="flex items-center">
         <div className="flex-shrink-0">
-          <svg
-            className="h-5 w-5 text-red-500"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
+          <svg className="h-5 w-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
             <path
               fillRule="evenodd"
               d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
@@ -47,8 +44,7 @@ const MicrophonePermissionAlert = ({ permission, onRequestPermission }) => {
         </div>
         <div className="ml-3">
           <p className="text-sm font-medium">
-            إذن الميكروفون مغلق. لن تتمكن من تسجيل نطقك. الرجاء السماح بالوصول
-            إلى الميكروفون في إعدادات المتصفح.
+            إذن الميكروفون مغلق. لن تتمكن من تسجيل نطقك. الرجاء السماح بالوصول إلى الميكروفون في إعدادات المتصفح.
           </p>
           <button
             onClick={onRequestPermission}
@@ -61,11 +57,12 @@ const MicrophonePermissionAlert = ({ permission, onRequestPermission }) => {
     </div>
   );
 };
-
 MicrophonePermissionAlert.propTypes = {
   permission: PropTypes.string,
   onRequestPermission: PropTypes.func.isRequired,
 };
+
+/* ====================== RecordingModal (new UI like screenshot) ====================== */
 const RecordingModal = ({
   isOpen,
   isRecording,
@@ -75,28 +72,38 @@ const RecordingModal = ({
   onStartRecording,
   onSkipRecording,
   onContinue,
+  onListen,       // optional
+  onListenSlow,   // optional
 }) => {
   if (!isOpen) return null;
 
-  React.useEffect(() => {
-    const onKey = (e) => {
-      if (!isOpen) return;
-      if (e.key === "Escape") onSkipRecording?.();
-    };
+  useEffect(() => {
+    const onKey = (e) => e.key === "Escape" && onSkipRecording?.();
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [isOpen, onSkipRecording]);
+  }, [onSkipRecording]);
 
-  // Title based on current state
+  // -------- Title text (Arabic states kept) --------
   const title = isRecording
     ? "جارٍ التسجيل"
     : recordingResult
-    ? recordingResult.success
-      ? "نتيجة التقييم"
-      : "خطأ في التسجيل"
+    ? recordingResult.success ? "نتيجة التقييم" : "خطأ في التسجيل"
     : "سجّل نُطقك الآن";
 
-  // Result card colors
+  // -------- Helper: phonetics fallback (cosmetic) --------
+  const tokens = useMemo(() => {
+    const words = (originalText || "").trim().split(/\s+/).filter(Boolean);
+    const fakePh = (t) =>
+      t
+        .toLowerCase()
+        .replace(/[^a-z']/g, "")
+        .replace(/([aeiouy]+)/g, "$1-")
+        .replace(/-$/, "")
+        .replace(/--+/g, "-");
+    return words.map((w, i) => ({ word: w, phon: fakePh(w) || w.toLowerCase(), id: `${w}-${i}` }));
+  }, [originalText]);
+
+  // -------- Result tone --------
   const resultTone =
     recordingResult?.evaluation?.color === "green"
       ? "border-green-500 bg-green-50 text-green-800"
@@ -106,56 +113,33 @@ const RecordingModal = ({
       ? "border-yellow-500 bg-yellow-50 text-yellow-800"
       : "border-red-500 bg-red-50 text-red-800";
 
-  // Function to highlight words based on comparison
-  const highlightWords = (originalText, userText) => {
-    if (!originalText || !userText) return null;
-
-    const originalWords = originalText.trim().split(/\s+/);
-    const userWords = userText.trim().split(/\s+/);
-
-    // Simple word matching algorithm - ignore all punctuation
-    const highlightedWords = originalWords.map((originalWord, index) => {
-      const userWord = userWords[index];
-
-      // Clean both words from all punctuation marks for comparison
-      const cleanOriginal = originalWord
-        .replace(/[^\w\u0600-\u06FF]/g, "")
-        .toLowerCase();
-      const cleanUser = userWord
-        ? userWord.replace(/[^\w\u0600-\u06FF]/g, "").toLowerCase()
-        : "";
-
-      const isCorrect = userWord && cleanOriginal === cleanUser;
-
-      return {
-        word: originalWord,
-        isCorrect,
-        userWord: userWord || "",
-      };
+  // -------- Highlight words diff (same as previous logic) --------
+  const highlightWords = (orig, user) => {
+    if (!orig || !user) return null;
+    const originalWords = orig.trim().split(/\s+/);
+    const userWords = user.trim().split(/\s+/);
+    const items = originalWords.map((ow, i) => {
+      const uw = userWords[i] || "";
+      const cleanO = ow.replace(/[^\w\u0600-\u06FF]/g, "").toLowerCase();
+      const cleanU = uw.replace(/[^\w\u0600-\u06FF]/g, "").toLowerCase();
+      return { word: ow, isCorrect: !!uw && cleanO === cleanU, userWord: uw };
     });
-
     return (
       <div className="space-y-2">
-        <div
-          className="arabic_font text-lg leading-relaxed"
-          dir="ltr"
-          style={{ textAlign: "left" }}
-        >
-          {highlightedWords.map((item, index) => (
-            <span key={index}>
+        <div className="arabic_font text-lg leading-relaxed" dir="ltr" style={{ textAlign: "left" }}>
+          {items.map((it, idx) => (
+            <span key={idx}>
               <span
                 className={`inline-block rounded-md font-bold transition-all ${
-                  item.isCorrect ? "text-green-800" : "text-red-800"
+                  it.isCorrect ? "text-green-800" : "text-red-800"
                 }`}
                 title={
-                  item.isCorrect
-                    ? "نطق صحيح"
-                    : `متوقع: ${item.word}، نطقت: ${item.userWord || "لا شيء"}`
+                  it.isCorrect ? "نطق صحيح" : `متوقع: ${it.word}، نطقت: ${it.userWord || "لا شيء"}`
                 }
               >
-                {item.word}
+                {it.word}
               </span>
-              {index < highlightedWords.length - 1 && " "}
+              {idx < items.length - 1 && " "}
             </span>
           ))}
         </div>
@@ -163,319 +147,245 @@ const RecordingModal = ({
     );
   };
 
-  /* ----------------------- Audio Waves + Recording Timer ---------------------- */
+  // -------- Fancy meter while recording --------
   const BAR_COUNT = 28;
-  const [elapsed, setElapsed] = React.useState(0); // in seconds
-  const startTsRef = React.useRef(null);
-  const rafRef = React.useRef(null);
-
-  // Start/stop timer synchronized with isRecording
-  React.useEffect(() => {
-    if (isRecording) {
-      // Reset timer when recording starts
-      startTsRef.current = performance.now();
-      setElapsed(0);
-
-      const tick = (now) => {
-        if (!startTsRef.current) return;
-        const seconds = Math.floor((now - startTsRef.current) / 1000);
-        setElapsed(seconds);
-        rafRef.current = requestAnimationFrame(tick);
-      };
-      rafRef.current = requestAnimationFrame(tick);
-    } else {
-      // Stop timer
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
-      rafRef.current = null;
-      startTsRef.current = null;
-    }
-    return () => {
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
-    };
-  }, [isRecording]);
-
-  const formatTime = (s) =>
-    `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s % 60).padStart(
-      2,
-      "0"
-    )}`;
-
-  // Animated bar heights (visual only - no real microphone)
-  const [seed, setSeed] = React.useState(0);
-  React.useEffect(() => {
+  const [seed, setSeed] = useState(0);
+  useEffect(() => {
     if (!isRecording) return;
-    const id = setInterval(() => setSeed((n) => (n + 1) % 1000000), 120);
+    const id = setInterval(() => setSeed((n) => (n + 1) % 1e6), 120);
     return () => clearInterval(id);
   }, [isRecording]);
-
-  const bars = React.useMemo(() => {
+  const bars = useMemo(() => {
     const arr = [];
     for (let i = 0; i < BAR_COUNT; i++) {
-      // Generate smooth semi-random height
-      const base = 8 + ((i * 37 + seed * 13) % 28); // 8px -> 36px
-      arr.push(base);
+      arr.push(8 + ((i * 37 + seed * 13) % 28));
     }
     return arr;
   }, [seed]);
 
-  return (
-    <div
-      className={`fixed inset-0 z-[60] ${isOpen ? "" : "pointer-events-none"}`}
-      aria-hidden={!isOpen}
-    >
-      {/* Overlay */}
-      <div
-        className={`absolute inset-0 bg-black/50 transition-opacity duration-300 ${
-          isOpen ? "opacity-100" : "opacity-0"
-        }`}
-        onClick={onSkipRecording}
-      />
+  const [elapsed, setElapsed] = useState(0);
+  const startTsRef = useRef(null);
+  const rafRef = useRef(null);
+  useEffect(() => {
+    if (isRecording) {
+      startTsRef.current = performance.now();
+      setElapsed(0);
+      const tick = (now) => {
+        const s = Math.floor((now - startTsRef.current) / 1000);
+        setElapsed(s);
+        rafRef.current = requestAnimationFrame(tick);
+      };
+      rafRef.current = requestAnimationFrame(tick);
+      return () => cancelAnimationFrame(rafRef.current);
+    } else {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      startTsRef.current = null;
+    }
+  }, [isRecording]);
+  const fmt = (s) => `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}`;
 
-      {/* Bottom Drawer */}
+  return (
+    <div className="fixed inset-0 z-[60]">
+      {/* overlay */}
+      <div className="absolute inset-0 bg-black/50" onClick={onSkipRecording} />
+      {/* sheet */}
       <div
-        className={`fixed overflow-hidden left-0 right-0 bottom-0 transform transition-transform duration-300 ease-out ${
-          isOpen ? "translate-y-0" : "translate-y-full"
-        }`}
+        className="fixed left-0 right-0 bottom-0 mx-auto w-full max-w-xl rounded-t-3xl bg-white shadow-2xl border-t border-gray-100"
         role="dialog"
         aria-modal="true"
-        dir="rtl"
       >
-        <div className="mx-auto w-full max-w-lg bg-white rounded-t-3xl shadow-2xl border-t border-gray-100">
-          {/* Handle + Close */}
-          <div className="py-3 flex items-center justify-center relative">
-            <div className="h-1.5 w-12 rounded-full bg-gray-300" />
-            <button
-              onClick={onSkipRecording}
-              className=" absolute left-2 top-6 -translate-y-1/2 p-2 rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-300"
-              aria-label="إغلاق"
-              title="إغلاق"
-            >
-              <X size={20} className="text-black" />
-            </button>
-          </div>
+        {/* top banner (like screenshot) */}
+        <div className="relative px-5 pt-4 pb-3 border-b">
+          <p className="text-center text-[22px] font-bold text-indigo-600">Your turn!</p>
+          <p className="text-center text-sm text-gray-600">
+            Press the{" "}
+            <span className="inline-flex translate-y-[2px]">
+              <IoIosMic className="text-purple-600" />
+            </span>{" "}
+            and record your voice.
+          </p>
+          <button
+            onClick={onSkipRecording}
+            className="absolute right-3 top-3 p-2 rounded-full hover:bg-gray-100"
+            aria-label="Close"
+          >
+            <X size={18} />
+          </button>
+        </div>
 
-          {/* Header */}
-          <div className="px-5 pb-3">
-            <h3 className="arabic_font text-lg font-bold text-gray-900 text-center">
-              {title}
-            </h3>
-          </div>
+        {/* dynamic title (Arabic state) */}
+        <div className="px-5 pt-3">
+          <h3 className="arabic_font text-center text-[15px] text-gray-700">{title}</h3>
+        </div>
 
-          {/* Content */}
-          <div className="px-5 pb-4">
-            {/* State 1: Before Recording */}
-            {isWaitingForRecording && !isRecording && !recordingResult && (
-              <div className="space-y-4">
-                {/* Display original text before recording */}
-                {originalText && (
-                  <div className="rounded-lg border-2 border-blue-300 p-4 bg-blue-50 shadow-sm">
-                    <p className="arabic_font text-sm text-blue-600 mb-2 font-bold text-center">
-                      اقرأ هذه الجملة واحفظها ثم انطقها
-                    </p>
-                    <p className="arabic_font text-blue-900 font-bold text-lg text-center leading-8 p-2 bg-white rounded-lg border border-blue-200">
-                      {originalText}
-                    </p>
+        <div className="px-4 py-5">
+          {/* sentence card with words & phonetics */}
+          {originalText && (
+            <div className="mx-auto w-full rounded-2xl border border-gray-200 bg-white/60 backdrop-blur-sm shadow-sm p-4">
+              <div className="flex flex-wrap items-end justify-center gap-x-2 gap-y-3 select-none">
+                {tokens.map((t, i) => (
+                  <div key={t.id} className="text-center">
+                    <div className="px-1">
+                      <span className="text-[20px] font-semibold text-gray-900 border-b-2 border-dotted border-gray-400">
+                        {t.word}
+                      </span>
+                    </div>
+                    <div className="mt-1 text-[12px] leading-none text-gray-500 flex items-center justify-center gap-1">
+                      {i === tokens.length - 1 && <Globe2 size={12} className="opacity-70" />}
+                      <span className="font-medium">{t.phon}</span>
+                    </div>
                   </div>
-                )}
+                ))}
+              </div>
+            </div>
+          )}
 
-                <div className="flex items-center flex-col justify-center gap-3">
-                  <button
-                    onClick={onStartRecording}
-                    className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[var(--primary-color)] hover:bg-[var(--secondary-color)] text-white font-semibold shadow-lg transition-all transform hover:scale-105"
-                  >
-                    <IoIosMic size={30} />
-                  </button>
+          {/* controls row like screenshot: Listen | Mic | Listen(slow) */}
+          {!recordingResult && (
+            <div className="mt-6 flex items-center justify-between">
+              <button
+                onClick={onListen}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-800 text-sm font-medium"
+              >
+                <Volume2 size={16} />
+                Listen
+              </button>
+
+              <button
+                onClick={isRecording ? onContinue : onStartRecording}
+                className={[
+                  "grid place-items-center rounded-full shadow-lg transition-all",
+                  "w-[72px] h-[72px]",
+                  isRecording ? "bg-rose-600 text-white hover:bg-rose-700" : "bg-purple-600 text-white hover:bg-purple-700",
+                ].join(" ")}
+                title={isRecording ? "Send" : "Tap to start speaking"}
+                aria-label="Record"
+              >
+                {isRecording ? <Loader2 className="animate-spin" size={26} /> : <IoIosMic size={30} />}
+              </button>
+
+              <button
+                onClick={onListenSlow}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-800 text-sm font-medium"
+                title="Listen (slow)"
+              >
+                <Turtle size={16} />
+                Listen (slow)
+              </button>
+            </div>
+          )}
+
+          {/* recording capsule + hint */}
+          {isRecording && (
+            <div className="mt-5 flex flex-col items-center gap-3">
+              <div className="w-full max-w-md">
+                <div className="relative w-full rounded-full bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] text-white px-3 py-2 flex items-center shadow-lg">
                   <button
                     onClick={onSkipRecording}
-                    className="arabic_font inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium shadow-sm transition-colors"
+                    className="shrink-0 mr-2 p-1.5 rounded-full hover:bg-white/10"
+                    title="حذف"
+                    aria-label="حذف التسجيل"
                   >
-                    تخطي
+                    <Trash2 size={18} />
+                  </button>
+
+                  <div className="flex-1 flex flex-col items-center">
+                    <div className="h-8 flex items-center justify-center gap-[2px] w-full max-w-[300px]">
+                      {bars.map((h, idx) => (
+                        <span
+                          key={idx}
+                          className="inline-block w-[3px] rounded-sm bg-white/90 transition-all duration-150"
+                          style={{ height: `${h}px` }}
+                        />
+                      ))}
+                    </div>
+                    <div className="arabic_font text-[11px] mt-1 opacity-90 tracking-wider font-mono">
+                      {fmt(elapsed)}
+                    </div>
+                  </div>
+
+                  <button
+                    onClick={onContinue}
+                    className="arabic_font flex items-center justify-center shrink-0 ml-2 p-2 rounded-full bg-white text-[var(--secondary-color)] hover:bg-white/70"
+                    title="إرسال"
+                    aria-label="إرسال التسجيل"
+                  >
+                    <IoIosSend size={20} className="flex" />
                   </button>
                 </div>
               </div>
-            )}
 
-            {/* State 2: During Recording - WhatsApp Style */}
-            {isRecording && (
-              <div className="flex flex-col items-center justify-center gap-4 py-2">
-                {/* Display original text during recording - with more focus */}
-                {originalText && (
-                  <div className="w-full rounded-xl border-2 border-green-300 p-4 bg-gradient-to-r from-green-50 to-emerald-50 shadow-lg">
-                    <p className="arabic_font text-sm text-green-700 mb-3 font-bold text-center flex items-center justify-center gap-2">
-                      <span className="inline-block w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                      انطق هذه الجملة الآن
-                      <span className="inline-block w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                    </p>
-                    <div className="bg-white rounded-lg p-3 border-2 border-green-200 shadow-inner">
-                      <p className="arabic_font text-green-900 font-bold text-xl text-center leading-relaxed">
-                        {originalText}
-                      </p>
+              <p className="text-gray-700 text-sm arabic_font font-medium">🎤 جارٍ التسجيل... تحدث بوضوح</p>
+            </div>
+          )}
+
+          {/* results view */}
+          {recordingResult && (
+            <div className="mt-6 space-y-5">
+              {recordingResult.success ? (
+                <>
+                  <div className={`mb-1 p-4 rounded-xl border-2 ${resultTone}`}>
+                    <div className="flex items-start gap-3">
+                      <svg className="w-5 h-5 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M20 6L9 17l-5-5" />
+                      </svg>
+                      <div>
+                        <p className="text-base font-bold arabic_font">{recordingResult.evaluation.message}</p>
+                        <p className="text-sm mt-1 arabic_font">التشابه: {recordingResult.evaluation.score}%</p>
+                      </div>
                     </div>
                   </div>
-                )}
 
-                {/* Recording Capsule */}
-                <div className="w-full max-w-md">
-                  <div className="relative w-full rounded-full bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] text-white px-3 py-2 flex items-center shadow-lg">
-                    {/* Delete Button (Left) */}
-                    <button
-                      onClick={onSkipRecording}
-                      className="shrink-0 mr-2 p-1.5 rounded-full hover:bg-white/10 focus:outline-none transition-colors"
-                      title="حذف"
-                      aria-label="حذف التسجيل"
-                    >
-                      <Trash2 size={18} />
-                    </button>
+                  <div className="rounded-lg border border-gray-200 p-4 bg-gray-50">
+                    <p className="arabic_font text-sm text-gray-600 mb-3 font-bold">تحليل الكلمات:</p>
+                    {highlightWords(recordingResult.originalText, recordingResult.userText)}
+                  </div>
 
-                    {/* Waves + Timer */}
-                    <div className="flex-1 flex flex-col items-center">
-                      {/* Audio Waves */}
-                      <div className="h-8 flex items-center justify-center gap-[2px] w-full max-w-[300px]">
-                        {bars.map((h, idx) => (
-                          <span
-                            key={idx}
-                            className="inline-block w-[3px] rounded-sm bg-white/90 transition-all duration-150"
-                            style={{ height: `${h}px` }}
-                          />
-                        ))}
-                      </div>
-                      {/* Timer below waves */}
-                      <div className="arabic_font text-[11px] mt-1 opacity-90 tracking-wider font-mono">
-                        {formatTime(elapsed)}
+                  <div className="rounded-lg border border-blue-200 p-3 bg-blue-50">
+                    <p className="arabic_font text-xs text-blue-600 mb-1 font-bold">ما قلته:</p>
+                    <p className="arabic_font text-left text-blue-900 font-medium">{recordingResult.userText}</p>
+                  </div>
+                </>
+              ) : (
+                <div className="space-y-4">
+                  <div className="p-4 rounded-xl border-2 border-red-500 bg-red-50 text-red-800">
+                    <div className="flex items-start gap-3">
+                      <svg className="w-5 h-5 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M12 9v4m0 4h.01M10.29 3.86l-8.48 14.7A2 2 0 003.53 22h16.94a2 2 0 001.72-3.44l-8.48-14.7a2 2 0 00-3.42 0z"
+                        />
+                      </svg>
+                      <div>
+                        <p className="font-semibold arabic_font">لم يتم تسجيل نطق صالح</p>
+                        <p className="text-sm mt-1 arabic_font">{recordingResult.message}</p>
                       </div>
                     </div>
+                  </div>
 
-                    {/* Send Button (Right) */}
-                    <button
-                      onClick={onContinue}
-                      className="arabic_font flex items-center justify-center shrink-0 ml-2 p-2 rounded-full bg-white text-[var(--secondary-color)] hover:bg-white/70 focus:outline-none transition-colors"
-                      title="إرسال"
-                      aria-label="إرسال التسجيل"
-                    >
-                      <IoIosSend size={20} className="flex" />
-                    </button>
+                  <div className="grid gap-3">
+                    <div className="rounded-lg border border-gray-200 p-3 bg-gray-50">
+                      <p className="text-xs arabic_font text-gray-500 mb-1">الجملة الأصلية</p>
+                      <p className="text-gray-900">{recordingResult.originalText}</p>
+                    </div>
+                    {recordingResult.userText ? (
+                      <div className="rounded-lg border border-gray-200 p-3">
+                        <p className="text-xs text-gray-500 mb-1">ما سُمع</p>
+                        <p className="text-gray-900">{recordingResult.userText}</p>
+                      </div>
+                    ) : null}
                   </div>
                 </div>
-
-                <p className="text-gray-700 text-sm arabic_font font-medium">
-                  🎤 جارٍ التسجيل... تحدث بوضوح
-                </p>
-              </div>
-            )}
-
-            {/* State 3: After Getting Results */}
-            {recordingResult && (
-              <div className="space-y-5">
-                {recordingResult.success ? (
-                  <>
-                    <div
-                      className={`mb-1 p-4 rounded-xl border-2 ${resultTone}`}
-                    >
-                      <div className="flex items-start gap-3">
-                        {/* Check icon */}
-                        <svg
-                          className="w-5 h-5 mt-0.5 flex-shrink-0"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M20 6L9 17l-5-5"
-                          />
-                        </svg>
-                        <div>
-                          <p className="text-base font-bold arabic_font">
-                            {recordingResult.evaluation.message}
-                          </p>
-                          <p className="text-sm mt-1 arabic_font">
-                            التشابه: {recordingResult.evaluation.score}%
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Word-by-word highlighting instead of comparison */}
-                    <div className="rounded-lg border border-gray-200 p-4 bg-gray-50">
-                      <p className="arabic_font text-sm text-gray-600 mb-3 font-bold">
-                        تحليل الكلمات:
-                      </p>
-                      {highlightWords(
-                        recordingResult.originalText,
-                        recordingResult.userText
-                      )}
-                    </div>
-
-                    {/* Show what user actually said */}
-                    <div className="rounded-lg border border-blue-200 p-3 bg-blue-50">
-                      <p className="arabic_font text-xs text-blue-600 mb-1 font-bold">
-                        ما قلته:
-                      </p>
-                      <p className="arabic_font text-left text-blue-900 font-medium">
-                        {recordingResult.userText}
-                      </p>
-                    </div>
-                  </>
-                ) : (
-                  <div className="space-y-4">
-                    <div className="p-4 rounded-xl border-2 border-red-500 bg-red-50 text-red-800">
-                      <div className="flex items-start gap-3">
-                        {/* Alert icon */}
-                        <svg
-                          className="w-5 h-5 mt-0.5 flex-shrink-0"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M12 9v4m0 4h.01M10.29 3.86l-8.48 14.7A2 2 0 003.53 22h16.94a2 2 0 001.72-3.44l-8.48-14.7a2 2 0 00-3.42 0z"
-                          />
-                        </svg>
-                        <div>
-                          <p className="font-semibold arabic_font">
-                            لم يتم تسجيل نطق صالح
-                          </p>
-                          <p className="text-sm mt-1 arabic_font">
-                            {recordingResult.message}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="grid gap-3">
-                      <div className="rounded-lg border border-gray-200 p-3 bg-gray-50">
-                        <p className="text-xs arabic_font text-gray-500 mb-1">
-                          الجملة الأصلية
-                        </p>
-                        <p className="text-gray-900">
-                          {recordingResult.originalText}
-                        </p>
-                      </div>
-                      {recordingResult.userText ? (
-                        <div className="rounded-lg border border-gray-200 p-3">
-                          <p className="text-xs text-gray-500 mb-1">ما سُمع</p>
-                          <p className="text-gray-900">
-                            {recordingResult.userText}
-                          </p>
-                        </div>
-                      ) : null}
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </div>
   );
 };
-
 RecordingModal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   isRecording: PropTypes.bool.isRequired,
@@ -497,23 +407,16 @@ RecordingModal.propTypes = {
   onStartRecording: PropTypes.func.isRequired,
   onSkipRecording: PropTypes.func.isRequired,
   onContinue: PropTypes.func.isRequired,
+  onListen: PropTypes.func,
+  onListenSlow: PropTypes.func,
 };
 
-/* ----------------------------- ClickableWord ----------------------------- */
-const ClickableWord = ({
-  word,
-  isLast,
-  onWordClick,
-  activeWord,
-  wordDefinitions,
-  onPlayWordAudio,
-}) => {
+/* ============================== Clickable Word ============================== */
+const ClickableWord = ({ word, isLast, onWordClick, activeWord, wordDefinitions, onPlayWordAudio }) => {
   const handleClick = useCallback(() => {
     const cleanWord = word.replace(/[.,!?;:'"]/g, "");
     const wordData = wordDefinitions[cleanWord];
-
     onPlayWordAudio(cleanWord);
-
     onWordClick({
       word: cleanWord,
       translation: wordData ? wordData.translation : "ترجمة غير متوفرة",
@@ -531,9 +434,7 @@ const ClickableWord = ({
     <>
       <span
         className={`text-black font-semibold text-xl hover:bg-blue-100 cursor-pointer rounded transition-all duration-200 ${
-          isActive
-            ? "border border-black p-1 bg-blue-50 shadow-sm"
-            : "border border-transparent"
+          isActive ? "border border-black p-1 bg-blue-50 shadow-sm" : "border border-transparent"
         }`}
         onClick={handleClick}
       >
@@ -544,7 +445,6 @@ const ClickableWord = ({
     </>
   );
 };
-
 ClickableWord.propTypes = {
   word: PropTypes.string.isRequired,
   isLast: PropTypes.bool.isRequired,
@@ -554,23 +454,10 @@ ClickableWord.propTypes = {
   onPlayWordAudio: PropTypes.func.isRequired,
 };
 
-/* -------------------------------- Sentence ------------------------------- */
+/* ================================= Sentence ================================ */
 const Sentence = React.forwardRef(
-  (
-    {
-      sentence,
-      onWordClick,
-      activeWord,
-      isCurrentlyReading,
-      wordDefinitions,
-      pronunciationScore,
-      onPlaySentenceAudio,
-      onPlayWordAudio,
-    },
-    ref
-  ) => {
+  ({ sentence, onWordClick, activeWord, isCurrentlyReading, wordDefinitions, pronunciationScore, onPlaySentenceAudio, onPlayWordAudio }, ref) => {
     const words = sentence.text.split(" ");
-
     return (
       <div ref={ref} className="relative">
         <div className="flex items-center mb-2">
@@ -605,7 +492,7 @@ const Sentence = React.forwardRef(
           )}
         </div>
 
-        {pronunciationScore && (
+        {typeof pronunciationScore === "number" && (
           <div
             className={`absolute -top-2 -right-2 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold ${
               pronunciationScore >= 85
@@ -625,7 +512,6 @@ const Sentence = React.forwardRef(
   }
 );
 Sentence.displayName = "Sentence";
-
 Sentence.propTypes = {
   sentence: PropTypes.shape({
     id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
@@ -641,7 +527,7 @@ Sentence.propTypes = {
   onPlayWordAudio: PropTypes.func.isRequired,
 };
 
-/* -------------------------------- Sidebar -------------------------------- */
+/* ================================= Sidebar ================================ */
 const Sidebar = ({ isOpen, selectedWordData, onClose, onPlayWordAudio }) => {
   return (
     <>
@@ -668,7 +554,7 @@ const Sidebar = ({ isOpen, selectedWordData, onClose, onPlayWordAudio }) => {
         <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4 sm:space-y-6">
           {selectedWordData ? (
             <>
-              <div className="bg-gradient-to-br from-[var(--secondary-color)] to-[var(--primary-color)] p-4 sm:p-6 rounded-xl border border-gray-100 shadow-sm transform transition-all duration-300 hover:shadow-md hover:-translate-y-0.5">
+              <div className="bg-gradient-to-br from-[var(--secondary-color)] to-[var(--primary-color)] p-4 sm:p-6 rounded-xl border border-gray-100 shadow-sm">
                 <div className="flex items-center justify-between mb-2 sm:mb-3">
                   <h2 className="text-xl sm:text-2xl font-bold text-white break-all">
                     {selectedWordData.word}
@@ -698,16 +584,9 @@ const Sidebar = ({ isOpen, selectedWordData, onClose, onPlayWordAudio }) => {
             </>
           ) : (
             <div className="flex flex-col items-center justify-center h-full text-center p-6 sm:p-8">
-              <BookOpen
-                size={28}
-                className="text-gray-300 mb-3 sm:mb-4 transition-all duration-500 hover:rotate-6"
-              />
-              <h4 className="text-base sm:text-lg font-medium text-gray-500 mb-1">
-                No word selected
-              </h4>
-              <p className="text-xs sm:text-sm text-gray-400">
-                Click on any word to see its details here
-              </p>
+              <BookOpen size={28} className="text-gray-300 mb-3 sm:mb-4" />
+              <h4 className="text-base sm:text-lg font-medium text-gray-500 mb-1">No word selected</h4>
+              <p className="text-xs sm:text-sm text-gray-400">Click on any word to see its details here</p>
             </div>
           )}
         </div>
@@ -715,7 +594,6 @@ const Sidebar = ({ isOpen, selectedWordData, onClose, onPlayWordAudio }) => {
     </>
   );
 };
-
 Sidebar.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   selectedWordData: PropTypes.shape({
@@ -729,7 +607,7 @@ Sidebar.propTypes = {
   onPlayWordAudio: PropTypes.func.isRequired,
 };
 
-/* ------------------------------- ShowLesson ------------------------------ */
+/* ================================ ShowLesson ================================ */
 export function ShowLesson() {
   const { levelId, lessonId } = useParams();
   const lessonIdNum = parseInt(lessonId);
@@ -743,32 +621,34 @@ export function ShowLesson() {
   const [selectedWordData, setSelectedWordData] = useState(null);
   const [activeWord, setActiveWord] = useState(null);
   const [isReading, setIsReading] = useState(false);
-  const [currentReadingSentenceId, setCurrentReadingSentenceId] =
-    useState(null);
-  const [autoScroll, setAutoScroll] = useState(true);
+  const [currentReadingSentenceId, setCurrentReadingSentenceId] = useState(null);
+  const [autoScroll] = useState(true);
   const [readingProgress, setReadingProgress] = useState(0);
   const [isRecording, setIsRecording] = useState(false);
   const [isWaitingForRecording, setIsWaitingForRecording] = useState(false);
   const [recordingResult, setRecordingResult] = useState(null);
   const [showRecordingModal, setShowRecordingModal] = useState(false);
-  const [pronunciationEnabled, setPronunciationEnabled] = useState(true);
+  const [pronunciationEnabled] = useState(true);
   const [pronunciationScores, setPronunciationScores] = useState({});
   const [microphonePermission, setMicrophonePermission] = useState(null);
 
-  // Browser voices
+  // audio/voice
   const [voices, setVoices] = useState([]);
+  const [playbackRate, setPlaybackRate] = useState(1);
+  const [loopEnabled, setLoopEnabled] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const durationsRef = useRef({});
+  const [lessonTotalDuration, setLessonTotalDuration] = useState(0);
+  const [lessonElapsed, setLessonElapsed] = useState(0);
 
   const readingTimeoutRef = useRef(null);
-  const readingStateRef = useRef({
-    isReading: false,
-    currentIndex: 0,
-    shouldStop: false,
-  });
+  const readingStateRef = useRef({ isReading: false, currentIndex: 0, shouldStop: false });
   const sentenceRefs = useRef({});
   const recognitionRef = useRef(null);
   const audioRef = useRef(null);
 
-  // Preload audio durations for the whole lesson
+  // --- preload lesson audio metadata
   useEffect(() => {
     let active = true;
     const loaders = [];
@@ -782,10 +662,7 @@ export function ShowLesson() {
             const d = Number.isFinite(a.duration) ? a.duration : 0;
             durationsRef.current[s.id] = d;
             if (active) {
-              const total = Object.values(durationsRef.current).reduce(
-                (acc, v) => acc + (Number.isFinite(v) ? v : 0),
-                0
-              );
+              const total = Object.values(durationsRef.current).reduce((acc, v) => acc + (Number.isFinite(v) ? v : 0), 0);
               setLessonTotalDuration(total);
             }
           };
@@ -796,23 +673,10 @@ export function ShowLesson() {
     }
     return () => {
       active = false;
-      loaders.forEach(({ a, onLoaded }) =>
-        a.removeEventListener("loadedmetadata", onLoaded)
-      );
+      loaders.forEach(({ a, onLoaded }) => a.removeEventListener("loadedmetadata", onLoaded));
     };
   }, [currentLesson]);
 
-  // --- Player state ---
-  const [playbackRate, setPlaybackRate] = useState(1);
-  const [loopEnabled, setLoopEnabled] = useState(false);
-  const [currentTime, setCurrentTime] = useState(0);
-  const [duration, setDuration] = useState(0);
-  // durations for each sentence id (from audio metadata)
-  const durationsRef = useRef({});
-  const [lessonTotalDuration, setLessonTotalDuration] = useState(0);
-  const [lessonElapsed, setLessonElapsed] = useState(0);
-
-  // Format mm:ss
   const fmt = (s) => {
     if (!Number.isFinite(s)) return "00:00";
     const m = Math.floor(s / 60);
@@ -822,21 +686,12 @@ export function ShowLesson() {
 
   const stepSeconds = (delta) => {
     if (audioRef.current && Number.isFinite(audioRef.current.currentTime)) {
-      const next = Math.max(
-        0,
-        Math.min((audioRef.current.currentTime || 0) + delta, duration || 0)
-      );
+      const next = Math.max(0, Math.min((audioRef.current.currentTime || 0) + delta, duration || 0));
       audioRef.current.currentTime = next;
     }
   };
 
-  const togglePlayPause = () => {
-    if (isReading) {
-      stopReading();
-    } else {
-      readAllSentences();
-    }
-  };
+  const togglePlayPause = () => (isReading ? stopReading() : readAllSentences());
 
   const handleSpeedChange = (rate) => {
     setPlaybackRate(rate);
@@ -847,15 +702,13 @@ export function ShowLesson() {
     }
   };
 
-  // Sum durations before a given sentence index
   const sumDurationsBeforeIndex = useCallback(
     (idx) => {
       if (!currentLesson?.storyData?.content) return 0;
       let sum = 0;
       for (let i = 0; i < idx; i++) {
         const sid = currentLesson.storyData.content[i].id;
-        const d = durationsRef.current[sid] || 0;
-        sum += Number.isFinite(d) ? d : 0;
+        sum += Number.isFinite(durationsRef.current[sid]) ? durationsRef.current[sid] : 0;
       }
       return sum;
     },
@@ -865,8 +718,7 @@ export function ShowLesson() {
   /* ------------------------------ Load voices ----------------------------- */
   useEffect(() => {
     if (!supportsTTS) return;
-    const loadVoices = () =>
-      setVoices(window.speechSynthesis.getVoices() || []);
+    const loadVoices = () => setVoices(window.speechSynthesis.getVoices() || []);
     loadVoices();
     window.speechSynthesis.onvoiceschanged = loadVoices;
     return () => {
@@ -876,27 +728,17 @@ export function ShowLesson() {
 
   const pickVoice = useCallback(() => {
     if (!voices.length) return null;
-    const byName = voices.find(
-      (v) =>
-        (v.name || "")
-          .toLowerCase()
-          .includes(PREFERRED_VOICE_NAME.toLowerCase()) ||
-        (v.voiceURI || "")
-          .toLowerCase()
-          .includes(PREFERRED_VOICE_NAME.toLowerCase())
-    );
+    const byName =
+      voices.find((v) => (v.name || "").toLowerCase().includes(PREFERRED_VOICE_NAME.toLowerCase())) ||
+      voices.find((v) => (v.voiceURI || "").toLowerCase().includes(PREFERRED_VOICE_NAME.toLowerCase()));
     if (byName) return byName;
-    const byLang = voices.find((v) =>
-      (v.lang || "")
-        .toLowerCase()
-        .startsWith(PREFERRED_VOICE_LANG.toLowerCase())
-    );
+    const byLang = voices.find((v) => (v.lang || "").toLowerCase().startsWith(PREFERRED_VOICE_LANG.toLowerCase()));
     if (byLang) return byLang;
     return voices.find((v) => (v.lang || "").startsWith("en")) || voices[0];
   }, [voices]);
 
   const speak = useCallback(
-    (text) => {
+    (text, rate = playbackRate) => {
       const toSay = (text || "").trim();
       if (!toSay) return;
 
@@ -913,7 +755,7 @@ export function ShowLesson() {
           const v = pickVoice();
           if (v) utter.voice = v;
           utter.lang = v?.lang || PREFERRED_VOICE_LANG || "en-US";
-          utter.rate = Math.min(2, Math.max(0.5, playbackRate || 1));
+          utter.rate = Math.min(2, Math.max(0.4, rate || 1));
           utter.pitch = 1;
           utter.volume = 1;
           window.speechSynthesis.speak(utter);
@@ -923,15 +765,12 @@ export function ShowLesson() {
         }
       }
 
-      // MP3 fallback
       const url = `https://cdn13674550.b-cdn.net/SNA-audio/words/${toSay.toLowerCase()}.mp3`;
       audioRef.current = new Audio(url);
       try {
-        audioRef.current.playbackRate = playbackRate;
+        audioRef.current.playbackRate = rate || 1;
       } catch {}
-      audioRef.current.play().catch((err) => {
-        console.error("TTS+MP3 fallback failed:", err);
-      });
+      audioRef.current.play().catch((err) => console.error("TTS+MP3 fallback failed:", err));
     },
     [pickVoice, playbackRate]
   );
@@ -940,16 +779,11 @@ export function ShowLesson() {
   const checkMicrophonePermission = useCallback(async () => {
     try {
       if (navigator.permissions) {
-        const permissionStatus = await navigator.permissions.query({
-          name: "microphone",
-        });
+        const permissionStatus = await navigator.permissions.query({ name: "microphone" });
         setMicrophonePermission(permissionStatus.state);
-        permissionStatus.onchange = () =>
-          setMicrophonePermission(permissionStatus.state);
+        permissionStatus.onchange = () => setMicrophonePermission(permissionStatus.state);
       } else {
-        const stream = await navigator.mediaDevices.getUserMedia({
-          audio: true,
-        });
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
         stream.getTracks().forEach((t) => t.stop());
         setMicrophonePermission("granted");
       }
@@ -974,7 +808,6 @@ export function ShowLesson() {
   useEffect(() => {
     checkMicrophonePermission();
     initializeSpeechRecognition();
-
     return () => {
       if (recognitionRef.current) recognitionRef.current.abort();
       if (audioRef.current) {
@@ -992,23 +825,18 @@ export function ShowLesson() {
 
   const initializeSpeechRecognition = () => {
     if ("webkitSpeechRecognition" in window || "SpeechRecognition" in window) {
-      const SpeechRecognition =
-        window.SpeechRecognition || window.webkitSpeechRecognition;
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
       recognitionRef.current = new SpeechRecognition();
-
       recognitionRef.current.continuous = false;
       recognitionRef.current.interimResults = false;
       recognitionRef.current.lang = "en-US";
       recognitionRef.current.maxAlternatives = 1;
-
       recognitionRef.current.onstart = () => setIsRecording(true);
-
       recognitionRef.current.onresult = (event) => {
         const transcript = event.results[0][0].transcript.toLowerCase().trim();
         const confidence = event.results[0][0].confidence;
         handleRecognitionResult(transcript, confidence);
       };
-
       recognitionRef.current.onerror = (event) => {
         setIsRecording(false);
         setIsWaitingForRecording(false);
@@ -1018,14 +846,11 @@ export function ShowLesson() {
             message: "لم يتم سماع أي صوت. حاول مرة أخرى.",
             userText: "",
             originalText:
-              currentLesson?.storyData?.content[
-                readingStateRef.current.currentIndex - 1
-              ]?.text || "",
+              currentLesson?.storyData?.content[readingStateRef.current.currentIndex - 1]?.text || "",
           });
           setShowRecordingModal(true);
         }
       };
-
       recognitionRef.current.onend = () => setIsRecording(false);
     } else {
       console.log("❌ Speech recognition not supported");
@@ -1036,78 +861,39 @@ export function ShowLesson() {
   const scrollToCurrentSentence = useCallback(
     (sentenceId) => {
       if (autoScroll && sentenceRefs.current[sentenceId]) {
-        sentenceRefs.current[sentenceId].scrollIntoView({
-          behavior: "smooth",
-          block: "center",
-        });
+        sentenceRefs.current[sentenceId].scrollIntoView({ behavior: "smooth", block: "center" });
       }
     },
     [autoScroll]
   );
 
-  /* --------------------------- Simple pronunciation eval -------------------------- */
-  const calculateSimilarity = (text1, text2) => {
-    const clean1 = text1
-      .toLowerCase()
-      .replace(/[^\w\s]/g, "")
-      .trim();
-    const clean2 = text2
-      .toLowerCase()
-      .replace(/[^\w\s]/g, "")
-      .trim();
-    const words1 = clean1.split(/\s+/);
-    const words2 = clean2.split(/\s+/);
-    let matches = 0;
-    const maxLength = Math.max(words1.length, words2.length);
-    words1.forEach((word, i) => {
-      if (words2[i] && word === words2[i]) matches++;
+  /* ------------------------ Simple pronunciation eval ----------------------- */
+  const calculateSimilarity = (a, b) => {
+    const c1 = a.toLowerCase().replace(/[^\w\s]/g, "").trim();
+    const c2 = b.toLowerCase().replace(/[^\w\s]/g, "").trim();
+    const w1 = c1.split(/\s+/);
+    const w2 = c2.split(/\s+/);
+    let m = 0;
+    const L = Math.max(w1.length, w2.length);
+    w1.forEach((w, i) => {
+      if (w2[i] && w === w2[i]) m++;
     });
-    return (matches / maxLength) * 100;
+    return (m / L) * 100;
   };
-
   const evaluatePronunciation = (userText, originalText, confidence) => {
     const similarity = calculateSimilarity(userText, originalText);
     const confidenceScore = confidence * 100;
-    const overallScore = similarity * 0.6 + confidenceScore * 0.4;
-    if (overallScore >= 85)
-      return {
-        level: "excellent",
-        message: "ممتاز! نطق رائع 🎉",
-        color: "green",
-        score: Math.round(overallScore),
-      };
-    if (overallScore >= 70)
-      return {
-        level: "good",
-        message: "جيد جداً! 👏",
-        color: "blue",
-        score: Math.round(overallScore),
-      };
-    if (overallScore >= 50)
-      return {
-        level: "fair",
-        message: "جيد، لكن يمكن تحسينه 💪",
-        color: "yellow",
-        score: Math.round(overallScore),
-      };
-    return {
-      level: "poor",
-      message: "حاول مرة أخرى 🔄",
-      color: "red",
-      score: Math.round(overallScore),
-    };
+    const overall = similarity * 0.6 + confidenceScore * 0.4;
+    if (overall >= 85) return { level: "excellent", message: "ممتاز! نطق رائع 🎉", color: "green", score: Math.round(overall) };
+    if (overall >= 70) return { level: "good", message: "جيد جداً! 👏", color: "blue", score: Math.round(overall) };
+    if (overall >= 50) return { level: "fair", message: "جيد، لكن يمكن تحسينه 💪", color: "yellow", score: Math.round(overall) };
+    return { level: "poor", message: "حاول مرة أخرى 🔄", color: "red", score: Math.round(overall) };
   };
-
   const handleRecognitionResult = (transcript, confidence) => {
-    const currentSentenceIndex = readingStateRef.current.currentIndex - 1;
-    const originalSentence =
-      currentLesson.storyData.content[currentSentenceIndex];
+    const idx = readingStateRef.current.currentIndex - 1;
+    const originalSentence = currentLesson.storyData.content[idx];
     if (originalSentence) {
-      const evaluation = evaluatePronunciation(
-        transcript,
-        originalSentence.text,
-        confidence
-      );
+      const evaluation = evaluatePronunciation(transcript, originalSentence.text, confidence);
       setRecordingResult({
         success: true,
         userText: transcript,
@@ -1115,16 +901,13 @@ export function ShowLesson() {
         evaluation,
         confidence: Math.round(confidence * 100),
       });
-      setPronunciationScores((prev) => ({
-        ...prev,
-        [originalSentence.id]: evaluation.score,
-      }));
+      setPronunciationScores((prev) => ({ ...prev, [originalSentence.id]: evaluation.score }));
       setShowRecordingModal(true);
       setIsWaitingForRecording(false);
     }
   };
 
-  /* ------------------------- Recording (start/skip) ------------------------ */
+  /* ------------------------------ Recording API ----------------------------- */
   const startRecording = useCallback(async () => {
     if (!recognitionRef.current) {
       alert("التسجيل الصوتي غير مدعوم في متصفحك. جرب Chrome أو Edge");
@@ -1166,19 +949,18 @@ export function ShowLesson() {
     }
   };
 
-  /* ------------------------------- Words/Sidebar ------------------------------ */
+  /* ------------------------------- Word Sidebar ------------------------------ */
   const handleWordClick = useCallback((wordData) => {
     setSelectedWordData(wordData);
     setActiveWord(wordData.word);
     setSidebarOpen(true);
   }, []);
-
   const closeSidebar = () => {
     setSidebarOpen(false);
     setActiveWord(null);
   };
 
-  /* ---------------------------- Play sentence audio --------------------------- */
+  /* ------------------------------ Play sentence audio ------------------------------ */
   const playSentenceAudio = useCallback(
     (audioUrl) => {
       if (window.speechSynthesis) {
@@ -1191,13 +973,11 @@ export function ShowLesson() {
           audioRef.current.pause();
         } catch {}
       }
-
       const audio = new Audio(audioUrl);
       audioRef.current = audio;
       try {
         audio.playbackRate = playbackRate;
       } catch {}
-
       audio.onloadedmetadata = () => {
         const d = Number.isFinite(audio.duration) ? audio.duration : 0;
         setDuration(d);
@@ -1205,31 +985,23 @@ export function ShowLesson() {
       audio.ontimeupdate = () => {
         const now = Number.isFinite(audio.currentTime) ? audio.currentTime : 0;
         setCurrentTime(now);
-        const base = sumDurationsBeforeIndex(
-          readingStateRef.current.currentIndex
-        );
+        const base = sumDurationsBeforeIndex(readingStateRef.current.currentIndex);
         setLessonElapsed(base + now);
       };
       audio.onended = () => {
         setCurrentTime(0);
-        const base = sumDurationsBeforeIndex(
-          readingStateRef.current.currentIndex
-        );
+        const base = sumDurationsBeforeIndex(readingStateRef.current.currentIndex);
         setLessonElapsed(base);
       };
       audio.onerror = () => {
         setDuration(0);
         setCurrentTime(0);
       };
-
-      audio.play().catch((error) => {
-        console.error("Error playing audio:", error);
-      });
+      audio.play().catch((e) => console.error("Error playing audio:", e));
     },
     [playbackRate, sumDurationsBeforeIndex]
   );
 
-  // Speak a single word
   const playWordAudio = useCallback(
     (word) => {
       const clean = (word || "").replace(/[^\w'-]/g, "");
@@ -1239,7 +1011,7 @@ export function ShowLesson() {
     [speak]
   );
 
-  /* ------------------------------- Read all sentences ------------------------------ */
+  /* ------------------------------ Read all sentences ------------------------------ */
   const readAllSentences = useCallback(() => {
     if (!currentLesson || !currentLesson.storyData?.content?.length) return;
 
@@ -1254,11 +1026,7 @@ export function ShowLesson() {
       } catch {}
     }
 
-    readingStateRef.current = {
-      isReading: true,
-      currentIndex: 0,
-      shouldStop: false,
-    };
+    readingStateRef.current = { isReading: true, currentIndex: 0, shouldStop: false };
     setIsReading(true);
     setReadingProgress(0);
     setIsWaitingForRecording(false);
@@ -1266,9 +1034,9 @@ export function ShowLesson() {
 
     const speakNextSentence = () => {
       const { currentIndex, shouldStop } = readingStateRef.current;
-      const totalSentences = currentLesson.storyData.content.length;
+      const total = currentLesson.storyData.content.length;
 
-      if (shouldStop || currentIndex >= totalSentences) {
+      if (shouldStop || currentIndex >= total) {
         setIsReading(false);
         setCurrentReadingSentenceId(null);
         setReadingProgress(100);
@@ -1282,9 +1050,8 @@ export function ShowLesson() {
       }
 
       const sentence = currentLesson.storyData.content[currentIndex];
-      // set base elapsed so the total timer jumps immediately to the start of this sentence
       setLessonElapsed(sumDurationsBeforeIndex(currentIndex));
-      const progress = ((currentIndex + 1) / totalSentences) * 100;
+      const progress = ((currentIndex + 1) / total) * 100;
 
       setCurrentReadingSentenceId(sentence.id);
       setReadingProgress(progress);
@@ -1297,7 +1064,6 @@ export function ShowLesson() {
             if (!readingStateRef.current.shouldStop) {
               readingStateRef.current.currentIndex++;
               if (pronunciationEnabled) {
-                // فتح المودل تلقائياً بدلاً من إظهار الـ CTA
                 setIsWaitingForRecording(true);
                 setShowRecordingModal(true);
               } else {
@@ -1305,12 +1071,10 @@ export function ShowLesson() {
               }
             }
           };
-
           audioRef.current.onerror = () => {
             if (!readingStateRef.current.shouldStop) {
               readingStateRef.current.currentIndex++;
               if (pronunciationEnabled) {
-                // فتح المودل تلقائياً بدلاً من إظهار الـ CTA
                 setIsWaitingForRecording(true);
                 setShowRecordingModal(true);
               } else {
@@ -1322,7 +1086,6 @@ export function ShowLesson() {
       } else {
         readingStateRef.current.currentIndex++;
         if (pronunciationEnabled) {
-          // فتح المودل تلقائياً للجمل التي ليس لها ملف صوتي
           setIsWaitingForRecording(true);
           setShowRecordingModal(true);
         } else {
@@ -1331,23 +1094,14 @@ export function ShowLesson() {
       }
     };
 
-    // expose to continue after recording
     window.speakNextSentence = speakNextSentence;
     speakNextSentence();
-  }, [
-    currentLesson,
-    scrollToCurrentSentence,
-    pronunciationEnabled,
-    playSentenceAudio,
-    loopEnabled,
-    sumDurationsBeforeIndex,
-  ]);
+  }, [currentLesson, scrollToCurrentSentence, pronunciationEnabled, playSentenceAudio, loopEnabled, sumDurationsBeforeIndex]);
 
   /* --------------------------------- Stop -------------------------------- */
   const stopReading = useCallback(() => {
     readingStateRef.current.shouldStop = true;
     readingStateRef.current.isReading = false;
-
     setIsReading(false);
     setCurrentReadingSentenceId(null);
     setReadingProgress(0);
@@ -1397,16 +1151,9 @@ export function ShowLesson() {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-2">
-            Lesson not found
-          </h2>
-          <p className="text-gray-500">
-            The requested lesson could not be found.
-          </p>
-          <Link
-            to="/"
-            className="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
-          >
+          <h2 className="text-2xl font-semibold text-gray-700 mb-2">Lesson not found</h2>
+          <p className="text-gray-500">The requested lesson could not be found.</p>
+          <Link to="/" className="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
             Go Home
           </Link>
         </div>
@@ -1414,33 +1161,25 @@ export function ShowLesson() {
     );
   }
 
+  const currentSentenceText =
+    currentLesson?.storyData?.content?.[readingStateRef.current.currentIndex - 1]?.text || "";
+
   return (
     <div className="min-h-screen">
-      <MicrophonePermissionAlert
-        permission={microphonePermission}
-        onRequestPermission={requestMicrophonePermission}
-      />
+      <MicrophonePermissionAlert permission={microphonePermission} onRequestPermission={requestMicrophonePermission} />
 
       <div className="max-w-4xl mx-auto p-6">
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center space-x-3">
-            <Link
-              to="/"
-              className="p-2 text-[var(--secondary-color)] hover:bg-gray-200 rounded-full transition-colors"
-            >
+            <Link to="/" className="p-2 text-[var(--secondary-color)] hover:bg-gray-200 rounded-full transition-colors">
               <X size={29} />
             </Link>
             {isReading && (
               <div className="flex items-center space-x-2">
                 <div className="w-32 h-2 bg-gray-200 rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-green-500 transition-all duration-300 ease-out"
-                    style={{ width: `${readingProgress}%` }}
-                  />
+                  <div className="h-full bg-green-500 transition-all duration-300 ease-out" style={{ width: `${readingProgress}%` }} />
                 </div>
-                <span className="text-sm text-gray-600">
-                  {Math.round(readingProgress)}%
-                </span>
+                <span className="text-sm text-gray-600">{Math.round(readingProgress)}%</span>
               </div>
             )}
           </div>
@@ -1448,19 +1187,11 @@ export function ShowLesson() {
 
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-6 sm:mb-8 p-4 sm:p-0">
           <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg overflow-hidden flex-shrink-0 shadow-md">
-            <img
-              src={currentLevel.image}
-              alt={currentLevel.name}
-              className="object-cover w-full h-full"
-            />
+            <img src={currentLevel.image} alt={currentLevel.name} className="object-cover w-full h-full" />
           </div>
           <div>
-            <h1 className="text-lg sm:text-xl font-semibold text-gray-800 mb-1 ">
-              {currentLesson.title}
-            </h1>
-            <p className="text-gray-600 text-sm sm:text-base line-clamp-2">
-              {currentLesson.description}
-            </p>
+            <h1 className="text-lg sm:text-xl font-semibold text-gray-800 mb-1 ">{currentLesson.title}</h1>
+            <p className="text-gray-600 text-sm sm:text-base line-clamp-2">{currentLesson.description}</p>
           </div>
         </div>
 
@@ -1483,12 +1214,7 @@ export function ShowLesson() {
       </div>
 
       {/* Sidebar */}
-      <Sidebar
-        isOpen={sidebarOpen}
-        selectedWordData={selectedWordData}
-        onClose={closeSidebar}
-        onPlayWordAudio={playWordAudio}
-      />
+      <Sidebar isOpen={sidebarOpen} selectedWordData={selectedWordData} onClose={closeSidebar} onPlayWordAudio={playWordAudio} />
 
       {/* Recording modal */}
       <RecordingModal
@@ -1497,13 +1223,11 @@ export function ShowLesson() {
         isWaitingForRecording={isWaitingForRecording}
         recordingResult={recordingResult}
         onStartRecording={startRecording}
-        originalText={
-          currentLesson?.storyData?.content?.[
-            readingStateRef.current.currentIndex - 1
-          ]?.text || ""
-        }
+        originalText={currentSentenceText}
         onSkipRecording={skipRecording}
         onContinue={continueToNextSentence}
+        onListen={() => speak(currentSentenceText, 1)}
+        onListenSlow={() => speak(currentSentenceText, 0.75)}
       />
 
       {/* Mini Player */}
@@ -1514,17 +1238,9 @@ export function ShowLesson() {
             <div
               className="h-1 w-full bg-gray-200 rounded-t-2xl overflow-hidden cursor-pointer"
               onClick={(e) => {
-                if (
-                  !audioRef.current ||
-                  !Number.isFinite(duration) ||
-                  duration === 0
-                )
-                  return;
+                if (!audioRef.current || !Number.isFinite(duration) || duration === 0) return;
                 const rect = e.currentTarget.getBoundingClientRect();
-                const ratio = Math.min(
-                  1,
-                  Math.max(0, (e.clientX - rect.left) / rect.width)
-                );
+                const ratio = Math.min(1, Math.max(0, (e.clientX - rect.left) / rect.width));
                 const t = ratio * duration;
                 audioRef.current.currentTime = t;
               }}
@@ -1533,11 +1249,7 @@ export function ShowLesson() {
                 className="h-full bg-[var(--primary-color)] transition-[width]"
                 style={{
                   width: lessonTotalDuration
-                    ? `${
-                        (Math.min(lessonElapsed, lessonTotalDuration) /
-                          lessonTotalDuration) *
-                        100
-                      }%`
+                    ? `${(Math.min(lessonElapsed, lessonTotalDuration) / lessonTotalDuration) * 100}%`
                     : duration
                     ? `${(Math.min(currentTime, duration) / duration) * 100}%`
                     : `${readingProgress}%`,
@@ -1545,9 +1257,8 @@ export function ShowLesson() {
               />
             </div>
 
-            {/* Controls row */}
+            {/* Controls */}
             <div className="flex items-center justify-between px-4 py-2">
-              {/* Left: play/skip/loop */}
               <div className="flex items-center gap-2">
                 <button
                   onClick={togglePlayPause}
@@ -1576,9 +1287,7 @@ export function ShowLesson() {
                 <button
                   onClick={() => setLoopEnabled((v) => !v)}
                   className={`w-9 h-9 rounded-full grid place-items-center ${
-                    loopEnabled
-                      ? "bg-emerald-100 text-emerald-700"
-                      : "bg-gray-100 text-gray-700"
+                    loopEnabled ? "bg-emerald-100 text-emerald-700" : "bg-gray-100 text-gray-700"
                   } hover:bg-emerald-100`}
                   title="تكرار الدرس"
                 >
@@ -1588,30 +1297,17 @@ export function ShowLesson() {
                 </button>
               </div>
 
-              {/* Center: time */}
               <div className="flex items-center gap-1 text-[11px] text-gray-600">
-                <span className="tabular-nums">
-                  {lessonTotalDuration
-                    ? fmt(lessonElapsed)
-                    : fmt(currentTime) || "00:00"}{" "}
-                </span>
+                <span className="tabular-nums">{lessonTotalDuration ? fmt(lessonElapsed) : fmt(currentTime) || "00:00"} </span>
                 <span className="text-gray-300">/</span>
                 <span className="tabular-nums">
-                  {lessonTotalDuration
-                    ? fmt(lessonTotalDuration)
-                    : duration
-                    ? fmt(duration)
-                    : `${Math.round(readingProgress)}%`}
+                  {lessonTotalDuration ? fmt(lessonTotalDuration) : duration ? fmt(duration) : `${Math.round(readingProgress)}%`}
                 </span>
               </div>
 
-              {/* Right: speed & expand */}
               <div className="relative flex items-center gap-2">
                 <div className="group relative">
-                  <button
-                    className="px-3 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-800 text-sm font-medium"
-                    title="السرعة"
-                  >
+                  <button className="px-3 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-800 text-sm font-medium" title="السرعة">
                     {playbackRate.toFixed(2).replace(/\.00$/, "")}x ▾
                   </button>
                   <div className="absolute -right-2 bottom-9 hidden group-hover:block bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
@@ -1620,9 +1316,7 @@ export function ShowLesson() {
                         key={r}
                         onClick={() => handleSpeedChange(r)}
                         className={`block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 ${
-                          Math.abs(playbackRate - r) < 0.001
-                            ? "text-[var(--primary-color)] bg-gray-50 font-semibold"
-                            : "text-gray-700"
+                          Math.abs(playbackRate - r) < 0.001 ? "text-[var(--primary-color)] bg-gray-50 font-semibold" : "text-gray-700"
                         }`}
                       >
                         {r}x
@@ -1636,14 +1330,15 @@ export function ShowLesson() {
         </div>
       </div>
 
-      {/* Quiz FAB */}
-      <Link
-        to={`/level/${levelId}/lesson/${lessonId}/quiz`}
-        className="fixed bottom-20 right-6 bg-[var(--primary-color)] hover:bg-[var(--secondary-color)] text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center"
-        style={{ width: "60px", height: "60px" }}
-      >
-        <PiExam size={30} />
-      </Link>
-    </div>
-  );
-}
+
+        {/* Quiz FAB */}
+        <Link
+          to={`/level/${levelId}/lesson/${lessonId}/quiz`}
+          className="fixed bottom-20 right-6 bg-[var(--primary-color)] hover:bg-[var(--secondary-color)] text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center"
+          style={{ width: "60px", height: "60px" }}
+        >
+          <PiExam size={30} />
+        </Link>
+      </div>
+    );
+  }
