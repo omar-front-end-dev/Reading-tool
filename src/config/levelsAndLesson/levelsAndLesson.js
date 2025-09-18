@@ -396,26 +396,31 @@ export const levelsAndLesson = [
     text: "Anna is a student at Lincoln School.",
     id: 1,
     translationAr: "آنا طالبة في مدرسة لينكولن.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2002%20Daily%20life%20stories/Lesson%2002/Level_02_Lesson_02_%20S%2002.mp3"
   },
   {
     text: "She likes math and science classes.",
     id: 2,
     translationAr: "هي تحب حصص الرياضيات والعلوم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2002%20Daily%20life%20stories/Lesson%2002/Level_02_Lesson_02_%20S%2003.mp3"
   },
   {
     text: "Her teacher is Mrs. Johnson.",
     id: 3,
     translationAr: "مُعلمتها هي السيدة جونسون.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2002%20Daily%20life%20stories/Lesson%2002/Level_02_Lesson_02_%20S%2004.mp3"
   },
   {
     text: "The school has a big library.",
     id: 4,
     translationAr: "المدرسة لديها مكتبة كبيرة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2002%20Daily%20life%20stories/Lesson%2002/Level_02_Lesson_02_%20S%2005.mp3"
   },
   {
     text: "Anna reads books every day.",
     id: 5,
     translationAr: "آنا تقرأ الكتب كل يوم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2002%20Daily%20life%20stories/Lesson%2002/Level_02_Lesson_02_%20S%2006.mp3"
   },
 ],
         },
@@ -476,26 +481,31 @@ export const levelsAndLesson = [
     text: "The Brown family eats dinner at six.",
     id: 1,
     translationAr: "عائلة براون تتناول العشاء في الساعة السادسة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2002%20Daily%20life%20stories/Lesson%2003/Level_02_Lesson_03_%20S%2002.mp3"
   },
   {
     text: "Mom cooks chicken and rice.",
     id: 2,
     translationAr: "الأم تطبخ دجاجًا وأرزًا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2002%20Daily%20life%20stories/Lesson%2003/Level_02_Lesson_03_%20S%2003.mp3"
   },
   {
     text: "Dad helps set the table.",
     id: 3,
     translationAr: "الأب يساعد في ترتيب الطاولة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2002%20Daily%20life%20stories/Lesson%2003/Level_02_Lesson_03_%20S%2004.mp3"
   },
   {
     text: "The children wash their hands.",
     id: 4,
     translationAr: "الأطفال يغسلون أيديهم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2002%20Daily%20life%20stories/Lesson%2003/Level_02_Lesson_03_%20S%2005.mp3"
   },
   {
     text: "Everyone enjoys the meal together.",
     id: 5,
     translationAr: "الجميع يستمتعون بالوجبة معًا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2002%20Daily%20life%20stories/Lesson%2003/Level_02_Lesson_03_%20S%2006.mp3"
   },
 ],
         },
@@ -552,26 +562,31 @@ export const levelsAndLesson = [
     text: "Saturday is my favorite day.",
     id: 1,
     translationAr: "يوم السبت هو يومي المفضل.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2002%20Daily%20life%20stories/Lesson%2004/Level_02_Lesson_04_%20S%2002.mp3"
   },
   {
     text: "I play soccer with my friends.",
     id: 2,
     translationAr: "ألعب كرة القدم مع أصدقائي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2002%20Daily%20life%20stories/Lesson%2004/Level_02_Lesson_04_%20S%2003.mp3"
   },
   {
     text: "We go to the park after lunch.",
     id: 3,
     translationAr: "نذهب إلى الحديقة بعد الغداء.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2002%20Daily%20life%20stories/Lesson%2004/Level_02_Lesson_04_%20S%2004.mp3"
   },
   {
     text: "My sister watches movies at home.",
     id: 4,
     translationAr: "أختي تشاهد الأفلام في المنزل.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2002%20Daily%20life%20stories/Lesson%2004/Level_02_Lesson_04_%20S%2005.mp3"
   },
   {
     text: "Sunday is for rest and family time.",
     id: 5,
     translationAr: "يوم الأحد مخصص للراحة ووقت العائلة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2002%20Daily%20life%20stories/Lesson%2004/Level_02_Lesson_04_%20S%2006.mp3"
   },
 ],
         },
@@ -620,26 +635,31 @@ export const levelsAndLesson = [
     text: "John feels sick today.",
     id: 1,
     translationAr: "جون يشعر بالمرض اليوم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2002%20Daily%20life%20stories/Lesson%2005/Level_02_Lesson_05_%20S%2002.mp3"
   },
   {
     text: "He goes to see Dr. Smith.",
     id: 2,
     translationAr: "هو يذهب لزيارة الدكتور سميث.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2002%20Daily%20life%20stories/Lesson%2005/Level_02_Lesson_05_%20S%2003.mp3"
   },
   {
     text: "The doctor checks his temperature.",
     id: 3,
     translationAr: "الطبيب يقيس حرارته.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2002%20Daily%20life%20stories/Lesson%2005/Level_02_Lesson_05_%20S%2004.mp3"
   },
   {
     text: "You have a cold, John.",
     id: 4,
     translationAr: "لديك نزلة برد يا جون.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2002%20Daily%20life%20stories/Lesson%2005/Level_02_Lesson_05_%20S%2005.mp3"
   },
   {
     text: "Drink water and get some rest.",
     id: 5,
     translationAr: "اشرب ماءً وخذ قسطًا من الراحة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2002%20Daily%20life%20stories/Lesson%2005/Level_02_Lesson_05_%20S%2006.mp3"
   },
 ],
         },
@@ -706,26 +726,31 @@ export const levelsAndLesson = [
     text: "I have a big family.",
     id: 1,
     translationAr: "لدي عائلة كبيرة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2003%20Family%20and%20Friends/Lesson%2006/Level_03_Lesson_06_%20S%2002.mp3"
   },
   {
     text: "My father works in an office.",
     id: 2,
     translationAr: "أبي يعمل في مكتب.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2003%20Family%20and%20Friends/Lesson%2006/Level_03_Lesson_06_%20S%2003.mp3"
   },
   {
     text: "My mother is a teacher.",
     id: 3,
     translationAr: "أمي معلمة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2003%20Family%20and%20Friends/Lesson%2006/Level_03_Lesson_06_%20S%2004.mp3"
   },
   {
     text: "I have two brothers and one sister.",
     id: 4,
     translationAr: "لدي أخَوان وأخت واحدة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2003%20Family%20and%20Friends/Lesson%2006/Level_03_Lesson_06_%20S%2005.mp3"
   },
   {
     text: "We live together in a nice house.",
     id: 5,
     translationAr: "نحن نعيش معًا في بيت جميل.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2003%20Family%20and%20Friends/Lesson%2006/Level_03_Lesson_06_%20S%2006.mp3"
   },
 ],
         },
@@ -777,11 +802,11 @@ export const levelsAndLesson = [
         description: "The story of two best friends and their adventures.",
         storyData: {
           content: [
-  { text: "Emma and Jack are best friends.", id: 1, translationAr: "إيما وجاك أعز أصدقاء." },
-  { text: "They go to school together every day.", id: 2, translationAr: "يذهبان إلى المدرسة معًا كل يوم." },
-  { text: "After school, they play in the garden.", id: 3, translationAr: "بعد المدرسة، يلعبان في الحديقة." },
-  { text: "Sometimes they do homework together.", id: 4, translationAr: "أحيانًا ينجزان الواجب معًا." },
-  { text: "They always help each other.", id: 5, translationAr: "دائمًا يساعدان بعضهما البعض." }
+  { text: "Emma and Jack are best friends.", id: 1, translationAr: "إيما وجاك أعز أصدقاء.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2003%20Family%20and%20Friends/Lesson%2007/Level_03_Lesson_07_%20S%2002.mp3" },
+  { text: "They go to school together every day.", id: 2, translationAr: "يذهبان إلى المدرسة معًا كل يوم.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2003%20Family%20and%20Friends/Lesson%2007/Level_03_Lesson_07_%20S%2003.mp3" },
+  { text: "After school, they play in the garden.", id: 3, translationAr: "بعد المدرسة، يلعبان في الحديقة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2003%20Family%20and%20Friends/Lesson%2007/Level_03_Lesson_07_%20S%2004.mp3" },
+  { text: "Sometimes they do homework together.", id: 4, translationAr: "أحيانًا ينجزان الواجب معًا.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2003%20Family%20and%20Friends/Lesson%2007/Level_03_Lesson_07_%20S%2005.mp3" },
+  { text: "They always help each other.", id: 5, translationAr: "دائمًا يساعدان بعضهما البعض.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2003%20Family%20and%20Friends/Lesson%2007/Level_03_Lesson_07_%20S%2006.mp3" }
 ],
         },
         wordDefinitions: {
@@ -845,11 +870,11 @@ export const levelsAndLesson = [
         image: "/assets/images/L-4/cooking.jpg",
         storyData: {
           content: [
-  { text: "Maria loves to cook for her family.", id: 1, translationAr: "ماريا تحب أن تطبخ لعائلتها." },
-  { text: "Today she is making pasta with tomato sauce.", id: 2, translationAr: "اليوم تعد معكرونة بصلصة الطماطم." },
-  { text: "She cuts vegetables and adds herbs.", id: 3, translationAr: "تقطع الخضروات وتضيف الأعشاب." },
-  { text: "The kitchen smells wonderful.", id: 4, translationAr: "رائحة المطبخ رائعة." },
-  { text: "Everyone enjoys the delicious meal.", id: 5, translationAr: "الجميع يستمتع بالوجبة اللذيذة." }
+  { text: "Maria loves to cook for her family.", id: 1, translationAr: "ماريا تحب أن تطبخ لعائلتها.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2004%20Food%20and%20Cooking/Lesson%2008/Level_04_Lesson_08_%20S%2002.mp3" },
+  { text: "Today she is making pasta with tomato sauce.", id: 2, translationAr: "اليوم تعد معكرونة بصلصة الطماطم.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2004%20Food%20and%20Cooking/Lesson%2008/Level_04_Lesson_08_%20S%2003.mp3" },
+  { text: "She cuts vegetables and adds herbs.", id: 3, translationAr: "تقطع الخضروات وتضيف الأعشاب.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2004%20Food%20and%20Cooking/Lesson%2008/Level_04_Lesson_08_%20S%2004.mp3" },
+  { text: "The kitchen smells wonderful.", id: 4, translationAr: "رائحة المطبخ رائعة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2004%20Food%20and%20Cooking/Lesson%2008/Level_04_Lesson_08_%20S%2005.mp3" },
+  { text: "Everyone enjoys the delicious meal.", id: 5, translationAr: "الجميع يستمتع بالوجبة اللذيذة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2004%20Food%20and%20Cooking/Lesson%2008/Level_04_Lesson_08_%20S%2006.mp3" }
 ],
         },
         wordDefinitions: {
@@ -929,11 +954,11 @@ export const levelsAndLesson = [
         image: "/assets/images/L-4/restaurant.jpg",
         storyData: {
           content: [
-  { text: "David and Susan enter the restaurant.", id: 1, translationAr: "ديفيد وسوزان يدخلان المطعم." },
-  { text: "The waiter shows them to a table.", id: 2, translationAr: "النادل يرشدهم إلى طاولة." },
-  { text: "They look at the menu carefully.", id: 3, translationAr: "ينظرون إلى القائمة بعناية." },
-  { text: "David orders fish and Susan chooses chicken.", id: 4, translationAr: "طلب ديفيد سمكًا واختارت سوزان دجاجًا." },
-  { text: "The food is excellent and they are very happy.", id: 5, translationAr: "الطعام ممتاز وهم سعداء جدًا." }
+  { text: "David and Susan enter the restaurant.", id: 1, translationAr: "ديفيد وسوزان يدخلان المطعم.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2004%20Food%20and%20Cooking/Lesson%2009/Level_04_Lesson_09_%20S%2002.mp3" },
+  { text: "The waiter shows them to a table.", id: 2, translationAr: "النادل يرشدهم إلى طاولة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2004%20Food%20and%20Cooking/Lesson%2009/Level_04_Lesson_09_%20S%2003.mp3" },
+  { text: "They look at the menu carefully.", id: 3, translationAr: "ينظرون إلى القائمة بعناية.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2004%20Food%20and%20Cooking/Lesson%2009/Level_04_Lesson_09_%20S%2004.mp3" },
+  { text: "David orders fish and Susan chooses chicken.", id: 4, translationAr: "طلب ديفيد سمكًا واختارت سوزان دجاجًا.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2004%20Food%20and%20Cooking/Lesson%2009/Level_04_Lesson_09_%20S%2005.mp3" },
+  { text: "The food is excellent and they are very happy.", id: 5, translationAr: "الطعام ممتاز وهم سعداء جدًا.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2004%20Food%20and%20Cooking/Lesson%2009/Level_04_Lesson_09_%20S%2006.mp3" }
 ],
         },
         wordDefinitions: {
@@ -3971,11 +3996,11 @@ export const levelsAndLesson = [
       description: "The teacher talks to the students about today’s lesson.",
       storyData: {
         content: [
-          { id: 1, text: "The students sit in the classroom.", translationAr: "يجلس الطلاب في الفصل." },
-          { id: 2, text: "The teacher says: Good morning, class!", translationAr: "يقول المعلم: صباح الخير يا صف!" },
-          { id: 3, text: "The students reply: Good morning, teacher!", translationAr: "يرد الطلاب: صباح الخير يا معلم!" },
-          { id: 4, text: "The teacher writes on the board.", translationAr: "يكتب المعلم على السبورة." },
-          { id: 5, text: "The students open their books.", translationAr: "يفتح الطلاب كتبهم." },
+          { id: 1, text: "The students sit in the classroom.", translationAr: "يجلس الطلاب في الفصل.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2011%20School%20and%20Learning/Lesson%2035/Level_11_Lesson_35_%20S%2002.mp3" },
+          { id: 2, text: "The teacher says: Good morning, class!", translationAr: "يقول المعلم: صباح الخير يا صف!", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2011%20School%20and%20Learning/Lesson%2035/Level_11_Lesson_35_%20S%2003.mp3" },
+          { id: 3, text: "The students reply: Good morning, teacher!", translationAr: "يرد الطلاب: صباح الخير يا معلم!" , audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2011%20School%20and%20Learning/Lesson%2035/Level_11_Lesson_35_%20S%2004.mp3"},
+          { id: 4, text: "The teacher writes on the board.", translationAr: "يكتب المعلم على السبورة." , audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2011%20School%20and%20Learning/Lesson%2035/Level_11_Lesson_35_%20S%2005.mp3"},
+          { id: 5, text: "The students open their books.", translationAr: "يفتح الطلاب كتبهم." , audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2011%20School%20and%20Learning/Lesson%2035/Level_11_Lesson_35_%20S%2006.mp3"},
         ],
       },
       wordDefinitions: {
@@ -4010,11 +4035,11 @@ export const levelsAndLesson = [
       description: "Sara borrows books from the library.",
       storyData: {
         content: [
-          { id: 1, text: "Sara walks into the library.", translationAr: "تدخل سارة إلى المكتبة." },
-          { id: 2, text: "She asks: Can I borrow this book?", translationAr: "تسأل: هل يمكنني استعارة هذا الكتاب؟" },
-          { id: 3, text: "The librarian says: Yes, you can.", translationAr: "يقول أمين المكتبة: نعم، يمكنك." },
-          { id: 4, text: "Sara thanks the librarian.", translationAr: "تشكر سارة أمين المكتبة." },
-          { id: 5, text: "She leaves with the book.", translationAr: "تغادر سارة ومعها الكتاب." },
+          { id: 1, text: "Sara walks into the library.", translationAr: "تدخل سارة إلى المكتبة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2011%20School%20and%20Learning/Lesson%2036/Level_11_Lesson_36_%20S%2002.mp3" },
+          { id: 2, text: "She asks: Can I borrow this book?", translationAr: "تسأل: هل يمكنني استعارة هذا الكتاب؟", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2011%20School%20and%20Learning/Lesson%2036/Level_11_Lesson_36_%20S%2003.mp3" },
+          { id: 3, text: "The librarian says: Yes, you can.", translationAr: "يقول أمين المكتبة: نعم، يمكنك.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2011%20School%20and%20Learning/Lesson%2036/Level_11_Lesson_36_%20S%2004.mp3" },
+          { id: 4, text: "Sara thanks the librarian.", translationAr: "تشكر سارة أمين المكتبة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2011%20School%20and%20Learning/Lesson%2036/Level_11_Lesson_36_%20S%2005.mp3" },
+          { id: 5, text: "She leaves with the book.", translationAr: "تغادر سارة ومعها الكتاب.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2011%20School%20and%20Learning/Lesson%2036/Level_11_Lesson_36_%20S%2006.mp3" },
         ],
       },
       wordDefinitions: {
@@ -4050,11 +4075,11 @@ export const levelsAndLesson = [
       description: "Ali plays football with his classmates.",
       storyData: {
         content: [
-          { id: 1, text: "Ali and his friends play football in the yard.", translationAr: "علي وأصدقاؤه يلعبون كرة القدم في الساحة." },
-          { id: 2, text: "Ali kicks the ball.", translationAr: "يركل علي الكرة." },
-          { id: 3, text: "His friend runs fast.", translationAr: "صديقه يجري بسرعة." },
-          { id: 4, text: "They score a goal.", translationAr: "يسجلون هدفًا." },
-          { id: 5, text: "Everyone is happy.", translationAr: "الجميع سعداء." },
+          { id: 1, text: "Ali and his friends play football in the yard.", translationAr: "علي وأصدقاؤه يلعبون كرة القدم في الساحة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2011%20School%20and%20Learning/Lesson%2037/Level_11_Lesson_37_%20S%2002.mp3" },
+          { id: 2, text: "Ali kicks the ball.", translationAr: "يركل علي الكرة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2011%20School%20and%20Learning/Lesson%2037/Level_11_Lesson_37_%20S%2003.mp3" },
+          { id: 3, text: "His friend runs fast.", translationAr: "صديقه يجري بسرعة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2011%20School%20and%20Learning/Lesson%2037/Level_11_Lesson_37_%20S%2004.mp3" },
+          { id: 4, text: "They score a goal.", translationAr: "يسجلون هدفًا.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2011%20School%20and%20Learning/Lesson%2037/Level_11_Lesson_37_%20S%2005.mp3" },
+          { id: 5, text: "Everyone is happy.", translationAr: "الجميع سعداء.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2011%20School%20and%20Learning/Lesson%2037/Level_11_Lesson_37_%20S%2006.mp3" },
         ],
       },
       wordDefinitions: {
@@ -4094,11 +4119,11 @@ export const levelsAndLesson = [
       description: "The students eat lunch in the cafeteria.",
       storyData: {
         content: [
-          { id: 1, text: "The bell rings for lunch.", translationAr: "يُقرَع الجرس من أجل الغداء." },
-          { id: 2, text: "The students go to the cafeteria.", translationAr: "يذهب الطلاب إلى الكافيتريا." },
-          { id: 3, text: "They eat sandwiches and drink juice.", translationAr: "يأكلون الشطائر ويشربون العصير." },
-          { id: 4, text: "They talk and laugh together.", translationAr: "يتحدثون ويضحكون معًا." },
-          { id: 5, text: "After lunch, they go back to class.", translationAr: "بعد الغداء، يعودون إلى الصف." },
+          { id: 1, text: "The bell rings for lunch.", translationAr: "يُقرَع الجرس من أجل الغداء.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2011%20School%20and%20Learning/Lesson%2038/Level_11_Lesson_38_%20S%2002.mp3" },
+          { id: 2, text: "The students go to the cafeteria.", translationAr: "يذهب الطلاب إلى الكافيتريا.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2011%20School%20and%20Learning/Lesson%2038/Level_11_Lesson_38_%20S%2003.mp3" },
+          { id: 3, text: "They eat sandwiches and drink juice.", translationAr: "يأكلون الشطائر ويشربون العصير.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2011%20School%20and%20Learning/Lesson%2038/Level_11_Lesson_38_%20S%2004.mp3" },
+          { id: 4, text: "They talk and laugh together.", translationAr: "يتحدثون ويضحكون معًا.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2011%20School%20and%20Learning/Lesson%2038/Level_11_Lesson_38_%20S%2005.mp3" },
+          { id: 5, text: "After lunch, they go back to class.", translationAr: "بعد الغداء، يعودون إلى الصف.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2011%20School%20and%20Learning/Lesson%2038/Level_11_Lesson_38_%20S%2006.mp3" },
         ],
       },
       wordDefinitions: {
@@ -4137,11 +4162,11 @@ export const levelsAndLesson = [
       description: "Omar does his homework at home.",
       storyData: {
         content: [
-          { id: 1, text: "Omar sits at his desk.", translationAr: "يجلس عمر على مكتبه." },
-          { id: 2, text: "He opens his notebook.", translationAr: "يفتح دفتر ملاحظاته." },
-          { id: 3, text: "He writes answers for his homework.", translationAr: "يكتب إجابات لواجبه." },
-          { id: 4, text: "His mother helps him.", translationAr: "تساعده والدته." },
-          { id: 5, text: "Omar finishes and closes his book.", translationAr: "ينهي عمر عمله ويغلق كتابه." },
+          { id: 1, text: "Omar sits at his desk.", translationAr: "يجلس عمر على مكتبه.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2011%20School%20and%20Learning/Lesson%2039/Level_11_Lesson_39_%20S%2002.mp3" },
+          { id: 2, text: "He opens his notebook.", translationAr: "يفتح دفتر ملاحظاته.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2011%20School%20and%20Learning/Lesson%2039/Level_11_Lesson_39_%20S%2003.mp3" },
+          { id: 3, text: "He writes answers for his homework.", translationAr: "يكتب إجابات لواجبه.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2011%20School%20and%20Learning/Lesson%2039/Level_11_Lesson_39_%20S%2004.mp3" },
+          { id: 4, text: "His mother helps him.", translationAr: "تساعده والدته.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2011%20School%20and%20Learning/Lesson%2039/Level_11_Lesson_39_%20S%2005.mp3" },
+          { id: 5, text: "Omar finishes and closes his book.", translationAr: "ينهي عمر عمله ويغلق كتابه.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2011%20School%20and%20Learning/Lesson%2039/Level_11_Lesson_39_%20S%2006.mp3" },
         ],
       },
       wordDefinitions: {
@@ -4186,11 +4211,11 @@ export const levelsAndLesson = [
         description: "Mother prepares food in the kitchen.",
         storyData: {
           content: [
-  { id: 1, text: "Mother cooks soup in the kitchen.", translationAr: "الأم تطبخ الحساء في المطبخ." },
-  { id: 2, text: "She cuts vegetables with a knife.", translationAr: "هي تقطع الخضروات بسكين." },
-  { id: 3, text: "The soup smells very good.", translationAr: "رائحة الحساء طيبة جدًا." },
-  { id: 4, text: "Father helps wash the dishes.", translationAr: "الأب يساعد في غسل الأطباق." },
-  { id: 5, text: "The family eats together happily.", translationAr: "العائلة تأكل معًا بسعادة." }
+  { id: 1, text: "Mother cooks soup in the kitchen.", translationAr: "الأم تطبخ الحساء في المطبخ.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2012%20At%20Home/Lesson%2045/Level_12_Lesson_45_%20S%2002.mp3" },
+  { id: 2, text: "She cuts vegetables with a knife.", translationAr: "هي تقطع الخضروات بسكين.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2012%20At%20Home/Lesson%2045/Level_12_Lesson_45_%20S%2003.mp3" },
+  { id: 3, text: "The soup smells very good.", translationAr: "رائحة الحساء طيبة جدًا.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2012%20At%20Home/Lesson%2045/Level_12_Lesson_45_%20S%2004.mp3" },
+  { id: 4, text: "Father helps wash the dishes.", translationAr: "الأب يساعد في غسل الأطباق.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2012%20At%20Home/Lesson%2045/Level_12_Lesson_45_%20S%2005.mp3" },
+  { id: 5, text: "The family eats together happily.", translationAr: "العائلة تأكل معًا بسعادة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2012%20At%20Home/Lesson%2045/Level_12_Lesson_45_%20S%2006.mp3" }
 ],
         },
         wordDefinitions: {
@@ -4228,11 +4253,11 @@ export const levelsAndLesson = [
         description: "The family watches TV in the living room.",
         storyData: {
           content: [
-  { id: 1, text: "The children sit on the sofa.", translationAr: "الأطفال يجلسون على الأريكة." },
-  { id: 2, text: "They watch cartoons on TV.", translationAr: "هم يشاهدون الرسوم المتحركة على التلفاز." },
-  { id: 3, text: "Father reads his newspaper quietly.", translationAr: "الأب يقرأ صحيفته بهدوء." },
-  { id: 4, text: "Mother waters the green plants.", translationAr: "الأم تسقي النباتات الخضراء." },
-  { id: 5, text: "Everyone feels comfortable and relaxed.", translationAr: "الجميع يشعر بالراحة والاسترخاء." }
+  { id: 1, text: "The children sit on the sofa.", translationAr: "الأطفال يجلسون على الأريكة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2012%20At%20Home/Lesson%2046/Level_12_Lesson_46_%20S%2002.mp3" },
+  { id: 2, text: "They watch cartoons on TV.", translationAr: "هم يشاهدون الرسوم المتحركة على التلفاز.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2012%20At%20Home/Lesson%2046/Level_12_Lesson_46_%20S%2003.mp3" },
+  { id: 3, text: "Father reads his newspaper quietly.", translationAr: "الأب يقرأ صحيفته بهدوء.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2012%20At%20Home/Lesson%2046/Level_12_Lesson_46_%20S%2004.mp3" },
+  { id: 4, text: "Mother waters the green plants.", translationAr: "الأم تسقي النباتات الخضراء.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2012%20At%20Home/Lesson%2046/Level_12_Lesson_46_%20S%2005.mp3" },
+  { id: 5, text: "Everyone feels comfortable and relaxed.", translationAr: "الجميع يشعر بالراحة والاسترخاء.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2012%20At%20Home/Lesson%2046/Level_12_Lesson_46_%20S%2006.mp3" }
 ],
         },
         wordDefinitions: {
@@ -4273,11 +4298,11 @@ export const levelsAndLesson = [
         description: "Sara organizes her bedroom.",
         storyData: {
           content: [
-  { id: 1, text: "Sara makes her bed neatly.", translationAr: "سارة ترتب سريرها بعناية." },
-  { id: 2, text: "She puts clothes in the closet.", translationAr: "هي تضع الملابس في الخزانة." },
-  { id: 3, text: "Her books go on the shelf.", translationAr: "كتبها توضع على الرف." },
-  { id: 4, text: "The room looks clean and tidy.", translationAr: "تبدو الغرفة نظيفة ومرتبة." },
-  { id: 5, text: "Sara feels proud of her work.", translationAr: "سارة تشعر بالفخر بعملها." }
+  { id: 1, text: "Sara makes her bed neatly.", translationAr: "سارة ترتب سريرها بعناية.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2012%20At%20Home/Lesson%2047/Level_12_Lesson_47_%20S%2002.mp3x" },
+  { id: 2, text: "She puts clothes in the closet.", translationAr: "هي تضع الملابس في الخزانة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2012%20At%20Home/Lesson%2047/Level_12_Lesson_47_%20S%2003.mp3" },
+  { id: 3, text: "Her books go on the shelf.", translationAr: "كتبها توضع على الرف.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2012%20At%20Home/Lesson%2047/Level_12_Lesson_47_%20S%2004.mp3" },
+  { id: 4, text: "The room looks clean and tidy.", translationAr: "تبدو الغرفة نظيفة ومرتبة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2012%20At%20Home/Lesson%2047/Level_12_Lesson_47_%20S%2005.mp3" },
+  { id: 5, text: "Sara feels proud of her work.", translationAr: "سارة تشعر بالفخر بعملها.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2012%20At%20Home/Lesson%2047/Level_12_Lesson_47_%20S%2006.mp3" }
 ],
         },
         wordDefinitions: {
@@ -4309,11 +4334,11 @@ export const levelsAndLesson = [
         description: "Ahmad works in the family garden.",
         storyData: {
           content: [
-  { id: 1, text: "Ahmad plants flowers in the garden.", translationAr: "أحمد يزرع الزهور في الحديقة." },
-  { id: 2, text: "He digs holes with his shovel.", translationAr: "هو يحفر حفرًا باستخدام مجرفته." },
-  { id: 3, text: "The colorful flowers look beautiful.", translationAr: "الزهور الملونة تبدو جميلة." },
-  { id: 4, text: "Bees fly around the sweet flowers.", translationAr: "النحل يطير حول الزهور العطرة." },
-  { id: 5, text: "Ahmad smiles at his lovely garden.", translationAr: "أحمد يبتسم لحديقته الجميلة." }
+  { id: 1, text: "Ahmad plants flowers in the garden.", translationAr: "أحمد يزرع الزهور في الحديقة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2012%20At%20Home/Lesson%2048/Level_12_Lesson_48_%20S%2002.mp3" },
+  { id: 2, text: "He digs holes with his shovel.", translationAr: "هو يحفر حفرًا باستخدام مجرفته.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2012%20At%20Home/Lesson%2048/Level_12_Lesson_48_%20S%2003.mp3" },
+  { id: 3, text: "The colorful flowers look beautiful.", translationAr: "الزهور الملونة تبدو جميلة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2012%20At%20Home/Lesson%2048/Level_12_Lesson_48_%20S%2004.mp3" },
+  { id: 4, text: "Bees fly around the sweet flowers.", translationAr: "النحل يطير حول الزهور العطرة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2012%20At%20Home/Lesson%2048/Level_12_Lesson_48_%20S%2005.mp3" },
+  { id: 5, text: "Ahmad smiles at his lovely garden.", translationAr: "أحمد يبتسم لحديقته الجميلة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2012%20At%20Home/Lesson%2048/Level_12_Lesson_48_%20S%2006.mp3" }
 ],
         },
         wordDefinitions: {
@@ -4342,15 +4367,15 @@ export const levelsAndLesson = [
       },
       {
         id: 49,
-        title: "49 - Bathroom",
+        title: "Bathroom",
         description: "Omar gets ready in the bathroom.",
         storyData: {
           content: [
-  { id: 1, text: "Omar brushes his teeth carefully.", translationAr: "عمر ينظف أسنانه بعناية." },
-  { id: 2, text: "He washes his face with soap.", translationAr: "هو يغسل وجهه بالصابون." },
-  { id: 3, text: "The mirror shows his clean face.", translationAr: "المرآة تُظهر وجهه النظيف." },
-  { id: 4, text: "He dries himself with a towel.", translationAr: "هو يجفف نفسه بالمنشفة." },
-  { id: 5, text: "Omar feels fresh and ready.", translationAr: "عمر يشعر بالانتعاش والاستعداد." }
+  { id: 1, text: "Omar brushes his teeth carefully.", translationAr: "عمر ينظف أسنانه بعناية.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2012%20At%20Home/Lesson%2049/Level_12_Lesson_49_%20S%2002.mp3"},
+  { id: 2, text: "He washes his face with soap.", translationAr: "هو يغسل وجهه بالصابون.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2012%20At%20Home/Lesson%2049/Level_12_Lesson_49_%20S%2003.mp3"},
+  { id: 3, text: "The mirror shows his clean face.", translationAr: "المرآة تُظهر وجهه النظيف.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2012%20At%20Home/Lesson%2049/Level_12_Lesson_49_%20S%2004.mp3"},
+  { id: 4, text: "He dries himself with a towel.", translationAr: "هو يجفف نفسه بالمنشفة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2012%20At%20Home/Lesson%2049/Level_12_Lesson_49_%20S%2005.mp3"},
+  { id: 5, text: "Omar feels fresh and ready.", translationAr: "عمر يشعر بالانتعاش والاستعداد.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2012%20At%20Home/Lesson%2049/Level_12_Lesson_49_%20S%2006.mp3"}
 ],
         },
         wordDefinitions: {
@@ -4388,11 +4413,11 @@ export const levelsAndLesson = [
         description: "Yousef buys groceries for his family.",
         storyData: {
           content: [
-  { id: 1, text: "Yousef takes a shopping cart at the entrance.", translationAr: "يوسف يأخذ عربة تسوق عند المدخل." },
-  { id: 2, text: "He picks fresh fruits and vegetables.", translationAr: "هو يختار فواكه وخضروات طازجة." },
-  { id: 3, text: "The cashier scans the items quickly.", translationAr: "أمين الصندوق يمرر البضائع بسرعة." },
-  { id: 4, text: "Yousef pays with his credit card.", translationAr: "يوسف يدفع ببطاقة الائتمان الخاصة به." },
-  { id: 5, text: "He carries the bags to his car.", translationAr: "هو يحمل الأكياس إلى سيارته." }
+  { id: 1, text: "Yousef takes a shopping cart at the entrance.", translationAr: "يوسف يأخذ عربة تسوق عند المدخل.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2013%20Around%20Town/Lesson%2050/Level_13_Lesson_50_%20S%2002.mp3" },
+  { id: 2, text: "He picks fresh fruits and vegetables.", translationAr: "هو يختار فواكه وخضروات طازجة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2013%20Around%20Town/Lesson%2050/Level_13_Lesson_50_%20S%2003.mp3" },
+  { id: 3, text: "The cashier scans the items quickly.", translationAr: "أمين الصندوق يمرر البضائع بسرعة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2013%20Around%20Town/Lesson%2050/Level_13_Lesson_50_%20S%2004.mp3" },
+  { id: 4, text: "Yousef pays with his credit card.", translationAr: "يوسف يدفع ببطاقة الائتمان الخاصة به.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2013%20Around%20Town/Lesson%2050/Level_13_Lesson_50_%20S%2005.mp3" },
+  { id: 5, text: "He carries the bags to his car.", translationAr: "هو يحمل الأكياس إلى سيارته.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2013%20Around%20Town/Lesson%2050/Level_13_Lesson_50_%20S%2006.mp3" }
 ],
         },
         wordDefinitions: {
@@ -4436,11 +4461,11 @@ export const levelsAndLesson = [
         description: "Nora takes the bus to school.",
         storyData: {
           content: [
-  { id: 1, text: "Nora waits at the bus stop with friends.", translationAr: "نورا تنتظر عند موقف الحافلة مع أصدقائها." },
-  { id: 2, text: "She checks the bus schedule on her phone.", translationAr: "هي تتحقق من جدول الحافلات على هاتفها." },
-  { id: 3, text: "The bus arrives at 8:15 AM.", translationAr: "تصل الحافلة في الساعة 8:15 صباحًا." },
-  { id: 4, text: "She shows her bus pass to the driver.", translationAr: "هي تُظهر بطاقة الحافلة للسائق." },
-  { id: 5, text: "Nora sits near the window.", translationAr: "نورا تجلس بالقرب من النافذة." }
+  { id: 1, text: "Nora waits at the bus stop with friends.", translationAr: "نورا تنتظر عند موقف الحافلة مع أصدقائها.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2013%20Around%20Town/Lesson%2051/Level_13_Lesson_51_%20S%2002.mp3" },
+  { id: 2, text: "She checks the bus schedule on her phone.", translationAr: "هي تتحقق من جدول الحافلات على هاتفها.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2013%20Around%20Town/Lesson%2051/Level_13_Lesson_51_%20S%2003.mp3" },
+  { id: 3, text: "The bus arrives at '8:15 AM.", translationAr: "تصل الحافلة في الساعة 8:15 صباحًا.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2013%20Around%20Town/Lesson%2051/Level_13_Lesson_51_%20S%2004.mp3" },
+  { id: 4, text: "She shows her bus pass to the driver.", translationAr: "هي تُظهر بطاقة الحافلة للسائق.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2013%20Around%20Town/Lesson%2051/Level_13_Lesson_51_%20S%2005.mp3" },
+  { id: 5, text: "Nora sits near the window.", translationAr: "نورا تجلس بالقرب من النافذة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2013%20Around%20Town/Lesson%2051/Level_13_Lesson_51_%20S%2006.mp3" }
 ],
         },
         wordDefinitions: {
@@ -4471,11 +4496,11 @@ export const levelsAndLesson = [
         description: "Children play games in the park.",
         storyData: {
           content: [
-  { id: 1, text: "The park has green grass and tall trees.", translationAr: "الحديقة بها عشب أخضر وأشجار طويلة." },
-  { id: 2, text: "Ali kicks a soccer ball with his brother.", translationAr: "علي يركل كرة القدم مع أخيه." },
-  { id: 3, text: "A dog runs after a flying frisbee.", translationAr: "كلب يجري خلف قرص فريسبي طائر." },
-  { id: 4, text: "Families eat sandwiches on picnic blankets.", translationAr: "العائلات تأكل شطائر على بطانيات النزهة." },
-  { id: 5, text: "Everyone enjoys the sunny weather.", translationAr: "الجميع يستمتع بالطقس المشمس." }
+  { id: 1, text: "The park has green grass and tall trees.", translationAr: "الحديقة بها عشب أخضر وأشجار طويلة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2013%20Around%20Town/Lesson%2052/Level_13_Lesson_52_%20S%2002.mp3" },
+  { id: 2, text: "Ali kicks a soccer ball with his brother.", translationAr: "علي يركل كرة القدم مع أخيه.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2013%20Around%20Town/Lesson%2052/Level_13_Lesson_52_%20S%2003.mp3" },
+  { id: 3, text: "A dog runs after a flying frisbee.", translationAr: "كلب يجري خلف قرص فريسبي طائر.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2013%20Around%20Town/Lesson%2052/Level_13_Lesson_52_%20S%2004.mp3" },
+  { id: 4, text: "Families eat sandwiches on picnic blankets.", translationAr: "العائلات تأكل شطائر على بطانيات النزهة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2013%20Around%20Town/Lesson%2052/Level_13_Lesson_52_%20S%2005.mp3" },
+  { id: 5, text: "Everyone enjoys the sunny weather.", translationAr: "الجميع يستمتع بالطقس المشمس.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2013%20Around%20Town/Lesson%2052/Level_13_Lesson_52_%20S%2006.mp3" }
 ],
         },
         wordDefinitions: {
@@ -4512,11 +4537,11 @@ export const levelsAndLesson = [
         description: "Rania buys medicine for her mother.",
         storyData: {
           content: [
-  { id: 1, text: "Rania asks the pharmacist for help.", translationAr: "رانيا تطلب المساعدة من الصيدلي." },
-  { id: 2, text: "She reads the medicine instructions carefully.", translationAr: "هي تقرأ تعليمات الدواء بعناية." },
-  { id: 3, text: "The pharmacist recommends cough syrup.", translationAr: "الصيدلي يوصي بشراب للسعال." },
-  { id: 4, text: "Rania pays at the counter.", translationAr: "رانيا تدفع عند الكاونتر." },
-  { id: 5, text: "She puts the medicine in her bag.", translationAr: "هي تضع الدواء في حقيبتها." }
+  { id: 1, text: "Rania asks the pharmacist for help.", translationAr: "رانيا تطلب المساعدة من الصيدلي.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2013%20Around%20Town/Lesson%2053/Level_13_Lesson_53_%20S%2002.mp3" },
+  { id: 2, text: "She reads the medicine instructions carefully.", translationAr: "هي تقرأ تعليمات الدواء بعناية.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2013%20Around%20Town/Lesson%2053/Level_13_Lesson_53_%20S%2003.mp3" },
+  { id: 3, text: "The pharmacist recommends cough syrup.", translationAr: "الصيدلي يوصي بشراب للسعال.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2013%20Around%20Town/Lesson%2053/Level_13_Lesson_53_%20S%2004.mp3" },
+  { id: 4, text: "Rania pays at the counter.", translationAr: "رانيا تدفع عند الكاونتر.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2013%20Around%20Town/Lesson%2053/Level_13_Lesson_53_%20S%2005.mp3" },
+  { id: 5, text: "She puts the medicine in her bag.", translationAr: "هي تضع الدواء في حقيبتها.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2013%20Around%20Town/Lesson%2053/Level_13_Lesson_53_%20S%2006.mp3" }
 ],
         },
         wordDefinitions: {
@@ -4541,11 +4566,11 @@ export const levelsAndLesson = [
         description: "Khalid borrows books for his project.",
         storyData: {
           content: [
-  { id: 1, text: "Khalid searches for books on the computer.", translationAr: "خالد يبحث عن كتب على الكمبيوتر." },
-  { id: 2, text: "He finds two books about science.", translationAr: "هو يجد كتابين عن العلوم." },
-  { id: 3, text: "The librarian stamps the due date.", translationAr: "أمين المكتبة يختم بتاريخ الاسترجاع." },
-  { id: 4, text: "Khalid reads quietly at a table.", translationAr: "خالد يقرأ بهدوء على الطاولة." },
-  { id: 5, text: "He returns the books after one week.", translationAr: "هو يُعيد الكتب بعد أسبوع." }
+  { id: 1, text: "Khalid searches for books on the computer.", translationAr: "خالد يبحث عن كتب على الكمبيوتر.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2013%20Around%20Town/Lesson%2054/Level_13_Lesson_54_%20S%2002.mp3" },
+  { id: 2, text: "He finds two books about science.", translationAr: "هو يجد كتابين عن العلوم.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2013%20Around%20Town/Lesson%2054/Level_13_Lesson_54_%20S%2003.mp3" },
+  { id: 3, text: "The librarian stamps the due date.", translationAr: "أمين المكتبة يختم بتاريخ الاسترجاع.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2013%20Around%20Town/Lesson%2054/Level_13_Lesson_54_%20S%2004.mp3" },
+  { id: 4, text: "Khalid reads quietly at a table.", translationAr: "خالد يقرأ بهدوء على الطاولة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2013%20Around%20Town/Lesson%2054/Level_13_Lesson_54_%20S%2005.mp3" },
+  { id: 5, text: "He returns the books after one week.", translationAr: "هو يُعيد الكتب بعد أسبوع.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2013%20Around%20Town/Lesson%2054/Level_13_Lesson_54_%20S%2006.mp3" }
 ],
         },
         wordDefinitions: {
@@ -4588,27 +4613,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "After the rain stopped, a beautiful rainbow appeared in the sky.",
-    translationAr: "بعد أن توقفت الأمطار، ظهر قوس قزح جميل في السماء."
+    translationAr: "بعد أن توقفت الأمطار، ظهر قوس قزح جميل في السماء.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2014%20Colors%20and%20Shapes/Lesson%2050/Level_14_Lesson_50_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Lisa counted seven different colors in the rainbow.",
     translationAr: "ليزا عدّت سبعة ألوان مختلفة في قوس قزح."
+    ,audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2014%20Colors%20and%20Shapes/Lesson%2050/Level_14_Lesson_50_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "She saw red, orange, yellow, green, blue, indigo, and violet.",
     translationAr: "رأت الأحمر، البرتقالي، الأصفر، الأخضر، الأزرق، النيلي، والبنفسجي."
+    ,audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2014%20Colors%20and%20Shapes/Lesson%2050/Level_14_Lesson_50_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Her younger brother pointed at the bright colors excitedly.",
     translationAr: "أخوها الأصغر أشار إلى الألوان الزاهية بحماس."
+    ,audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2014%20Colors%20and%20Shapes/Lesson%2050/Level_14_Lesson_50_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "They both agreed that nature creates the most wonderful art.",
     translationAr: "اتفقا كلاهما على أن الطبيعة تخلق أجمل الفنون."
+    ,audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2014%20Colors%20and%20Shapes/Lesson%2050/Level_14_Lesson_50_%20S%2006.mp3"
   }
 ],
         },
@@ -4735,27 +4765,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "The teacher drew several geometric shapes on the whiteboard.",
-    translationAr: "المعلم رسم عدة أشكال هندسية على السبورة البيضاء."
+    translationAr: "المعلم رسم عدة أشكال هندسية على السبورة البيضاء.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2014%20Colors%20and%20Shapes/Lesson%2051/Level_14_Lesson_51_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "First, she drew a perfect circle using a compass.",
-    translationAr: "أولاً، رسمت دائرة مثالية باستخدام البرجل."
+    translationAr: "أولاً، رسمت دائرة مثالية باستخدام البرجل.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2014%20Colors%20and%20Shapes/Lesson%2051/Level_14_Lesson_51_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Then she added a square, triangle, and rectangle.",
-    translationAr: "ثم أضافت مربعًا، مثلثًا، ومستطيلًا."
+    translationAr: "ثم أضافت مربعًا، مثلثًا، ومستطيلًا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2014%20Colors%20and%20Shapes/Lesson%2051/Level_14_Lesson_51_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Students practiced identifying each shape and its properties.",
-    translationAr: "تدرّب الطلاب على التعرف على كل شكل وخصائصه."
+    translationAr: "تدرّب الطلاب على التعرف على كل شكل وخصائصه.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2014%20Colors%20and%20Shapes/Lesson%2051/Level_14_Lesson_51_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Everyone discovered that shapes are everywhere around us.",
-    translationAr: "اكتشف الجميع أن الأشكال موجودة في كل مكان من حولنا."
+    translationAr: "اكتشف الجميع أن الأشكال موجودة في كل مكان من حولنا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2014%20Colors%20and%20Shapes/Lesson%2051/Level_14_Lesson_51_%20S%2006.mp3"
   }
 ],
         },
@@ -4873,27 +4908,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "In art class, children learned about primary and secondary colors.",
-    translationAr: "في حصة الرسم، تعلّم الأطفال عن الألوان الأساسية والثانوية."
+    translationAr: "في حصة الرسم، تعلّم الأطفال عن الألوان الأساسية والثانوية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2014%20Colors%20and%20Shapes/Lesson%2052/Level_14_Lesson_52_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "They mixed red and yellow paint to create orange.",
-    translationAr: "مزجوا اللون الأحمر والأصفر لصنع اللون البرتقالي."
+    translationAr: "مزجوا اللون الأحمر والأصفر لصنع اللون البرتقالي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2014%20Colors%20and%20Shapes/Lesson%2052/Level_14_Lesson_52_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Blue and yellow combined together made a bright green.",
-    translationAr: "عند دمج الأزرق والأصفر معًا نتج لون أخضر فاتح."
+    translationAr: "عند دمج الأزرق والأصفر معًا نتج لون أخضر فاتح.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2014%20Colors%20and%20Shapes/Lesson%2052/Level_14_Lesson_52_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "When they mixed red and blue, purple appeared magically.",
-    translationAr: "عندما مزجوا الأحمر والأزرق، ظهر اللون البنفسجي بشكل سحري."
+    translationAr: "عندما مزجوا الأحمر والأزرق، ظهر اللون البنفسجي بشكل سحري.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2014%20Colors%20and%20Shapes/Lesson%2052/Level_14_Lesson_52_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "The children felt amazed by how colors work together.",
-    translationAr: "انبهر الأطفال بكيفية تفاعل الألوان معًا."
+    translationAr: "انبهر الأطفال بكيفية تفاعل الألوان معًا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2014%20Colors%20and%20Shapes/Lesson%2052/Level_14_Lesson_52_%20S%2006.mp3"
   }
 ],
         },
@@ -4982,27 +5022,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Tom carefully selected blocks of different colors and sizes.",
-    translationAr: "اختار توم بعناية مكعبات بألوان وأحجام مختلفة."
+    translationAr: "اختار توم بعناية مكعبات بألوان وأحجام مختلفة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2014%20Colors%20and%20Shapes/Lesson%2053/Level_14_Lesson_53_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "He built a tall tower using rectangular and square blocks.",
-    translationAr: "بنى برجًا طويلًا باستخدام مكعبات مستطيلة ومربعة."
+    translationAr: "بنى برجًا طويلًا باستخدام مكعبات مستطيلة ومربعة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2014%20Colors%20and%20Shapes/Lesson%2053/Level_14_Lesson_53_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "The foundation needed strong, wide blocks for stability.",
-    translationAr: "كانت الأساس بحاجة إلى مكعبات قوية وعريضة من أجل الثبات."
+    translationAr: "كانت الأساس بحاجة إلى مكعبات قوية وعريضة من أجل الثبات.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2014%20Colors%20and%20Shapes/Lesson%2053/Level_14_Lesson_53_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "He added triangular pieces on top to make a roof.",
-    translationAr: "أضاف قطعًا مثلثة في الأعلى لصنع سقف."
+    translationAr: "أضاف قطعًا مثلثة في الأعلى لصنع سقف.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2014%20Colors%20and%20Shapes/Lesson%2053/Level_14_Lesson_53_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "His creative building combined geometry with imagination perfectly.",
-    translationAr: "جمع بناؤه الإبداعي بين الهندسة والخيال بشكل مثالي."
+    translationAr: "جمع بناؤه الإبداعي بين الهندسة والخيال بشكل مثالي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2014%20Colors%20and%20Shapes/Lesson%2053/Level_14_Lesson_53_%20S%2006.mp3"
   }
 ],
         },
@@ -5110,27 +5155,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Emma explored the forest and noticed interesting patterns everywhere.",
-    translationAr: "استكشفت إيما الغابة ولاحظت أنماطًا مثيرة للاهتمام في كل مكان."
+    translationAr: "استكشفت إيما الغابة ولاحظت أنماطًا مثيرة للاهتمام في كل مكان.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2014%20Colors%20and%20Shapes/Lesson%2054/Level_14_Lesson_54_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Tree leaves showed various shades of green, brown, and gold.",
-    translationAr: "أظهرت أوراق الأشجار درجات مختلفة من الأخضر والبني والذهبي."
+    translationAr: "أظهرت أوراق الأشجار درجات مختلفة من الأخضر والبني والذهبي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2014%20Colors%20and%20Shapes/Lesson%2054/Level_14_Lesson_54_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Butterfly wings displayed symmetrical designs with vibrant colors.",
-    translationAr: "عرضت أجنحة الفراشات تصاميم متناظرة بألوان زاهية."
+    translationAr: "عرضت أجنحة الفراشات تصاميم متناظرة بألوان زاهية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2014%20Colors%20and%20Shapes/Lesson%2054/Level_14_Lesson_54_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Flower petals formed perfect circular and star-shaped patterns.",
-    translationAr: "شكلت بتلات الزهور أنماطًا دائرية ونجمية مثالية."
+    translationAr: "شكلت بتلات الزهور أنماطًا دائرية ونجمية مثالية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2014%20Colors%20and%20Shapes/Lesson%2054/Level_14_Lesson_54_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "She realized that nature is the greatest artist of all.",
-    translationAr: "أدركت أن الطبيعة هي أعظم فنان على الإطلاق."
+    translationAr: "أدركت أن الطبيعة هي أعظم فنان على الإطلاق.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2014%20Colors%20and%20Shapes/Lesson%2054/Level_14_Lesson_54_%20S%2006.mp3"
   }
 ],
         },
@@ -5255,27 +5305,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Sarah wakes up early every morning when her alarm clock rings.",
-    translationAr: "تستيقظ سارة مبكرًا كل صباح عندما يدق منبهها."
+    translationAr: "تستيقظ سارة مبكرًا كل صباح عندما يدق منبهها.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2015%20Daily%20Activities/Lesson%2055/Level_15_Lesson_55_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "She brushes her teeth, washes her face, and combs her hair carefully.",
-    translationAr: "تفرش أسنانها، وتغسل وجهها، وتمشط شعرها بعناية."
+    translationAr: "تفرش أسنانها، وتغسل وجهها، وتمشط شعرها بعناية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2015%20Daily%20Activities/Lesson%2055/Level_15_Lesson_55_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "After getting dressed, she eats breakfast with her family.",
-    translationAr: "بعد أن ترتدي ملابسها، تتناول وجبة الإفطار مع عائلتها."
+    translationAr: "بعد أن ترتدي ملابسها، تتناول وجبة الإفطار مع عائلتها.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2015%20Daily%20Activities/Lesson%2055/Level_15_Lesson_55_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "She packs her school bag with books, pencils, and lunch.",
-    translationAr: "تحزم حقيبتها المدرسية بالكتب والأقلام ووجبة الغداء."
+    translationAr: "تحزم حقيبتها المدرسية بالكتب والأقلام ووجبة الغداء.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2015%20Daily%20Activities/Lesson%2055/Level_15_Lesson_55_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Finally, she kisses her parents goodbye and walks to school.",
-    translationAr: "أخيرًا، تقبّل والديها وتودعهما ثم تمشي إلى المدرسة."
+    translationAr: "أخيرًا، تقبّل والديها وتودعهما ثم تمشي إلى المدرسة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2015%20Daily%20Activities/Lesson%2055/Level_15_Lesson_55_%20S%2006.mp3"
   }
 ],
         },
@@ -5399,27 +5454,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Jake helps his mother prepare dinner in the busy kitchen.",
-    translationAr: "جيك يساعد والدته في تحضير العشاء في المطبخ المزدحم."
+    translationAr: "جيك يساعد والدته في تحضير العشاء في المطبخ المزدحم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2015%20Daily%20Activities/Lesson%2056/Level_15_Lesson_56_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "They wash vegetables, chop onions, and season the meat carefully.",
-    translationAr: "يغسلون الخضروات، ويقطعون البصل، ويتبلون اللحم بعناية."
+    translationAr: "يغسلون الخضروات، ويقطعون البصل، ويتبلون اللحم بعناية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2015%20Daily%20Activities/Lesson%2056/Level_15_Lesson_56_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Mom teaches Jake how to measure ingredients and follow recipes.",
-    translationAr: "الأم تُعلّم جيك كيف يقيس المكونات ويتبع الوصفات."
+    translationAr: "الأم تُعلّم جيك كيف يقيس المكونات ويتبع الوصفات.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2015%20Daily%20Activities/Lesson%2056/Level_15_Lesson_56_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "The delicious smell fills the entire house while they cook.",
-    translationAr: "الرائحة اللذيذة تملأ المنزل كله أثناء الطبخ."
+    translationAr: "الرائحة اللذيذة تملأ المنزل كله أثناء الطبخ.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2015%20Daily%20Activities/Lesson%2056/Level_15_Lesson_56_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Working together makes cooking fun and creates wonderful memories.",
-    translationAr: "العمل معًا يجعل الطبخ ممتعًا ويخلق ذكريات رائعة."
+    translationAr: "العمل معًا يجعل الطبخ ممتعًا ويخلق ذكريات رائعة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2015%20Daily%20Activities/Lesson%2056/Level_15_Lesson_56_%20S%2006.mp3"
   }
 ],
         },
@@ -5544,27 +5604,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "After school ends, children participate in various exciting activities.",
-    translationAr: "بعد انتهاء المدرسة، يشارك الأطفال في أنشطة مثيرة متنوعة."
+    translationAr: "بعد انتهاء المدرسة، يشارك الأطفال في أنشطة مثيرة متنوعة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2015%20Daily%20Activities/Lesson%2057/Level_15_Lesson_57_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Some students join sports teams and practice soccer or basketball.",
-    translationAr: "بعض الطلاب ينضمون إلى فرق رياضية ويمارسون كرة القدم أو كرة السلة."
+    translationAr: "بعض الطلاب ينضمون إلى فرق رياضية ويمارسون كرة القدم أو كرة السلة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2015%20Daily%20Activities/Lesson%2057/Level_15_Lesson_57_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Others prefer music lessons, learning piano or guitar skills.",
-    translationAr: "آخرون يفضلون دروس الموسيقى، ويتعلمون العزف على البيانو أو الجيتار."
+    translationAr: "آخرون يفضلون دروس الموسيقى، ويتعلمون العزف على البيانو أو الجيتار.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2015%20Daily%20Activities/Lesson%2057/Level_15_Lesson_57_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Many children visit the library to read books and complete homework.",
-    translationAr: "العديد من الأطفال يزورون المكتبة لقراءة الكتب وإنجاز الواجبات."
+    translationAr: "العديد من الأطفال يزورون المكتبة لقراءة الكتب وإنجاز الواجبات.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2015%20Daily%20Activities/Lesson%2057/Level_15_Lesson_57_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "These activities help students develop talents and make new friends.",
-    translationAr: "تساعد هذه الأنشطة الطلاب على تنمية المواهب وتكوين صداقات جديدة."
+    translationAr: "تساعد هذه الأنشطة الطلاب على تنمية المواهب وتكوين صداقات جديدة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2015%20Daily%20Activities/Lesson%2057/Level_15_Lesson_57_%20S%2006.mp3"
   }
 ],
         },
@@ -5703,27 +5768,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "During weekends, families spend precious time together doing fun activities.",
-    translationAr: "في عطلة نهاية الأسبوع، تقضي العائلات وقتًا ثمينًا معًا في القيام بأنشطة ممتعة."
+    translationAr: "في عطلة نهاية الأسبوع، تقضي العائلات وقتًا ثمينًا معًا في القيام بأنشطة ممتعة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2015%20Daily%20Activities/Lesson%2058/Level_15_Lesson_58_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "They might visit parks, have picnics, or go shopping at the mall.",
-    translationAr: "قد يزورون الحدائق، أو يقومون بنزهات، أو يتسوقون في المركز التجاري."
+    translationAr: "قد يزورون الحدائق، أو يقومون بنزهات، أو يتسوقون في المركز التجاري.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2015%20Daily%20Activities/Lesson%2058/Level_15_Lesson_58_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Some families enjoy watching movies, playing games, or riding bicycles.",
-    translationAr: "بعض العائلات تستمتع بمشاهدة الأفلام، ولعب الألعاب، أو ركوب الدراجات."
+    translationAr: "بعض العائلات تستمتع بمشاهدة الأفلام، ولعب الألعاب، أو ركوب الدراجات.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2015%20Daily%20Activities/Lesson%2058/Level_15_Lesson_58_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Children help with household chores like cleaning and organizing rooms.",
-    translationAr: "يساعد الأطفال في أعمال المنزل مثل التنظيف وتنظيم الغرف."
+    translationAr: "يساعد الأطفال في أعمال المنزل مثل التنظيف وتنظيم الغرف.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2015%20Daily%20Activities/Lesson%2058/Level_15_Lesson_58_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Weekend activities strengthen family bonds and create lasting happiness.",
-    translationAr: "أنشطة عطلة نهاية الأسبوع تقوي الروابط الأسرية وتخلق سعادة دائمة."
+    translationAr: "أنشطة عطلة نهاية الأسبوع تقوي الروابط الأسرية وتخلق سعادة دائمة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2015%20Daily%20Activities/Lesson%2058/Level_15_Lesson_58_%20S%2006.mp3"
   }
 ],
         },
@@ -5866,27 +5936,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Every evening, the Martinez family follows their calm bedtime routine.",
-    translationAr: "كل مساء، تتبع عائلة مارتينيز روتين النوم الهادئ الخاص بهم."
+    translationAr: "كل مساء، تتبع عائلة مارتينيز روتين النوم الهادئ الخاص بهم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2015%20Daily%20Activities/Lesson%2059/Level_15_Lesson_59_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Children take warm baths, put on pajamas, and brush their teeth.",
-    translationAr: "يأخذ الأطفال حمامات دافئة، ويرتدون ملابس النوم، ويغسلون أسنانهم."
+    translationAr: "يأخذ الأطفال حمامات دافئة، ويرتدون ملابس النوم، ويغسلون أسنانهم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2015%20Daily%20Activities/Lesson%2059/Level_15_Lesson_59_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Parents read bedtime stories while kids listen quietly in their beds.",
-    translationAr: "يقرأ الوالدان قصص ما قبل النوم بينما يستمع الأطفال بهدوء في أسرتهم."
+    translationAr: "يقرأ الوالدان قصص ما قبل النوم بينما يستمع الأطفال بهدوء في أسرتهم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2015%20Daily%20Activities/Lesson%2059/Level_15_Lesson_59_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "They say goodnight prayers and share what made them happy today.",
-    translationAr: "يقولون دعاء المساء ويشاركون ما جعلهم سعداء اليوم."
+    translationAr: "يقولون دعاء المساء ويشاركون ما جعلهم سعداء اليوم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2015%20Daily%20Activities/Lesson%2059/Level_15_Lesson_59_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Finally, everyone falls asleep peacefully, ready for tomorrow's adventures.",
-    translationAr: "أخيرًا، يخلد الجميع إلى النوم بسلام، مستعدين لمغامرات الغد."
+    translationAr: "أخيرًا، يخلد الجميع إلى النوم بسلام، مستعدين لمغامرات الغد.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2015%20Daily%20Activities/Lesson%2059/Level_15_Lesson_59_%20S%2006.mp3"
   }
 ],
         },
@@ -14532,27 +14607,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Police officers keep our streets safe and help people when they need protection or have lost something important.",
-    translationAr: "الشرطة تحافظ على شوارعنا آمنة وتساعد الناس عندما يحتاجون إلى حماية أو يفقدون شيئًا مهمًا."
+    translationAr: "الشرطة تحافظ على شوارعنا آمنة وتساعد الناس عندما يحتاجون إلى حماية أو يفقدون شيئًا مهمًا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2026%20My%20Community%20and%20Neighborhood/Lesson%20081/Level_26_Lesson_081_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Firefighters are brave heroes who put out dangerous fires and rescue people from burning buildings with their big red trucks.",
-    translationAr: "رجال الإطفاء أبطال شجعان يطفئون الحرائق الخطيرة وينقذون الناس من المباني المحترقة باستخدام شاحناتهم الحمراء الكبيرة."
+    translationAr: "رجال الإطفاء أبطال شجعان يطفئون الحرائق الخطيرة وينقذون الناس من المباني المحترقة باستخدام شاحناتهم الحمراء الكبيرة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2026%20My%20Community%20and%20Neighborhood/Lesson%20081/Level_26_Lesson_081_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Doctors and nurses take care of sick people in hospitals and give them medicine to help them feel better.",
-    translationAr: "الأطباء والممرضون يعتنون بالمرضى في المستشفيات ويعطونهم الدواء ليساعدهم على الشعور بالتحسن."
+    translationAr: "الأطباء والممرضون يعتنون بالمرضى في المستشفيات ويعطونهم الدواء ليساعدهم على الشعور بالتحسن.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2026%20My%20Community%20and%20Neighborhood/Lesson%20081/Level_26_Lesson_081_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Teachers help children learn new things at school and show them how to read, write, and solve math problems.",
-    translationAr: "المعلمون يساعدون الأطفال على تعلم أشياء جديدة في المدرسة ويعلمونهم كيف يقرؤون ويكتبون ويحلّون مسائل الرياضيات."
+    translationAr: "المعلمون يساعدون الأطفال على تعلم أشياء جديدة في المدرسة ويعلمونهم كيف يقرؤون ويكتبون ويحلّون مسائل الرياضيات.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2026%20My%20Community%20and%20Neighborhood/Lesson%20081/Level_26_Lesson_081_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Mail carriers bring letters and packages to our homes every day, rain or shine, walking from house to house.",
-    translationAr: "سعاة البريد يجلبون الرسائل والطرود إلى بيوتنا كل يوم، سواء كان الجو ممطرًا أو مشمسًا، وهم يمشون من بيت إلى آخر."
+    translationAr: "سعاة البريد يجلبون الرسائل والطرود إلى بيوتنا كل يوم، سواء كان الجو ممطرًا أو مشمسًا، وهم يمشون من بيت إلى آخر.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2026%20My%20Community%20and%20Neighborhood/Lesson%20081/Level_26_Lesson_081_%20S%2006.mp3"
   }
 ],
         },
@@ -14665,27 +14745,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "The library is a quiet place where people read books, study for tests, and borrow stories to take home.",
-    translationAr: "المكتبة مكان هادئ يقرأ فيه الناس الكتب، ويذاكرون للاختبارات، ويستعيرون القصص ليأخذوها إلى البيت."
+    translationAr: "المكتبة مكان هادئ يقرأ فيه الناس الكتب، ويذاكرون للاختبارات، ويستعيرون القصص ليأخذوها إلى البيت.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2026%20My%20Community%20and%20Neighborhood/Lesson%20082/Level_26_Lesson_082_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "The grocery store has fresh fruits, vegetables, milk, and bread that families need to cook healthy meals at home.",
-    translationAr: "محل البقالة يحتوي على فواكه وخضروات طازجة، وحليب، وخبز تحتاجها العائلات لطهي وجبات صحية في المنزل."
+    translationAr: "محل البقالة يحتوي على فواكه وخضروات طازجة، وحليب، وخبز تحتاجها العائلات لطهي وجبات صحية في المنزل.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2026%20My%20Community%20and%20Neighborhood/Lesson%20082/Level_26_Lesson_082_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "The park has green grass, tall trees, and fun playground equipment where children can play and exercise outside.",
-    translationAr: "الحديقة بها عشب أخضر، وأشجار طويلة، وألعاب ممتعة يمكن للأطفال اللعب بها وممارسة الرياضة في الهواء الطلق."
+    translationAr: "الحديقة بها عشب أخضر، وأشجار طويلة، وألعاب ممتعة يمكن للأطفال اللعب بها وممارسة الرياضة في الهواء الطلق.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2026%20My%20Community%20and%20Neighborhood/Lesson%20082/Level_26_Lesson_082_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "The post office is where people send letters and packages to friends and family who live far away.",
-    translationAr: "مكتب البريد هو المكان الذي يرسل فيه الناس الرسائل والطرود إلى الأصدقاء والعائلة الذين يعيشون بعيدًا."
+    translationAr: "مكتب البريد هو المكان الذي يرسل فيه الناس الرسائل والطرود إلى الأصدقاء والعائلة الذين يعيشون بعيدًا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2026%20My%20Community%20and%20Neighborhood/Lesson%20082/Level_26_Lesson_082_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "The bank is a safe building where people keep their money and get help with buying houses or cars.",
-    translationAr: "البنك مبنى آمن يحتفظ فيه الناس بأموالهم ويحصلون على المساعدة في شراء المنازل أو السيارات."
+    translationAr: "البنك مبنى آمن يحتفظ فيه الناس بأموالهم ويحصلون على المساعدة في شراء المنازل أو السيارات.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2026%20My%20Community%20and%20Neighborhood/Lesson%20082/Level_26_Lesson_082_%20S%2006.mp3"
   }
 ],
         },
@@ -14777,27 +14862,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Buses are big yellow vehicles that carry many students to school safely every morning and afternoon.",
-    translationAr: "الحافلات مركبات صفراء كبيرة تنقل الكثير من الطلاب إلى المدرسة بأمان كل صباح وبعد الظهر."
+    translationAr: "الحافلات مركبات صفراء كبيرة تنقل الكثير من الطلاب إلى المدرسة بأمان كل صباح وبعد الظهر.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2026%20My%20Community%20and%20Neighborhood/Lesson%20083/Level_26_Lesson_083_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Cars help families travel to work, stores, and visit friends quickly while staying comfortable and dry inside.",
-    translationAr: "السيارات تساعد العائلات على الذهاب إلى العمل، والمتاجر، وزيارة الأصدقاء بسرعة مع البقاء مرتاحين وجافين داخلها."
+    translationAr: "السيارات تساعد العائلات على الذهاب إلى العمل، والمتاجر، وزيارة الأصدقاء بسرعة مع البقاء مرتاحين وجافين داخلها.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2026%20My%20Community%20and%20Neighborhood/Lesson%20083/Level_26_Lesson_083_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Bicycles are fun and healthy ways to move around the neighborhood without using any gas or electricity.",
-    translationAr: "الدراجات وسيلة ممتعة وصحية للتنقل في الحي دون استخدام أي وقود أو كهرباء."
+    translationAr: "الدراجات وسيلة ممتعة وصحية للتنقل في الحي دون استخدام أي وقود أو كهرباء.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2026%20My%20Community%20and%20Neighborhood/Lesson%20083/Level_26_Lesson_083_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Trains carry hundreds of people long distances between cities much faster than driving in heavy traffic.",
-    translationAr: "القطارات تنقل مئات الأشخاص لمسافات طويلة بين المدن بسرعة أكبر بكثير من القيادة وسط الزحام."
+    translationAr: "القطارات تنقل مئات الأشخاص لمسافات طويلة بين المدن بسرعة أكبر بكثير من القيادة وسط الزحام.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2026%20My%20Community%20and%20Neighborhood/Lesson%20083/Level_26_Lesson_083_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Walking is the most natural way to explore your neighborhood and get exercise while enjoying fresh air.",
-    translationAr: "المشي هو الطريقة الأكثر طبيعية لاستكشاف حيّك وممارسة الرياضة أثناء الاستمتاع بالهواء النقي."
+    translationAr: "المشي هو الطريقة الأكثر طبيعية لاستكشاف حيّك وممارسة الرياضة أثناء الاستمتاع بالهواء النقي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2026%20My%20Community%20and%20Neighborhood/Lesson%20083/Level_26_Lesson_083_%20S%2006.mp3"
   }
 ],
         },
