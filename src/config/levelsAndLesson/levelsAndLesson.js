@@ -1036,27 +1036,32 @@ export const levelsAndLesson = [
   {
     text: "The Johnson family is planning their summer vacation.",
     id: 1,
-    translationAr: "عائلة جونسون تخطط لعطلتها الصيفية."
+    translationAr: "عائلة جونسون تخطط لعطلتها الصيفية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2005%20Travel%20and%20Adventure/Lesson%2010/Level_05_Lesson_10_%20S%2002.mp3"
   },
   {
     text: "They want to visit the mountains and the beach.",
     id: 2,
-    translationAr: "يريدون زيارة الجبال والشاطئ."
+    translationAr: "يريدون زيارة الجبال والشاطئ.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2005%20Travel%20and%20Adventure/Lesson%2010/Level_05_Lesson_10_%20S%2003.mp3"
   },
   {
     text: "First, they will drive to the national park.",
     id: 3,
-    translationAr: "أولاً، سيقودون إلى الحديقة الوطنية."
+    translationAr: "أولاً، سيقودون إلى الحديقة الوطنية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2005%20Travel%20and%20Adventure/Lesson%2010/Level_05_Lesson_10_%20S%2004.mp3"
   },
   {
     text: "Then they will spend a week by the ocean.",
     id: 4,
-    translationAr: "ثم سيقضون أسبوعًا بجانب المحيط."
+    translationAr: "ثم سيقضون أسبوعًا بجانب المحيط.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2005%20Travel%20and%20Adventure/Lesson%2010/Level_05_Lesson_10_%20S%2005.mp3"
   },
   {
     text: "Everyone is excited about the trip.",
     id: 5,
-    translationAr: "الجميع متحمس بشأن الرحلة."
+    translationAr: "الجميع متحمس بشأن الرحلة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2005%20Travel%20and%20Adventure/Lesson%2010/Level_05_Lesson_10_%20S%2008.mp3"
   }
 ],
         },
@@ -1122,11 +1127,11 @@ export const levelsAndLesson = [
         description: "A tourist gets lost and asks for directions.",
         storyData: {
           content: [
-  { text: "Mark is visiting Paris for the first time.", id: 1, translationAr: "مارك يزور باريس لأول مرة." },
-  { text: "He wants to find the famous museum.", id: 2, translationAr: "يريد أن يجد المتحف الشهير." },
-  { text: "Unfortunately, he gets lost in the busy streets.", id: 3, translationAr: "للأسف، يضل طريقه في الشوارع المزدحمة." },
-  { text: "He asks a friendly local for directions.", id: 4, translationAr: "يسأل أحد السكان المحليين الودودين عن الاتجاهات." },
-  { text: "Finally, he finds the museum and enjoys his visit.", id: 5, translationAr: "أخيرًا يجد المتحف ويستمتع بزيارته." }
+  { text: "Mark is visiting Paris for the first time.", id: 1, translationAr: "مارك يزور باريس لأول مرة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2005%20Travel%20and%20Adventure/Lesson%2011/Level_05_Lesson_11_%20S%2002.mp3" },
+  { text: "He wants to find the famous museum.", id: 2, translationAr: "يريد أن يجد المتحف الشهير.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2005%20Travel%20and%20Adventure/Lesson%2011/Level_05_Lesson_11_%20S%2003.mp3" },
+  { text: "Unfortunately, he gets lost in the busy streets.", id: 3, translationAr: "للأسف، يضل طريقه في الشوارع المزدحمة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2005%20Travel%20and%20Adventure/Lesson%2011/Level_05_Lesson_11_%20S%2004.mp3" },
+  { text: "He asks a friendly local for directions.", id: 4, translationAr: "يسأل أحد السكان المحليين الودودين عن الاتجاهات.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2005%20Travel%20and%20Adventure/Lesson%2011/Level_05_Lesson_11_%20S%2005.mp3" },
+  { text: "Finally, he finds the museum and enjoys his visit.", id: 5, translationAr: "أخيرًا يجد المتحف ويستمتع بزيارته.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2005%20Travel%20and%20Adventure/Lesson%2011/Level_05_Lesson_11_%20S%2006.mp3" }
 ],
         },
         wordDefinitions: {
@@ -1217,11 +1222,11 @@ export const levelsAndLesson = [
         image: "/assets/images/L-6/newjob.jpg",
         storyData: {
           content: [
-  { text: "Sarah is nervous about her first day at work.", id: 1, translationAr: "سارة متوترة بشأن يومها الأول في العمل." },
-  { text: "She arrives early and meets her new colleagues.", id: 2, translationAr: "تصل مبكرًا وتقابل زملاءها الجدد." },
-  { text: "Her supervisor explains the company's procedures.", id: 3, translationAr: "يشـرح مشرفها إجراءات الشركة." },
-  { text: "Sarah works hard and learns many new things.", id: 4, translationAr: "تعمل سارة بجد وتتعلّم الكثير من الأشياء الجديدة." },
-  { text: "By the end of the day, she feels confident and happy.", id: 5, translationAr: "بنهاية اليوم، تشعر بالثقة والسعادة." }
+  { text: "Sarah is nervous about her first day at work.", id: 1, translationAr: "سارة متوترة بشأن يومها الأول في العمل.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2006%20Work%20and%20Career/Lesson%2012/Level_06_Lesson_12_%20S%2002.mp3" },
+  { text: "She arrives early and meets her new colleagues.", id: 2, translationAr: "تصل مبكرًا وتقابل زملاءها الجدد.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2006%20Work%20and%20Career/Lesson%2012/Level_06_Lesson_12_%20S%2003.mp3" },
+  { text: "Her supervisor explains the company's procedures.", id: 3, translationAr: "يشـرح مشرفها إجراءات الشركة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2006%20Work%20and%20Career/Lesson%2012/Level_06_Lesson_12_%20S%2004.mp3" },
+  { text: "Sarah works hard and learns many new things.", id: 4, translationAr: "تعمل سارة بجد وتتعلّم الكثير من الأشياء الجديدة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2006%20Work%20and%20Career/Lesson%2012/Level_06_Lesson_12_%20S%2005.mp3" },
+  { text: "By the end of the day, she feels confident and happy.", id: 5, translationAr: "بنهاية اليوم، تشعر بالثقة والسعادة.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2006%20Work%20and%20Career/Lesson%2012/Level_06_Lesson_12_%20S%2006.mp3" }
 ],
         },
         wordDefinitions: {
@@ -1310,11 +1315,11 @@ export const levelsAndLesson = [
         image: "/assets/images/L-6/meeting.jpg",
         storyData: {
           content: [
-  { text: "Mr. Johnson has an important meeting today.", id: 1, translationAr: "السيد جونسون لديه اجتماع مهم اليوم." },
-  { text: "He prepares his presentation carefully.", id: 2, translationAr: "يُحضّر عرضه التقديمي بعناية." },
-  { text: "The clients arrive at exactly two o'clock.", id: 3, translationAr: "يصل العملاء في تمام الساعة الثانية." },
-  { text: "His presentation goes very well.", id: 4, translationAr: "يَسير عرضه التقديمي بشكل جيد جدًا." },
-  { text: "The clients decide to sign the contract.", id: 5, translationAr: "يقرر العملاء توقيع العقد." }
+  { text: "Mr. Johnson has an important meeting today.", id: 1, translationAr: "السيد جونسون لديه اجتماع مهم اليوم.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2006%20Work%20and%20Career/Lesson%2013/Level_06_Lesson_13_%20S%2002.mp3" },
+  { text: "He prepares his presentation carefully.", id: 2, translationAr: "يُحضّر عرضه التقديمي بعناية.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2006%20Work%20and%20Career/Lesson%2013/Level_06_Lesson_13_%20S%2003.mp3" },
+  { text: "The clients arrive at exactly two o'clock.", id: 3, translationAr: "يصل العملاء في تمام الساعة الثانية.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2006%20Work%20and%20Career/Lesson%2013/Level_06_Lesson_13_%20S%2004.mp3" },
+  { text: "His presentation goes very well.", id: 4, translationAr: "يَسير عرضه التقديمي بشكل جيد جدًا.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2006%20Work%20and%20Career/Lesson%2013/Level_06_Lesson_13_%20S%2005.mp3" },
+  { text: "The clients decide to sign the contract.", id: 5, translationAr: "يقرر العملاء توقيع العقد.", audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2006%20Work%20and%20Career/Lesson%2013/Level_06_Lesson_13_%20S%2006.mp3" }
 ],
         },
         wordDefinitions: {
@@ -1997,27 +2002,32 @@ export const levelsAndLesson = [
   {
     text: "John buys his first smartphone from the electronics store.",
     id: 1,
-    translationAr: "جون يشتري أول هاتف ذكي له من متجر الإلكترونيات."
+    translationAr: "جون يشتري أول هاتف ذكي له من متجر الإلكترونيات.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2008%20Technology%20and%20Modern%20Life/Lesson%2017/Level_08_Lesson_17_%20S%2002.mp3"
   },
   {
     text: "He downloads several useful applications on his device.",
     id: 2,
-    translationAr: "يقوم بتحميل عدة تطبيقات مفيدة على جهازه."
+    translationAr: "يقوم بتحميل عدة تطبيقات مفيدة على جهازه.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2008%20Technology%20and%20Modern%20Life/Lesson%2017/Level_08_Lesson_17_%20S%2003.mp3"
   },
   {
     text: "The store employee explains how to connect to Wi-Fi.",
     id: 3,
-    translationAr: "يشرح موظف المتجر كيفية الاتصال بشبكة الواي فاي."
+    translationAr: "يشرح موظف المتجر كيفية الاتصال بشبكة الواي فاي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2008%20Technology%20and%20Modern%20Life/Lesson%2017/Level_08_Lesson_17_%20S%2004.mp3"
   },
   {
     text: "John successfully creates his email account and password.",
     id: 4,
-    translationAr: "ينشئ جون بنجاح بريده الإلكتروني وكلمة المرور."
+    translationAr: "ينشئ جون بنجاح بريده الإلكتروني وكلمة المرور.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2008%20Technology%20and%20Modern%20Life/Lesson%2017/Level_08_Lesson_17_%20S%2005.mp3"
   },
   {
     text: "Now he can browse the internet and send messages easily.",
     id: 5,
-    translationAr: "الآن يمكنه تصفح الإنترنت وإرسال الرسائل بسهولة."
+    translationAr: "الآن يمكنه تصفح الإنترنت وإرسال الرسائل بسهولة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2008%20Technology%20and%20Modern%20Life/Lesson%2017/Level_08_Lesson_17_%20S%2006.mp3"
   }
 ],
         },
@@ -2131,27 +2141,32 @@ export const levelsAndLesson = [
   {
     text: "Emma creates profiles on popular social media platforms.",
     id: 1,
-    translationAr: "إيما تنشئ حسابات على منصات التواصل الاجتماعي الشهيرة."
+    translationAr: "إيما تنشئ حسابات على منصات التواصل الاجتماعي الشهيرة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2008%20Technology%20and%20Modern%20Life/Lesson%2018/Level_08_Lesson_18_%20S%2002.mp3"
   },
   {
     text: "She uploads photos and shares updates about her daily activities.",
     id: 2,
-    translationAr: "تقوم بتحميل الصور ومشاركة تحديثات عن أنشطتها اليومية."
+    translationAr: "تقوم بتحميل الصور ومشاركة تحديثات عن أنشطتها اليومية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2008%20Technology%20and%20Modern%20Life/Lesson%2018/Level_08_Lesson_18_%20S%2003.mp3"
   },
   {
     text: "Her friends comment and like her posts regularly.",
     id: 3,
-    translationAr: "أصدقاؤها يعلقون ويضغطون إعجاب على منشوراتها بانتظام."
+    translationAr: "أصدقاؤها يعلقون ويضغطون إعجاب على منشوراتها بانتظام.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2008%20Technology%20and%20Modern%20Life/Lesson%2018/Level_08_Lesson_18_%20S%2004.mp3"
   },
   {
     text: "Emma follows interesting pages and discovers new content daily.",
     id: 4,
-    translationAr: "إيما تتابع صفحات مثيرة وتكتشف محتوى جديد يوميًا."
+    translationAr: "إيما تتابع صفحات مثيرة وتكتشف محتوى جديد يوميًا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2008%20Technology%20and%20Modern%20Life/Lesson%2018/Level_08_Lesson_18_%20S%2005.mp3"
   },
   {
     text: "However, she limits her screen time to maintain healthy habits.",
     id: 5,
-    translationAr: "ومع ذلك، تحد من وقت استخدام الشاشة للحفاظ على عادات صحية."
+    translationAr: "ومع ذلك، تحد من وقت استخدام الشاشة للحفاظ على عادات صحية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2008%20Technology%20and%20Modern%20Life/Lesson%2018/Level_08_Lesson_18_%20S%2006.mp3"
   }
 ],
         },
@@ -2268,27 +2283,32 @@ export const levelsAndLesson = [
   {
     text: "Michael starts working remotely from his home office.",
     id: 1,
-    translationAr: "مايكل يبدأ العمل عن بُعد من مكتبه المنزلي."
+    translationAr: "مايكل يبدأ العمل عن بُعد من مكتبه المنزلي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2008%20Technology%20and%20Modern%20Life/Lesson%2019/Level_08_Lesson_19_%20S%2002.mp3"
   },
   {
     text: "He uses video conferencing software to attend virtual meetings.",
     id: 2,
-    translationAr: "يستخدم برنامج مؤتمرات الفيديو لحضور الاجتماعات الافتراضية."
+    translationAr: "يستخدم برنامج مؤتمرات الفيديو لحضور الاجتماعات الافتراضية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2008%20Technology%20and%20Modern%20Life/Lesson%2019/Level_08_Lesson_19_%20S%2003.mp3"
   },
   {
     text: "Cloud storage helps him access important documents anywhere.",
     id: 3,
-    translationAr: "التخزين السحابي يساعده في الوصول إلى المستندات المهمة من أي مكان."
+    translationAr: "التخزين السحابي يساعده في الوصول إلى المستندات المهمة من أي مكان.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2008%20Technology%20and%20Modern%20Life/Lesson%2019/Level_08_Lesson_19_%20S%2004.mp3"
   },
   {
     text: "Michael collaborates with colleagues through instant messaging apps.",
     id: 4,
-    translationAr: "مايكل يتعاون مع زملائه من خلال تطبيقات المراسلة الفورية."
+    translationAr: "مايكل يتعاون مع زملائه من خلال تطبيقات المراسلة الفورية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2008%20Technology%20and%20Modern%20Life/Lesson%2019/Level_08_Lesson_19_%20S%2005.mp3"
   },
   {
     text: "Digital tools make remote work productive and efficient.",
     id: 5,
-    translationAr: "الأدوات الرقمية تجعل العمل عن بُعد مثمرًا وفعالًا."
+    translationAr: "الأدوات الرقمية تجعل العمل عن بُعد مثمرًا وفعالًا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2008%20Technology%20and%20Modern%20Life/Lesson%2019/Level_08_Lesson_19_%20S%2006.mp3"
   }
 ],
         },
@@ -2400,7 +2420,7 @@ export const levelsAndLesson = [
       },
       {
         id: 20,
-        title: "20 - Online Shopping Experience",
+        title: "Online Shopping Experience",
         description:
           "Lisa discovers the convenience of e-commerce and digital payments.",
         image: "/assets/images/L-8/online_shopping.jpg",
@@ -2409,27 +2429,32 @@ export const levelsAndLesson = [
   {
     text: "Lisa explores various online shopping websites for the first time.",
     id: 1,
-    translationAr: "ليزا تستكشف مختلف مواقع التسوق عبر الإنترنت لأول مرة."
+    translationAr: "ليزا تستكشف مختلف مواقع التسوق عبر الإنترنت لأول مرة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2008%20Technology%20and%20Modern%20Life/Lesson%2020/Level_08_Lesson_20_%20S%2002.mp3"
   },
   {
     text: "She compares prices and reads customer reviews carefully.",
     id: 2,
-    translationAr: "تقارن الأسعار وتقرأ مراجعات العملاء بعناية."
+    translationAr: "تقارن الأسعار وتقرأ مراجعات العملاء بعناية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2008%20Technology%20and%20Modern%20Life/Lesson%2020/Level_08_Lesson_20_%20S%2003.mp3"
   },
   {
     text: "Lisa adds items to her digital cart and proceeds to checkout.",
     id: 3,
-    translationAr: "تضيف ليزا المنتجات إلى سلة التسوق الرقمية وتتابع لإتمام الدفع."
+    translationAr: "تضيف ليزا المنتجات إلى سلة التسوق الرقمية وتتابع لإتمام الدفع.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2008%20Technology%20and%20Modern%20Life/Lesson%2020/Level_08_Lesson_20_%20S%2004.mp3"
   },
   {
     text: "She enters her credit card information and delivery address.",
     id: 4,
-    translationAr: "تدخل بيانات بطاقتها الائتمانية وعنوان التوصيل."
+    translationAr: "تدخل بيانات بطاقتها الائتمانية وعنوان التوصيل.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2008%20Technology%20and%20Modern%20Life/Lesson%2020/Level_08_Lesson_20_%20S%2005.mp3"
   },
   {
     text: "The package arrives within two days with excellent packaging.",
     id: 5,
-    translationAr: "تصل الطرد خلال يومين بتغليف ممتاز."
+    translationAr: "تصل الطرد خلال يومين بتغليف ممتاز.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2008%20Technology%20and%20Modern%20Life/Lesson%2020/Level_08_Lesson_20_%20S%2006.mp3"
   }
 ],
         },
@@ -2566,27 +2591,32 @@ export const levelsAndLesson = [
   {
     text: "Robert receives an email that looks suspicious and potentially dangerous.",
     id: 1,
-    translationAr: "روبرت يتلقى بريدًا إلكترونيًا يبدو مريبًا وقد يكون خطيرًا."
+    translationAr: "روبرت يتلقى بريدًا إلكترونيًا يبدو مريبًا وقد يكون خطيرًا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2008%20Technology%20and%20Modern%20Life/Lesson%2021/Level_08_Lesson_21_%20S%2002.mp3"
   },
   {
     text: "He researches cybersecurity best practices to protect himself.",
     id: 2,
-    translationAr: "يبحث عن أفضل ممارسات الأمن السيبراني لحماية نفسه."
+    translationAr: "يبحث عن أفضل ممارسات الأمن السيبراني لحماية نفسه.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2008%20Technology%20and%20Modern%20Life/Lesson%2021/Level_08_Lesson_21_%20S%2003.mp3"
   },
   {
     text: "Robert enables two-factor authentication on all his important accounts.",
     id: 3,
-    translationAr: "يفعّل روبرت التحقق بخطوتين على جميع حساباته المهمة."
+    translationAr: "يفعّل روبرت التحقق بخطوتين على جميع حساباته المهمة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2008%20Technology%20and%20Modern%20Life/Lesson%2021/Level_08_Lesson_21_%20S%2004.mp3"
   },
   {
     text: "He updates his passwords regularly and uses strong combinations.",
     id: 4,
-    translationAr: "يقوم بتحديث كلماته السرية بانتظام ويستخدم تركيبات قوية."
+    translationAr: "يقوم بتحديث كلماته السرية بانتظام ويستخدم تركيبات قوية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2008%20Technology%20and%20Modern%20Life/Lesson%2021/Level_08_Lesson_21_%20S%2005.mp3"
   },
   {
     text: "Now Robert feels confident about his online safety and privacy.",
     id: 5,
-    translationAr: "الآن يشعر روبرت بالثقة بشأن أمانه وخصوصيته على الإنترنت."
+    translationAr: "الآن يشعر روبرت بالثقة بشأن أمانه وخصوصيته على الإنترنت.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2008%20Technology%20and%20Modern%20Life/Lesson%2021/Level_08_Lesson_21_%20S%2006.mp3"
   }
 ],
         },
@@ -6097,27 +6127,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Professor Chen demonstrated how digital technology revolutionized communication, commerce, and education globally.",
-    translationAr: "قدّم البروفيسور تشين شرحًا حول كيفية ثورة التكنولوجيا الرقمية في مجال التواصل، والتجارة، والتعليم عالميًا."
+    translationAr: "قدّم البروفيسور تشين شرحًا حول كيفية ثورة التكنولوجيا الرقمية في مجال التواصل، والتجارة، والتعليم عالميًا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2016%20Technology%20and%20Communication/Lesson%2065/Level_16_Lesson_65_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Smartphones, tablets, and laptops became indispensable tools for productivity and entertainment purposes.",
-    translationAr: "أصبحت الهواتف الذكية والأجهزة اللوحية وأجهزة الحاسوب المحمولة أدوات لا غنى عنها للإنتاجية والترفيه."
+    translationAr: "أصبحت الهواتف الذكية والأجهزة اللوحية وأجهزة الحاسوب المحمولة أدوات لا غنى عنها للإنتاجية والترفيه.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2016%20Technology%20and%20Communication/Lesson%2065/Level_16_Lesson_65_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Cloud computing enables users to access information instantly from virtually anywhere on Earth.",
-    translationAr: "تمكّن الحوسبة السحابية المستخدمين من الوصول إلى المعلومات فورًا من أي مكان تقريبًا على الأرض."
+    translationAr: "تمكّن الحوسبة السحابية المستخدمين من الوصول إلى المعلومات فورًا من أي مكان تقريبًا على الأرض.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2016%20Technology%20and%20Communication/Lesson%2065/Level_16_Lesson_65_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Artificial intelligence and machine learning algorithms continuously improve user experiences and efficiency.",
-    translationAr: "تعمل تقنيات الذكاء الاصطناعي وخوارزميات التعلم الآلي باستمرار على تحسين تجارب المستخدمين وزيادة الكفاءة."
+    translationAr: "تعمل تقنيات الذكاء الاصطناعي وخوارزميات التعلم الآلي باستمرار على تحسين تجارب المستخدمين وزيادة الكفاءة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2016%20Technology%20and%20Communication/Lesson%2065/Level_16_Lesson_65_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "The digital transformation challenges traditional methods while creating innovative opportunities for progress.",
-    translationAr: "تشكل التحول الرقمي تحديًا للأساليب التقليدية بينما يخلق فرصًا مبتكرة للتقدم."
+    translationAr: "تشكل التحول الرقمي تحديًا للأساليب التقليدية بينما يخلق فرصًا مبتكرة للتقدم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2016%20Technology%20and%20Communication/Lesson%2065/Level_16_Lesson_65_%20S%2006.mp3"
   }
 ],
         },
@@ -6283,27 +6318,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Sarah researched extensively about social media's profound impact on contemporary interpersonal relationships.",
-    translationAr: "أجرت سارة بحثًا موسعًا حول التأثير العميق لوسائل التواصل الاجتماعي على العلاقات الإنسانية المعاصرة."
+    translationAr: "أجرت سارة بحثًا موسعًا حول التأثير العميق لوسائل التواصل الاجتماعي على العلاقات الإنسانية المعاصرة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2016%20Technology%20and%20Communication/Lesson%2066/Level_16_Lesson_66_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Platforms like Facebook, Instagram, and Twitter facilitate global connections and information sharing rapidly.",
-    translationAr: "تساعد منصات مثل فيسبوك وإنستغرام وتويتر في تسهيل الروابط العالمية ومشاركة المعلومات بسرعة."
+    translationAr: "تساعد منصات مثل فيسبوك وإنستغرام وتويتر في تسهيل الروابط العالمية ومشاركة المعلومات بسرعة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2016%20Technology%20and%20Communication/Lesson%2066/Level_16_Lesson_66_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "However, excessive usage can lead to addiction, privacy concerns, and decreased face-to-face interactions.",
-    translationAr: "لكن، قد يؤدي الاستخدام المفرط إلى الإدمان ومشكلات الخصوصية وانخفاض التفاعل وجهاً لوجه."
+    translationAr: "لكن، قد يؤدي الاستخدام المفرط إلى الإدمان ومشكلات الخصوصية وانخفاض التفاعل وجهاً لوجه.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2016%20Technology%20and%20Communication/Lesson%2066/Level_16_Lesson_66_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Digital communities provide support networks, but sometimes create unrealistic expectations and comparisons.",
-    translationAr: "توفر المجتمعات الرقمية شبكات دعم، لكنها أحيانًا تخلق توقعات غير واقعية ومقارنات سلبية."
+    translationAr: "توفر المجتمعات الرقمية شبكات دعم، لكنها أحيانًا تخلق توقعات غير واقعية ومقارنات سلبية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2016%20Technology%20and%20Communication/Lesson%2066/Level_16_Lesson_66_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Balanced social media consumption requires mindful awareness and deliberate boundaries for mental wellbeing.",
-    translationAr: "يتطلب الاستخدام المتوازن لوسائل التواصل الاجتماعي وعيًا وانضباطًا مقصودًا للحفاظ على الصحة النفسية."
+    translationAr: "يتطلب الاستخدام المتوازن لوسائل التواصل الاجتماعي وعيًا وانضباطًا مقصودًا للحفاظ على الصحة النفسية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2016%20Technology%20and%20Communication/Lesson%2066/Level_16_Lesson_66_%20S%2006.mp3"
   }
 ],
         },
@@ -6451,27 +6491,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Distance education platforms transformed traditional classroom experiences into flexible, accessible learning environments.",
-    translationAr: "حولت منصات التعليم عن بُعد تجربة الفصول التقليدية إلى بيئات تعليمية مرنة وسهلة الوصول."
+    translationAr: "حولت منصات التعليم عن بُعد تجربة الفصول التقليدية إلى بيئات تعليمية مرنة وسهلة الوصول.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2016%20Technology%20and%20Communication/Lesson%2067/Level_16_Lesson_67_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Students participate in interactive video conferences, submit assignments electronically, and collaborate virtually.",
-    translationAr: "يشارك الطلاب في مؤتمرات فيديو تفاعلية، ويقدمون الواجبات إلكترونيًا، ويتعاونون افتراضيًا."
+    translationAr: "يشارك الطلاب في مؤتمرات فيديو تفاعلية، ويقدمون الواجبات إلكترونيًا، ويتعاونون افتراضيًا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2016%20Technology%20and%20Communication/Lesson%2067/Level_16_Lesson_67_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Instructors utilize multimedia presentations, real-time feedback systems, and personalized learning pathways effectively.",
-    translationAr: "يستخدم المعلمون عروض الوسائط المتعددة، وأنظمة التغذية الراجعة الفورية، ومسارات التعلم المخصصة بشكل فعّال."
+    translationAr: "يستخدم المعلمون عروض الوسائط المتعددة، وأنظمة التغذية الراجعة الفورية، ومسارات التعلم المخصصة بشكل فعّال.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2016%20Technology%20and%20Communication/Lesson%2067/Level_16_Lesson_67_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Online courses offer convenience and affordability while maintaining educational quality and academic standards.",
-    translationAr: "توفر الدورات عبر الإنترنت الراحة والتكلفة المعقولة مع الحفاظ على جودة التعليم والمعايير الأكاديمية."
+    translationAr: "توفر الدورات عبر الإنترنت الراحة والتكلفة المعقولة مع الحفاظ على جودة التعليم والمعايير الأكاديمية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2016%20Technology%20and%20Communication/Lesson%2067/Level_16_Lesson_67_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "This educational evolution democratizes knowledge access and accommodates diverse learning styles globally.",
-    translationAr: "هذا التطور التعليمي ي democratizes الوصول إلى المعرفة ويستوعب أساليب التعلم المتنوعة عالميًا."
+    translationAr: "هذا التطور التعليمي ي democratizes الوصول إلى المعرفة ويستوعب أساليب التعلم المتنوعة عالميًا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2016%20Technology%20and%20Communication/Lesson%2067/Level_16_Lesson_67_%20S%2006.mp3"
   }
 ],
         },
@@ -6648,27 +6693,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Marcus attended a comprehensive cybersecurity workshop to understand modern digital threats and protection strategies.",
-    translationAr: "حضر ماركوس ورشة عمل شاملة عن الأمن السيبراني لفهم التهديدات الرقمية الحديثة واستراتيجيات الحماية."
+    translationAr: "حضر ماركوس ورشة عمل شاملة عن الأمن السيبراني لفهم التهديدات الرقمية الحديثة واستراتيجيات الحماية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2016%20Technology%20and%20Communication/Lesson%2068/Level_16_Lesson_68_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Strong passwords, two-factor authentication, and regular software updates form essential defensive barriers.",
-    translationAr: "تُشكّل كلمات المرور القوية، والمصادقة الثنائية، والتحديثات المنتظمة للبرامج حواجز دفاعية أساسية."
+    translationAr: "تُشكّل كلمات المرور القوية، والمصادقة الثنائية، والتحديثات المنتظمة للبرامج حواجز دفاعية أساسية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2016%20Technology%20and%20Communication/Lesson%2068/Level_16_Lesson_68_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Phishing emails, malware attacks, and identity theft represent significant risks in cyberspace.",
-    translationAr: "تمثل رسائل التصيد الاحتيالي، وهجمات البرمجيات الخبيثة، وسرقة الهوية مخاطر كبيرة في الفضاء السيبراني."
+    translationAr: "تمثل رسائل التصيد الاحتيالي، وهجمات البرمجيات الخبيثة، وسرقة الهوية مخاطر كبيرة في الفضاء السيبراني.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2016%20Technology%20and%20Communication/Lesson%2068/Level_16_Lesson_68_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Firewall protection, antivirus software, and secure networks provide multiple layers of digital security.",
-    translationAr: "يوفر جدار الحماية، وبرامج مكافحة الفيروسات، والشبكات الآمنة طبقات متعددة من الحماية الرقمية."
+    translationAr: "يوفر جدار الحماية، وبرامج مكافحة الفيروسات، والشبكات الآمنة طبقات متعددة من الحماية الرقمية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2016%20Technology%20and%20Communication/Lesson%2068/Level_16_Lesson_68_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Continuous education and vigilant practices ensure safe navigation through our interconnected digital world.",
-    translationAr: "يضمن التعليم المستمر والممارسات اليقظة تصفحًا آمنًا لعالمنا الرقمي المترابط."
+    translationAr: "يضمن التعليم المستمر والممارسات اليقظة تصفحًا آمنًا لعالمنا الرقمي المترابط.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2016%20Technology%20and%20Communication/Lesson%2068/Level_16_Lesson_68_%20S%2006.mp3"
   }
 ],
         },
@@ -6818,27 +6868,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Firefighter Tom works at the busy fire station in our town.",
-    translationAr: "رجل الإطفاء توم يعمل في محطة الإطفاء المزدحمة في مدينتنا."
+    translationAr: "رجل الإطفاء توم يعمل في محطة الإطفاء المزدحمة في مدينتنا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2017%20Community%20Helpers/Lesson%2060/Level_17_Lesson_60_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "He wears a special uniform, heavy boots, and a protective helmet.",
-    translationAr: "يرتدي زيًا خاصًا، وحذاءً ثقيلاً، وخوذة واقية."
+    translationAr: "يرتدي زيًا خاصًا، وحذاءً ثقيلاً، وخوذة واقية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2017%20Community%20Helpers/Lesson%2060/Level_17_Lesson_60_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "When the alarm rings, Tom quickly slides down the pole.",
-    translationAr: "عندما يدق جرس الإنذار، ينزلق توم بسرعة على العمود."
+    translationAr: "عندما يدق جرس الإنذار، ينزلق توم بسرعة على العمود.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2017%20Community%20Helpers/Lesson%2060/Level_17_Lesson_60_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "He drives the big red fire truck to help people in danger.",
-    translationAr: "يقود شاحنة الإطفاء الحمراء الكبيرة لمساعدة الناس في الخطر."
+    translationAr: "يقود شاحنة الإطفاء الحمراء الكبيرة لمساعدة الناس في الخطر.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2017%20Community%20Helpers/Lesson%2060/Level_17_Lesson_60_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Tom saves lives, puts out fires, and keeps our community safe.",
-    translationAr: "توم ينقذ الأرواح، ويطفئ الحرائق، ويحافظ على سلامة مجتمعنا."
+    translationAr: "توم ينقذ الأرواح، ويطفئ الحرائق، ويحافظ على سلامة مجتمعنا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2017%20Community%20Helpers/Lesson%2060/Level_17_Lesson_60_%20S%2006.mp3"
   }
 ],
         },
@@ -6921,27 +6976,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Dr. Sarah examines patients carefully in her clean medical office.",
-    translationAr: "الدكتورة سارة تفحص المرضى بعناية في عيادتها الطبية النظيفة."
+    translationAr: "الدكتورة سارة تفحص المرضى بعناية في عيادتها الطبية النظيفة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2017%20Community%20Helpers/Lesson%2061/Level_17_Lesson_61_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "She uses a stethoscope to listen to heartbeats and breathing sounds.",
-    translationAr: "تستخدم سماعة الطبيب للاستماع إلى دقات القلب وأصوات التنفس."
+    translationAr: "تستخدم سماعة الطبيب للاستماع إلى دقات القلب وأصوات التنفس.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2017%20Community%20Helpers/Lesson%2061/Level_17_Lesson_61_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "The doctor checks temperatures, measures blood pressure, and asks questions.",
-    translationAr: "تقوم الطبيبة بقياس درجات الحرارة وضغط الدم وطرح الأسئلة."
+    translationAr: "تقوم الطبيبة بقياس درجات الحرارة وضغط الدم وطرح الأسئلة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2017%20Community%20Helpers/Lesson%2061/Level_17_Lesson_61_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "She prescribes medicine and gives helpful advice to sick people.",
-    translationAr: "تصف الدواء وتقدم نصائح مفيدة للمرضى."
+    translationAr: "تصف الدواء وتقدم نصائح مفيدة للمرضى.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2017%20Community%20Helpers/Lesson%2061/Level_17_Lesson_61_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Dr. Sarah's kindness and knowledge help patients recover quickly.",
-    translationAr: "لطف الدكتورة سارة ومعرفتها يساعدان المرضى على الشفاء بسرعة."
+    translationAr: "لطف الدكتورة سارة ومعرفتها يساعدان المرضى على الشفاء بسرعة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2017%20Community%20Helpers/Lesson%2061/Level_17_Lesson_61_%20S%2006.mp3"
   }
 ],
         },
@@ -7043,27 +7103,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Mike the mail carrier delivers letters and packages every single day.",
-    translationAr: "مايك ساعي البريد يوزع الرسائل والطرود كل يوم."
+    translationAr: "مايك ساعي البريد يوزع الرسائل والطرود كل يوم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2017%20Community%20Helpers/Lesson%2062/Level_17_Lesson_62_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "He loads his truck with mail bags and drives through the neighborhood.",
-    translationAr: "يحمّل شاحنته بحقائب البريد ويقودها عبر الحي."
+    translationAr: "يحمّل شاحنته بحقائب البريد ويقودها عبر الحي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2017%20Community%20Helpers/Lesson%2062/Level_17_Lesson_62_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Mike walks from house to house, putting mail in each mailbox.",
-    translationAr: "يمشي مايك من بيت إلى آخر ويضع البريد في كل صندوق."
+    translationAr: "يمشي مايك من بيت إلى آخر ويضع البريد في كل صندوق.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2017%20Community%20Helpers/Lesson%2062/Level_17_Lesson_62_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "He rings doorbells when delivering special packages to residents.",
-    translationAr: "يقرع جرس الباب عند تسليم الطرود الخاصة للسكان."
+    translationAr: "يقرع جرس الباب عند تسليم الطرود الخاصة للسكان.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2017%20Community%20Helpers/Lesson%2062/Level_17_Lesson_62_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Rain or sunshine, Mike ensures everyone receives their important mail.",
-    translationAr: "في المطر أو الشمس، يتأكد مايك أن الجميع يحصل على بريدهم المهم."
+    translationAr: "في المطر أو الشمس، يتأكد مايك أن الجميع يحصل على بريدهم المهم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2017%20Community%20Helpers/Lesson%2062/Level_17_Lesson_62_%20S%2006.mp3"
   }
 ],
         },
@@ -7162,27 +7227,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Mrs. Johnson drives the big yellow school bus safely every morning.",
-    translationAr: "السيدة جونسون تقود الحافلة المدرسية الصفراء الكبيرة بأمان كل صباح."
+    translationAr: "السيدة جونسون تقود الحافلة المدرسية الصفراء الكبيرة بأمان كل صباح.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2017%20Community%20Helpers/Lesson%2063/Level_17_Lesson_63_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "She arrives early, checks the engine, and inspects all safety equipment.",
-    translationAr: "تصل مبكرًا، وتفحص المحرك، وتعاين جميع معدات السلامة."
+    translationAr: "تصل مبكرًا، وتفحص المحرك، وتعاين جميع معدات السلامة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2017%20Community%20Helpers/Lesson%2063/Level_17_Lesson_63_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Children climb aboard the bus and find their favorite seats quickly.",
-    translationAr: "يصعد الأطفال إلى الحافلة ويجدون مقاعدهم المفضلة بسرعة."
+    translationAr: "يصعد الأطفال إلى الحافلة ويجدون مقاعدهم المفضلة بسرعة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2017%20Community%20Helpers/Lesson%2063/Level_17_Lesson_63_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Mrs. Johnson watches traffic carefully and follows all driving rules strictly.",
-    translationAr: "تراقب السيدة جونسون حركة المرور بعناية وتتبع جميع قواعد القيادة بدقة."
+    translationAr: "تراقب السيدة جونسون حركة المرور بعناية وتتبع جميع قواعد القيادة بدقة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2017%20Community%20Helpers/Lesson%2063/Level_17_Lesson_63_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "She delivers happy students to school on time, ready to learn.",
-    translationAr: "توصل الطلاب السعداء إلى المدرسة في الوقت المحدد، مستعدين للتعلم."
+    translationAr: "توصل الطلاب السعداء إلى المدرسة في الوقت المحدد، مستعدين للتعلم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2017%20Community%20Helpers/Lesson%2063/Level_17_Lesson_63_%20S%2006.mp3"
   }
 ],
         },
@@ -7273,27 +7343,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Ms. Garcia works quietly in the peaceful town library every day.",
-    translationAr: "السيدة غارسيا تعمل بهدوء في مكتبة البلدة الهادئة كل يوم."
+    translationAr: "السيدة غارسيا تعمل بهدوء في مكتبة البلدة الهادئة كل يوم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2017%20Community%20Helpers/Lesson%2064/Level_17_Lesson_64_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "She organizes thousands of books on shelves by subjects and authors.",
-    translationAr: "ترتب آلاف الكتب على الرفوف حسب المواضيع والمؤلفين."
+    translationAr: "ترتب آلاف الكتب على الرفوف حسب المواضيع والمؤلفين.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2017%20Community%20Helpers/Lesson%2064/Level_17_Lesson_64_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Visitors ask questions, and she helps them find exactly what they need.",
-    translationAr: "يسأل الزوار أسئلة، وهي تساعدهم في العثور على ما يحتاجونه بالضبط."
+    translationAr: "يسأل الزوار أسئلة، وهي تساعدهم في العثور على ما يحتاجونه بالضبط.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2017%20Community%20Helpers/Lesson%2064/Level_17_Lesson_64_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Ms. Garcia reads stories to children during special weekend programs.",
-    translationAr: "تقرأ السيدة غارسيا القصص للأطفال خلال البرامج الخاصة في عطلة نهاية الأسبوع."
+    translationAr: "تقرأ السيدة غارسيا القصص للأطفال خلال البرامج الخاصة في عطلة نهاية الأسبوع.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2017%20Community%20Helpers/Lesson%2064/Level_17_Lesson_64_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Her love for books and learning inspires everyone in the community.",
-    translationAr: "حبها للكتب والتعلم يلهم الجميع في المجتمع."
+    translationAr: "حبها للكتب والتعلم يلهم الجميع في المجتمع.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2017%20Community%20Helpers/Lesson%2064/Level_17_Lesson_64_%20S%2006.mp3"
   }
 ],
         },
@@ -8034,27 +8109,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Farmer John takes care of many different animals on his busy farm.",
-    translationAr: "المزارع جون يعتني بالعديد من الحيوانات المختلفة في مزرعته المزدحمة."
+    translationAr: "المزارع جون يعتني بالعديد من الحيوانات المختلفة في مزرعته المزدحمة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2019%20Animals%20and%20Nature/Lesson%2070/Level_19_Lesson_70_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Cows provide fresh milk while chickens lay eggs in their cozy nests.",
-    translationAr: "الأبقار توفر الحليب الطازج بينما الدجاج يضع البيض في أعشاشه المريحة."
+    translationAr: "الأبقار توفر الحليب الطازج بينما الدجاج يضع البيض في أعشاشه المريحة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2019%20Animals%20and%20Nature/Lesson%2070/Level_19_Lesson_70_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Pigs roll in mud to stay cool, and sheep provide wool for clothing.",
-    translationAr: "الخنازير تتدحرج في الطين لتبقى باردة، والأغنام توفر الصوف للملابس."
+    translationAr: "الخنازير تتدحرج في الطين لتبقى باردة، والأغنام توفر الصوف للملابس.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2019%20Animals%20and%20Nature/Lesson%2070/Level_19_Lesson_70_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Horses help with farm work and give children exciting rides around the field.",
-    translationAr: "الخيول تساعد في أعمال المزرعة وتمنح الأطفال جولات ممتعة حول الحقل."
+    translationAr: "الخيول تساعد في أعمال المزرعة وتمنح الأطفال جولات ممتعة حول الحقل.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2019%20Animals%20and%20Nature/Lesson%2070/Level_19_Lesson_70_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "All these animals depend on the farmer for food, water, and shelter.",
-    translationAr: "كل هذه الحيوانات تعتمد على المزارع للحصول على الطعام والماء والمأوى."
+    translationAr: "كل هذه الحيوانات تعتمد على المزارع للحصول على الطعام والماء والمأوى.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2019%20Animals%20and%20Nature/Lesson%2070/Level_19_Lesson_70_%20S%2006.mp3"
   }
 ],
         },
@@ -8146,27 +8226,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Deep in the forest, many wild animals live peacefully among tall trees.",
-    translationAr: "في أعماق الغابة، تعيش العديد من الحيوانات البرية بسلام بين الأشجار الطويلة."
+    translationAr: "في أعماق الغابة، تعيش العديد من الحيوانات البرية بسلام بين الأشجار الطويلة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2019%20Animals%20and%20Nature/Lesson%2071/Level_19_Lesson_71_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Squirrels collect nuts and acorns, storing them for the cold winter months.",
-    translationAr: "السناجب تجمع المكسرات والبلوط وتخزنها لأشهر الشتاء الباردة."
+    translationAr: "السناجب تجمع المكسرات والبلوط وتخزنها لأشهر الشتاء الباردة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2019%20Animals%20and%20Nature/Lesson%2071/Level_19_Lesson_71_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Deer gracefully move through the woods, eating grass and young tree leaves.",
-    translationAr: "الغزلان تتحرك برشاقة عبر الغابة، وتأكل العشب وأوراق الأشجار الصغيرة."
+    translationAr: "الغزلان تتحرك برشاقة عبر الغابة، وتأكل العشب وأوراق الأشجار الصغيرة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2019%20Animals%20and%20Nature/Lesson%2071/Level_19_Lesson_71_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Owls hunt silently at night while rabbits hop quickly through the undergrowth.",
-    translationAr: "البوم يصطاد بصمت في الليل بينما الأرانب تقفز بسرعة بين النباتات الكثيفة."
+    translationAr: "البوم يصطاد بصمت في الليل بينما الأرانب تقفز بسرعة بين النباتات الكثيفة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2019%20Animals%20and%20Nature/Lesson%2071/Level_19_Lesson_71_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "The forest ecosystem provides homes and food for countless species of animals.",
-    translationAr: "النظام البيئي للغابة يوفر المأوى والغذاء لأنواع لا حصر لها من الحيوانات."
+    translationAr: "النظام البيئي للغابة يوفر المأوى والغذاء لأنواع لا حصر لها من الحيوانات.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2019%20Animals%20and%20Nature/Lesson%2071/Level_19_Lesson_71_%20S%2006.mp3"
   }
 ],
         },
@@ -8268,27 +8353,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "The vast ocean contains millions of amazing creatures living at different depths.",
-    translationAr: "المحيط الواسع يحتوي على ملايين الكائنات المذهلة التي تعيش في أعماق مختلفة."
+    translationAr: "المحيط الواسع يحتوي على ملايين الكائنات المذهلة التي تعيش في أعماق مختلفة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2019%20Animals%20and%20Nature/Lesson%2072/Level_19_Lesson_72_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Colorful fish swim in schools while dolphins playfully jump above the waves.",
-    translationAr: "الأسماك الملونة تسبح في مجموعات بينما الدلافين تقفز بمرح فوق الأمواج."
+    translationAr: "الأسماك الملونة تسبح في مجموعات بينما الدلافين تقفز بمرح فوق الأمواج.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2019%20Animals%20and%20Nature/Lesson%2072/Level_19_Lesson_72_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Giant whales migrate thousands of miles, singing beautiful songs to communicate.",
-    translationAr: "الحيتان العملاقة تهاجر آلاف الأميال، وتغني أغانٍ جميلة للتواصل."
+    translationAr: "الحيتان العملاقة تهاجر آلاف الأميال، وتغني أغانٍ جميلة للتواصل.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2019%20Animals%20and%20Nature/Lesson%2072/Level_19_Lesson_72_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Sea turtles glide slowly through the water, searching for jellyfish to eat.",
-    translationAr: "السلاحف البحرية تنزلق ببطء عبر الماء، باحثة عن قناديل البحر لتأكلها."
+    translationAr: "السلاحف البحرية تنزلق ببطء عبر الماء، باحثة عن قناديل البحر لتأكلها.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2019%20Animals%20and%20Nature/Lesson%2072/Level_19_Lesson_72_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Coral reefs provide shelter and breeding grounds for countless marine species.",
-    translationAr: "الشعاب المرجانية توفر المأوى وأماكن التكاثر لعدد لا يحصى من الكائنات البحرية."
+    translationAr: "الشعاب المرجانية توفر المأوى وأماكن التكاثر لعدد لا يحصى من الكائنات البحرية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2019%20Animals%20and%20Nature/Lesson%2072/Level_19_Lesson_72_%20S%2006.mp3"
   }
 ],
         },
@@ -8401,27 +8491,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Emma loves her golden retriever Max and takes excellent care of him daily.",
-    translationAr: "تحب إيما كلبها الذهبي ماكس وتعتني به جيدًا كل يوم."
+    translationAr: "تحب إيما كلبها الذهبي ماكس وتعتني به جيدًا كل يوم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2019%20Animals%20and%20Nature/Lesson%2073/Level_19_Lesson_73_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "She feeds him nutritious food, gives him fresh water, and brushes his coat.",
-    translationAr: "تطعمه طعامًا مغذيًا، وتعطيه ماءً نظيفًا، وتُسرّح فراءه."
+    translationAr: "تطعمه طعامًا مغذيًا، وتعطيه ماءً نظيفًا، وتُسرّح فراءه.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2019%20Animals%20and%20Nature/Lesson%2073/Level_19_Lesson_73_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Max needs regular exercise, so Emma walks him twice every single day.",
-    translationAr: "ماكس يحتاج إلى تمرين منتظم، لذلك تأخذه إيما في نزهة مرتين كل يوم."
+    translationAr: "ماكس يحتاج إلى تمرين منتظم، لذلك تأخذه إيما في نزهة مرتين كل يوم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2019%20Animals%20and%20Nature/Lesson%2073/Level_19_Lesson_73_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "The veterinarian checks Max's health and gives him important vaccinations yearly.",
-    translationAr: "الطبيب البيطري يفحص صحة ماكس ويعطيه التطعيمات المهمة سنويًا."
+    translationAr: "الطبيب البيطري يفحص صحة ماكس ويعطيه التطعيمات المهمة سنويًا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2019%20Animals%20and%20Nature/Lesson%2073/Level_19_Lesson_73_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Responsible pet ownership brings joy while teaching children about caring for others.",
-    translationAr: "الاعتناء المسؤول بالحيوانات الأليفة يجلب السعادة ويعلم الأطفال الاهتمام بالآخرين."
+    translationAr: "الاعتناء المسؤول بالحيوانات الأليفة يجلب السعادة ويعلم الأطفال الاهتمام بالآخرين.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2019%20Animals%20and%20Nature/Lesson%2073/Level_19_Lesson_73_%20S%2006.mp3"
   }
 ],
         },
@@ -8508,27 +8603,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Scientists and volunteers work together to protect endangered species from extinction.",
-    translationAr: "يعمل العلماء والمتطوعون معًا لحماية الأنواع المهددة بالانقراض من الانقراض التام."
+    translationAr: "يعمل العلماء والمتطوعون معًا لحماية الأنواع المهددة بالانقراض من الانقراض التام.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2019%20Animals%20and%20Nature/Lesson%2074/Level_19_Lesson_74_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "National parks preserve large areas of wilderness for future generations to enjoy.",
-    translationAr: "تحافظ المتنزهات الوطنية على مساحات واسعة من الطبيعة ليستمتع بها الأجيال القادمة."
+    translationAr: "تحافظ المتنزهات الوطنية على مساحات واسعة من الطبيعة ليستمتع بها الأجيال القادمة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2019%20Animals%20and%20Nature/Lesson%2074/Level_19_Lesson_74_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Recycling programs help reduce waste and protect the environment from pollution.",
-    translationAr: "تساعد برامج إعادة التدوير في تقليل النفايات وحماية البيئة من التلوث."
+    translationAr: "تساعد برامج إعادة التدوير في تقليل النفايات وحماية البيئة من التلوث.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2019%20Animals%20and%20Nature/Lesson%2074/Level_19_Lesson_74_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Planting trees and creating gardens provide homes for birds and small animals.",
-    translationAr: "زراعة الأشجار وإنشاء الحدائق توفر بيوتًا للطيور والحيوانات الصغيرة."
+    translationAr: "زراعة الأشجار وإنشاء الحدائق توفر بيوتًا للطيور والحيوانات الصغيرة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2019%20Animals%20and%20Nature/Lesson%2074/Level_19_Lesson_74_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Everyone can contribute to conservation by making environmentally friendly choices daily.",
-    translationAr: "يمكن للجميع المساهمة في الحفاظ على البيئة من خلال اتخاذ خيارات صديقة للبيئة يوميًا."
+    translationAr: "يمكن للجميع المساهمة في الحفاظ على البيئة من خلال اتخاذ خيارات صديقة للبيئة يوميًا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2019%20Animals%20and%20Nature/Lesson%2074/Level_19_Lesson_74_%20S%2006.mp3"
   }
 ],
         },
@@ -8644,27 +8744,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Nutritionists emphasize that a balanced diet consists of various food groups consumed in appropriate proportions.",
-    translationAr: "يؤكد خبراء التغذية أن النظام الغذائي المتوازن يتكون من مجموعات غذائية متنوعة تُستهلك بنِسَب مناسبة."
+    translationAr: "يؤكد خبراء التغذية أن النظام الغذائي المتوازن يتكون من مجموعات غذائية متنوعة تُستهلك بنِسَب مناسبة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2020%20Health%20and%20Wellness/Lesson%2076/Level_20_Lesson_76_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Fresh fruits and vegetables provide essential vitamins, minerals, and antioxidants that boost immune function.",
-    translationAr: "توفّر الفواكه والخضروات الطازجة الفيتامينات والمعادن ومضادات الأكسدة الأساسية التي تعزز وظيفة الجهاز المناعي."
+    translationAr: "توفّر الفواكه والخضروات الطازجة الفيتامينات والمعادن ومضادات الأكسدة الأساسية التي تعزز وظيفة الجهاز المناعي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2020%20Health%20and%20Wellness/Lesson%2076/Level_20_Lesson_76_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Whole grains and lean proteins supply sustained energy while supporting muscle development and repair.",
-    translationAr: "تمد الحبوب الكاملة والبروتينات الخالية من الدهون الجسم بالطاقة المستمرة وتساعد على نمو وإصلاح العضلات."
+    translationAr: "تمد الحبوب الكاملة والبروتينات الخالية من الدهون الجسم بالطاقة المستمرة وتساعد على نمو وإصلاح العضلات.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2020%20Health%20and%20Wellness/Lesson%2076/Level_20_Lesson_76_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Processed foods high in sugar and saturated fats should be consumed sparingly to prevent chronic diseases.",
-    translationAr: "يجب تناول الأطعمة المصنعة الغنية بالسكر والدهون المشبعة باعتدال لتجنّب الأمراض المزمنة."
+    translationAr: "يجب تناول الأطعمة المصنعة الغنية بالسكر والدهون المشبعة باعتدال لتجنّب الأمراض المزمنة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2020%20Health%20and%20Wellness/Lesson%2076/Level_20_Lesson_76_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Adequate hydration through water intake is crucial for maintaining cellular functions and overall well-being.",
-    translationAr: "الحفاظ على ترطيب كافٍ من خلال شرب الماء ضروري للحفاظ على وظائف الخلايا والصحة العامة."
+    translationAr: "الحفاظ على ترطيب كافٍ من خلال شرب الماء ضروري للحفاظ على وظائف الخلايا والصحة العامة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2020%20Health%20and%20Wellness/Lesson%2076/Level_20_Lesson_76_%20S%2006.mp3"
   }
 ],
         },
@@ -8870,27 +8975,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Regular physical exercise strengthens cardiovascular health and improves muscle tone throughout the body.",
-    translationAr: "التمارين البدنية المنتظمة تقوّي صحة القلب والأوعية الدموية وتحسّن قوة العضلات في جميع أنحاء الجسم."
+    translationAr: "التمارين البدنية المنتظمة تقوّي صحة القلب والأوعية الدموية وتحسّن قوة العضلات في جميع أنحاء الجسم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2020%20Health%20and%20Wellness/Lesson%2077/Level_20_Lesson_77_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Aerobic activities like running, swimming, and cycling enhance endurance and burn calories effectively.",
-    translationAr: "الأنشطة الهوائية مثل الجري والسباحة وركوب الدراجات تعزز القدرة على التحمل وتحرق السعرات الحرارية بفعالية."
+    translationAr: "الأنشطة الهوائية مثل الجري والسباحة وركوب الدراجات تعزز القدرة على التحمل وتحرق السعرات الحرارية بفعالية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2020%20Health%20and%20Wellness/Lesson%2077/Level_20_Lesson_77_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Strength training with weights builds muscle mass and increases bone density, preventing osteoporosis.",
-    translationAr: "تدريبات القوة باستخدام الأوزان تزيد من كتلة العضلات وتزيد من كثافة العظام، مما يمنع هشاشة العظام."
+    translationAr: "تدريبات القوة باستخدام الأوزان تزيد من كتلة العضلات وتزيد من كثافة العظام، مما يمنع هشاشة العظام.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2020%20Health%20and%20Wellness/Lesson%2077/Level_20_Lesson_77_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Flexibility exercises such as yoga and stretching improve range of motion and reduce injury risk.",
-    translationAr: "تمارين المرونة مثل اليوغا والتمدد تحسن نطاق الحركة وتقلل من خطر الإصابة."
+    translationAr: "تمارين المرونة مثل اليوغا والتمدد تحسن نطاق الحركة وتقلل من خطر الإصابة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2020%20Health%20and%20Wellness/Lesson%2077/Level_20_Lesson_77_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Consistent exercise routines also release endorphins, reducing stress and promoting mental well-being.",
-    translationAr: "الالتزام بروتين تمارين منتظم يساعد أيضًا على إفراز الإندورفين، مما يقلل التوتر ويعزز الصحة النفسية."
+    translationAr: "الالتزام بروتين تمارين منتظم يساعد أيضًا على إفراز الإندورفين، مما يقلل التوتر ويعزز الصحة النفسية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2020%20Health%20and%20Wellness/Lesson%2077/Level_20_Lesson_77_%20S%2006.mp3"
   }
 ],
         },
@@ -9056,27 +9166,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Mental health encompasses emotional, psychological, and social well-being, affecting how we think and behave.",
-    translationAr: "الصحة النفسية تشمل الرفاهية العاطفية والنفسية والاجتماعية، وتؤثر على طريقة تفكيرنا وتصرفاتنا."
+    translationAr: "الصحة النفسية تشمل الرفاهية العاطفية والنفسية والاجتماعية، وتؤثر على طريقة تفكيرنا وتصرفاتنا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2020%20Health%20and%20Wellness/Lesson%2078/Level_20_Lesson_78_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Common conditions like depression and anxiety can significantly impact daily functioning and quality of life.",
-    translationAr: "الحالات الشائعة مثل الاكتئاب والقلق يمكن أن تؤثر بشكل كبير على الأداء اليومي وجودة الحياة."
+    translationAr: "الحالات الشائعة مثل الاكتئاب والقلق يمكن أن تؤثر بشكل كبير على الأداء اليومي وجودة الحياة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2020%20Health%20and%20Wellness/Lesson%2078/Level_20_Lesson_78_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Stress management techniques including meditation, deep breathing, and mindfulness practice prove highly beneficial.",
-    translationAr: "تقنيات إدارة التوتر مثل التأمل والتنفس العميق وممارسة اليقظة الذهنية تُعتبر مفيدة جدًا."
+    translationAr: "تقنيات إدارة التوتر مثل التأمل والتنفس العميق وممارسة اليقظة الذهنية تُعتبر مفيدة جدًا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2020%20Health%20and%20Wellness/Lesson%2078/Level_20_Lesson_78_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Professional therapy and counseling provide valuable support for individuals struggling with mental health challenges.",
-    translationAr: "العلاج النفسي والإرشاد المهني يقدمان دعمًا قيّمًا للأشخاص الذين يواجهون تحديات الصحة النفسية."
+    translationAr: "العلاج النفسي والإرشاد المهني يقدمان دعمًا قيّمًا للأشخاص الذين يواجهون تحديات الصحة النفسية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2020%20Health%20and%20Wellness/Lesson%2078/Level_20_Lesson_78_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Reducing stigma around mental illness encourages people to seek help and promotes community understanding.",
-    translationAr: "تقليل الوصمة حول المرض النفسي يشجع الناس على طلب المساعدة ويعزز فهم المجتمع."
+    translationAr: "تقليل الوصمة حول المرض النفسي يشجع الناس على طلب المساعدة ويعزز فهم المجتمع.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2020%20Health%20and%20Wellness/Lesson%2078/Level_20_Lesson_78_%20S%2006.mp3"
   }
 ],
         },
@@ -9248,27 +9363,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Preventive healthcare focuses on maintaining health and detecting potential problems before they become serious.",
-    translationAr: "الرعاية الصحية الوقائية تركز على الحفاظ على الصحة واكتشاف المشكلات المحتملة قبل أن تصبح خطيرة."
+    translationAr: "الرعاية الصحية الوقائية تركز على الحفاظ على الصحة واكتشاف المشكلات المحتملة قبل أن تصبح خطيرة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2020%20Health%20and%20Wellness/Lesson%2079/Level_20_Lesson_79_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Regular medical checkups allow doctors to monitor vital signs and identify risk factors early.",
-    translationAr: "الفحوصات الطبية الدورية تتيح للأطباء متابعة المؤشرات الحيوية وتحديد عوامل الخطر مبكرًا."
+    translationAr: "الفحوصات الطبية الدورية تتيح للأطباء متابعة المؤشرات الحيوية وتحديد عوامل الخطر مبكرًا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2020%20Health%20and%20Wellness/Lesson%2079/Level_20_Lesson_79_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Vaccinations protect individuals and communities from infectious diseases through building immunity.",
-    translationAr: "التطعيمات تحمي الأفراد والمجتمعات من الأمراض المعدية من خلال بناء المناعة."
+    translationAr: "التطعيمات تحمي الأفراد والمجتمعات من الأمراض المعدية من خلال بناء المناعة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2020%20Health%20and%20Wellness/Lesson%2079/Level_20_Lesson_79_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Cancer screenings such as mammograms and colonoscopies can detect abnormalities in their earliest stages.",
-    translationAr: "فحوصات السرطان مثل الماموجرام وتنظير القولون يمكن أن تكشف عن الشذوذ في مراحله المبكرة جدًا."
+    translationAr: "فحوصات السرطان مثل الماموجرام وتنظير القولون يمكن أن تكشف عن الشذوذ في مراحله المبكرة جدًا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2020%20Health%20and%20Wellness/Lesson%2079/Level_20_Lesson_79_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Lifestyle modifications including smoking cessation and weight management significantly reduce disease risk.",
-    translationAr: "تغييرات نمط الحياة مثل الإقلاع عن التدخين وإدارة الوزن تقلل بشكل كبير من مخاطر الإصابة بالأمراض."
+    translationAr: "تغييرات نمط الحياة مثل الإقلاع عن التدخين وإدارة الوزن تقلل بشكل كبير من مخاطر الإصابة بالأمراض.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2020%20Health%20and%20Wellness/Lesson%2079/Level_20_Lesson_79_%20S%2006.mp3"
   }
 ],
         },
@@ -9421,27 +9541,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Quality sleep serves as the foundation for physical recovery, memory consolidation, and immune system strengthening.",
-    translationAr: "النوم الجيد يُعد الأساس للتعافي الجسدي، وتثبيت الذاكرة، وتقوية جهاز المناعة."
+    translationAr: "النوم الجيد يُعد الأساس للتعافي الجسدي، وتثبيت الذاكرة، وتقوية جهاز المناعة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2020%20Health%20and%20Wellness/Lesson%2080/Level_20_Lesson_80_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Adults typically require seven to nine hours of sleep nightly for optimal cognitive performance and emotional regulation.",
-    translationAr: "يحتاج البالغون عادةً من سبع إلى تسع ساعات من النوم ليلاً لتحقيق أفضل أداء إدراكي وتنظيم عاطفي."
+    translationAr: "يحتاج البالغون عادةً من سبع إلى تسع ساعات من النوم ليلاً لتحقيق أفضل أداء إدراكي وتنظيم عاطفي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2020%20Health%20and%20Wellness/Lesson%2080/Level_20_Lesson_80_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Sleep disorders like insomnia and sleep apnea can severely compromise health and require professional medical attention.",
-    translationAr: "اضطرابات النوم مثل الأرق وتوقف التنفس أثناء النوم يمكن أن تؤثر بشكل خطير على الصحة وتتطلب عناية طبية متخصصة."
+    translationAr: "اضطرابات النوم مثل الأرق وتوقف التنفس أثناء النوم يمكن أن تؤثر بشكل خطير على الصحة وتتطلب عناية طبية متخصصة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2020%20Health%20and%20Wellness/Lesson%2080/Level_20_Lesson_80_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Creating healthy sleep habits includes maintaining consistent bedtimes and avoiding caffeine before sleep.",
-    translationAr: "إنشاء عادات نوم صحية يشمل الالتزام بمواعيد نوم ثابتة وتجنب الكافيين قبل النوم."
+    translationAr: "إنشاء عادات نوم صحية يشمل الالتزام بمواعيد نوم ثابتة وتجنب الكافيين قبل النوم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2020%20Health%20and%20Wellness/Lesson%2080/Level_20_Lesson_80_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "The bedroom environment should be dark, quiet, and cool to promote deep, restorative sleep cycles.",
-    translationAr: "يجب أن يكون بيئة غرفة النوم مظلمة وهادئة وباردة لتعزيز دورات النوم العميقة والمُجددة."
+    translationAr: "يجب أن يكون بيئة غرفة النوم مظلمة وهادئة وباردة لتعزيز دورات النوم العميقة والمُجددة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2020%20Health%20and%20Wellness/Lesson%2080/Level_20_Lesson_80_%20S%2006.mp3"
   }
 ],
         },
@@ -9586,27 +9711,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "International travel requires careful planning, including passport renewal, visa applications, and comprehensive travel insurance coverage.",
-    translationAr: "السفر الدولي يتطلب تخطيطًا دقيقًا، بما في ذلك تجديد جواز السفر، طلبات التأشيرة، وتغطية تأمينية شاملة للسفر."
+    translationAr: "السفر الدولي يتطلب تخطيطًا دقيقًا، بما في ذلك تجديد جواز السفر، طلبات التأشيرة، وتغطية تأمينية شاملة للسفر.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2021%20Travel%20and%20Cultural%20Experiences/Lesson%2081/Level_21_Lesson_81_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Research destinations thoroughly by studying local customs, currency exchange rates, and seasonal weather patterns beforehand.",
-    translationAr: "ابحث في الوجهات بشكل شامل من خلال دراسة العادات المحلية، أسعار صرف العملات، وأنماط الطقس الموسمية مسبقًا."
+    translationAr: "ابحث في الوجهات بشكل شامل من خلال دراسة العادات المحلية، أسعار صرف العملات، وأنماط الطقس الموسمية مسبقًا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2021%20Travel%20and%20Cultural%20Experiences/Lesson%2081/Level_21_Lesson_81_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Budget considerations should include accommodation costs, transportation expenses, meals, and emergency funds for unexpected situations.",
-    translationAr: "يجب أن تشمل الاعتبارات المالية تكاليف الإقامة، مصاريف النقل، الوجبات، والأموال المخصصة للطوارئ في المواقف غير المتوقعة."
+    translationAr: "يجب أن تشمل الاعتبارات المالية تكاليف الإقامة، مصاريف النقل، الوجبات، والأموال المخصصة للطوارئ في المواقف غير المتوقعة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2021%20Travel%20and%20Cultural%20Experiences/Lesson%2081/Level_21_Lesson_81_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Flight booking strategies involve comparing airlines, choosing optimal departure times, and understanding baggage restrictions carefully.",
-    translationAr: "تشمل استراتيجيات حجز الرحلات مقارنة شركات الطيران، اختيار أوقات المغادرة المثالية، وفهم قيود الأمتعة بعناية."
+    translationAr: "تشمل استراتيجيات حجز الرحلات مقارنة شركات الطيران، اختيار أوقات المغادرة المثالية، وفهم قيود الأمتعة بعناية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2021%20Travel%20and%20Cultural%20Experiences/Lesson%2081/Level_21_Lesson_81_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Health preparations may require vaccinations, prescription medications, and medical documentation depending on destination requirements.",
-    translationAr: "قد تتطلب التحضيرات الصحية التطعيمات، الأدوية الموصوفة، والوثائق الطبية وفقًا لمتطلبات الوجهة."
+    translationAr: "قد تتطلب التحضيرات الصحية التطعيمات، الأدوية الموصوفة، والوثائق الطبية وفقًا لمتطلبات الوجهة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2021%20Travel%20and%20Cultural%20Experiences/Lesson%2081/Level_21_Lesson_81_%20S%2006.mp3"
   }
 ],
         },
@@ -9822,27 +9952,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Cultural diversity enriches societies by bringing together unique traditions, languages, cuisines, and artistic expressions from around the world.",
-    translationAr: "التنوع الثقافي يُثري المجتمعات من خلال جمع التقاليد الفريدة، واللغات، والمأكولات، والتعبيرات الفنية من مختلف أنحاء العالم."
+    translationAr: "التنوع الثقافي يُثري المجتمعات من خلال جمع التقاليد الفريدة، واللغات، والمأكولات، والتعبيرات الفنية من مختلف أنحاء العالم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2021%20Travel%20and%20Cultural%20Experiences/Lesson%2082/Level_21_Lesson_82_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Understanding cultural etiquette prevents misunderstandings and demonstrates respect for local values and social norms.",
-    translationAr: "فهم الآداب الثقافية يمنع سوء الفهم ويُظهر الاحترام للقيم المحلية والأعراف الاجتماعية."
+    translationAr: "فهم الآداب الثقافية يمنع سوء الفهم ويُظهر الاحترام للقيم المحلية والأعراف الاجتماعية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2021%20Travel%20and%20Cultural%20Experiences/Lesson%2082/Level_21_Lesson_82_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Religious festivals and ceremonies offer fascinating insights into spiritual beliefs and community celebrations across different cultures.",
-    translationAr: "المهرجانات والمناسبات الدينية تقدم رؤى رائعة حول المعتقدات الروحية والاحتفالات المجتمعية في مختلف الثقافات."
+    translationAr: "المهرجانات والمناسبات الدينية تقدم رؤى رائعة حول المعتقدات الروحية والاحتفالات المجتمعية في مختلف الثقافات.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2021%20Travel%20and%20Cultural%20Experiences/Lesson%2082/Level_21_Lesson_82_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Traditional crafts and artisan skills represent centuries of cultural knowledge passed down through generations of families.",
-    translationAr: "الحرف التقليدية والمهارات اليدوية تمثل قرونًا من المعرفة الثقافية التي تناقلتها الأجيال داخل العائلات."
+    translationAr: "الحرف التقليدية والمهارات اليدوية تمثل قرونًا من المعرفة الثقافية التي تناقلتها الأجيال داخل العائلات.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2021%20Travel%20and%20Cultural%20Experiences/Lesson%2082/Level_21_Lesson_82_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Cross-cultural communication requires patience, open-mindedness, and willingness to learn from diverse perspectives and experiences.",
-    translationAr: "التواصل بين الثقافات يتطلب الصبر، والانفتاح الذهني، والاستعداد للتعلم من وجهات النظر والتجارب المتنوعة."
+    translationAr: "التواصل بين الثقافات يتطلب الصبر، والانفتاح الذهني، والاستعداد للتعلم من وجهات النظر والتجارب المتنوعة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2021%20Travel%20and%20Cultural%20Experiences/Lesson%2082/Level_21_Lesson_82_%20S%2006.mp3"
   }
 ],
         },
@@ -10045,27 +10180,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Sustainable tourism balances economic benefits with environmental protection and cultural preservation for future generations.",
-    translationAr: "السياحة المستدامة توازن بين الفوائد الاقتصادية وحماية البيئة والحفاظ على الثقافة للأجيال القادمة."
+    translationAr: "السياحة المستدامة توازن بين الفوائد الاقتصادية وحماية البيئة والحفاظ على الثقافة للأجيال القادمة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2021%20Travel%20and%20Cultural%20Experiences/Lesson%2083/Level_21_Lesson_83_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Eco-friendly accommodations minimize their carbon footprint through renewable energy, water conservation, and waste reduction programs.",
-    translationAr: "أماكن الإقامة الصديقة للبيئة تقلل بصمتها الكربونية من خلال الطاقة المتجددة، الحفاظ على المياه، وبرامج تقليل النفايات."
+    translationAr: "أماكن الإقامة الصديقة للبيئة تقلل بصمتها الكربونية من خلال الطاقة المتجددة، الحفاظ على المياه، وبرامج تقليل النفايات.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2021%20Travel%20and%20Cultural%20Experiences/Lesson%2083/Level_21_Lesson_83_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Supporting local businesses and purchasing handmade products directly contributes to community economic development and prosperity.",
-    translationAr: "دعم الأعمال المحلية وشراء المنتجات اليدوية يساهم بشكل مباشر في التنمية الاقتصادية وازدهار المجتمع."
+    translationAr: "دعم الأعمال المحلية وشراء المنتجات اليدوية يساهم بشكل مباشر في التنمية الاقتصادية وازدهار المجتمع.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2021%20Travel%20and%20Cultural%20Experiences/Lesson%2083/Level_21_Lesson_83_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Wildlife tourism should prioritize animal welfare and habitat conservation rather than entertainment that exploits vulnerable species.",
-    translationAr: "يجب أن تركز السياحة البيئية على رفاهية الحيوانات والحفاظ على المواطن الطبيعية بدلاً من الترفيه الذي يستغل الأنواع المهددة."
+    translationAr: "يجب أن تركز السياحة البيئية على رفاهية الحيوانات والحفاظ على المواطن الطبيعية بدلاً من الترفيه الذي يستغل الأنواع المهددة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2021%20Travel%20and%20Cultural%20Experiences/Lesson%2083/Level_21_Lesson_83_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Responsible travelers educate themselves about destinations and make conscious choices that minimize negative environmental impacts.",
-    translationAr: "المسافرون المسؤولون يثقفوا أنفسهم حول الوجهات ويتخذون خيارات واعية تقلل من التأثيرات البيئية السلبية."
+    translationAr: "المسافرون المسؤولون يثقفوا أنفسهم حول الوجهات ويتخذون خيارات واعية تقلل من التأثيرات البيئية السلبية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2021%20Travel%20and%20Cultural%20Experiences/Lesson%2083/Level_21_Lesson_83_%20S%2006.mp3"
   }
 ],
         },
@@ -10267,27 +10407,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Culinary traditions reflect historical influences, geographical resources, and cultural values that define regional identities worldwide.",
-    translationAr: "التقاليد culinaria تعكس التأثيرات التاريخية، والموارد الجغرافية، والقيم الثقافية التي تُشكل الهويات الإقليمية حول العالم."
+    translationAr: "التقاليد culinaria تعكس التأثيرات التاريخية، والموارد الجغرافية، والقيم الثقافية التي تُشكل الهويات الإقليمية حول العالم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2021%20Travel%20and%20Cultural%20Experiences/Lesson%2084/Level_21_Lesson_84_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Street food culture provides authentic flavors and affordable meals while supporting local entrepreneurs and family businesses.",
-    translationAr: "ثقافة طعام الشارع تقدم نكهات أصيلة ووجبات ميسورة التكلفة، وتدعم في الوقت نفسه رواد الأعمال المحليين والأسر العاملة."
+    translationAr: "ثقافة طعام الشارع تقدم نكهات أصيلة ووجبات ميسورة التكلفة، وتدعم في الوقت نفسه رواد الأعمال المحليين والأسر العاملة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2021%20Travel%20and%20Cultural%20Experiences/Lesson%2084/Level_21_Lesson_84_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Traditional cooking methods and indigenous ingredients preserve ancient knowledge and maintain connections to ancestral heritage.",
-    translationAr: "طرق الطهي التقليدية والمكونات المحلية تحفظ المعرفة القديمة وتحافظ على الروابط مع التراث الأجدادي."
+    translationAr: "طرق الطهي التقليدية والمكونات المحلية تحفظ المعرفة القديمة وتحافظ على الروابط مع التراث الأجدادي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2021%20Travel%20and%20Cultural%20Experiences/Lesson%2084/Level_21_Lesson_84_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Food festivals celebrate seasonal harvests, religious occasions, and community bonds through shared culinary experiences and storytelling.",
-    translationAr: "مهرجانات الطعام تحتفل بالمحاصيل الموسمية، والمناسبات الدينية، وروابط المجتمع من خلال تجارب الطهي المشتركة وسرد القصص."
+    translationAr: "مهرجانات الطعام تحتفل بالمحاصيل الموسمية، والمناسبات الدينية، وروابط المجتمع من خلال تجارب الطهي المشتركة وسرد القصص.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2021%20Travel%20and%20Cultural%20Experiences/Lesson%2084/Level_21_Lesson_84_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Globalization has created fusion cuisine that blends different culinary traditions while sometimes threatening authentic local recipes.",
-    translationAr: "العولمة أوجدت مطبخًا مدمجًا يمزج بين تقاليد طهي مختلفة، لكنها أحيانًا تهدد الوصفات المحلية الأصيلة."
+    translationAr: "العولمة أوجدت مطبخًا مدمجًا يمزج بين تقاليد طهي مختلفة، لكنها أحيانًا تهدد الوصفات المحلية الأصيلة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2021%20Travel%20and%20Cultural%20Experiences/Lesson%2084/Level_21_Lesson_84_%20S%2006.mp3"
   }
 ],
         },
@@ -10488,27 +10633,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Immersive language experiences during travel accelerate learning by providing constant exposure to native speakers and authentic contexts.",
-    translationAr: "التجارب اللغوية الغامرة أثناء السفر تُسرّع عملية التعلم من خلال التعرض المستمر للناطقين الأصليين والسياقات الحقيقية."
+    translationAr: "التجارب اللغوية الغامرة أثناء السفر تُسرّع عملية التعلم من خلال التعرض المستمر للناطقين الأصليين والسياقات الحقيقية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2021%20Travel%20and%20Cultural%20Experiences/Lesson%2085/Level_21_Lesson_85_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Daily interactions with locals, from ordering meals to asking directions, create practical vocabulary building opportunities.",
-    translationAr: "التفاعلات اليومية مع السكان المحليين، من طلب الطعام إلى الاستفسار عن الاتجاهات، تخلق فرصًا عملية لبناء المفردات."
+    translationAr: "التفاعلات اليومية مع السكان المحليين، من طلب الطعام إلى الاستفسار عن الاتجاهات، تخلق فرصًا عملية لبناء المفردات.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2021%20Travel%20and%20Cultural%20Experiences/Lesson%2085/Level_21_Lesson_85_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Cultural immersion helps learners understand idiomatic expressions, regional dialects, and nonverbal communication patterns effectively.",
-    translationAr: "الانغماس الثقافي يساعد المتعلمين على فهم التعابير الاصطلاحية، واللهجات الإقليمية، وأنماط التواصل غير اللفظي بفعالية."
+    translationAr: "الانغماس الثقافي يساعد المتعلمين على فهم التعابير الاصطلاحية، واللهجات الإقليمية، وأنماط التواصل غير اللفظي بفعالية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2021%20Travel%20and%20Cultural%20Experiences/Lesson%2085/Level_21_Lesson_85_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Language exchange programs connect travelers with local conversation partners who seek mutual cultural and linguistic benefits.",
-    translationAr: "برامج تبادل اللغة تربط المسافرين بشركاء محليين في المحادثة يبحثون عن فوائد ثقافية ولغوية متبادلة."
+    translationAr: "برامج تبادل اللغة تربط المسافرين بشركاء محليين في المحادثة يبحثون عن فوائد ثقافية ولغوية متبادلة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2021%20Travel%20and%20Cultural%20Experiences/Lesson%2085/Level_21_Lesson_85_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Overcoming communication barriers builds confidence and demonstrates that imperfect language skills can still facilitate meaningful connections.",
-    translationAr: "تجاوز حواجز التواصل يعزز الثقة ويُظهر أن مهارات اللغة غير الكاملة يمكن أن تسهّل مع ذلك روابط ذات مغزى."
+    translationAr: "تجاوز حواجز التواصل يعزز الثقة ويُظهر أن مهارات اللغة غير الكاملة يمكن أن تسهّل مع ذلك روابط ذات مغزى.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2021%20Travel%20and%20Cultural%20Experiences/Lesson%2085/Level_21_Lesson_85_%20S%2006.mp3"
   }
 ],
         },
@@ -10744,27 +10894,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Greenhouse gases like carbon dioxide and methane trap heat in the atmosphere, causing global temperatures to rise steadily.",
-    translationAr: "غازات الدفيئة مثل ثاني أكسيد الكربون والميثان تحبس الحرارة في الغلاف الجوي، مما يؤدي إلى ارتفاع تدريجي في درجات الحرارة العالمية."
+    translationAr: "غازات الدفيئة مثل ثاني أكسيد الكربون والميثان تحبس الحرارة في الغلاف الجوي، مما يؤدي إلى ارتفاع تدريجي في درجات الحرارة العالمية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2022%20Environmental%20Conservation%20and%20Climate%20Change/Lesson%2091/Level_22_Lesson_91_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Melting polar ice caps and glaciers contribute to rising sea levels, threatening coastal communities and island nations worldwide.",
-    translationAr: "ذوبان القمم الجليدية القطبية والأنهار الجليدية يساهم في ارتفاع مستويات سطح البحر، مما يهدد المجتمعات الساحلية والدول الجزرية حول العالم."
+    translationAr: "ذوبان القمم الجليدية القطبية والأنهار الجليدية يساهم في ارتفاع مستويات سطح البحر، مما يهدد المجتمعات الساحلية والدول الجزرية حول العالم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2022%20Environmental%20Conservation%20and%20Climate%20Change/Lesson%2091/Level_22_Lesson_91_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Extreme weather events including hurricanes, droughts, and heatwaves are becoming more frequent and intense due to climate change.",
-    translationAr: "الظواهر الجوية المتطرفة مثل الأعاصير والجفاف وموجات الحر أصبحت أكثر تكرارًا وشدة بسبب تغير المناخ."
+    translationAr: "الظواهر الجوية المتطرفة مثل الأعاصير والجفاف وموجات الحر أصبحت أكثر تكرارًا وشدة بسبب تغير المناخ.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2022%20Environmental%20Conservation%20and%20Climate%20Change/Lesson%2091/Level_22_Lesson_91_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Deforestation reduces the Earth's ability to absorb carbon dioxide while simultaneously releasing stored carbon into the atmosphere.",
-    translationAr: "إزالة الغابات تقلل من قدرة الأرض على امتصاص ثاني أكسيد الكربون وفي الوقت نفسه تطلق الكربون المخزن إلى الغلاف الجوي."
+    translationAr: "إزالة الغابات تقلل من قدرة الأرض على امتصاص ثاني أكسيد الكربون وفي الوقت نفسه تطلق الكربون المخزن إلى الغلاف الجوي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2022%20Environmental%20Conservation%20and%20Climate%20Change/Lesson%2091/Level_22_Lesson_91_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "International agreements like the Paris Climate Accord aim to limit global warming through coordinated emission reduction efforts.",
-    translationAr: "الاتفاقيات الدولية مثل اتفاقية باريس للمناخ تهدف إلى الحد من الاحتباس الحراري من خلال جهود منسقة لتقليل الانبعاثات."
+    translationAr: "الاتفاقيات الدولية مثل اتفاقية باريس للمناخ تهدف إلى الحد من الاحتباس الحراري من خلال جهود منسقة لتقليل الانبعاثات.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2022%20Environmental%20Conservation%20and%20Climate%20Change/Lesson%2091/Level_22_Lesson_91_%20S%2005.mp3"
   }
 ],
         },
@@ -10919,27 +11074,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Solar panels convert sunlight directly into electricity using photovoltaic cells, providing clean energy without harmful emissions.",
-    translationAr: "الألواح الشمسية تحول ضوء الشمس مباشرة إلى كهرباء باستخدام الخلايا الكهروضوئية، مما يوفر طاقة نظيفة بدون انبعاثات ضارة."
+    translationAr: "الألواح الشمسية تحول ضوء الشمس مباشرة إلى كهرباء باستخدام الخلايا الكهروضوئية، مما يوفر طاقة نظيفة بدون انبعاثات ضارة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2022%20Environmental%20Conservation%20and%20Climate%20Change/Lesson%2092/Level_22_Lesson_92_%20S%2002.mp3" 
   },
   {
     id: 2,
     text: "Wind turbines harness kinetic energy from moving air to generate electricity, especially effective in coastal and mountainous regions.",
-    translationAr: "توربينات الرياح تستغل الطاقة الحركية من الهواء المتحرك لتوليد الكهرباء، وتكون فعّالة بشكل خاص في المناطق الساحلية والجبلية."
+    translationAr: "توربينات الرياح تستغل الطاقة الحركية من الهواء المتحرك لتوليد الكهرباء، وتكون فعّالة بشكل خاص في المناطق الساحلية والجبلية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2022%20Environmental%20Conservation%20and%20Climate%20Change/Lesson%2092/Level_22_Lesson_92_%20S%2003.mp3" 
   },
   {
     id: 3,
     text: "Hydroelectric dams use flowing water to spin turbines and produce renewable electricity for millions of homes and businesses.",
-    translationAr: "السدود الكهرومائية تستخدم المياه الجارية لتدوير التوربينات وإنتاج كهرباء متجددة لملايين المنازل والأعمال."
+    translationAr: "السدود الكهرومائية تستخدم المياه الجارية لتدوير التوربينات وإنتاج كهرباء متجددة لملايين المنازل والأعمال.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2022%20Environmental%20Conservation%20and%20Climate%20Change/Lesson%2092/Level_22_Lesson_92_%20S%2004.mp3" 
   },
   {
     id: 4,
     text: "Geothermal energy taps into the Earth's internal heat to generate power and provide heating for residential and commercial buildings.",
-    translationAr: "الطاقة الحرارية الأرضية تستفيد من حرارة باطن الأرض لتوليد الطاقة وتوفير التدفئة للمباني السكنية والتجارية."
+    translationAr: "الطاقة الحرارية الأرضية تستفيد من حرارة باطن الأرض لتوليد الطاقة وتوفير التدفئة للمباني السكنية والتجارية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2022%20Environmental%20Conservation%20and%20Climate%20Change/Lesson%2092/Level_22_Lesson_92_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Energy storage technologies like batteries are essential for managing renewable energy supply and ensuring consistent power availability.",
-    translationAr: "تقنيات تخزين الطاقة مثل البطاريات ضرورية لإدارة إمدادات الطاقة المتجددة وضمان توفر الكهرباء بشكل مستمر."
+    translationAr: "تقنيات تخزين الطاقة مثل البطاريات ضرورية لإدارة إمدادات الطاقة المتجددة وضمان توفر الكهرباء بشكل مستمر.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2022%20Environmental%20Conservation%20and%20Climate%20Change/Lesson%2092/Level_22_Lesson_92_%20S%2006.mp3" 
   }
 ],
         },
@@ -11091,27 +11251,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Habitat destruction is the primary threat to wildlife populations, forcing animals to compete for limited resources in shrinking territories.",
-    translationAr: "تدمير المواطن الطبيعية هو التهديد الأساسي للحياة البرية، حيث يُجبر الحيوانات على التنافس على موارد محدودة في مناطق آخذة في الانكماش."
+    translationAr: "تدمير المواطن الطبيعية هو التهديد الأساسي للحياة البرية، حيث يُجبر الحيوانات على التنافس على موارد محدودة في مناطق آخذة في الانكماش.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2022%20Environmental%20Conservation%20and%20Climate%20Change/Lesson%2093/Level_22_Lesson_93_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "National parks and nature reserves protect critical ecosystems while providing safe breeding grounds for endangered species.",
-    translationAr: "الحدائق الوطنية والمحميات الطبيعية تحمي النظم البيئية الحيوية وتوفر في الوقت نفسه مواطن آمنة لتكاثر الأنواع المهددة بالانقراض."
+    translationAr: "الحدائق الوطنية والمحميات الطبيعية تحمي النظم البيئية الحيوية وتوفر في الوقت نفسه مواطن آمنة لتكاثر الأنواع المهددة بالانقراض.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2022%20Environmental%20Conservation%20and%20Climate%20Change/Lesson%2093/Level_22_Lesson_93_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Poaching for illegal wildlife trade threatens iconic species like elephants, rhinos, and tigers with extinction worldwide.",
-    translationAr: "الصيد غير المشروع من أجل تجارة الحياة البرية غير القانونية يهدد الأنواع الشهيرة مثل الفيلة ووحيد القرن والنمور بالانقراض عالميًا."
+    translationAr: "الصيد غير المشروع من أجل تجارة الحياة البرية غير القانونية يهدد الأنواع الشهيرة مثل الفيلة ووحيد القرن والنمور بالانقراض عالميًا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2022%20Environmental%20Conservation%20and%20Climate%20Change/Lesson%2093/Level_22_Lesson_93_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Conservation programs involve local communities in protecting wildlife through education, employment, and sustainable tourism initiatives.",
-    translationAr: "برامج الحفاظ على البيئة تُشرك المجتمعات المحلية في حماية الحياة البرية من خلال التعليم، وفرص العمل، ومبادرات السياحة المستدامة."
+    translationAr: "برامج الحفاظ على البيئة تُشرك المجتمعات المحلية في حماية الحياة البرية من خلال التعليم، وفرص العمل، ومبادرات السياحة المستدامة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2022%20Environmental%20Conservation%20and%20Climate%20Change/Lesson%2093/Level_22_Lesson_93_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Biodiversity supports ecosystem stability by maintaining complex food webs and natural processes essential for environmental health.",
-    translationAr: "التنوع البيولوجي يدعم استقرار النظم البيئية من خلال الحفاظ على الشبكات الغذائية المعقدة والعمليات الطبيعية الأساسية لصحة البيئة."
+    translationAr: "التنوع البيولوجي يدعم استقرار النظم البيئية من خلال الحفاظ على الشبكات الغذائية المعقدة والعمليات الطبيعية الأساسية لصحة البيئة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2022%20Environmental%20Conservation%20and%20Climate%20Change/Lesson%2093/Level_22_Lesson_93_%20S%2006.mp3"
   }
 ],
         },
@@ -11314,27 +11479,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Air pollution from vehicle emissions and industrial activities causes respiratory problems and contributes to smog formation in urban areas.",
-    translationAr: "تلوث الهواء الناتج عن انبعاثات المركبات والأنشطة الصناعية يسبب مشاكل تنفسية ويساهم في تكوّن الضباب الدخاني في المناطق الحضرية."
+    translationAr: "تلوث الهواء الناتج عن انبعاثات المركبات والأنشطة الصناعية يسبب مشاكل تنفسية ويساهم في تكوّن الضباب الدخاني في المناطق الحضرية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2022%20Environmental%20Conservation%20and%20Climate%20Change/Lesson%2094/Level_22_Lesson_94_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Plastic waste accumulates in oceans, harming marine life and creating massive garbage patches that persist for decades.",
-    translationAr: "النفايات البلاستيكية تتراكم في المحيطات، مما يضر بالحياة البحرية ويُكوّن بقع قمامة هائلة تستمر لعقود."
+    translationAr: "النفايات البلاستيكية تتراكم في المحيطات، مما يضر بالحياة البحرية ويُكوّن بقع قمامة هائلة تستمر لعقود.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2022%20Environmental%20Conservation%20and%20Climate%20Change/Lesson%2094/Level_22_Lesson_94_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Water contamination from chemical runoff and sewage threatens drinking water supplies and aquatic ecosystem health significantly.",
-    translationAr: "تلوث المياه الناتج عن الجريان الكيميائي ومياه الصرف الصحي يهدد بشكل كبير إمدادات مياه الشرب وصحة النظم البيئية المائية."
+    translationAr: "تلوث المياه الناتج عن الجريان الكيميائي ومياه الصرف الصحي يهدد بشكل كبير إمدادات مياه الشرب وصحة النظم البيئية المائية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2022%20Environmental%20Conservation%20and%20Climate%20Change/Lesson%2094/Level_22_Lesson_94_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Recycling programs reduce waste volume while creating economic opportunities and conserving natural resources for future generations.",
-    translationAr: "برامج إعادة التدوير تقلل من حجم النفايات وتخلق فرصًا اقتصادية، كما تحفظ الموارد الطبيعية للأجيال القادمة."
+    translationAr: "برامج إعادة التدوير تقلل من حجم النفايات وتخلق فرصًا اقتصادية، كما تحفظ الموارد الطبيعية للأجيال القادمة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2022%20Environmental%20Conservation%20and%20Climate%20Change/Lesson%2094/Level_22_Lesson_94_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Environmental cleanup technologies include bioremediation, waste-to-energy conversion, and advanced filtration systems for pollution control.",
-    translationAr: "تشمل تقنيات تنظيف البيئة المعالجة الحيوية، وتحويل النفايات إلى طاقة، وأنظمة الترشيح المتقدمة للتحكم في التلوث."
+    translationAr: "تشمل تقنيات تنظيف البيئة المعالجة الحيوية، وتحويل النفايات إلى طاقة، وأنظمة الترشيح المتقدمة للتحكم في التلوث.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2022%20Environmental%20Conservation%20and%20Climate%20Change/Lesson%2094/Level_22_Lesson_94_%20S%2006.mp3"
   }
 ],
         },
@@ -11499,27 +11669,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Reducing energy consumption at home through LED lighting, efficient appliances, and proper insulation saves money and reduces carbon footprint.",
-    translationAr: "تقليل استهلاك الطاقة في المنزل من خلال الإضاءة بتقنية LED، والأجهزة الموفرة للطاقة، والعزل الجيد يوفر المال ويقلل من البصمة الكربونية."
+    translationAr: "تقليل استهلاك الطاقة في المنزل من خلال الإضاءة بتقنية LED، والأجهزة الموفرة للطاقة، والعزل الجيد يوفر المال ويقلل من البصمة الكربونية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2022%20Environmental%20Conservation%20and%20Climate%20Change/Lesson%2095/Level_22_Lesson_95_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Composting organic waste creates nutrient-rich soil for gardening while diverting biodegradable materials from overcrowded landfills.",
-    translationAr: "تحويل النفايات العضوية إلى سماد ينتج تربة غنية بالعناصر الغذائية للحدائق، ويحول المواد القابلة للتحلل بعيدًا عن مدافن النفايات المزدحمة."
+    translationAr: "تحويل النفايات العضوية إلى سماد ينتج تربة غنية بالعناصر الغذائية للحدائق، ويحول المواد القابلة للتحلل بعيدًا عن مدافن النفايات المزدحمة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2022%20Environmental%20Conservation%20and%20Climate%20Change/Lesson%2095/Level_22_Lesson_95_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Sustainable transportation options like cycling, public transit, and electric vehicles significantly reduce individual greenhouse gas emissions.",
-    translationAr: "خيارات النقل المستدام مثل ركوب الدراجات، ووسائل النقل العام، والسيارات الكهربائية تقلل بشكل كبير من انبعاثات الغازات الدفيئة الفردية."
+    translationAr: "خيارات النقل المستدام مثل ركوب الدراجات، ووسائل النقل العام، والسيارات الكهربائية تقلل بشكل كبير من انبعاثات الغازات الدفيئة الفردية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2022%20Environmental%20Conservation%20and%20Climate%20Change/Lesson%2095/Level_22_Lesson_95_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Water conservation measures including rainwater harvesting and efficient fixtures help preserve this precious resource for future needs.",
-    translationAr: "إجراءات الحفاظ على المياه مثل جمع مياه الأمطار واستخدام التركيبات الموفرة تساعد في الحفاظ على هذا المورد الثمين للاحتياجات المستقبلية."
+    translationAr: "إجراءات الحفاظ على المياه مثل جمع مياه الأمطار واستخدام التركيبات الموفرة تساعد في الحفاظ على هذا المورد الثمين للاحتياجات المستقبلية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2022%20Environmental%20Conservation%20and%20Climate%20Change/Lesson%2095/Level_22_Lesson_95_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Supporting local farmers and choosing organic products reduces transportation emissions while promoting healthier ecosystems and communities.",
-    translationAr: "دعم المزارعين المحليين واختيار المنتجات العضوية يقلل من انبعاثات النقل ويعزز النظم البيئية والمجتمعات الأكثر صحة."
+    translationAr: "دعم المزارعين المحليين واختيار المنتجات العضوية يقلل من انبعاثات النقل ويعزز النظم البيئية والمجتمعات الأكثر صحة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2022%20Environmental%20Conservation%20and%20Climate%20Change/Lesson%2095/Level_22_Lesson_95_%20S%2006.mp3"
   }
 ],
         },
@@ -11695,27 +11870,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Successful entrepreneurs conduct comprehensive market research to identify unmet consumer needs and assess competitive landscapes before launching their ventures.",
-    translationAr: "يقوم رواد الأعمال الناجحون بإجراء أبحاث سوق شاملة لتحديد احتياجات المستهلك غير الملباة وتقييم المشهد التنافسي قبل إطلاق مشاريعهم."
+    translationAr: "يقوم رواد الأعمال الناجحون بإجراء أبحاث سوق شاملة لتحديد احتياجات المستهلك غير الملباة وتقييم المشهد التنافسي قبل إطلاق مشاريعهم.",
+    audioUrl: ""
   },
   {
     id: 2,
     text: "Developing a compelling business plan requires articulating your value proposition, financial projections, and strategic roadmap to attract potential investors and partners.",
-    translationAr: "إعداد خطة عمل مقنعة يتطلب توضيح عرض القيمة الخاصة بك، والتوقعات المالية، وخارطة الطريق الاستراتيجية لجذب المستثمرين والشركاء المحتملين."
+    translationAr: "إعداد خطة عمل مقنعة يتطلب توضيح عرض القيمة الخاصة بك، والتوقعات المالية، وخارطة الطريق الاستراتيجية لجذب المستثمرين والشركاء المحتملين.",
+    audioUrl: ""
   },
   {
     id: 3,
     text: "Securing adequate funding through angel investors, venture capital firms, or crowdfunding platforms demands exceptional presentation skills and unwavering confidence in your vision.",
-    translationAr: "الحصول على تمويل كافٍ من خلال المستثمرين الملائكيين أو شركات رأس المال المغامر أو منصات التمويل الجماعي يتطلب مهارات عرض استثنائية وثقة راسخة في رؤيتك."
+    translationAr: "الحصول على تمويل كافٍ من خلال المستثمرين الملائكيين أو شركات رأس المال المغامر أو منصات التمويل الجماعي يتطلب مهارات عرض استثنائية وثقة راسخة في رؤيتك.",
+    audioUrl: ""
   },
   {
     id: 4,
     text: "Building a cohesive team involves recruiting talented individuals whose complementary skills and shared commitment will drive the organization toward sustained growth.",
-    translationAr: "بناء فريق متماسك يتطلب استقطاب أفراد موهوبين يتمتعون بمهارات مكملة والتزام مشترك لدفع المنظمة نحو نمو مستدام."
+    translationAr: "بناء فريق متماسك يتطلب استقطاب أفراد موهوبين يتمتعون بمهارات مكملة والتزام مشترك لدفع المنظمة نحو نمو مستدام.",
+    audioUrl: ""
   },
   {
     id: 5,
     text: "Navigating regulatory compliance, intellectual property protection, and legal frameworks requires strategic partnerships with experienced attorneys and consultants.",
-    translationAr: "التعامل مع الامتثال التنظيمي وحماية الملكية الفكرية والأطر القانونية يتطلب شراكات استراتيجية مع محامين ومستشارين ذوي خبرة."
+    translationAr: "التعامل مع الامتثال التنظيمي وحماية الملكية الفكرية والأطر القانونية يتطلب شراكات استراتيجية مع محامين ومستشارين ذوي خبرة.",
+    audioUrl: ""
   }
 ],
         },
@@ -14994,27 +15174,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "The summer festival has colorful decorations, delicious food stands, and live music that makes everyone dance and smile.",
-    translationAr: "مهرجان الصيف يحتوي على زينة ملونة، وأكشاك طعام لذيذ، وموسيقى حية تجعل الجميع يرقصون ويبتسمون."
+    translationAr: "مهرجان الصيف يحتوي على زينة ملونة، وأكشاك طعام لذيذ، وموسيقى حية تجعل الجميع يرقصون ويبتسمون.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2026%20My%20Community%20and%20Neighborhood/Lesson%20084/Level_26_Lesson_084_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Farmers markets happen every Saturday morning where local people sell fresh vegetables, fruits, and homemade crafts.",
-    translationAr: "أسواق المزارعين تُقام كل صباح سبت حيث يبيع الناس المحليون الخضروات والفواكه الطازجة والأشغال اليدوية."
+    translationAr: "أسواق المزارعين تُقام كل صباح سبت حيث يبيع الناس المحليون الخضروات والفواكه الطازجة والأشغال اليدوية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2026%20My%20Community%20and%20Neighborhood/Lesson%20084/Level_26_Lesson_084_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Holiday parades march down main streets with marching bands, decorated floats, and costumed characters waving to crowds.",
-    translationAr: "العروض الاحتفالية تسير في الشوارع الرئيسية مع الفرق الموسيقية والعربات المزينة والشخصيات التنكرية التي تلوّح للجماهير."
+    translationAr: "العروض الاحتفالية تسير في الشوارع الرئيسية مع الفرق الموسيقية والعربات المزينة والشخصيات التنكرية التي تلوّح للجماهير.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2026%20My%20Community%20and%20Neighborhood/Lesson%20084/Level_26_Lesson_084_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Community clean-up days bring neighbors together to pick up trash and plant beautiful flowers in public spaces.",
-    translationAr: "أيام تنظيف المجتمع تجمع الجيران ليلتقطوا القمامة ويزرعوا الزهور الجميلة في الأماكن العامة."
+    translationAr: "أيام تنظيف المجتمع تجمع الجيران ليلتقطوا القمامة ويزرعوا الزهور الجميلة في الأماكن العامة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2026%20My%20Community%20and%20Neighborhood/Lesson%20084/Level_26_Lesson_084_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "School sports games unite families and friends who cheer loudly for their favorite teams on weekends.",
-    translationAr: "مباريات الرياضة المدرسية تجمع العائلات والأصدقاء الذين يشجعون فرقهم المفضلة بصوت عالٍ في عطلة نهاية الأسبوع."
+    translationAr: "مباريات الرياضة المدرسية تجمع العائلات والأصدقاء الذين يشجعون فرقهم المفضلة بصوت عالٍ في عطلة نهاية الأسبوع.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2026%20My%20Community%20and%20Neighborhood/Lesson%20084/Level_26_Lesson_084_%20S%2006.mp3"
   }
 ],
         },
@@ -15125,27 +15310,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Good neighbors are friendly and polite, always greeting each other with warm smiles and helpful attitudes every day.",
-    translationAr: "الجيران الطيبون ودودون ومهذبون، يحيون بعضهم دائمًا بابتسامات دافئة ومواقف متعاونة كل يوم."
+    translationAr: "الجيران الطيبون ودودون ومهذبون، يحيون بعضهم دائمًا بابتسامات دافئة ومواقف متعاونة كل يوم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2026%20My%20Community%20and%20Neighborhood/Lesson%20085/Level_26_Lesson_085_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Helping elderly neighbors carry heavy shopping bags or shovel snow from their driveways shows kindness and respect.",
-    translationAr: "مساعدة الجيران المسنين في حمل أكياس التسوق الثقيلة أو إزالة الثلوج من مداخل منازلهم تُظهر اللطف والاحترام."
+    translationAr: "مساعدة الجيران المسنين في حمل أكياس التسوق الثقيلة أو إزالة الثلوج من مداخل منازلهم تُظهر اللطف والاحترام.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2026%20My%20Community%20and%20Neighborhood/Lesson%20085/Level_26_Lesson_085_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Keeping our yards clean and picking up litter makes the whole neighborhood look beautiful and welcoming for everyone.",
-    translationAr: "الحفاظ على نظافة حدائقنا والتقاط القمامة يجعل الحي بأكمله يبدو جميلًا ومرحّبًا بالجميع."
+    translationAr: "الحفاظ على نظافة حدائقنا والتقاط القمامة يجعل الحي بأكمله يبدو جميلًا ومرحّبًا بالجميع.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2026%20My%20Community%20and%20Neighborhood/Lesson%20085/Level_26_Lesson_085_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Sharing toys with other children and taking turns on playground equipment teaches cooperation and friendship skills.",
-    translationAr: "مشاركة الألعاب مع الأطفال الآخرين والتناوب على استخدام ألعاب الملعب تعلم التعاون ومهارات الصداقة."
+    translationAr: "مشاركة الألعاب مع الأطفال الآخرين والتناوب على استخدام ألعاب الملعب تعلم التعاون ومهارات الصداقة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2026%20My%20Community%20and%20Neighborhood/Lesson%20085/Level_26_Lesson_085_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Following community rules like quiet hours and recycling guidelines helps create a peaceful and healthy environment for all.",
-    translationAr: "اتباع قواعد المجتمع مثل ساعات الهدوء وإرشادات إعادة التدوير يساعد على خلق بيئة سلمية وصحية للجميع."
+    translationAr: "اتباع قواعد المجتمع مثل ساعات الهدوء وإرشادات إعادة التدوير يساعد على خلق بيئة سلمية وصحية للجميع.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2026%20My%20Community%20and%20Neighborhood/Lesson%20085/Level_26_Lesson_085_%20S%2006.mp3"
   }
 ],
         },
@@ -15264,27 +15454,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Painting with watercolors requires understanding color mixing, brush techniques, and paper textures to create atmospheric effects and expressive artwork.",
-    translationAr: "الرسم بالألوان المائية يتطلب فهم مزج الألوان، وتقنيات استخدام الفرشاة، وملمس الورق لابتكار تأثيرات جوية وأعمال فنية معبّرة."
+    translationAr: "الرسم بالألوان المائية يتطلب فهم مزج الألوان، وتقنيات استخدام الفرشاة، وملمس الورق لابتكار تأثيرات جوية وأعمال فنية معبّرة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2027%20Hobbies%20and%20Creative%20Activities/Lesson%20161/Level_27_Lesson_161_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Knitting combines repetitive motions with pattern recognition, producing functional items like scarves and sweaters while promoting mental relaxation and focus.",
-    translationAr: "الحياكة تجمع بين الحركات المتكررة والتعرف على الأنماط، وتنتج عناصر عملية مثل الأوشحة والسترات، مع تعزيز الاسترخاء الذهني والتركيز."
+    translationAr: "الحياكة تجمع بين الحركات المتكررة والتعرف على الأنماط، وتنتج عناصر عملية مثل الأوشحة والسترات، مع تعزيز الاسترخاء الذهني والتركيز.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2027%20Hobbies%20and%20Creative%20Activities/Lesson%20161/Level_27_Lesson_161_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Pottery involves shaping clay on spinning wheels, learning glazing techniques, and understanding kiln firing processes to create unique ceramic pieces.",
-    translationAr: "صناعة الفخار تشمل تشكيل الطين على عجلات دوارة، وتعلم تقنيات التزجيج، وفهم عمليات الحرق في الأفران لإنتاج قطع خزفية مميزة."
+    translationAr: "صناعة الفخار تشمل تشكيل الطين على عجلات دوارة، وتعلم تقنيات التزجيج، وفهم عمليات الحرق في الأفران لإنتاج قطع خزفية مميزة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2027%20Hobbies%20and%20Creative%20Activities/Lesson%20161/Level_27_Lesson_161_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Photography develops visual composition skills, technical camera knowledge, and post-processing abilities to capture meaningful moments and artistic perspectives.",
-    translationAr: "التصوير الفوتوغرافي يطور مهارات التكوين البصري، والمعرفة التقنية بالكاميرا، وقدرات المعالجة اللاحقة لالتقاط لحظات ذات معنى ومنظورات فنية."
+    translationAr: "التصوير الفوتوغرافي يطور مهارات التكوين البصري، والمعرفة التقنية بالكاميرا، وقدرات المعالجة اللاحقة لالتقاط لحظات ذات معنى ومنظورات فنية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2027%20Hobbies%20and%20Creative%20Activities/Lesson%20161/Level_27_Lesson_161_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Scrapbooking preserves memories through creative layout design, decorative elements, and storytelling techniques that document personal histories and experiences.",
-    translationAr: "فن الألبومات يحفظ الذكريات من خلال تصميمات تخطيط إبداعية، وعناصر زخرفية، وتقنيات سردية توثق التواريخ والتجارب الشخصية."
+    translationAr: "فن الألبومات يحفظ الذكريات من خلال تصميمات تخطيط إبداعية، وعناصر زخرفية، وتقنيات سردية توثق التواريخ والتجارب الشخصية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2027%20Hobbies%20and%20Creative%20Activities/Lesson%20161/Level_27_Lesson_161_%20S%2006.mp3"
   }
 ],
         },
@@ -15403,27 +15598,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Learning piano develops finger coordination, music theory understanding, and provides a foundation for appreciating classical and contemporary musical compositions.",
-    translationAr: "تعلم العزف على البيانو يطور تنسيق الأصابع، وفهم نظرية الموسيقى، ويوفر أساسًا لتقدير المؤلفات الموسيقية الكلاسيكية والمعاصرة."
+    translationAr: "تعلم العزف على البيانو يطور تنسيق الأصابع، وفهم نظرية الموسيقى، ويوفر أساسًا لتقدير المؤلفات الموسيقية الكلاسيكية والمعاصرة.",
+    audioUrl: ""
   },
   {
     id: 2,
     text: "Guitar playing combines chord progressions with rhythm patterns, enabling musicians to accompany singing and create diverse musical styles from folk to rock.",
-    translationAr: "عزف الجيتار يجمع بين تقدمات الكوردات وأنماط الإيقاع، مما يمكّن العازفين من مرافقة الغناء وابتكار أنماط موسيقية متنوعة من الفولك إلى الروك."
+    translationAr: "عزف الجيتار يجمع بين تقدمات الكوردات وأنماط الإيقاع، مما يمكّن العازفين من مرافقة الغناء وابتكار أنماط موسيقية متنوعة من الفولك إلى الروك.",
+    audioUrl: ""
   },
   {
     id: 3,
     text: "Singing exercises improve breath control, vocal range expansion, and emotional expression while building confidence through performance opportunities.",
-    translationAr: "تمارين الغناء تحسن التحكم في التنفس، وتوسّع المدى الصوتي، وتطور التعبير العاطفي، مع تعزيز الثقة من خلال فرص الأداء."
+    translationAr: "تمارين الغناء تحسن التحكم في التنفس، وتوسّع المدى الصوتي، وتطور التعبير العاطفي، مع تعزيز الثقة من خلال فرص الأداء.",
+    audioUrl: ""
   },
   {
     id: 4,
     text: "Dancing integrates physical movement with musical interpretation, promoting fitness, cultural awareness, and social interaction through various traditional and modern styles.",
-    translationAr: "الرقص يدمج الحركة الجسدية مع التفسير الموسيقي، ويعزز اللياقة البدنية، والوعي الثقافي، والتفاعل الاجتماعي عبر أنماط تقليدية وحديثة متنوعة."
+    translationAr: "الرقص يدمج الحركة الجسدية مع التفسير الموسيقي، ويعزز اللياقة البدنية، والوعي الثقافي، والتفاعل الاجتماعي عبر أنماط تقليدية وحديثة متنوعة.",
+    audioUrl: ""
   },
   {
     id: 5,
     text: "Theater participation develops acting skills, public speaking abilities, and creative collaboration while exploring different characters and storytelling methods.",
-    translationAr: "المشاركة في المسرح تطور مهارات التمثيل، وقدرات التحدث أمام الجمهور، والتعاون الإبداعي مع استكشاف شخصيات وأساليب سرد مختلفة."
+    translationAr: "المشاركة في المسرح تطور مهارات التمثيل، وقدرات التحدث أمام الجمهور، والتعاون الإبداعي مع استكشاف شخصيات وأساليب سرد مختلفة.",
+    audioUrl: ""
   }
 ],
         },
@@ -15534,27 +15734,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Hiking through mountain trails offers cardiovascular exercise, scenic photography opportunities, and peaceful meditation experiences away from urban distractions.",
-    translationAr: "المشي لمسافات طويلة عبر المسارات الجبلية يوفر تمرينًا للقلب والأوعية الدموية، وفرصًا لالتقاط صور طبيعية خلابة، وتجارب تأمل هادئة بعيدًا عن ضوضاء المدن."
+    translationAr: "المشي لمسافات طويلة عبر المسارات الجبلية يوفر تمرينًا للقلب والأوعية الدموية، وفرصًا لالتقاط صور طبيعية خلابة، وتجارب تأمل هادئة بعيدًا عن ضوضاء المدن.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2027%20Hobbies%20and%20Creative%20Activities/Lesson%20163/Level_27_Lesson_163_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Gardening combines physical activity with botanical knowledge, producing fresh vegetables and beautiful flowers while connecting people to natural growing cycles.",
-    translationAr: "البستنة تجمع بين النشاط البدني والمعرفة النباتية، وتنتج خضروات طازجة وأزهارًا جميلة، مع ربط الناس بدورات النمو الطبيعية."
+    translationAr: "البستنة تجمع بين النشاط البدني والمعرفة النباتية، وتنتج خضروات طازجة وأزهارًا جميلة، مع ربط الناس بدورات النمو الطبيعية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2027%20Hobbies%20and%20Creative%20Activities/Lesson%20163/Level_27_Lesson_163_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Birdwatching develops patience, observation skills, and environmental awareness while encouraging exploration of diverse habitats and wildlife behaviors.",
-    translationAr: "مراقبة الطيور تطور الصبر، ومهارات الملاحظة، والوعي البيئي، وتشجع على استكشاف المواطن الطبيعية المتنوعة وسلوكيات الحياة البرية."
+    translationAr: "مراقبة الطيور تطور الصبر، ومهارات الملاحظة، والوعي البيئي، وتشجع على استكشاف المواطن الطبيعية المتنوعة وسلوكيات الحياة البرية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2027%20Hobbies%20and%20Creative%20Activities/Lesson%20163/Level_27_Lesson_163_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Camping provides outdoor survival skills, stargazing opportunities, and social bonding experiences around campfires while appreciating natural surroundings.",
-    translationAr: "التخييم يوفر مهارات البقاء في الهواء الطلق، وفرص مراقبة النجوم، وتجارب الترابط الاجتماعي حول نيران المخيم، مع تقدير الطبيعة المحيطة."
+    translationAr: "التخييم يوفر مهارات البقاء في الهواء الطلق، وفرص مراقبة النجوم، وتجارب الترابط الاجتماعي حول نيران المخيم، مع تقدير الطبيعة المحيطة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2027%20Hobbies%20and%20Creative%20Activities/Lesson%20163/Level_27_Lesson_163_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Cycling promotes cardiovascular fitness, environmental consciousness, and community exploration while offering sustainable transportation alternatives for daily commuting.",
-    translationAr: "ركوب الدراجات يعزز اللياقة القلبية الوعائية، والوعي البيئي، واستكشاف المجتمع، مع تقديم بدائل نقل مستدامة للتنقل اليومي."
+    translationAr: "ركوب الدراجات يعزز اللياقة القلبية الوعائية، والوعي البيئي، واستكشاف المجتمع، مع تقديم بدائل نقل مستدامة للتنقل اليومي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2027%20Hobbies%20and%20Creative%20Activities/Lesson%20163/Level_27_Lesson_163_%20S%2006.mp3"
   }
 ],
         },
@@ -15682,27 +15887,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Reading diverse literature genres expands vocabulary, cultural understanding, and critical thinking abilities while providing entertainment and escapism from daily routines.",
-    translationAr: "قراءة أنواع مختلفة من الأدب توسع المفردات، والفهم الثقافي، والقدرات على التفكير النقدي، بينما توفر الترفيه والهروب من الروتين اليومي."
+    translationAr: "قراءة أنواع مختلفة من الأدب توسع المفردات، والفهم الثقافي، والقدرات على التفكير النقدي، بينما توفر الترفيه والهروب من الروتين اليومي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2027%20Hobbies%20and%20Creative%20Activities/Lesson%20164/Level_27_Lesson_164_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Creative writing exercises imagination, develops storytelling techniques, and improves communication skills through poetry, fiction, and personal narrative composition.",
-    translationAr: "الكتابة الإبداعية تدرب الخيال، وتطور تقنيات السرد، وتحسن مهارات التواصل من خلال الشعر، والقصص الخيالية، وكتابة السرد الشخصي."
+    translationAr: "الكتابة الإبداعية تدرب الخيال، وتطور تقنيات السرد، وتحسن مهارات التواصل من خلال الشعر، والقصص الخيالية، وكتابة السرد الشخصي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2027%20Hobbies%20and%20Creative%20Activities/Lesson%20164/Level_27_Lesson_164_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Journaling promotes self-reflection, emotional processing, and memory preservation while creating personal historical records of thoughts and experiences.",
-    translationAr: "كتابة اليوميات تعزز التأمل الذاتي، ومعالجة المشاعر، وحفظ الذكريات، مع إنشاء سجلات شخصية للتاريخ الفكري والتجارب."
+    translationAr: "كتابة اليوميات تعزز التأمل الذاتي، ومعالجة المشاعر، وحفظ الذكريات، مع إنشاء سجلات شخصية للتاريخ الفكري والتجارب.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2027%20Hobbies%20and%20Creative%20Activities/Lesson%20164/Level_27_Lesson_164_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Book clubs encourage social discussion, perspective sharing, and analytical thinking while building friendships around shared literary interests and discoveries.",
-    translationAr: "نوادي القراءة تشجع النقاشات الاجتماعية، وتبادل وجهات النظر، والتفكير التحليلي، بينما تبني صداقات حول اهتمامات واكتشافات أدبية مشتركة."
+    translationAr: "نوادي القراءة تشجع النقاشات الاجتماعية، وتبادل وجهات النظر، والتفكير التحليلي، بينما تبني صداقات حول اهتمامات واكتشافات أدبية مشتركة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2027%20Hobbies%20and%20Creative%20Activities/Lesson%20164/Level_27_Lesson_164_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Blogging combines writing practice with digital publishing, enabling content creators to share expertise, experiences, and opinions with global audiences online.",
-    translationAr: "التدوين يجمع بين ممارسة الكتابة والنشر الرقمي، مما يمكّن صناع المحتوى من مشاركة خبراتهم وتجاربهم وآرائهم مع جماهير عالمية عبر الإنترنت."
+    translationAr: "التدوين يجمع بين ممارسة الكتابة والنشر الرقمي، مما يمكّن صناع المحتوى من مشاركة خبراتهم وتجاربهم وآرائهم مع جماهير عالمية عبر الإنترنت.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2027%20Hobbies%20and%20Creative%20Activities/Lesson%20164/Level_27_Lesson_164_%20S%2006.mp3"
   }
 ],
         },
@@ -15823,27 +16033,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Stamp collecting teaches geographical knowledge, historical events, and cultural appreciation while developing organizational systems for cataloging and preserving valuable specimens.",
-    translationAr: "جمع الطوابع يعلّم المعرفة الجغرافية، والأحداث التاريخية، والتقدير الثقافي، مع تطوير أنظمة تنظيمية لفهرسة وحفظ العينات القيّمة."
+    translationAr: "جمع الطوابع يعلّم المعرفة الجغرافية، والأحداث التاريخية، والتقدير الثقافي، مع تطوير أنظمة تنظيمية لفهرسة وحفظ العينات القيّمة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2027%20Hobbies%20and%20Creative%20Activities/Lesson%20165/Level_27_Lesson_165_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Coin collecting combines historical research with economic understanding, requiring authentication skills and market knowledge to identify rare and valuable pieces.",
-    translationAr: "جمع العملات يجمع بين البحث التاريخي والفهم الاقتصادي، ويتطلب مهارات التحقق من الأصالة ومعرفة بالسوق للتعرف على القطع النادرة والقيّمة."
+    translationAr: "جمع العملات يجمع بين البحث التاريخي والفهم الاقتصادي، ويتطلب مهارات التحقق من الأصالة ومعرفة بالسوق للتعرف على القطع النادرة والقيّمة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2027%20Hobbies%20and%20Creative%20Activities/Lesson%20165/Level_27_Lesson_165_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Book collecting focuses on first editions, signed copies, and rare publications while considering condition, provenance, and literary significance for building comprehensive libraries.",
-    translationAr: "جمع الكتب يركز على الطبعات الأولى، والنسخ الموقعة، والمنشورات النادرة، مع مراعاة الحالة والأصل والأهمية الأدبية لبناء مكتبات شاملة."
+    translationAr: "جمع الكتب يركز على الطبعات الأولى، والنسخ الموقعة، والمنشورات النادرة، مع مراعاة الحالة والأصل والأهمية الأدبية لبناء مكتبات شاملة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2027%20Hobbies%20and%20Creative%20Activities/Lesson%20165/Level_27_Lesson_165_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Vintage toy collecting preserves childhood memories and manufacturing history while requiring storage solutions, restoration techniques, and market valuation expertise.",
-    translationAr: "جمع الألعاب القديمة يحفظ ذكريات الطفولة وتاريخ التصنيع، ويتطلب حلول تخزين وتقنيات ترميم وخبرة في تقييم السوق."
+    translationAr: "جمع الألعاب القديمة يحفظ ذكريات الطفولة وتاريخ التصنيع، ويتطلب حلول تخزين وتقنيات ترميم وخبرة في تقييم السوق.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2027%20Hobbies%20and%20Creative%20Activities/Lesson%20165/Level_27_Lesson_165_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Digital photo organizing involves creating systematic filing systems, backup strategies, and metadata tagging to preserve family memories and important life documentation.",
-    translationAr: "تنظيم الصور الرقمية يشمل إنشاء أنظمة حفظ منظمة، واستراتيجيات نسخ احتياطي، ووضع علامات تعريفية لحفظ ذكريات العائلة والوثائق الحياتية المهمة."
+    translationAr: "تنظيم الصور الرقمية يشمل إنشاء أنظمة حفظ منظمة، واستراتيجيات نسخ احتياطي، ووضع علامات تعريفية لحفظ ذكريات العائلة والوثائق الحياتية المهمة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2027%20Hobbies%20and%20Creative%20Activities/Lesson%20165/Level_27_Lesson_165_%20S%2006.mp3"
   }
 ],
         },
@@ -15968,27 +16183,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Extreme poverty affects over 700 million people globally, manifesting through inadequate access to clean water, nutritious food, healthcare, education, and decent housing conditions.",
-    translationAr: "الفقر المدقع يؤثر على أكثر من 700 مليون شخص حول العالم، ويظهر من خلال نقص الوصول إلى المياه النظيفة، والغذاء المغذي، والرعاية الصحية، والتعليم، وظروف السكن اللائقة."
+    translationAr: "الفقر المدقع يؤثر على أكثر من 700 مليون شخص حول العالم، ويظهر من خلال نقص الوصول إلى المياه النظيفة، والغذاء المغذي، والرعاية الصحية، والتعليم، وظروف السكن اللائقة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2028%20Global%20Issues%20and%20Social%20Responsibility/Lesson%20171/Level_28_Lesson_171_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Wealth concentration among the top one percent of earners has intensified dramatically over recent decades, creating unprecedented gaps between affluent populations and struggling communities.",
-    translationAr: "تركز الثروة بين أعلى واحد بالمئة من أصحاب الدخل قد ازداد بشكل كبير خلال العقود الأخيرة، مما خلق فجوات غير مسبوقة بين السكان الأثرياء والمجتمعات المكافحة."
+    translationAr: "تركز الثروة بين أعلى واحد بالمئة من أصحاب الدخل قد ازداد بشكل كبير خلال العقود الأخيرة، مما خلق فجوات غير مسبوقة بين السكان الأثرياء والمجتمعات المكافحة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2028%20Global%20Issues%20and%20Social%20Responsibility/Lesson%20171/Level_28_Lesson_171_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Systemic barriers including discrimination, limited educational opportunities, geographical isolation, and political instability perpetuate cycles of poverty across generations.",
-    translationAr: "العوائق النظامية مثل التمييز، وقلة الفرص التعليمية، والعزلة الجغرافية، وعدم الاستقرار السياسي تساهم في استمرار دورات الفقر عبر الأجيال."
+    translationAr: "العوائق النظامية مثل التمييز، وقلة الفرص التعليمية، والعزلة الجغرافية، وعدم الاستقرار السياسي تساهم في استمرار دورات الفقر عبر الأجيال.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2028%20Global%20Issues%20and%20Social%20Responsibility/Lesson%20171/Level_28_Lesson_171_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Microfinance initiatives, fair trade practices, and sustainable development programs demonstrate promising approaches to empowering economically disadvantaged populations through targeted interventions.",
-    translationAr: "مبادرات التمويل الصغير، وممارسات التجارة العادلة، وبرامج التنمية المستدامة تُظهر أساليب واعدة لتمكين الفئات المحرومة اقتصاديًا من خلال تدخلات موجهة."
+    translationAr: "مبادرات التمويل الصغير، وممارسات التجارة العادلة، وبرامج التنمية المستدامة تُظهر أساليب واعدة لتمكين الفئات المحرومة اقتصاديًا من خلال تدخلات موجهة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2028%20Global%20Issues%20and%20Social%20Responsibility/Lesson%20171/Level_28_Lesson_171_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Universal basic income experiments and progressive taxation policies represent innovative mechanisms for redistributing wealth and ensuring minimum living standards for all citizens.",
-    translationAr: "تجارب الدخل الأساسي الشامل وسياسات الضرائب التصاعدية تمثل آليات مبتكرة لإعادة توزيع الثروة وضمان مستويات معيشية دنيا لجميع المواطنين."
+    translationAr: "تجارب الدخل الأساسي الشامل وسياسات الضرائب التصاعدية تمثل آليات مبتكرة لإعادة توزيع الثروة وضمان مستويات معيشية دنيا لجميع المواطنين.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2028%20Global%20Issues%20and%20Social%20Responsibility/Lesson%20171/Level_28_Lesson_171_%20S%2006.mp3"
   }
 ],
       },
@@ -16099,27 +16319,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "The Universal Declaration of Human Rights establishes fundamental freedoms including dignity, equality, security, and justice that transcend national boundaries and cultural differences.",
-    translationAr: "الإعلان العالمي لحقوق الإنسان يرسخ الحريات الأساسية بما في ذلك الكرامة والمساواة والأمن والعدالة، وهي قيم تتجاوز الحدود الوطنية والاختلافات الثقافية."
+    translationAr: "الإعلان العالمي لحقوق الإنسان يرسخ الحريات الأساسية بما في ذلك الكرامة والمساواة والأمن والعدالة، وهي قيم تتجاوز الحدود الوطنية والاختلافات الثقافية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2028%20Global%20Issues%20and%20Social%20Responsibility/Lesson%20172/Level_28_Lesson_172_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Civil rights movements throughout history have challenged institutionalized discrimination, demanding equal treatment regardless of race, gender, religion, or socioeconomic status.",
-    translationAr: "حركات الحقوق المدنية عبر التاريخ تحدت التمييز المؤسسي وطالبت بالمساواة في المعاملة بغض النظر عن العرق أو الجنس أو الدين أو الوضع الاجتماعي والاقتصادي."
+    translationAr: "حركات الحقوق المدنية عبر التاريخ تحدت التمييز المؤسسي وطالبت بالمساواة في المعاملة بغض النظر عن العرق أو الجنس أو الدين أو الوضع الاجتماعي والاقتصادي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2028%20Global%20Issues%20and%20Social%20Responsibility/Lesson%20172/Level_28_Lesson_172_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Contemporary activism utilizes digital platforms, grassroots organizing, and international networks to amplify marginalized voices and mobilize support for systemic change.",
-    translationAr: "النشاط المعاصر يستخدم المنصات الرقمية، والتنظيم القاعدي، والشبكات الدولية لتضخيم أصوات المهمشين وحشد الدعم من أجل التغيير الجذري."
+    translationAr: "النشاط المعاصر يستخدم المنصات الرقمية، والتنظيم القاعدي، والشبكات الدولية لتضخيم أصوات المهمشين وحشد الدعم من أجل التغيير الجذري.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2028%20Global%20Issues%20and%20Social%20Responsibility/Lesson%20172/Level_28_Lesson_172_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Legal advocacy involves strategic litigation, policy reform initiatives, and constitutional challenges to dismantle discriminatory laws and establish protective frameworks.",
-    translationAr: "الدفاع القانوني يشمل التقاضي الاستراتيجي، ومبادرات إصلاح السياسات، والطعن الدستوري لتفكيك القوانين التمييزية وإنشاء أطر حماية."
+    translationAr: "الدفاع القانوني يشمل التقاضي الاستراتيجي، ومبادرات إصلاح السياسات، والطعن الدستوري لتفكيك القوانين التمييزية وإنشاء أطر حماية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2028%20Global%20Issues%20and%20Social%20Responsibility/Lesson%20172/Level_28_Lesson_172_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Intersectionality recognizes how multiple identity categories create overlapping systems of oppression that require comprehensive approaches to achieving genuine equality.",
-    translationAr: "التقاطع يوضح كيف أن فئات الهوية المتعددة تخلق أنظمة متداخلة من الاضطهاد تتطلب أساليب شاملة لتحقيق المساواة الحقيقية."
+    translationAr: "التقاطع يوضح كيف أن فئات الهوية المتعددة تخلق أنظمة متداخلة من الاضطهاد تتطلب أساليب شاملة لتحقيق المساواة الحقيقية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2028%20Global%20Issues%20and%20Social%20Responsibility/Lesson%20172/Level_28_Lesson_172_%20S%2006.mp3"
   }
 ],
       },
@@ -16225,27 +16450,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Global warming has accelerated beyond natural fluctuations, causing rising sea levels, extreme weather events, ecosystem disruption, and species extinction at unprecedented rates.",
-    translationAr: "الاحتباس الحراري تسارع إلى ما يتجاوز التقلبات الطبيعية، مما تسبب في ارتفاع مستويات البحار، والظواهر الجوية المتطرفة، واضطراب النظم البيئية، وانقراض الأنواع بمعدلات غير مسبوقة."
+    translationAr: "الاحتباس الحراري تسارع إلى ما يتجاوز التقلبات الطبيعية، مما تسبب في ارتفاع مستويات البحار، والظواهر الجوية المتطرفة، واضطراب النظم البيئية، وانقراض الأنواع بمعدلات غير مسبوقة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2028%20Global%20Issues%20and%20Social%20Responsibility/Lesson%20173/Level_28_Lesson_173_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Deforestation destroys carbon-absorbing forests while industrial pollution contaminates air, water, and soil resources that sustain human populations and wildlife habitats.",
-    translationAr: "إزالة الغابات تدمر الغابات الماصة للكربون بينما يلوث التلوث الصناعي الهواء والماء والتربة التي تدعم السكان البشريين وموائل الحياة البرية."
+    translationAr: "إزالة الغابات تدمر الغابات الماصة للكربون بينما يلوث التلوث الصناعي الهواء والماء والتربة التي تدعم السكان البشريين وموائل الحياة البرية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2028%20Global%20Issues%20and%20Social%20Responsibility/Lesson%20173/Level_28_Lesson_173_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Renewable energy transition requires massive infrastructure investments, policy coordination, and technological innovation to replace fossil fuel dependency effectively.",
-    translationAr: "التحول إلى الطاقة المتجددة يتطلب استثمارات ضخمة في البنية التحتية، وتنسيق السياسات، والابتكار التكنولوجي لاستبدال الاعتماد على الوقود الأحفوري بشكل فعّال."
+    translationAr: "التحول إلى الطاقة المتجددة يتطلب استثمارات ضخمة في البنية التحتية، وتنسيق السياسات، والابتكار التكنولوجي لاستبدال الاعتماد على الوقود الأحفوري بشكل فعّال.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2028%20Global%20Issues%20and%20Social%20Responsibility/Lesson%20173/Level_28_Lesson_173_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Individual climate actions include reducing consumption, choosing sustainable transportation, supporting eco-friendly businesses, and advocating for environmental policies.",
-    translationAr: "الإجراءات الفردية لمواجهة تغير المناخ تشمل تقليل الاستهلاك، واختيار وسائل نقل مستدامة، ودعم الشركات الصديقة للبيئة، والدعوة إلى سياسات بيئية."
+    translationAr: "الإجراءات الفردية لمواجهة تغير المناخ تشمل تقليل الاستهلاك، واختيار وسائل نقل مستدامة، ودعم الشركات الصديقة للبيئة، والدعوة إلى سياسات بيئية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2028%20Global%20Issues%20and%20Social%20Responsibility/Lesson%20173/Level_28_Lesson_173_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "International cooperation through climate agreements, carbon pricing mechanisms, and technology transfer programs represents essential strategies for addressing global environmental challenges.",
-    translationAr: "التعاون الدولي من خلال اتفاقيات المناخ، وآليات تسعير الكربون، وبرامج نقل التكنولوجيا يمثل استراتيجيات أساسية لمواجهة التحديات البيئية العالمية."
+    translationAr: "التعاون الدولي من خلال اتفاقيات المناخ، وآليات تسعير الكربون، وبرامج نقل التكنولوجيا يمثل استراتيجيات أساسية لمواجهة التحديات البيئية العالمية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2028%20Global%20Issues%20and%20Social%20Responsibility/Lesson%20173/Level_28_Lesson_173_%20S%2006.mp3"
   }
 ],
       },
@@ -16351,27 +16581,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Artificial intelligence algorithms can perpetuate existing biases and discrimination patterns, requiring careful oversight and ethical frameworks to ensure fair and equitable outcomes.",
-    translationAr: "خوارزميات الذكاء الاصطناعي يمكن أن تُكرس التحيزات والأنماط التمييزية القائمة، مما يتطلب إشرافًا دقيقًا وأطرًا أخلاقية لضمان نتائج عادلة ومنصفة."
+    translationAr: "خوارزميات الذكاء الاصطناعي يمكن أن تُكرس التحيزات والأنماط التمييزية القائمة، مما يتطلب إشرافًا دقيقًا وأطرًا أخلاقية لضمان نتائج عادلة ومنصفة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2028%20Global%20Issues%20and%20Social%20Responsibility/Lesson%20174/Level_28_Lesson_174_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Data privacy violations compromise personal autonomy and security, as corporations collect, analyze, and monetize intimate information without adequate user consent.",
-    translationAr: "انتهاكات خصوصية البيانات تقوض الاستقلالية والأمن الشخصي، حيث تقوم الشركات بجمع المعلومات الحميمة وتحليلها وتحقيق الربح منها دون موافقة كافية من المستخدم."
+    translationAr: "انتهاكات خصوصية البيانات تقوض الاستقلالية والأمن الشخصي، حيث تقوم الشركات بجمع المعلومات الحميمة وتحليلها وتحقيق الربح منها دون موافقة كافية من المستخدم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2028%20Global%20Issues%20and%20Social%20Responsibility/Lesson%20174/Level_28_Lesson_174_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Social media platforms facilitate misinformation spread and echo chambers that polarize communities while undermining democratic discourse and critical thinking.",
-    translationAr: "منصات التواصل الاجتماعي تسهل انتشار المعلومات المضللة وغرف الصدى التي تستقطب المجتمعات، بينما تقوض الحوار الديمقراطي والتفكير النقدي."
+    translationAr: "منصات التواصل الاجتماعي تسهل انتشار المعلومات المضللة وغرف الصدى التي تستقطب المجتمعات، بينما تقوض الحوار الديمقراطي والتفكير النقدي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2028%20Global%20Issues%20and%20Social%20Responsibility/Lesson%20174/Level_28_Lesson_174_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Digital surveillance technologies enable unprecedented monitoring capabilities that threaten civil liberties and create potential for authoritarian control and social manipulation.",
-    translationAr: "تكنولوجيا المراقبة الرقمية توفر قدرات مراقبة غير مسبوقة تهدد الحريات المدنية وتخلق إمكانات للسيطرة الاستبدادية والتلاعب الاجتماعي."
+    translationAr: "تكنولوجيا المراقبة الرقمية توفر قدرات مراقبة غير مسبوقة تهدد الحريات المدنية وتخلق إمكانات للسيطرة الاستبدادية والتلاعب الاجتماعي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2028%20Global%20Issues%20and%20Social%20Responsibility/Lesson%20174/Level_28_Lesson_174_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Responsible technology use involves understanding digital footprints, protecting personal information, fact-checking sources, and promoting constructive online interactions.",
-    translationAr: "الاستخدام المسؤول للتكنولوجيا يتضمن فهم البصمات الرقمية، وحماية المعلومات الشخصية، والتحقق من المصادر، وتعزيز التفاعلات الإيجابية عبر الإنترنت."
+    translationAr: "الاستخدام المسؤول للتكنولوجيا يتضمن فهم البصمات الرقمية، وحماية المعلومات الشخصية، والتحقق من المصادر، وتعزيز التفاعلات الإيجابية عبر الإنترنت.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2028%20Global%20Issues%20and%20Social%20Responsibility/Lesson%20174/Level_28_Lesson_174_%20S%2006.mp3"
   }
 ],
       },
@@ -16475,27 +16710,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Cultural competency requires developing empathy, challenging personal assumptions, and learning to navigate diverse value systems while respecting fundamental human dignity.",
-    translationAr: "الكفاءة الثقافية تتطلب تنمية التعاطف، وتحدي الافتراضات الشخصية، وتعلم كيفية التعامل مع أنظمة القيم المتنوعة مع احترام الكرامة الإنسانية الأساسية."
+    translationAr: "الكفاءة الثقافية تتطلب تنمية التعاطف، وتحدي الافتراضات الشخصية، وتعلم كيفية التعامل مع أنظمة القيم المتنوعة مع احترام الكرامة الإنسانية الأساسية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2028%20Global%20Issues%20and%20Social%20Responsibility/Lesson%20175/Level_28_Lesson_175_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Global interconnectedness means that local actions have worldwide consequences, making international cooperation essential for addressing shared challenges effectively.",
-    translationAr: "الترابط العالمي يعني أن الأفعال المحلية لها عواقب على مستوى العالم، مما يجعل التعاون الدولي ضروريًا للتعامل مع التحديات المشتركة بفعالية."
+    translationAr: "الترابط العالمي يعني أن الأفعال المحلية لها عواقب على مستوى العالم، مما يجعل التعاون الدولي ضروريًا للتعامل مع التحديات المشتركة بفعالية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2028%20Global%20Issues%20and%20Social%20Responsibility/Lesson%20175/Level_28_Lesson_175_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Language barriers, stereotyping, and ethnocentrism create obstacles to meaningful cross-cultural dialogue and collaborative problem-solving among different communities.",
-    translationAr: "حواجز اللغة، والقوالب النمطية، والمركزية العرقية تخلق عوائق أمام الحوار العابر للثقافات وحل المشكلات التعاوني بين المجتمعات المختلفة."
+    translationAr: "حواجز اللغة، والقوالب النمطية، والمركزية العرقية تخلق عوائق أمام الحوار العابر للثقافات وحل المشكلات التعاوني بين المجتمعات المختلفة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2028%20Global%20Issues%20and%20Social%20Responsibility/Lesson%20175/Level_28_Lesson_175_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Educational exchange programs, cultural immersion experiences, and virtual collaboration opportunities foster mutual understanding and break down prejudicial attitudes.",
-    translationAr: "برامج التبادل التعليمي، وتجارب الانغماس الثقافي، وفرص التعاون الافتراضي تعزز الفهم المتبادل وتكسر المواقف التحيزية."
+    translationAr: "برامج التبادل التعليمي، وتجارب الانغماس الثقافي، وفرص التعاون الافتراضي تعزز الفهم المتبادل وتكسر المواقف التحيزية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2028%20Global%20Issues%20and%20Social%20Responsibility/Lesson%20175/Level_28_Lesson_175_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Active global citizenship involves advocating for universal human rights, supporting sustainable development goals, and working toward social justice across national boundaries.",
-    translationAr: "المواطنة العالمية الفعّالة تتضمن الدعوة إلى حقوق الإنسان العالمية، ودعم أهداف التنمية المستدامة، والعمل من أجل العدالة الاجتماعية عبر الحدود الوطنية."
+    translationAr: "المواطنة العالمية الفعّالة تتضمن الدعوة إلى حقوق الإنسان العالمية، ودعم أهداف التنمية المستدامة، والعمل من أجل العدالة الاجتماعية عبر الحدود الوطنية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2028%20Global%20Issues%20and%20Social%20Responsibility/Lesson%20175/Level_28_Lesson_175_%20S%2006.mp3"
   }
 ],
       },
