@@ -1401,27 +1401,32 @@ export const levelsAndLesson = [
   {
     text: "Dr. Martinez evaluates patients' dietary habits and creates personalized nutrition programs.",
     id: 1,
-    translationAr: "الدكتور مارتينيز يقيّم العادات الغذائية للمرضى ويضع برامج تغذية شخصية."
+    translationAr: "الدكتور مارتينيز يقيّم العادات الغذائية للمرضى ويضع برامج تغذية شخصية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2007%20Health%20and%20Fitness/Lesson%2032/Level_07_Lesson_32_%20S%2002.mp3"
   },
   {
     text: "Balanced meals include essential vitamins, minerals, proteins, and healthy carbohydrates daily.",
     id: 2,
-    translationAr: "الوجبات المتوازنة تشمل الفيتامينات والمعادن والبروتينات والكربوهيدرات الصحية يوميًا."
+    translationAr: "الوجبات المتوازنة تشمل الفيتامينات والمعادن والبروتينات والكربوهيدرات الصحية يوميًا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2007%20Health%20and%20Fitness/Lesson%2032/Level_07_Lesson_32_%20S%2003.mp3"
   },
   {
     text: "Fresh fruits and vegetables provide antioxidants that boost immune system function.",
     id: 3,
-    translationAr: "الفواكه والخضروات الطازجة توفر مضادات الأكسدة التي تعزز وظائف الجهاز المناعي."
+    translationAr: "الفواكه والخضروات الطازجة توفر مضادات الأكسدة التي تعزز وظائف الجهاز المناعي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2007%20Health%20and%20Fitness/Lesson%2032/Level_07_Lesson_32_%20S%2004.mp3"
   },
   {
     text: "Processed foods contain excessive sugar and sodium that harm cardiovascular health.",
     id: 4,
-    translationAr: "الأطعمة المُصنَّعة تحتوي على كميات زائدة من السكر والصوديوم التي تضر بصحة القلب والأوعية الدموية."
+    translationAr: "الأطعمة المُصنَّعة تحتوي على كميات زائدة من السكر والصوديوم التي تضر بصحة القلب والأوعية الدموية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2007%20Health%20and%20Fitness/Lesson%2032/Level_07_Lesson_32_%20S%2005.mp3"
   },
   {
     text: "Proper hydration and portion control support weight management and digestive wellness.",
     id: 5,
-    translationAr: "الترطيب الجيد والتحكم في الحصص يدعمان إدارة الوزن وصحة الجهاز الهضمي."
+    translationAr: "الترطيب الجيد والتحكم في الحصص يدعمان إدارة الوزن وصحة الجهاز الهضمي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2007%20Health%20and%20Fitness/Lesson%2032/Level_07_Lesson_32_%20S%2006.mp3"
   }
 ],
         },
@@ -1542,27 +1547,32 @@ export const levelsAndLesson = [
   {
     text: "Jake develops customized fitness programs targeting different muscle groups effectively.",
     id: 1,
-    translationAr: "جيك يطوّر برامج لياقة مخصّصة تستهدف مجموعات عضلية مختلفة بفعالية."
+    translationAr: "جيك يطوّر برامج لياقة مخصّصة تستهدف مجموعات عضلية مختلفة بفعالية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2007%20Health%20and%20Fitness/Lesson%2033/Level_07_Lesson_33_%20S%2002.mp3"
   },
   {
     text: "Cardio exercises strengthen the heart while burning calories and improving circulation.",
     id: 2,
-    translationAr: "تمارين الكارديو تقوّي القلب أثناء حرق السعرات الحرارية وتحسين الدورة الدموية."
+    translationAr: "تمارين الكارديو تقوّي القلب أثناء حرق السعرات الحرارية وتحسين الدورة الدموية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2007%20Health%20and%20Fitness/Lesson%2033/Level_07_Lesson_33_%20S%2003.mp3"
   },
   {
     text: "Weight training builds muscle mass and increases bone density significantly.",
     id: 3,
-    translationAr: "تدريب الأوزان يبني الكتلة العضلية ويزيد من كثافة العظام بشكل ملحوظ."
+    translationAr: "تدريب الأوزان يبني الكتلة العضلية ويزيد من كثافة العظام بشكل ملحوظ.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2007%20Health%20and%20Fitness/Lesson%2033/Level_07_Lesson_33_%20S%2004.mp3"
   },
   {
     text: "Flexibility workouts prevent injuries and enhance joint mobility and range motion.",
     id: 4,
-    translationAr: "تمارين المرونة تمنع الإصابات وتعزز حركة المفاصل ونطاق الحركة."
+    translationAr: "تمارين المرونة تمنع الإصابات وتعزز حركة المفاصل ونطاق الحركة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2007%20Health%20and%20Fitness/Lesson%2033/Level_07_Lesson_33_%20S%2005.mp3"
   },
   {
     text: "Regular physical activity reduces stress levels and promotes better sleep quality.",
     id: 5,
-    translationAr: "النشاط البدني المنتظم يقلل من مستويات التوتر ويعزز جودة النوم."
+    translationAr: "النشاط البدني المنتظم يقلل من مستويات التوتر ويعزز جودة النوم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2007%20Health%20and%20Fitness/Lesson%2033/Level_07_Lesson_33_%20S%2006.mp3"
   }
 ],
         },
@@ -1655,27 +1665,32 @@ export const levelsAndLesson = [
   {
     text: "Dr. Thompson conducts workshops teaching stress management and anxiety reduction techniques.",
     id: 1,
-    translationAr: "الدكتور طومسون يُقدّم ورش عمل لتعليم تقنيات إدارة التوتر وتقليل القلق."
+    translationAr: "الدكتور طومسون يُقدّم ورش عمل لتعليم تقنيات إدارة التوتر وتقليل القلق.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2007%20Health%20and%20Fitness/Lesson%2034/Level_07_Lesson_34_%20S%2002.mp3"
   },
   {
     text: "Mental health disorders affect millions requiring professional therapy and medication support.",
     id: 2,
-    translationAr: "اضطرابات الصحة النفسية تؤثر على ملايين الأشخاص وتحتاج إلى علاج مهني ودعم دوائي."
+    translationAr: "اضطرابات الصحة النفسية تؤثر على ملايين الأشخاص وتحتاج إلى علاج مهني ودعم دوائي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2007%20Health%20and%20Fitness/Lesson%2034/Level_07_Lesson_34_%20S%2003.mp3"
   },
   {
     text: "Meditation and mindfulness practices help individuals cope with depression and trauma.",
     id: 3,
-    translationAr: "تمارين التأمل واليقظة الذهنية تساعد الأفراد على التكيف مع الاكتئاب والصدمات."
+    translationAr: "تمارين التأمل واليقظة الذهنية تساعد الأفراد على التكيف مع الاكتئاب والصدمات.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2007%20Health%20and%20Fitness/Lesson%2034/Level_07_Lesson_34_%20S%2004.mp3"
   },
   {
     text: "Social connections and family support systems strengthen emotional resilience significantly.",
     id: 4,
-    translationAr: "العلاقات الاجتماعية وأنظمة الدعم الأسري تعزز المرونة العاطفية بشكل كبير."
+    translationAr: "العلاقات الاجتماعية وأنظمة الدعم الأسري تعزز المرونة العاطفية بشكل كبير.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2007%20Health%20and%20Fitness/Lesson%2034/Level_07_Lesson_34_%20S%2005.mp3"
   },
   {
     text: "Early intervention and treatment prevent minor issues from becoming serious conditions.",
     id: 5,
-    translationAr: "التدخل المبكر والعلاج يمنعان المشكلات البسيطة من أن تتحول إلى حالات خطيرة."
+    translationAr: "التدخل المبكر والعلاج يمنعان المشكلات البسيطة من أن تتحول إلى حالات خطيرة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2007%20Health%20and%20Fitness/Lesson%2034/Level_07_Lesson_34_%20S%2006.mp3"
   }
 ],
         },
@@ -1765,27 +1780,32 @@ export const levelsAndLesson = [
   {
     text: "Dr. Ahmed encourages patients to schedule annual physical examinations and screenings.",
     id: 1,
-    translationAr: "الدكتور أحمد يشجّع المرضى على جدولة الفحوصات البدنية السنوية والكشف المبكر."
+    translationAr: "الدكتور أحمد يشجّع المرضى على جدولة الفحوصات البدنية السنوية والكشف المبكر.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2007%20Health%20and%20Fitness/Lesson%2035/Level_07_Lesson_35_%20S%2002.mp3"
   },
   {
     text: "Vaccinations protect communities from infectious diseases and prevent dangerous outbreaks.",
     id: 2,
-    translationAr: "التطعيمات تحمي المجتمعات من الأمراض المعدية وتمنع تفشيها الخطير."
+    translationAr: "التطعيمات تحمي المجتمعات من الأمراض المعدية وتمنع تفشيها الخطير.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2007%20Health%20and%20Fitness/Lesson%2035/Level_07_Lesson_35_%20S%2003.mp3"
   },
   {
     text: "Blood tests reveal important health indicators including cholesterol and glucose levels.",
     id: 3,
-    translationAr: "تحاليل الدم تكشف مؤشرات صحية مهمة بما في ذلك مستويات الكوليسترول والجلوكوز."
+    translationAr: "تحاليل الدم تكشف مؤشرات صحية مهمة بما في ذلك مستويات الكوليسترول والجلوكوز.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2007%20Health%20and%20Fitness/Lesson%2035/Level_07_Lesson_35_%20S%2004.mp3"
   },
   {
     text: "Early detection of symptoms allows doctors to treat illnesses more successfully.",
     id: 4,
-    translationAr: "الاكتشاف المبكر للأعراض يمكّن الأطباء من علاج الأمراض بشكل أكثر نجاحًا."
+    translationAr: "الاكتشاف المبكر للأعراض يمكّن الأطباء من علاج الأمراض بشكل أكثر نجاحًا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2007%20Health%20and%20Fitness/Lesson%2035/Level_07_Lesson_35_%20S%2005.mp3"
   },
   {
     text: "Healthy lifestyle choices reduce medical expenses and improve life expectancy rates.",
     id: 5,
-    translationAr: "اختيارات نمط الحياة الصحية تقلل من النفقات الطبية وتحسن معدلات العمر المتوقع."
+    translationAr: "اختيارات نمط الحياة الصحية تقلل من النفقات الطبية وتحسن معدلات العمر المتوقع.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2007%20Health%20and%20Fitness/Lesson%2035/Level_07_Lesson_35_%20S%2006.mp3"
   }
 ],
         },
@@ -1880,27 +1900,32 @@ export const levelsAndLesson = [
   {
     text: "Dr. Kim researches sleep patterns and their impact on cognitive function performance.",
     id: 1,
-    translationAr: "الدكتور كيم يبحث في أنماط النوم وتأثيرها على أداء الوظائف الإدراكية."
+    translationAr: "الدكتور كيم يبحث في أنماط النوم وتأثيرها على أداء الوظائف الإدراكية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2007%20Health%20and%20Fitness/Lesson%2036/Level_07_Lesson_36_%20S%2002.mp3"
   },
   {
     text: "Quality sleep allows the body to repair tissues and consolidate memories effectively.",
     id: 2,
-    translationAr: "النوم الجيد يمكّن الجسم من إصلاح الأنسجة وتثبيت الذكريات بفعالية."
+    translationAr: "النوم الجيد يمكّن الجسم من إصلاح الأنسجة وتثبيت الذكريات بفعالية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2007%20Health%20and%20Fitness/Lesson%2036/Level_07_Lesson_36_%20S%2003.mp3"
   },
   {
     text: "Sleep deprivation causes fatigue, impaired judgment, and weakened immune system responses.",
     id: 3,
-    translationAr: "الحرمان من النوم يسبب التعب وضعف الحكم وضعف استجابات الجهاز المناعي."
+    translationAr: "الحرمان من النوم يسبب التعب وضعف الحكم وضعف استجابات الجهاز المناعي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2007%20Health%20and%20Fitness/Lesson%2036/Level_07_Lesson_36_%20S%2004.mp3"
   },
   {
     text: "Consistent bedtime routines and comfortable environments promote better sleep hygiene habits.",
     id: 4,
-    translationAr: "روتين النوم المنتظم والبيئة المريحة يعززان عادات صحية أفضل للنوم."
+    translationAr: "روتين النوم المنتظم والبيئة المريحة يعززان عادات صحية أفضل للنوم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2007%20Health%20and%20Fitness/Lesson%2036/Level_07_Lesson_36_%20S%2005.mp3"
   },
   {
     text: "Adults require seven to nine hours of uninterrupted sleep for optimal recovery.",
     id: 5,
-    translationAr: "البالغون يحتاجون من سبع إلى تسع ساعات من النوم المتواصل لتحقيق التعافي الأمثل."
+    translationAr: "البالغون يحتاجون من سبع إلى تسع ساعات من النوم المتواصل لتحقيق التعافي الأمثل.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2007%20Health%20and%20Fitness/Lesson%2036/Level_07_Lesson_36_%20S%2006.mp3"
   }
 ],
         },
@@ -2752,27 +2777,32 @@ export const levelsAndLesson = [
   {
     text: "Dr. Peterson discusses global warming trends with his environmental science class.",
     id: 1,
-    translationAr: "الدكتور بيترسون يناقش اتجاهات الاحتباس الحراري مع صفه في علوم البيئة."
+    translationAr: "الدكتور بيترسون يناقش اتجاهات الاحتباس الحراري مع صفه في علوم البيئة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2009%20Environment%20and%20Nature/Lesson%2022/Level_09_Lesson_22_%20S%2002.mp3"
   },
   {
     text: "He explains how greenhouse gases trap heat in the atmosphere.",
     id: 2,
-    translationAr: "يشرح كيف تحتجز الغازات الدفيئة الحرارة في الغلاف الجوي."
+    translationAr: "يشرح كيف تحتجز الغازات الدفيئة الحرارة في الغلاف الجوي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2009%20Environment%20and%20Nature/Lesson%2022/Level_09_Lesson_22_%20S%2003.mp3"
   },
   {
     text: "Rising temperatures cause glaciers to melt and sea levels to increase.",
     id: 3,
-    translationAr: "ارتفاع درجات الحرارة يؤدي إلى ذوبان الأنهار الجليدية وارتفاع مستوى البحار."
+    translationAr: "ارتفاع درجات الحرارة يؤدي إلى ذوبان الأنهار الجليدية وارتفاع مستوى البحار.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2009%20Environment%20and%20Nature/Lesson%2022/Level_09_Lesson_22_%20S%2004.mp3"
   },
   {
     text: "Extreme weather events become more frequent and devastating worldwide.",
     id: 4,
-    translationAr: "الظواهر الجوية المتطرفة تصبح أكثر تكرارًا ودمارًا في جميع أنحاء العالم."
+    translationAr: "الظواهر الجوية المتطرفة تصبح أكثر تكرارًا ودمارًا في جميع أنحاء العالم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2009%20Environment%20and%20Nature/Lesson%2022/Level_09_Lesson_22_%20S%2005.mp3"
   },
   {
     text: "Students realize urgent action is needed to address this crisis.",
     id: 5,
-    translationAr: "يدرك الطلاب أن هناك حاجة لاتخاذ إجراءات عاجلة لمواجهة هذه الأزمة."
+    translationAr: "يدرك الطلاب أن هناك حاجة لاتخاذ إجراءات عاجلة لمواجهة هذه الأزمة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2009%20Environment%20and%20Nature/Lesson%2022/Level_09_Lesson_22_%20S%2006.mp3"
   }
 ],
         },
@@ -2910,27 +2940,32 @@ export const levelsAndLesson = [
   {
     text: "Sarah volunteers at the local wildlife sanctuary every weekend.",
     id: 1,
-    translationAr: "سارة تتطوع في محمية الحياة البرية المحلية كل عطلة نهاية أسبوع."
+    translationAr: "سارة تتطوع في محمية الحياة البرية المحلية كل عطلة نهاية أسبوع.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2009%20Environment%20and%20Nature/Lesson%2023/Level_09_Lesson_23_%20S%2002.mp3"
   },
   {
     text: "She helps care for injured animals and monitors their recovery.",
     id: 2,
-    translationAr: "تساعد في رعاية الحيوانات المصابة وتتابع تعافيها."
+    translationAr: "تساعد في رعاية الحيوانات المصابة وتتابع تعافيها.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2009%20Environment%20and%20Nature/Lesson%2023/Level_09_Lesson_23_%20S%2003.mp3"
   },
   {
     text: "Many species face extinction due to habitat destruction and poaching.",
     id: 3,
-    translationAr: "العديد من الأنواع تواجه خطر الانقراض بسبب تدمير المواطن والصيد الجائر."
+    translationAr: "العديد من الأنواع تواجه خطر الانقراض بسبب تدمير المواطن والصيد الجائر.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2009%20Environment%20and%20Nature/Lesson%2023/Level_09_Lesson_23_%20S%2004.mp3"
   },
   {
     text: "The sanctuary educates visitors about biodiversity and conservation efforts.",
     id: 4,
-    translationAr: "تُثقف المحمية الزوار حول التنوع البيولوجي وجهود الحماية."
+    translationAr: "تُثقف المحمية الزوار حول التنوع البيولوجي وجهود الحماية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2009%20Environment%20and%20Nature/Lesson%2023/Level_09_Lesson_23_%20S%2005.mp3"
   },
   {
     text: "Sarah feels proud contributing to wildlife protection and preservation.",
     id: 5,
-    translationAr: "تشعر سارة بالفخر لمساهمتها في حماية الحياة البرية والحفاظ عليها."
+    translationAr: "تشعر سارة بالفخر لمساهمتها في حماية الحياة البرية والحفاظ عليها.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2009%20Environment%20and%20Nature/Lesson%2023/Level_09_Lesson_23_%20S%2006.mp3"
   }
 ],
         },
@@ -3039,27 +3074,32 @@ export const levelsAndLesson = [
   {
     text: "The Johnson family decides to reduce their environmental footprint significantly.",
     id: 1,
-    translationAr: "عائلة جونسون تقرر تقليل بصمتها البيئية بشكل كبير."
+    translationAr: "عائلة جونسون تقرر تقليل بصمتها البيئية بشكل كبير.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2009%20Environment%20and%20Nature/Lesson%2024/Level_09_Lesson_24_%20S%2002.mp3"
   },
   {
     text: "They install solar panels and switch to renewable energy sources.",
     id: 2,
-    translationAr: "يركبون ألواحًا شمسية وينتقلون إلى مصادر الطاقة المتجددة."
+    translationAr: "يركبون ألواحًا شمسية وينتقلون إلى مصادر الطاقة المتجددة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2009%20Environment%20and%20Nature/Lesson%2024/Level_09_Lesson_24_%20S%2003.mp3"
   },
   {
     text: "Organic gardening provides fresh vegetables while avoiding harmful pesticides.",
     id: 3,
-    translationAr: "الزراعة العضوية توفر خضروات طازجة مع تجنب المبيدات الضارة."
+    translationAr: "الزراعة العضوية توفر خضروات طازجة مع تجنب المبيدات الضارة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2009%20Environment%20and%20Nature/Lesson%2024/Level_09_Lesson_24_%20S%2004.mp3"
   },
   {
     text: "They minimize waste by recycling materials and composting organic matter.",
     id: 4,
-    translationAr: "يقللون النفايات عن طريق إعادة تدوير المواد وتحويل المخلفات العضوية إلى سماد."
+    translationAr: "يقللون النفايات عن طريق إعادة تدوير المواد وتحويل المخلفات العضوية إلى سماد.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2009%20Environment%20and%20Nature/Lesson%2024/Level_09_Lesson_24_%20S%2005.mp3"
   },
   {
     text: "These sustainable practices save money and protect the planet simultaneously.",
     id: 5,
-    translationAr: "هذه الممارسات المستدامة توفر المال وتحمي الكوكب في الوقت نفسه."
+    translationAr: "هذه الممارسات المستدامة توفر المال وتحمي الكوكب في الوقت نفسه.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2009%20Environment%20and%20Nature/Lesson%2024/Level_09_Lesson_24_%20S%2006.mp3"
   }
 ],
         },
@@ -3185,27 +3225,32 @@ export const levelsAndLesson = [
   {
     text: "Dr. Chen conducts research on plastic pollution affecting marine ecosystems.",
     id: 1,
-    translationAr: "الدكتور تشين يجري أبحاثًا حول التلوث البلاستيكي الذي يؤثر على النظم البيئية البحرية."
+    translationAr: "الدكتور تشين يجري أبحاثًا حول التلوث البلاستيكي الذي يؤثر على النظم البيئية البحرية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2009%20Environment%20and%20Nature/Lesson%2025/Level_09_Lesson_25_%20S%2002.mp3"
   },
   {
     text: "Microscopic plastic particles contaminate the entire food chain dangerously.",
     id: 2,
-    translationAr: "جزيئات البلاستيك المجهرية تلوث السلسلة الغذائية بأكملها بشكل خطير."
+    translationAr: "جزيئات البلاستيك المجهرية تلوث السلسلة الغذائية بأكملها بشكل خطير.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2009%20Environment%20and%20Nature/Lesson%2025/Level_09_Lesson_25_%20S%2003.mp3"
   },
   {
     text: "Sea creatures mistake plastic debris for food and suffer severe consequences.",
     id: 3,
-    translationAr: "الكائنات البحرية تخطئ البلاستيك الملقى وتظنه طعامًا وتعاني عواقب وخيمة."
+    translationAr: "الكائنات البحرية تخطئ البلاستيك الملقى وتظنه طعامًا وتعاني عواقب وخيمة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2009%20Environment%20and%20Nature/Lesson%2025/Level_09_Lesson_25_%20S%2004.mp3"
   },
   {
     text: "Chemical pollutants leak from waste and poison aquatic life forms.",
     id: 4,
-    translationAr: "الملوثات الكيميائية تتسرب من النفايات وتسمم الكائنات المائية."
+    translationAr: "الملوثات الكيميائية تتسرب من النفايات وتسمم الكائنات المائية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2009%20Environment%20and%20Nature/Lesson%2025/Level_09_Lesson_25_%20S%2005.mp3"
   },
   {
     text: "International cooperation is essential to solve this massive environmental problem.",
     id: 5,
-    translationAr: "التعاون الدولي ضروري لحل هذه المشكلة البيئية الضخمة."
+    translationAr: "التعاون الدولي ضروري لحل هذه المشكلة البيئية الضخمة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2009%20Environment%20and%20Nature/Lesson%2025/Level_09_Lesson_25_%20S%2006.mp3"
   }
 ],
         },
@@ -3314,27 +3359,32 @@ export const levelsAndLesson = [
   {
     text: "Environmental activists organize campaigns to prevent illegal deforestation activities.",
     id: 1,
-    translationAr: "النشطاء البيئيون ينظمون حملات لمنع أنشطة إزالة الغابات غير القانونية."
+    translationAr: "النشطاء البيئيون ينظمون حملات لمنع أنشطة إزالة الغابات غير القانونية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2009%20Environment%20and%20Nature/Lesson%2026/Level_09_Lesson_26_%20S%2002.mp3"
   },
   {
     text: "Ancient forests provide oxygen, absorb carbon dioxide, and support countless species.",
     id: 2,
-    translationAr: "الغابات القديمة توفر الأكسجين، وتمتص ثاني أكسيد الكربون، وتدعم عددًا لا يحصى من الأنواع."
+    translationAr: "الغابات القديمة توفر الأكسجين، وتمتص ثاني أكسيد الكربون، وتدعم عددًا لا يحصى من الأنواع.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2009%20Environment%20and%20Nature/Lesson%2026/Level_09_Lesson_26_%20S%2003.mp3"
   },
   {
     text: "Logging companies threaten these ecosystems for commercial timber profits.",
     id: 3,
-    translationAr: "شركات قطع الأشجار تهدد هذه النظم البيئية من أجل أرباح الأخشاب التجارية."
+    translationAr: "شركات قطع الأشجار تهدد هذه النظم البيئية من أجل أرباح الأخشاب التجارية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2009%20Environment%20and%20Nature/Lesson%2026/Level_09_Lesson_26_%20S%2004.mp3"
   },
   {
     text: "Local communities depend on forests for their livelihoods and cultural traditions.",
     id: 4,
-    translationAr: "المجتمعات المحلية تعتمد على الغابات في مصادر رزقها وتقاليدها الثقافية."
+    translationAr: "المجتمعات المحلية تعتمد على الغابات في مصادر رزقها وتقاليدها الثقافية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2009%20Environment%20and%20Nature/Lesson%2026/Level_09_Lesson_26_%20S%2005.mp3"
   },
   {
     text: "Sustainable forestry practices balance economic needs with environmental protection effectively.",
     id: 5,
-    translationAr: "ممارسات الغابات المستدامة توازن بين الاحتياجات الاقتصادية وحماية البيئة بفعالية."
+    translationAr: "ممارسات الغابات المستدامة توازن بين الاحتياجات الاقتصادية وحماية البيئة بفعالية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2009%20Environment%20and%20Nature/Lesson%2026/Level_09_Lesson_26_%20S%2006.mp3"
   }
 ],
         },
@@ -3483,27 +3533,32 @@ export const levelsAndLesson = [
   {
     text: "Mark hosts a panel discussion about artificial intelligence breakthroughs at the tech conference.",
     id: 1,
-    translationAr: "يستضيف مارك ندوة نقاشية حول إنجازات الذكاء الاصطناعي في المؤتمر التقني."
+    translationAr: "يستضيف مارك ندوة نقاشية حول إنجازات الذكاء الاصطناعي في المؤتمر التقني.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2010%20Technology%20and%20Innovation/Lesson%2027/Level_10_Lesson_27_%20S%2002.mp3"
   },
   {
     text: "Machine learning algorithms now outperform humans in complex pattern recognition tasks.",
     id: 2,
-    translationAr: "خوارزميات التعلم الآلي تتفوق الآن على البشر في مهام التعرف على الأنماط المعقدة."
+    translationAr: "خوارزميات التعلم الآلي تتفوق الآن على البشر في مهام التعرف على الأنماط المعقدة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2010%20Technology%20and%20Innovation/Lesson%2027/Level_10_Lesson_27_%20S%2003.mp3"
   },
   {
     text: "Natural language processing enables seamless communication between humans and machines.",
     id: 3,
-    translationAr: "معالجة اللغة الطبيعية تُمكّن من تواصل سلس بين البشر والآلات."
+    translationAr: "معالجة اللغة الطبيعية تُمكّن من تواصل سلس بين البشر والآلات.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2010%20Technology%20and%20Innovation/Lesson%2027/Level_10_Lesson_27_%20S%2004.mp3"
   },
   {
     text: "Ethical concerns arise regarding AI decision-making and potential job displacement.",
     id: 4,
-    translationAr: "تظهر مخاوف أخلاقية بشأن اتخاذ القرارات بواسطة الذكاء الاصطناعي وإمكانية فقدان الوظائف."
+    translationAr: "تظهر مخاوف أخلاقية بشأن اتخاذ القرارات بواسطة الذكاء الاصطناعي وإمكانية فقدان الوظائف.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2010%20Technology%20and%20Innovation/Lesson%2027/Level_10_Lesson_27_%20S%2005.mp3"
   },
   {
     text: "The experts agree that responsible AI development requires careful regulation and oversight.",
     id: 5,
-    translationAr: "يتفق الخبراء على أن تطوير الذكاء الاصطناعي المسؤول يتطلب تنظيمًا دقيقًا وإشرافًا صارمًا."
+    translationAr: "يتفق الخبراء على أن تطوير الذكاء الاصطناعي المسؤول يتطلب تنظيمًا دقيقًا وإشرافًا صارمًا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2010%20Technology%20and%20Innovation/Lesson%2027/Level_10_Lesson_27_%20S%2006.mp3"
   }
 ],
         },
@@ -3614,27 +3669,32 @@ export const levelsAndLesson = [
   {
     text: "Lisa presents the fundamentals of blockchain technology to banking executives.",
     id: 1,
-    translationAr: "ليزا تعرض أساسيات تقنية البلوكشين لمديري البنوك."
+    translationAr: "ليزا تعرض أساسيات تقنية البلوكشين لمديري البنوك.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2010%20Technology%20and%20Innovation/Lesson%2028/Level_10_Lesson_28_%20S%2002.mp3"
   },
   {
     text: "Decentralized ledgers provide transparency and security for financial transactions.",
     id: 2,
-    translationAr: "السجلات اللامركزية توفر الشفافية والأمان للمعاملات المالية."
+    translationAr: "السجلات اللامركزية توفر الشفافية والأمان للمعاملات المالية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2010%20Technology%20and%20Innovation/Lesson%2028/Level_10_Lesson_28_%20S%2003.mp3"
   },
   {
     text: "Smart contracts automatically execute agreements without intermediaries.",
     id: 3,
-    translationAr: "العقود الذكية تنفذ الاتفاقيات تلقائيًا دون الحاجة إلى وسطاء."
+    translationAr: "العقود الذكية تنفذ الاتفاقيات تلقائيًا دون الحاجة إلى وسطاء.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2010%20Technology%20and%20Innovation/Lesson%2028/Level_10_Lesson_28_%20S%2004.mp3"
   },
   {
     text: "Supply chain management benefits from immutable product tracking.",
     id: 4,
-    translationAr: "إدارة سلاسل التوريد تستفيد من تتبع المنتجات غير القابل للتغيير."
+    translationAr: "إدارة سلاسل التوريد تستفيد من تتبع المنتجات غير القابل للتغيير.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2010%20Technology%20and%20Innovation/Lesson%2028/Level_10_Lesson_28_%20S%2005.mp3"
   },
   {
     text: "The banking industry recognizes blockchain's potential to revolutionize traditional systems.",
     id: 5,
-    translationAr: "قطاع البنوك يدرك قدرة البلوكشين على إحداث ثورة في الأنظمة التقليدية."
+    translationAr: "قطاع البنوك يدرك قدرة البلوكشين على إحداث ثورة في الأنظمة التقليدية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2010%20Technology%20and%20Innovation/Lesson%2028/Level_10_Lesson_28_%20S%2006.mp3"
   }
 ],
         },
@@ -3712,27 +3772,32 @@ export const levelsAndLesson = [
   {
     text: "Dr. Nakamura demonstrates how quantum bits differ from classical binary bits.",
     id: 1,
-    translationAr: "الدكتور ناكامورا يوضح كيف تختلف الكيوبتات الكمية عن البِتّات الثنائية الكلاسيكية."
+    translationAr: "الدكتور ناكامورا يوضح كيف تختلف الكيوبتات الكمية عن البِتّات الثنائية الكلاسيكية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2010%20Technology%20and%20Innovation/Lesson%2029/Level_10_Lesson_29_%20S%2002.mp3"
   },
   {
     text: "Superposition allows qubits to exist in multiple states simultaneously.",
     id: 2,
-    translationAr: "التراكب يسمح للكيوبتات بالوجود في حالات متعددة في نفس الوقت."
+    translationAr: "التراكب يسمح للكيوبتات بالوجود في حالات متعددة في نفس الوقت.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2010%20Technology%20and%20Innovation/Lesson%2029/Level_10_Lesson_29_%20S%2003.mp3"
   },
   {
     text: "Quantum entanglement enables instantaneous correlation between particles.",
     id: 3,
-    translationAr: "التشابك الكمي يتيح ترابطًا لحظيًا بين الجسيمات."
+    translationAr: "التشابك الكمي يتيح ترابطًا لحظيًا بين الجسيمات.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2010%20Technology%20and%20Innovation/Lesson%2029/Level_10_Lesson_29_%20S%2004.mp3"
   },
   {
     text: "These phenomena could solve problems intractable for conventional computers.",
     id: 4,
-    translationAr: "هذه الظواهر يمكن أن تحل مشكلات مستعصية على الحواسيب التقليدية."
+    translationAr: "هذه الظواهر يمكن أن تحل مشكلات مستعصية على الحواسيب التقليدية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2010%20Technology%20and%20Innovation/Lesson%2029/Level_10_Lesson_29_%20S%2005.mp3"
   },
   {
     text: "The students grasp the revolutionary potential of this emerging technology.",
     id: 5,
-    translationAr: "الطلاب يدركون الإمكانات الثورية لهذه التكنولوجيا الناشئة."
+    translationAr: "الطلاب يدركون الإمكانات الثورية لهذه التكنولوجيا الناشئة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2010%20Technology%20and%20Innovation/Lesson%2029/Level_10_Lesson_29_%20S%2006.mp3"
   }
 ],
         },
@@ -3823,27 +3888,37 @@ export const levelsAndLesson = [
         image: "/assets/images/courses_image0/iot.jpg",
         storyData: {
           content: [
-            {
-              text: "Emily documents how interconnected devices create smart home ecosystems.",
-              id: 1,
-            },
-            {
-              text: "Sensors collect data about energy usage, security, and appliance performance.",
-              id: 2,
-            },
-            {
-              text: "Urban infrastructure incorporates IoT for traffic management and waste reduction.",
-              id: 3,
-            },
-            {
-              text: "Privacy advocates warn about vulnerabilities in networked systems.",
-              id: 4,
-            },
-            {
-              text: "The report concludes that IoT benefits outweigh risks when properly implemented.",
-              id: 5,
-            },
-          ],
+  {
+    text: "Emily documents how interconnected devices create smart home ecosystems.",
+    id: 1,
+    translationAr: "إميلي توثّق كيف تُنشئ الأجهزة المترابطة أنظمة بيئية للمنازل الذكية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2010%20Technology%20and%20Innovation/Lesson%2030/Level_10_Lesson_30_%20S%2002.mp3"
+  },
+  {
+    text: "Sensors collect data about energy usage, security, and appliance performance.",
+    id: 2,
+    translationAr: "تجمع أجهزة الاستشعار بيانات عن استهلاك الطاقة، والأمن، وأداء الأجهزة المنزلية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2010%20Technology%20and%20Innovation/Lesson%2030/Level_10_Lesson_30_%20S%2003.mp3"
+  },
+  {
+    text: "Urban infrastructure incorporates IoT for traffic management and waste reduction.",
+    id: 3,
+    translationAr: "تدمج البنية التحتية الحضرية إنترنت الأشياء لإدارة المرور وتقليل النفايات.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2010%20Technology%20and%20Innovation/Lesson%2030/Level_10_Lesson_30_%20S%2004.mp3"
+  },
+  {
+    text: "Privacy advocates warn about vulnerabilities in networked systems.",
+    id: 4,
+    translationAr: "يحذر المدافعون عن الخصوصية من الثغرات في الأنظمة المترابطة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2010%20Technology%20and%20Innovation/Lesson%2030/Level_10_Lesson_30_%20S%2005.mp3"
+  },
+  {
+    text: "The report concludes that IoT benefits outweigh risks when properly implemented.",
+    id: 5,
+    translationAr: "يخلص التقرير إلى أن فوائد إنترنت الأشياء تفوق المخاطر عند تطبيقه بشكل صحيح.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2010%20Technology%20and%20Innovation/Lesson%2030/Level_10_Lesson_30_%20S%2006.mp3"
+  }
+],
         },
         wordDefinitions: {
           Emily: { translation: "إيميلي", definition: "A female given name" },
@@ -3906,7 +3981,7 @@ export const levelsAndLesson = [
       },
       {
         id: 31,
-        title: "31 - Cybersecurity Challenges",
+        title: "Cybersecurity Challenges",
         description:
           "Security expert David analyzes emerging cyber threats and defenses.",
         image: "/assets/images/courses_image0/cybersecurity.jpg",
@@ -3915,27 +3990,32 @@ export const levelsAndLesson = [
   {
     text: "David examines sophisticated phishing schemes targeting corporate networks.",
     id: 1,
-    translationAr: "ديفيد يفحص مخططات التصيد الاحتيالي المعقدة التي تستهدف الشبكات المؤسسية."
+    translationAr: "ديفيد يفحص مخططات التصيد الاحتيالي المعقدة التي تستهدف الشبكات المؤسسية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2010%20Technology%20and%20Innovation/Lesson%2031/Level_10_Lesson_31_%20S%2002.mp3"
   },
   {
     text: "Ransomware attacks encrypt critical data and demand cryptocurrency payments.",
     id: 2,
-    translationAr: "هجمات برامج الفدية تقوم بتشفير البيانات الحساسة وتطلب مدفوعات بالعملات الرقمية."
+    translationAr: "هجمات برامج الفدية تقوم بتشفير البيانات الحساسة وتطلب مدفوعات بالعملات الرقمية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2010%20Technology%20and%20Innovation/Lesson%2031/Level_10_Lesson_31_%20S%2003.mp3"
   },
   {
     text: "Zero-day exploits take advantage of unknown software vulnerabilities.",
     id: 3,
-    translationAr: "هجمات يوم الصفر تستغل الثغرات البرمجية غير المعروفة."
+    translationAr: "هجمات يوم الصفر تستغل الثغرات البرمجية غير المعروفة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2010%20Technology%20and%20Innovation/Lesson%2031/Level_10_Lesson_31_%20S%2004.mp3"
   },
   {
     text: "Multi-factor authentication and encryption provide essential protection layers.",
     id: 4,
-    translationAr: "المصادقة متعددة العوامل والتشفير يوفران طبقات حماية أساسية."
+    translationAr: "المصادقة متعددة العوامل والتشفير يوفران طبقات حماية أساسية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2010%20Technology%20and%20Innovation/Lesson%2031/Level_10_Lesson_31_%20S%2005.mp3"
   },
   {
     text: "Continuous employee training remains crucial for organizational security.",
     id: 5,
-    translationAr: "التدريب المستمر للموظفين يظل أمرًا بالغ الأهمية لأمن المؤسسة."
+    translationAr: "التدريب المستمر للموظفين يظل أمرًا بالغ الأهمية لأمن المؤسسة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2010%20Technology%20and%20Innovation/Lesson%2031/Level_10_Lesson_31_%20S%2006.mp3"
   }
 ],
         },
@@ -11871,31 +11951,31 @@ export const levelsAndLesson = [
     id: 1,
     text: "Successful entrepreneurs conduct comprehensive market research to identify unmet consumer needs and assess competitive landscapes before launching their ventures.",
     translationAr: "يقوم رواد الأعمال الناجحون بإجراء أبحاث سوق شاملة لتحديد احتياجات المستهلك غير الملباة وتقييم المشهد التنافسي قبل إطلاق مشاريعهم.",
-    audioUrl: ""
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2023%20Business%20and%20Entrepreneurship/Lesson%2096/Level_23_Lesson_96_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Developing a compelling business plan requires articulating your value proposition, financial projections, and strategic roadmap to attract potential investors and partners.",
     translationAr: "إعداد خطة عمل مقنعة يتطلب توضيح عرض القيمة الخاصة بك، والتوقعات المالية، وخارطة الطريق الاستراتيجية لجذب المستثمرين والشركاء المحتملين.",
-    audioUrl: ""
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2023%20Business%20and%20Entrepreneurship/Lesson%2096/Level_23_Lesson_96_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Securing adequate funding through angel investors, venture capital firms, or crowdfunding platforms demands exceptional presentation skills and unwavering confidence in your vision.",
     translationAr: "الحصول على تمويل كافٍ من خلال المستثمرين الملائكيين أو شركات رأس المال المغامر أو منصات التمويل الجماعي يتطلب مهارات عرض استثنائية وثقة راسخة في رؤيتك.",
-    audioUrl: ""
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2023%20Business%20and%20Entrepreneurship/Lesson%2096/Level_23_Lesson_96_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Building a cohesive team involves recruiting talented individuals whose complementary skills and shared commitment will drive the organization toward sustained growth.",
     translationAr: "بناء فريق متماسك يتطلب استقطاب أفراد موهوبين يتمتعون بمهارات مكملة والتزام مشترك لدفع المنظمة نحو نمو مستدام.",
-    audioUrl: ""
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2023%20Business%20and%20Entrepreneurship/Lesson%2096/Level_23_Lesson_96_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Navigating regulatory compliance, intellectual property protection, and legal frameworks requires strategic partnerships with experienced attorneys and consultants.",
     translationAr: "التعامل مع الامتثال التنظيمي وحماية الملكية الفكرية والأطر القانونية يتطلب شراكات استراتيجية مع محامين ومستشارين ذوي خبرة.",
-    audioUrl: ""
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2023%20Business%20and%20Entrepreneurship/Lesson%2096/Level_23_Lesson_96_%20S%2006.mp3"
   }
 ],
         },
@@ -12149,27 +12229,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Effective leaders cultivate emotional intelligence to understand team dynamics, resolve interpersonal conflicts, and foster collaborative work environments.",
-    translationAr: "القادة الفعّالون ينمّون الذكاء العاطفي لفهم ديناميكيات الفريق، وحل النزاعات الشخصية، وتعزيز بيئات عمل تعاونية."
+    translationAr: "القادة الفعّالون ينمّون الذكاء العاطفي لفهم ديناميكيات الفريق، وحل النزاعات الشخصية، وتعزيز بيئات عمل تعاونية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2023%20Business%20and%20Entrepreneurship/Lesson%2097/Level_23_Lesson_97_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Strategic decision-making involves analyzing complex data sets, weighing potential risks and opportunities, and implementing solutions that align with organizational objectives.",
-    translationAr: "اتخاذ القرارات الاستراتيجية يتضمن تحليل مجموعات بيانات معقدة، وموازنة المخاطر والفرص المحتملة، وتنفيذ الحلول التي تتماشى مع أهداف المنظمة."
+    translationAr: "اتخاذ القرارات الاستراتيجية يتضمن تحليل مجموعات بيانات معقدة، وموازنة المخاطر والفرص المحتملة، وتنفيذ الحلول التي تتماشى مع أهداف المنظمة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2023%20Business%20and%20Entrepreneurship/Lesson%2097/Level_23_Lesson_97_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Performance management systems require establishing clear metrics, providing constructive feedback, and creating professional development pathways for employee advancement.",
-    translationAr: "أنظمة إدارة الأداء تتطلب وضع مقاييس واضحة، وتقديم تغذية راجعة بنّاءة، وإنشاء مسارات تطوير مهني لترقية الموظفين."
+    translationAr: "أنظمة إدارة الأداء تتطلب وضع مقاييس واضحة، وتقديم تغذية راجعة بنّاءة، وإنشاء مسارات تطوير مهني لترقية الموظفين.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2023%20Business%20and%20Entrepreneurship/Lesson%2097/Level_23_Lesson_97_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Change management initiatives demand transparent communication, stakeholder engagement, and systematic approaches to minimize resistance and maximize adoption.",
-    translationAr: "مبادرات إدارة التغيير تتطلب تواصلًا شفافًا، ومشاركة أصحاب المصلحة، ونهجًا منهجيًا لتقليل المقاومة وزيادة التبني."
+    translationAr: "مبادرات إدارة التغيير تتطلب تواصلًا شفافًا، ومشاركة أصحاب المصلحة، ونهجًا منهجيًا لتقليل المقاومة وزيادة التبني.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2023%20Business%20and%20Entrepreneurship/Lesson%2097/Level_23_Lesson_97_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Delegation strategies empower subordinates by distributing responsibilities appropriately while maintaining accountability and ensuring quality standards are consistently met.",
-    translationAr: "استراتيجيات التفويض تمكّن المرؤوسين من خلال توزيع المسؤوليات بشكل مناسب مع الحفاظ على المساءلة وضمان الالتزام بمعايير الجودة باستمرار."
+    translationAr: "استراتيجيات التفويض تمكّن المرؤوسين من خلال توزيع المسؤوليات بشكل مناسب مع الحفاظ على المساءلة وضمان الالتزام بمعايير الجودة باستمرار.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2023%20Business%20and%20Entrepreneurship/Lesson%2097/Level_23_Lesson_97_%20S%2006.mp3"
   }
 ],
         },
@@ -12389,27 +12474,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Comprehensive financial analysis requires examining cash flow statements, balance sheets, and profit margins to assess organizational fiscal health accurately.",
-    translationAr: "يتطلب التحليل المالي الشامل فحص بيانات التدفق النقدي، والميزانيات العمومية، وهوامش الربح لتقييم الصحة المالية للمنظمة بدقة."
+    translationAr: "يتطلب التحليل المالي الشامل فحص بيانات التدفق النقدي، والميزانيات العمومية، وهوامش الربح لتقييم الصحة المالية للمنظمة بدقة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2023%20Business%20and%20Entrepreneurship/Lesson%2098/Level_23_Lesson_98_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Investment portfolio diversification minimizes risk exposure while maximizing potential returns through strategic allocation across various asset classes and sectors.",
-    translationAr: "تنويع محفظة الاستثمار يقلل من التعرض للمخاطر ويزيد من العوائد المحتملة من خلال التوزيع الاستراتيجي عبر فئات أصول وقطاعات متنوعة."
+    translationAr: "تنويع محفظة الاستثمار يقلل من التعرض للمخاطر ويزيد من العوائد المحتملة من خلال التوزيع الاستراتيجي عبر فئات أصول وقطاعات متنوعة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2023%20Business%20and%20Entrepreneurship/Lesson%2098/Level_23_Lesson_98_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Capital budgeting decisions involve evaluating long-term projects using net present value calculations and internal rate of return metrics.",
-    translationAr: "قرارات موازنة رأس المال تتضمن تقييم المشاريع طويلة الأجل باستخدام حسابات القيمة الحالية الصافية ومؤشرات معدل العائد الداخلي."
+    translationAr: "قرارات موازنة رأس المال تتضمن تقييم المشاريع طويلة الأجل باستخدام حسابات القيمة الحالية الصافية ومؤشرات معدل العائد الداخلي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2023%20Business%20and%20Entrepreneurship/Lesson%2098/Level_23_Lesson_98_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Risk management frameworks identify potential threats, quantify their impact, and implement mitigation strategies to protect stakeholder investments.",
-    translationAr: "أطر إدارة المخاطر تحدد التهديدات المحتملة، وتُقَيِّم تأثيرها، وتنفذ استراتيجيات التخفيف لحماية استثمارات أصحاب المصلحة."
+    translationAr: "أطر إدارة المخاطر تحدد التهديدات المحتملة، وتُقَيِّم تأثيرها، وتنفذ استراتيجيات التخفيف لحماية استثمارات أصحاب المصلحة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2023%20Business%20and%20Entrepreneurship/Lesson%2098/Level_23_Lesson_98_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Mergers and acquisitions require due diligence processes, valuation analyses, and integration planning to ensure synergistic benefits are realized.",
-    translationAr: "عمليات الاندماج والاستحواذ تتطلب إجراءات العناية الواجبة، وتحليلات التقييم، وتخطيط التكامل لضمان تحقيق الفوائد التآزرية."
+    translationAr: "عمليات الاندماج والاستحواذ تتطلب إجراءات العناية الواجبة، وتحليلات التقييم، وتخطيط التكامل لضمان تحقيق الفوائد التآزرية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2023%20Business%20and%20Entrepreneurship/Lesson%2098/Level_23_Lesson_98_%20S%2006.mp3"
   }
 ],
         },
@@ -12611,27 +12701,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Effective digital marketing campaigns leverage data analytics to identify target demographics, optimize conversion rates, and maximize return on advertising investment.",
-    translationAr: "تستفيد الحملات الفعّالة في التسويق الرقمي من تحليلات البيانات لتحديد الفئات المستهدفة، وتحسين معدلات التحويل، وتعظيم العائد على الاستثمار الإعلاني."
+    translationAr: "تستفيد الحملات الفعّالة في التسويق الرقمي من تحليلات البيانات لتحديد الفئات المستهدفة، وتحسين معدلات التحويل، وتعظيم العائد على الاستثمار الإعلاني.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2023%20Business%20and%20Entrepreneurship/Lesson%2099/Level_23_Lesson_99_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Brand positioning strategies differentiate products from competitors by establishing unique value propositions that resonate with specific consumer segments.",
-    translationAr: "استراتيجيات تموضع العلامة التجارية تميز المنتجات عن المنافسين من خلال إنشاء عروض قيمة فريدة تتماشى مع شرائح المستهلكين المحددة."
+    translationAr: "استراتيجيات تموضع العلامة التجارية تميز المنتجات عن المنافسين من خلال إنشاء عروض قيمة فريدة تتماشى مع شرائح المستهلكين المحددة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2023%20Business%20and%20Entrepreneurship/Lesson%2099/Level_23_Lesson_99_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Search engine optimization techniques improve website visibility through keyword research, content optimization, and strategic link-building initiatives.",
-    translationAr: "تقنيات تحسين محركات البحث تحسن من ظهور المواقع من خلال البحث عن الكلمات المفتاحية، وتحسين المحتوى، ومبادرات بناء الروابط الاستراتيجية."
+    translationAr: "تقنيات تحسين محركات البحث تحسن من ظهور المواقع من خلال البحث عن الكلمات المفتاحية، وتحسين المحتوى، ومبادرات بناء الروابط الاستراتيجية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2023%20Business%20and%20Entrepreneurship/Lesson%2099/Level_23_Lesson_99_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Social media marketing utilizes platform-specific algorithms to enhance engagement, build community relationships, and generate viral content distribution.",
-    translationAr: "يستخدم التسويق عبر وسائل التواصل الاجتماعي خوارزميات خاصة بكل منصة لتعزيز التفاعل، وبناء علاقات مجتمعية، وتوليد توزيع واسع للمحتوى الفيروسي."
+    translationAr: "يستخدم التسويق عبر وسائل التواصل الاجتماعي خوارزميات خاصة بكل منصة لتعزيز التفاعل، وبناء علاقات مجتمعية، وتوليد توزيع واسع للمحتوى الفيروسي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2023%20Business%20and%20Entrepreneurship/Lesson%2099/Level_23_Lesson_99_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Customer relationship management systems track interaction histories, personalize communication touchpoints, and automate retention strategies for long-term loyalty.",
-    translationAr: "أنظمة إدارة علاقات العملاء تتابع سجلات التفاعلات، وتخصص نقاط الاتصال في التواصل، وتُؤتمت استراتيجيات الاحتفاظ لتحقيق ولاء طويل الأمد."
+    translationAr: "أنظمة إدارة علاقات العملاء تتابع سجلات التفاعلات، وتخصص نقاط الاتصال في التواصل، وتُؤتمت استراتيجيات الاحتفاظ لتحقيق ولاء طويل الأمد.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2023%20Business%20and%20Entrepreneurship/Lesson%2099/Level_23_Lesson_99_%20S%2006.mp3"
   }
 ],
         },
@@ -12829,27 +12924,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "International market expansion requires comprehensive cultural intelligence, regulatory compliance understanding, and adaptable business models that accommodate diverse consumer preferences.",
-    translationAr: "توسيع الأسواق الدولية يتطلب ذكاءً ثقافيًا شاملاً، وفهمًا للامتثال التنظيمي، ونماذج أعمال مرنة تستوعب تفضيلات المستهلكين المتنوعة."
+    translationAr: "توسيع الأسواق الدولية يتطلب ذكاءً ثقافيًا شاملاً، وفهمًا للامتثال التنظيمي، ونماذج أعمال مرنة تستوعب تفضيلات المستهلكين المتنوعة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2023%20Business%20and%20Entrepreneurship/Lesson%20100/Level_23_Lesson_100_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Cross-cultural negotiations demand sensitivity to communication styles, decision-making hierarchies, and relationship-building protocols that vary significantly across different regions.",
-    translationAr: "المفاوضات بين الثقافات تتطلب حساسية لأنماط التواصل، وهياكل اتخاذ القرار، وبروتوكولات بناء العلاقات التي تختلف بشكل كبير بين المناطق."
+    translationAr: "المفاوضات بين الثقافات تتطلب حساسية لأنماط التواصل، وهياكل اتخاذ القرار، وبروتوكولات بناء العلاقات التي تختلف بشكل كبير بين المناطق.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2023%20Business%20and%20Entrepreneurship/Lesson%20100/Level_23_Lesson_100_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Global supply chain management involves coordinating logistics networks, managing currency fluctuations, and mitigating geopolitical risks that could disrupt operations.",
-    translationAr: "إدارة سلاسل التوريد العالمية تشمل تنسيق شبكات الخدمات اللوجستية، وإدارة تقلبات العملات، والتخفيف من المخاطر الجيوسياسية التي قد تعطل العمليات."
+    translationAr: "إدارة سلاسل التوريد العالمية تشمل تنسيق شبكات الخدمات اللوجستية، وإدارة تقلبات العملات، والتخفيف من المخاطر الجيوسياسية التي قد تعطل العمليات.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2023%20Business%20and%20Entrepreneurship/Lesson%20100/Level_23_Lesson_100_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Foreign exchange markets influence international trade through currency valuation changes, hedging strategies, and economic indicators that affect purchasing power.",
-    translationAr: "أسواق الصرف الأجنبي تؤثر على التجارة الدولية من خلال تغييرات تقييم العملات، واستراتيجيات التحوط، والمؤشرات الاقتصادية التي تؤثر على القوة الشرائية."
+    translationAr: "أسواق الصرف الأجنبي تؤثر على التجارة الدولية من خلال تغييرات تقييم العملات، واستراتيجيات التحوط، والمؤشرات الاقتصادية التي تؤثر على القوة الشرائية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2023%20Business%20and%20Entrepreneurship/Lesson%20100/Level_23_Lesson_100_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Multinational corporations must navigate complex tax structures, transfer pricing regulations, and intellectual property laws while maintaining ethical business practices globally.",
-    translationAr: "يتعين على الشركات متعددة الجنسيات التعامل مع هياكل ضريبية معقدة، ولوائح تسعير التحويل، وقوانين الملكية الفكرية مع الحفاظ على ممارسات تجارية أخلاقية عالميًا."
+    translationAr: "يتعين على الشركات متعددة الجنسيات التعامل مع هياكل ضريبية معقدة، ولوائح تسعير التحويل، وقوانين الملكية الفكرية مع الحفاظ على ممارسات تجارية أخلاقية عالميًا.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2023%20Business%20and%20Entrepreneurship/Lesson%20100/Level_23_Lesson_100_%20S%2006.mp3"
   }
 ],
         },
@@ -13062,27 +13162,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Working memory functions as a cognitive workspace where information is temporarily maintained and manipulated during complex mental tasks requiring sustained attention.",
-    translationAr: "تعمل الذاكرة العاملة كمساحة معرفية يتم فيها الاحتفاظ بالمعلومات مؤقتًا ومعالجتها أثناء المهام الذهنية المعقدة التي تتطلب انتباهاً مستمراً."
+    translationAr: "تعمل الذاكرة العاملة كمساحة معرفية يتم فيها الاحتفاظ بالمعلومات مؤقتًا ومعالجتها أثناء المهام الذهنية المعقدة التي تتطلب انتباهاً مستمراً.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2024%20Psychology%20and%20Human%20Behavior/Lesson%20106/Level_24_Lesson_106_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Cognitive biases systematically distort judgment and decision-making processes, leading individuals to deviate from rational thinking patterns in predictable ways.",
-    translationAr: "الانحيازات المعرفية تشوه الحكم وعمليات اتخاذ القرار بشكل منهجي، مما يدفع الأفراد إلى الانحراف عن أنماط التفكير العقلاني بطرق يمكن التنبؤ بها."
+    translationAr: "الانحيازات المعرفية تشوه الحكم وعمليات اتخاذ القرار بشكل منهجي، مما يدفع الأفراد إلى الانحراف عن أنماط التفكير العقلاني بطرق يمكن التنبؤ بها.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2024%20Psychology%20and%20Human%20Behavior/Lesson%20106/Level_24_Lesson_106_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Neuroplasticity demonstrates the brain's remarkable capacity to reorganize neural pathways throughout life, adapting to new experiences and recovering from injuries.",
-    translationAr: "المرونة العصبية تُظهر قدرة الدماغ المذهلة على إعادة تنظيم المسارات العصبية طوال الحياة، والتكيف مع التجارب الجديدة، والتعافي من الإصابات."
+    translationAr: "المرونة العصبية تُظهر قدرة الدماغ المذهلة على إعادة تنظيم المسارات العصبية طوال الحياة، والتكيف مع التجارب الجديدة، والتعافي من الإصابات.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2024%20Psychology%20and%20Human%20Behavior/Lesson%20106/Level_24_Lesson_106_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Executive functions encompass higher-order cognitive abilities including inhibitory control, cognitive flexibility, and planning that coordinate complex behavioral responses.",
-    translationAr: "الوظائف التنفيذية تشمل القدرات المعرفية العليا مثل التحكم التثبيطي، والمرونة المعرفية، والتخطيط، التي تنسق الاستجابات السلوكية المعقدة."
+    translationAr: "الوظائف التنفيذية تشمل القدرات المعرفية العليا مثل التحكم التثبيطي، والمرونة المعرفية، والتخطيط، التي تنسق الاستجابات السلوكية المعقدة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2024%20Psychology%20and%20Human%20Behavior/Lesson%20106/Level_24_Lesson_106_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Memory consolidation transforms fragile short-term memories into stable long-term storage through synaptic strengthening and protein synthesis mechanisms.",
-    translationAr: "توطيد الذاكرة يحول الذكريات قصيرة المدى الهشة إلى تخزين طويل المدى مستقر من خلال تقوية المشابك العصبية وآليات تخليق البروتين."
+    translationAr: "توطيد الذاكرة يحول الذكريات قصيرة المدى الهشة إلى تخزين طويل المدى مستقر من خلال تقوية المشابك العصبية وآليات تخليق البروتين.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2024%20Psychology%20and%20Human%20Behavior/Lesson%20106/Level_24_Lesson_106_%20S%2006.mp3"
   }
 ],
         },
@@ -13262,27 +13367,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Social conformity pressures compel individuals to align their behaviors and opinions with group norms, even when contradicting personal beliefs.",
-    translationAr: "ضغوط الامتثال الاجتماعي تدفع الأفراد إلى مواءمة سلوكياتهم وآرائهم مع معايير الجماعة، حتى عندما تتعارض مع معتقداتهم الشخصية."
+    translationAr: "ضغوط الامتثال الاجتماعي تدفع الأفراد إلى مواءمة سلوكياتهم وآرائهم مع معايير الجماعة، حتى عندما تتعارض مع معتقداتهم الشخصية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2024%20Psychology%20and%20Human%20Behavior/Lesson%20107/Level_24_Lesson_107_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "In-group favoritism and out-group discrimination demonstrate how social categorization creates biased attitudes toward different social groups.",
-    translationAr: "المحاباة داخل المجموعة والتمييز ضد المجموعات الأخرى يوضحان كيف أن التصنيف الاجتماعي يولد مواقف متحيزة تجاه مجموعات اجتماعية مختلفة."
+    translationAr: "المحاباة داخل المجموعة والتمييز ضد المجموعات الأخرى يوضحان كيف أن التصنيف الاجتماعي يولد مواقف متحيزة تجاه مجموعات اجتماعية مختلفة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2024%20Psychology%20and%20Human%20Behavior/Lesson%20107/Level_24_Lesson_107_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Bystander effect phenomena reveal how diffusion of responsibility in group settings reduces individual likelihood of helping during emergencies.",
-    translationAr: "ظاهرة تأثير المتفرج تكشف كيف أن انتشار المسؤولية في المواقف الجماعية يقلل من احتمالية مساعدة الفرد أثناء الطوارئ."
+    translationAr: "ظاهرة تأثير المتفرج تكشف كيف أن انتشار المسؤولية في المواقف الجماعية يقلل من احتمالية مساعدة الفرد أثناء الطوارئ.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2024%20Psychology%20and%20Human%20Behavior/Lesson%20107/Level_24_Lesson_107_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Social identity theory explains how individuals derive self-esteem from group memberships while maintaining positive distinctiveness from other groups.",
-    translationAr: "نظرية الهوية الاجتماعية تشرح كيف يستمد الأفراد تقدير الذات من عضوياتهم في الجماعات مع الحفاظ على تميز إيجابي عن الجماعات الأخرى."
+    translationAr: "نظرية الهوية الاجتماعية تشرح كيف يستمد الأفراد تقدير الذات من عضوياتهم في الجماعات مع الحفاظ على تميز إيجابي عن الجماعات الأخرى.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2024%20Psychology%20and%20Human%20Behavior/Lesson%20107/Level_24_Lesson_107_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Groupthink dynamics impair critical thinking when cohesive groups prioritize consensus over accurate assessment of alternative solutions.",
-    translationAr: "ديناميكيات التفكير الجماعي تضعف التفكير النقدي عندما تفضل الجماعات المتماسكة التوافق على حساب التقييم الدقيق للحلول البديلة."
+    translationAr: "ديناميكيات التفكير الجماعي تضعف التفكير النقدي عندما تفضل الجماعات المتماسكة التوافق على حساب التقييم الدقيق للحلول البديلة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2024%20Psychology%20and%20Human%20Behavior/Lesson%20107/Level_24_Lesson_107_%20S%2006.mp3"
   }
 ],
         },
@@ -13427,27 +13537,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Attachment theory posits that early caregiver relationships establish internal working models that influence interpersonal behavior throughout life.",
-    translationAr: "تفترض نظرية التعلق أن علاقات الطفولة المبكرة مع مقدمي الرعاية تؤسس نماذج داخلية تعمل على التأثير في السلوكيات الاجتماعية طوال الحياة."
+    translationAr: "تفترض نظرية التعلق أن علاقات الطفولة المبكرة مع مقدمي الرعاية تؤسس نماذج داخلية تعمل على التأثير في السلوكيات الاجتماعية طوال الحياة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2024%20Psychology%20and%20Human%20Behavior/Lesson%20108/Level_24_Lesson_108_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Cognitive development follows predictable stages where children acquire increasingly sophisticated mental operations and abstract reasoning capabilities.",
-    translationAr: "التطور المعرفي يسير في مراحل متوقعة حيث يكتسب الأطفال عمليات عقلية أكثر تعقيدًا وقدرات متزايدة على التفكير المجرد."
+    translationAr: "التطور المعرفي يسير في مراحل متوقعة حيث يكتسب الأطفال عمليات عقلية أكثر تعقيدًا وقدرات متزايدة على التفكير المجرد.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2024%20Psychology%20and%20Human%20Behavior/Lesson%20108/Level_24_Lesson_108_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Adolescence represents a critical period of identity formation when individuals navigate psychological, social, and biological transitions toward adulthood.",
-    translationAr: "يمثل سن المراهقة فترة حاسمة لتشكيل الهوية، حيث يمر الأفراد بانتقالات نفسية واجتماعية وبيولوجية نحو مرحلة البلوغ."
+    translationAr: "يمثل سن المراهقة فترة حاسمة لتشكيل الهوية، حيث يمر الأفراد بانتقالات نفسية واجتماعية وبيولوجية نحو مرحلة البلوغ.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2024%20Psychology%20and%20Human%20Behavior/Lesson%20108/Level_24_Lesson_108_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Aging processes involve complex interactions between genetic predispositions, environmental factors, and lifestyle choices affecting cognitive decline.",
-    translationAr: "تشمل عمليات الشيخوخة تفاعلات معقدة بين الاستعدادات الجينية والعوامل البيئية وخيارات نمط الحياة التي تؤثر على التراجع المعرفي."
+    translationAr: "تشمل عمليات الشيخوخة تفاعلات معقدة بين الاستعدادات الجينية والعوامل البيئية وخيارات نمط الحياة التي تؤثر على التراجع المعرفي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2024%20Psychology%20and%20Human%20Behavior/Lesson%20108/Level_24_Lesson_108_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Resilience factors enable individuals to overcome adversity by developing adaptive coping mechanisms and maintaining psychological well-being despite challenges.",
-    translationAr: "عوامل المرونة تمكّن الأفراد من التغلب على الشدائد من خلال تطوير آليات تكيف فعّالة والحفاظ على الصحة النفسية رغم التحديات."
+    translationAr: "عوامل المرونة تمكّن الأفراد من التغلب على الشدائد من خلال تطوير آليات تكيف فعّالة والحفاظ على الصحة النفسية رغم التحديات.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2024%20Psychology%20and%20Human%20Behavior/Lesson%20108/Level_24_Lesson_108_%20S%2006.mp3"
   }
 ],
         },
@@ -13590,27 +13705,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Clinical depression manifests through persistent mood disturbances, cognitive impairments, and physiological symptoms that significantly interfere with daily functioning.",
-    translationAr: "الاكتئاب الإكلينيكي يظهر من خلال اضطرابات مزاجية مستمرة، وضعف معرفي، وأعراض فسيولوجية تؤثر بشكل كبير على الأداء اليومي."
+    translationAr: "الاكتئاب الإكلينيكي يظهر من خلال اضطرابات مزاجية مستمرة، وضعف معرفي، وأعراض فسيولوجية تؤثر بشكل كبير على الأداء اليومي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2024%20Psychology%20and%20Human%20Behavior/Lesson%20109/Level_24_Lesson_109_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Anxiety disorders encompass various conditions characterized by excessive worry, avoidance behaviors, and somatic manifestations affecting quality of life.",
-    translationAr: "اضطرابات القلق تشمل حالات مختلفة تتميز بالقلق المفرط، والسلوكيات التجنبية، والأعراض الجسدية التي تؤثر على جودة الحياة."
+    translationAr: "اضطرابات القلق تشمل حالات مختلفة تتميز بالقلق المفرط، والسلوكيات التجنبية، والأعراض الجسدية التي تؤثر على جودة الحياة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2024%20Psychology%20and%20Human%20Behavior/Lesson%20109/Level_24_Lesson_109_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Psychotherapy modalities including cognitive-behavioral therapy and psychodynamic approaches address underlying psychological mechanisms perpetuating mental health symptoms.",
-    translationAr: "أساليب العلاج النفسي بما في ذلك العلاج المعرفي السلوكي والمقاربات الديناميكية النفسية تعالج الآليات النفسية الكامنة التي تساهم في استمرار الأعراض النفسية."
+    translationAr: "أساليب العلاج النفسي بما في ذلك العلاج المعرفي السلوكي والمقاربات الديناميكية النفسية تعالج الآليات النفسية الكامنة التي تساهم في استمرار الأعراض النفسية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2024%20Psychology%20and%20Human%20Behavior/Lesson%20109/Level_24_Lesson_109_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Pharmacological interventions target neurotransmitter imbalances through selective serotonin reuptake inhibitors and other psychiatric medications.",
-    translationAr: "التدخلات الدوائية تستهدف اختلالات الناقلات العصبية من خلال مثبطات إعادة امتصاص السيروتونين الانتقائية وأدوية نفسية أخرى."
+    translationAr: "التدخلات الدوائية تستهدف اختلالات الناقلات العصبية من خلال مثبطات إعادة امتصاص السيروتونين الانتقائية وأدوية نفسية أخرى.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2024%20Psychology%20and%20Human%20Behavior/Lesson%20109/Level_24_Lesson_109_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Mental health stigma creates barriers to treatment seeking, perpetuating misconceptions and discrimination against individuals experiencing psychological distress.",
-    translationAr: "الوصمة المرتبطة بالصحة النفسية تخلق حواجز أمام طلب العلاج، وتُعزز المفاهيم الخاطئة والتمييز ضد الأفراد الذين يعانون من ضيق نفسي."
+    translationAr: "الوصمة المرتبطة بالصحة النفسية تخلق حواجز أمام طلب العلاج، وتُعزز المفاهيم الخاطئة والتمييز ضد الأفراد الذين يعانون من ضيق نفسي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2024%20Psychology%20and%20Human%20Behavior/Lesson%20109/Level_24_Lesson_109_%20S%2006.mp3"
   }
 ],
         },
@@ -13769,27 +13889,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Subjective well-being encompasses life satisfaction, positive affect, and absence of negative emotions, reflecting individuals' evaluations of their overall quality of life.",
-    translationAr: "الرفاهية الذاتية تشمل الرضا عن الحياة، والمشاعر الإيجابية، وغياب المشاعر السلبية، وتعكس تقييم الأفراد لجودة حياتهم بشكل عام."
+    translationAr: "الرفاهية الذاتية تشمل الرضا عن الحياة، والمشاعر الإيجابية، وغياب المشاعر السلبية، وتعكس تقييم الأفراد لجودة حياتهم بشكل عام.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2024%20Psychology%20and%20Human%20Behavior/Lesson%20110/Level_24_Lesson_110_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Character strengths and virtues represent core positive traits that contribute to human flourishing and meaningful existence across diverse cultural contexts.",
-    translationAr: "نقاط القوة والفضائل تمثل سمات إيجابية أساسية تسهم في ازدهار الإنسان ووجوده ذو المعنى عبر سياقات ثقافية متنوعة."
+    translationAr: "نقاط القوة والفضائل تمثل سمات إيجابية أساسية تسهم في ازدهار الإنسان ووجوده ذو المعنى عبر سياقات ثقافية متنوعة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2024%20Psychology%20and%20Human%20Behavior/Lesson%20110/Level_24_Lesson_110_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Flow states occur during optimal experiences when individuals become completely absorbed in challenging activities matching their skill levels.",
-    translationAr: "تحدث حالات التدفق أثناء التجارب المثالية عندما ينغمس الأفراد كليًا في أنشطة تحدي تتناسب مع مستويات مهاراتهم."
+    translationAr: "تحدث حالات التدفق أثناء التجارب المثالية عندما ينغمس الأفراد كليًا في أنشطة تحدي تتناسب مع مستويات مهاراتهم.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2024%20Psychology%20and%20Human%20Behavior/Lesson%20110/Level_24_Lesson_110_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Gratitude practices and mindfulness interventions enhance psychological well-being by fostering appreciation and present-moment awareness.",
-    translationAr: "ممارسات الامتنان وتدخلات اليقظة الذهنية تعزز الرفاهية النفسية من خلال تنمية التقدير والوعي باللحظة الحالية."
+    translationAr: "ممارسات الامتنان وتدخلات اليقظة الذهنية تعزز الرفاهية النفسية من خلال تنمية التقدير والوعي باللحظة الحالية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2024%20Psychology%20and%20Human%20Behavior/Lesson%20110/Level_24_Lesson_110_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Post-traumatic growth demonstrates how individuals can develop increased resilience, deeper relationships, and enhanced life appreciation following adversity.",
-    translationAr: "النمو ما بعد الصدمة يُظهر كيف يمكن للأفراد تطوير مرونة أكبر، وعلاقات أعمق، وتقدير أعلى للحياة بعد مواجهة الشدائد."
+    translationAr: "النمو ما بعد الصدمة يُظهر كيف يمكن للأفراد تطوير مرونة أكبر، وعلاقات أعمق، وتقدير أعلى للحياة بعد مواجهة الشدائد.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2024%20Psychology%20and%20Human%20Behavior/Lesson%20110/Level_24_Lesson_110_%20S%2006.mp3"
   }
 ],
         },
@@ -13932,27 +14057,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Socratic methodology employs systematic questioning to expose contradictions in commonly held beliefs, encouraging critical examination of assumptions through dialectical reasoning.",
-    translationAr: "المنهج السقراطي يستخدم التساؤل المنهجي لكشف التناقضات في المعتقدات الشائعة، ويشجع على الفحص النقدي للافتراضات من خلال التفكير الجدلي."
+    translationAr: "المنهج السقراطي يستخدم التساؤل المنهجي لكشف التناقضات في المعتقدات الشائعة، ويشجع على الفحص النقدي للافتراضات من خلال التفكير الجدلي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2025%20Philosophy%20and%20Ethics/Lesson%20111/Level_25_Lesson_111_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Aristotelian virtue ethics emphasizes character development and moral excellence, proposing that happiness results from cultivating virtuous dispositions and practicing ethical behavior.",
-    translationAr: "أخلاقيات الفضيلة الأرسطية تركز على تنمية الشخصية والتميز الأخلاقي، وتقترح أن السعادة تنبع من تنمية الميول الفاضلة وممارسة السلوك الأخلاقي."
+    translationAr: "أخلاقيات الفضيلة الأرسطية تركز على تنمية الشخصية والتميز الأخلاقي، وتقترح أن السعادة تنبع من تنمية الميول الفاضلة وممارسة السلوك الأخلاقي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2025%20Philosophy%20and%20Ethics/Lesson%20111/Level_25_Lesson_111_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Stoic philosophy advocates emotional resilience and rational acceptance of circumstances beyond human control while emphasizing personal responsibility for one's responses.",
-    translationAr: "الفلسفة الرواقية تدعو إلى الصمود العاطفي والقبول العقلاني للظروف الخارجة عن سيطرة الإنسان، مع التأكيد على المسؤولية الشخصية عن الاستجابات."
+    translationAr: "الفلسفة الرواقية تدعو إلى الصمود العاطفي والقبول العقلاني للظروف الخارجة عن سيطرة الإنسان، مع التأكيد على المسؤولية الشخصية عن الاستجابات.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2025%20Philosophy%20and%20Ethics/Lesson%20111/Level_25_Lesson_111_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Platonic idealism posits that abstract forms represent perfect universal truths, suggesting that physical reality constitutes mere shadows of these eternal concepts.",
-    translationAr: "المثالية الأفلاطونية تفترض أن الأشكال المجردة تمثل حقائق كونية مثالية، وتشير إلى أن الواقع المادي ليس سوى ظلال لهذه المفاهيم الأبدية."
+    translationAr: "المثالية الأفلاطونية تفترض أن الأشكال المجردة تمثل حقائق كونية مثالية، وتشير إلى أن الواقع المادي ليس سوى ظلال لهذه المفاهيم الأبدية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2025%20Philosophy%20and%20Ethics/Lesson%20111/Level_25_Lesson_111_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Confucian ethics prioritizes social harmony through hierarchical relationships, filial piety, and moral cultivation based on reciprocity and benevolent governance.",
-    translationAr: "الأخلاقيات الكونفوشيوسية تعطي الأولوية للانسجام الاجتماعي من خلال العلاقات الهرمية، وبر الوالدين، والتنمية الأخلاقية القائمة على المعاملة بالمثل والحكم الرشيد."
+    translationAr: "الأخلاقيات الكونفوشيوسية تعطي الأولوية للانسجام الاجتماعي من خلال العلاقات الهرمية، وبر الوالدين، والتنمية الأخلاقية القائمة على المعاملة بالمثل والحكم الرشيد.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2025%20Philosophy%20and%20Ethics/Lesson%20111/Level_25_Lesson_111_%20S%2006.mp3"
   }
 ],
         },
@@ -14126,27 +14256,32 @@ export const levelsAndLesson = [
       {
         id: 1,
         text: "Utilitarianism advocates maximizing overall happiness and minimizing suffering through consequentialist evaluation of actions based on their outcomes rather than intentions.",
-        translationAr: "النفعية تدعو إلى تعظيم السعادة العامة وتقليل المعاناة من خلال تقييم عواقب الأفعال بناءً على نتائجها بدلاً من نواياها."
+        translationAr: "النفعية تدعو إلى تعظيم السعادة العامة وتقليل المعاناة من خلال تقييم عواقب الأفعال بناءً على نتائجها بدلاً من نواياها.",
+        audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2025%20Philosophy%20and%20Ethics/Lesson%20112/Level_25_Lesson_112_%20S%2002.mp3"
       },
       {
         id: 2,
         text: "Deontological ethics emphasizes moral duties and universal principles, asserting that certain actions are inherently right or wrong regardless of consequences.",
-        translationAr: "الأخلاق الواجبة تؤكد على الواجبات الأخلاقية والمبادئ الكونية، وتعتبر أن بعض الأفعال صحيحة أو خاطئة في جوهرها بغض النظر عن النتائج."
+        translationAr: "الأخلاق الواجبة تؤكد على الواجبات الأخلاقية والمبادئ الكونية، وتعتبر أن بعض الأفعال صحيحة أو خاطئة في جوهرها بغض النظر عن النتائج.",
+        audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2025%20Philosophy%20and%20Ethics/Lesson%20112/Level_25_Lesson_112_%20S%2003.mp3"
       },
       {
         id: 3,
         text: "Existentialist philosophy stresses individual freedom and responsibility, arguing that humans create meaning through authentic choices in an absurd universe.",
-        translationAr: "الفلسفة الوجودية تؤكد على الحرية والمسؤولية الفردية، وتقول إن الإنسان يخلق المعنى من خلال اختيارات أصيلة في كون عبثي."
+        translationAr: "الفلسفة الوجودية تؤكد على الحرية والمسؤولية الفردية، وتقول إن الإنسان يخلق المعنى من خلال اختيارات أصيلة في كون عبثي.",
+        audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2025%20Philosophy%20and%20Ethics/Lesson%20112/Level_25_Lesson_112_%20S%2004.mp3"
       },
       {
         id: 4,
         text: "Feminist ethics challenges traditional moral frameworks by emphasizing care, relationships, and contextual reasoning over abstract universal principles.",
-        translationAr: "الأخلاقيات النسوية تتحدى الأطر الأخلاقية التقليدية من خلال التركيز على الرعاية والعلاقات والتفكير السياقي بدلاً من المبادئ الكونية المجردة."
+        translationAr: "الأخلاقيات النسوية تتحدى الأطر الأخلاقية التقليدية من خلال التركيز على الرعاية والعلاقات والتفكير السياقي بدلاً من المبادئ الكونية المجردة.",
+        audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2025%20Philosophy%20and%20Ethics/Lesson%20112/Level_25_Lesson_112_%20S%2005.mp3"
       },
       {
         id: 5,
         text: "Applied ethics addresses practical moral dilemmas in specific domains including medical bioethics, environmental ethics, and artificial intelligence governance.",
-        translationAr: "الأخلاقيات التطبيقية تعالج المعضلات الأخلاقية العملية في مجالات محددة مثل أخلاقيات الطب الحيوي، والأخلاقيات البيئية، وحوكمة الذكاء الاصطناعي."
+        translationAr: "الأخلاقيات التطبيقية تعالج المعضلات الأخلاقية العملية في مجالات محددة مثل أخلاقيات الطب الحيوي، والأخلاقيات البيئية، وحوكمة الذكاء الاصطناعي.",
+        audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2025%20Philosophy%20and%20Ethics/Lesson%20112/Level_25_Lesson_112_%20S%2006.mp3"
       }
     ],
         },
@@ -14299,27 +14434,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Empiricism contends that sensory experience constitutes the primary source of knowledge, emphasizing observation and experimentation over rational speculation.",
-    translationAr: "التجريبية ترى أن التجربة الحسية تُشكّل المصدر الأساسي للمعرفة، مع التركيز على الملاحظة والتجريب بدلاً من التكهنات العقلانية."
+    translationAr: "التجريبية ترى أن التجربة الحسية تُشكّل المصدر الأساسي للمعرفة، مع التركيز على الملاحظة والتجريب بدلاً من التكهنات العقلانية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2025%20Philosophy%20and%20Ethics/Lesson%20113/Level_25_Lesson_113_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Rationalism argues that reason and logical deduction provide more reliable pathways to truth than empirical observation, prioritizing innate ideas.",
-    translationAr: "العقلانية تجادل بأن العقل والاستنتاج المنطقي يوفران طرقًا أكثر موثوقية للوصول إلى الحقيقة من الملاحظة التجريبية، مع إعطاء الأولوية للأفكار الفطرية."
+    translationAr: "العقلانية تجادل بأن العقل والاستنتاج المنطقي يوفران طرقًا أكثر موثوقية للوصول إلى الحقيقة من الملاحظة التجريبية، مع إعطاء الأولوية للأفكار الفطرية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2025%20Philosophy%20and%20Ethics/Lesson%20113/Level_25_Lesson_113_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Skepticism questions the possibility of certain knowledge, challenging assumptions about reality and highlighting limitations of human cognitive faculties.",
-    translationAr: "الشكّية تُثير التساؤلات حول إمكانية الحصول على معرفة مؤكدة، وتتحدى الافتراضات عن الواقع وتبرز حدود القدرات المعرفية البشرية."
+    translationAr: "الشكّية تُثير التساؤلات حول إمكانية الحصول على معرفة مؤكدة، وتتحدى الافتراضات عن الواقع وتبرز حدود القدرات المعرفية البشرية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2025%20Philosophy%20and%20Ethics/Lesson%20113/Level_25_Lesson_113_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Constructivism suggests that individuals actively construct knowledge through interaction with their environment rather than passively receiving information.",
-    translationAr: "البنيوية ترى أن الأفراد يبنون المعرفة بشكل نشط من خلال التفاعل مع بيئتهم بدلاً من تلقي المعلومات بشكل سلبي."
+    translationAr: "البنيوية ترى أن الأفراد يبنون المعرفة بشكل نشط من خلال التفاعل مع بيئتهم بدلاً من تلقي المعلومات بشكل سلبي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2025%20Philosophy%20and%20Ethics/Lesson%20113/Level_25_Lesson_113_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Pragmatism evaluates truth claims based on their practical consequences and utility, emphasizing workable solutions over absolute certainties.",
-    translationAr: "البراغماتية تقيّم الادعاءات المتعلقة بالحقيقة بناءً على عواقبها العملية وفائدتها، مع التركيز على الحلول القابلة للتطبيق بدلاً من اليقينيات المطلقة."
+    translationAr: "البراغماتية تقيّم الادعاءات المتعلقة بالحقيقة بناءً على عواقبها العملية وفائدتها، مع التركيز على الحلول القابلة للتطبيق بدلاً من اليقينيات المطلقة.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2025%20Philosophy%20and%20Ethics/Lesson%20113/Level_25_Lesson_113_%20S%2006.mp3"
   }
 ],
         },
@@ -14449,27 +14589,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Social contract theory proposes that legitimate political authority derives from voluntary agreements among individuals who surrender certain freedoms for collective security.",
-    translationAr: "نظرية العقد الاجتماعي تقترح أن السلطة السياسية الشرعية تنبع من اتفاقات طوعية بين الأفراد الذين يتنازلون عن بعض الحريات مقابل الأمن الجماعي."
+    translationAr: "نظرية العقد الاجتماعي تقترح أن السلطة السياسية الشرعية تنبع من اتفاقات طوعية بين الأفراد الذين يتنازلون عن بعض الحريات مقابل الأمن الجماعي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2025%20Philosophy%20and%20Ethics/Lesson%20114/Level_25_Lesson_114_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Liberalism champions individual rights, democratic governance, and limited government intervention while protecting minority interests against majoritarian tyranny.",
-    translationAr: "الليبرالية تدافع عن الحقوق الفردية، والحكم الديمقراطي، وتدخل محدود من الحكومة مع حماية مصالح الأقليات من طغيان الأغلبية."
+    translationAr: "الليبرالية تدافع عن الحقوق الفردية، والحكم الديمقراطي، وتدخل محدود من الحكومة مع حماية مصالح الأقليات من طغيان الأغلبية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2025%20Philosophy%20and%20Ethics/Lesson%20114/Level_25_Lesson_114_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Rawlsian justice theory employs the original position thought experiment to determine fair principles for organizing society behind a veil of ignorance.",
-    translationAr: "نظرية العدالة عند رولز تستخدم تجربة الوضع الأصلي الفكرية لتحديد مبادئ عادلة لتنظيم المجتمع من خلف حجاب الجهل."
+    translationAr: "نظرية العدالة عند رولز تستخدم تجربة الوضع الأصلي الفكرية لتحديد مبادئ عادلة لتنظيم المجتمع من خلف حجاب الجهل.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2025%20Philosophy%20and%20Ethics/Lesson%20114/Level_25_Lesson_114_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Anarchism rejects centralized authority and hierarchical power structures, advocating for voluntary cooperation and decentralized decision-making processes.",
-    translationAr: "الفوضوية ترفض السلطة المركزية والهياكل السلطوية الهرمية، وتدعو إلى التعاون الطوعي وعمليات اتخاذ القرار اللامركزية."
+    translationAr: "الفوضوية ترفض السلطة المركزية والهياكل السلطوية الهرمية، وتدعو إلى التعاون الطوعي وعمليات اتخاذ القرار اللامركزية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2025%20Philosophy%20and%20Ethics/Lesson%20114/Level_25_Lesson_114_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Communitarianism emphasizes shared values and collective identity over individual autonomy, prioritizing community obligations and cultural traditions.",
-    translationAr: "الجماعاتية تؤكد على القيم المشتركة والهوية الجماعية على حساب الاستقلالية الفردية، مع إعطاء الأولوية لالتزامات المجتمع والتقاليد الثقافية."
+    translationAr: "الجماعاتية تؤكد على القيم المشتركة والهوية الجماعية على حساب الاستقلالية الفردية، مع إعطاء الأولوية لالتزامات المجتمع والتقاليد الثقافية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2025%20Philosophy%20and%20Ethics/Lesson%20114/Level_25_Lesson_114_%20S%2006.mp3"
   }
 ],
         },
@@ -14608,27 +14753,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "The mind-body problem investigates whether consciousness emerges from physical brain processes or represents a distinct non-material substance requiring dualistic explanations.",
-    translationAr: "مشكلة العقل والجسد تبحث فيما إذا كان الوعي ينشأ من العمليات الفيزيائية في الدماغ أم أنه يمثل جوهرًا غير مادي يتطلب تفسيرات ثنائية."
+    translationAr: "مشكلة العقل والجسد تبحث فيما إذا كان الوعي ينشأ من العمليات الفيزيائية في الدماغ أم أنه يمثل جوهرًا غير مادي يتطلب تفسيرات ثنائية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2025%20Philosophy%20and%20Ethics/Lesson%20115/Level_25_Lesson_115_%20S%2002.mp3"
   },
   {
     id: 2,
     text: "Personal identity theory examines what constitutes continuous selfhood across time, considering psychological continuity versus physical persistence as defining criteria.",
-    translationAr: "نظرية الهوية الشخصية تدرس ما الذي يشكل استمرارية الذات عبر الزمن، من خلال المقارنة بين الاستمرارية النفسية والبقاء الجسدي كمعايير للتعريف."
+    translationAr: "نظرية الهوية الشخصية تدرس ما الذي يشكل استمرارية الذات عبر الزمن، من خلال المقارنة بين الاستمرارية النفسية والبقاء الجسدي كمعايير للتعريف.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2025%20Philosophy%20and%20Ethics/Lesson%20115/Level_25_Lesson_115_%20S%2003.mp3"
   },
   {
     id: 3,
     text: "Free will debates question whether human actions result from deterministic causation or genuine choice, exploring compatibilist and libertarian perspectives.",
-    translationAr: "نقاشات الإرادة الحرة تتساءل عما إذا كانت أفعال البشر نتيجة سببية حتمية أم اختيار حقيقي، من خلال استكشاف وجهات النظر التوافقية والليبرتارية."
+    translationAr: "نقاشات الإرادة الحرة تتساءل عما إذا كانت أفعال البشر نتيجة سببية حتمية أم اختيار حقيقي، من خلال استكشاف وجهات النظر التوافقية والليبرتارية.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2025%20Philosophy%20and%20Ethics/Lesson%20115/Level_25_Lesson_115_%20S%2004.mp3"
   },
   {
     id: 4,
     text: "Qualia represent the subjective, experiential aspects of conscious states that resist objective scientific description and measurement.",
-    translationAr: "الكواليا تمثل الجوانب الذاتية والتجريبية للحالات الواعية التي تقاوم الوصف والقياس العلمي الموضوعي."
+    translationAr: "الكواليا تمثل الجوانب الذاتية والتجريبية للحالات الواعية التي تقاوم الوصف والقياس العلمي الموضوعي.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2025%20Philosophy%20and%20Ethics/Lesson%20115/Level_25_Lesson_115_%20S%2005.mp3"
   },
   {
     id: 5,
     text: "Artificial consciousness raises philosophical questions about machine sentience, computational theories of mind, and the possibility of silicon-based awareness.",
-    translationAr: "الوعي الاصطناعي يثير تساؤلات فلسفية حول إدراك الآلات، ونظريات العقل الحسابية، وإمكانية وجود وعي قائم على السيليكون."
+    translationAr: "الوعي الاصطناعي يثير تساؤلات فلسفية حول إدراك الآلات، ونظريات العقل الحسابية، وإمكانية وجود وعي قائم على السيليكون.",
+    audioUrl: "https://cdn13674550.b-cdn.net/Reading%20tool/Reading%20tool/LVL%2025%20Philosophy%20and%20Ethics/Lesson%20115/Level_25_Lesson_115_%20S%2006.mp3"
   }
 ],
         },
@@ -16847,27 +16997,32 @@ export const levelsAndLesson = [
   {
     id: 1,
     text: "Scientific hypotheses must be falsifiable and testable, providing specific predictions that can be empirically verified or refuted through controlled experimentation and observation.",
-    translationAr: "الفرضيات العلمية يجب أن تكون قابلة للتكذيب والاختبار، وأن تقدم تنبؤات محددة يمكن التحقق منها أو دحضها تجريبيًا من خلال التجارب المضبوطة والملاحظة."
+    translationAr: "الفرضيات العلمية يجب أن تكون قابلة للتكذيب والاختبار، وأن تقدم تنبؤات محددة يمكن التحقق منها أو دحضها تجريبيًا من خلال التجارب المضبوطة والملاحظة.",
+    audioUrl: ""
   },
   {
     id: 2,
     text: "Experimental design controls confounding variables through randomization, standardization, and the inclusion of control groups that isolate the effects of independent variables.",
-    translationAr: "تصميم التجارب يتحكم في المتغيرات المربكة من خلال العشوائية، والتوحيد القياسي، وإدراج مجموعات ضابطة لعزل تأثيرات المتغيرات المستقلة."
+    translationAr: "تصميم التجارب يتحكم في المتغيرات المربكة من خلال العشوائية، والتوحيد القياسي، وإدراج مجموعات ضابطة لعزل تأثيرات المتغيرات المستقلة.",
+    audioUrl: ""
   },
   {
     id: 3,
     text: "Statistical significance determines whether observed differences represent genuine patterns or random fluctuations, requiring appropriate sample sizes and analytical methods.",
-    translationAr: "الدلالة الإحصائية تحدد ما إذا كانت الفروق الملحوظة تمثل أنماطًا حقيقية أم تقلبات عشوائية، وهذا يتطلب أحجام عينات مناسبة وأساليب تحليل دقيقة."
+    translationAr: "الدلالة الإحصائية تحدد ما إذا كانت الفروق الملحوظة تمثل أنماطًا حقيقية أم تقلبات عشوائية، وهذا يتطلب أحجام عينات مناسبة وأساليب تحليل دقيقة.",
+    audioUrl: ""
   },
   {
     id: 4,
     text: "Peer review processes subject research findings to scrutiny by expert colleagues who evaluate methodology, analyze data interpretation, and assess conclusions before publication.",
-    translationAr: "عمليات مراجعة الأقران تعرض نتائج الأبحاث للتدقيق من قبل زملاء خبراء يقومون بتقييم المنهجية، وتحليل تفسير البيانات، وتقدير الاستنتاجات قبل النشر."
+    translationAr: "عمليات مراجعة الأقران تعرض نتائج الأبحاث للتدقيق من قبل زملاء خبراء يقومون بتقييم المنهجية، وتحليل تفسير البيانات، وتقدير الاستنتاجات قبل النشر.",
+    audioUrl: ""
   },
   {
     id: 5,
     text: "Reproducibility crisis highlights challenges in replicating experimental results, emphasizing the importance of transparent methodology and open data sharing practices.",
-    translationAr: "أزمة القابلية للتكرار تسلط الضوء على التحديات في إعادة إنتاج النتائج التجريبية، وتؤكد على أهمية المنهجية الشفافة وممارسات مشاركة البيانات المفتوحة."
+    translationAr: "أزمة القابلية للتكرار تسلط الضوء على التحديات في إعادة إنتاج النتائج التجريبية، وتؤكد على أهمية المنهجية الشفافة وممارسات مشاركة البيانات المفتوحة.",
+    audioUrl: ""
   }
 ],
       },
