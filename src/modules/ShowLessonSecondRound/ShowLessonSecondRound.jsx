@@ -970,19 +970,6 @@ export function ShowLessonSecondRound() {
             >
               <X size={29} />
             </Link>
-            {isReading && (
-              <div className="flex items-center space-x-2">
-                <div className="w-32 h-2 bg-gray-200 rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-green-500 transition-all duration-300 ease-out"
-                    style={{ width: `${readingProgress}%` }}
-                  />
-                </div>
-                <span className="text-sm text-gray-600">
-                  {Math.round(readingProgress)}%
-                </span>
-              </div>
-            )}
           </div>
           
           {/* Translation Toggle Button */}
@@ -996,7 +983,7 @@ export function ShowLessonSecondRound() {
             title={showTranslations ? "إخفاء الترجمة" : "إظهار الترجمة"}
           >
             <Languages size={20} />
-            <span className="text-sm font-medium">
+            <span className="text-sm arabic_font font-medium">
               {showTranslations ? "إخفاء الترجمة" : "إظهار الترجمة"}
             </span>
           </button>

@@ -6,6 +6,7 @@ export const levelsAndLesson = [
     levelDescription:
       "A simple story in 26 parts. A good place to start learning English. It is a good idea to listen many times to each part.",
     levelKey: "Beginner",
+    isLocked: false,
     lessons: [
       {
         id: 1,
@@ -315,6 +316,7 @@ export const levelsAndLesson = [
     levelDescription:
       "Simple everyday stories for English beginners. Learn about daily activities through easy conversations and situations. Perfect for building basic vocabulary and understanding.",
     levelKey: "Beginner",
+    isLocked: false,
     lessons: [
       {
         id: 398,
@@ -715,6 +717,7 @@ export const levelsAndLesson = [
     levelDescription:
       "Stories about relationships, family members, and social interactions. Learn vocabulary about people in your life.",
     levelKey: "Elementary",
+    isLocked: true,
     lessons: [
       {
         id: 6,
@@ -862,6 +865,7 @@ export const levelsAndLesson = [
     levelDescription:
       "Delicious stories about food, cooking, and dining experiences. Learn vocabulary for the kitchen and restaurant.",
     levelKey: "Elementary",
+    isLocked: true,
     lessons: [
       {
         id: 8,
@@ -1026,6 +1030,7 @@ export const levelsAndLesson = [
     levelDescription:
       "Exciting stories about traveling, exploring new places, and adventures. Learn vocabulary for transportation and tourism.",
     levelKey: "Pre-Intermediate",
+    isLocked: true,
     lessons: [
       {
         id: 10,
@@ -1214,6 +1219,7 @@ export const levelsAndLesson = [
     levelDescription:
       "Professional stories about different jobs, workplace situations, and career development. Learn business vocabulary.",
     levelKey: "Intermediate",
+    isLocked: true,
     lessons: [
       {
         id: 12,
@@ -1389,6 +1395,7 @@ export const levelsAndLesson = [
     levelDescription:
       "Learn about maintaining a healthy lifestyle through proper nutrition, exercise, and wellness practices. Discover vocabulary related to medical care, mental health, and physical activities.",
     levelKey: "Advanced",
+    isLocked: true,
     lessons: [
       {
         id: 32,
@@ -2015,6 +2022,7 @@ export const levelsAndLesson = [
     levelDescription:
       "Explore how technology shapes our daily lives. Learn vocabulary about computers, smartphones, social media, and digital communication.",
     levelKey: "Upper-Intermediate",
+    isLocked: true,
     lessons: [
       {
         id: 17,
@@ -2765,6 +2773,7 @@ export const levelsAndLesson = [
     levelDescription:
       "Discover the natural world and environmental issues. Learn vocabulary about climate, wildlife, conservation, and sustainable living.",
     levelKey: "Advanced",
+    isLocked: true,
     lessons: [
       {
         id: 22,
@@ -3521,6 +3530,7 @@ export const levelsAndLesson = [
     levelDescription:
       "Explore the world of modern technology, digital transformation, and cutting-edge innovations that are shaping our future.",
     levelKey: "Advanced",
+    isLocked: true,
     lessons: [
       {
         id: 27,
@@ -4099,6 +4109,7 @@ export const levelsAndLesson = [
   levelDescription:
     "Learn simple English conversations about school life, classes, and learning activities.",
   levelKey: "Beginner",
+  isLocked: true,
   lessons: [
     {
       id: 354,
@@ -4221,8 +4232,6 @@ export const levelsAndLesson = [
         happy: { translation: "سعيد", definition: "Feeling pleasure" },
       },
     },
-
-    /* -------------------- Lesson 38: Lunch Break -------------------- */
     {
       id: 38,
       title: "Lunch Break",
@@ -4314,6 +4323,7 @@ export const levelsAndLesson = [
     levelDescription:
       "Learn simple English phrases about home activities and family life.",
     levelKey: "Beginner",
+    isLocked: true,
     lessons: [
       {
         id: 45,
@@ -4516,6 +4526,7 @@ export const levelsAndLesson = [
     levelDescription:
       "Learn English phrases for common places, transportation, and shopping in a town.",
     levelKey: "Beginner",
+    isLocked: true,
     lessons: [
       {
         id: 50,
@@ -4712,6 +4723,7 @@ export const levelsAndLesson = [
     levelDescription:
       "Learn about different colors and basic shapes in everyday objects.",
     levelKey: "Elementary",
+    isLocked: true,
     lessons: [
       {
         id: 50,
@@ -5403,6 +5415,7 @@ export const levelsAndLesson = [
     levelDescription:
       "Learn about daily routines and activities that people do every day.",
     levelKey: "Elementary",
+    isLocked: true,
     lessons: [
       {
         id: 55,
@@ -6195,6 +6208,7 @@ export const levelsAndLesson = [
     levelDescription:
       "Explore modern technology and various forms of digital communication in today's world.",
     levelKey: "Pre-Intermediate",
+    isLocked: true,
     lessons: [
       {
         id: 65,
@@ -6936,6 +6950,7 @@ export const levelsAndLesson = [
     levelDescription:
       "Learn about different people who help us in our community and their important jobs.",
     levelKey: "Pre-Intermediate",
+    isLocked: true,
     lessons: [
       {
         id: 60,
@@ -7537,11 +7552,12 @@ export const levelsAndLesson = [
   },
   {
     id: 101,
-    image: "/assets/images/courses_image8/Level-E4-18.jpg",
+    image: "/assets/images/courses_image/Seasons-and-Weather.webp",
     levelTitle: "Seasons and Weather",
     levelDescription:
       "Explore the four seasons and different types of weather throughout the year.",
-    levelKey: "Elementary 4",
+    levelKey: "Elementary",
+    isLocked: true,
     lessons: [
       {
         id: 65,
@@ -8177,6 +8193,7 @@ export const levelsAndLesson = [
     levelDescription:
       "Discover amazing animals and learn about the natural world around us.",
     levelKey: "Pre-Intermediate",
+    isLocked: true,
     lessons: [
       {
         id: 70,
@@ -8812,6 +8829,7 @@ export const levelsAndLesson = [
     levelDescription:
       "Learn about maintaining physical and mental health through proper nutrition, exercise, and lifestyle choices.",
     levelKey: "Intermediate",
+    isLocked: true,
     lessons: [
       {
         id: 76,
@@ -9779,6 +9797,7 @@ export const levelsAndLesson = [
     levelDescription:
       "Explore different cultures, travel experiences, and the impact of tourism on global communities and environments.",
     levelKey: "Intermediate",
+    isLocked: true,
     lessons: [
       {
         id: 81,
@@ -10962,6 +10981,7 @@ export const levelsAndLesson = [
     levelDescription:
       "Explore environmental challenges, conservation efforts, and sustainable practices to protect our planet for future generations.",
     levelKey: "Intermediate",
+    isLocked: true,
     lessons: [
       {
         id: 91,
@@ -11938,6 +11958,7 @@ export const levelsAndLesson = [
     levelDescription:
       "Master advanced business concepts, entrepreneurial strategies, and professional skills needed to succeed in the modern corporate world and startup ecosystem.",
     levelKey: "Upper-Intermediate",
+    isLocked: true,
     lessons: [
       {
         id: 96,
@@ -13150,6 +13171,7 @@ export const levelsAndLesson = [
     levelDescription:
       "Delve into the complexities of human cognition, behavioral patterns, mental health, and psychological theories that explain how we think, feel, and interact with the world.",
     levelKey: "Upper-Intermediate",
+    isLocked: true,
     lessons: [
       {
         id: 106,
@@ -14045,6 +14067,7 @@ export const levelsAndLesson = [
     levelDescription:
       "Examine fundamental questions about existence, knowledge, morality, and human nature through philosophical inquiry and ethical reasoning across different schools of thought.",
     levelKey: "Upper-Intermediate",
+    isLocked: true,
     lessons: [
       {
         id: 111,
@@ -14925,6 +14948,7 @@ export const levelsAndLesson = [
     levelDescription:
       "Learn about the people, places, and services in your community that help make our neighborhoods safe, clean, and fun places to live.",
     levelKey: "Elementary",
+    isLocked: true,
     lessons: [
       {
         id: 81,
@@ -15592,6 +15616,7 @@ export const levelsAndLesson = [
     levelDescription:
       "Explore various recreational pursuits and creative outlets that enrich personal life, develop skills, and provide relaxation and fulfillment through engaging activities.",
     levelKey: "Pre-Intermediate",
+    isLocked: true,
     lessons: [
       {
         id: 161,
@@ -16322,6 +16347,7 @@ export const levelsAndLesson = [
   levelTitle: "Global Issues and Social Responsibility",
   levelDescription: "Examine contemporary global challenges including poverty, inequality, environmental degradation, and human rights while exploring individual and collective responses to create positive social change.",
   levelKey: "Intermediate",
+  isLocked: true,
   lessons: [
     {
       id: 171,
@@ -16986,6 +17012,7 @@ export const levelsAndLesson = [
   "levelTitle": "Science and Scientific Method",
   "levelDescription": "Explore scientific inquiry processes, research methodologies, hypothesis testing, and the application of scientific principles across disciplines while examining the role of science in society and technological advancement.",
   levelKey: "Upper-Intermediate",
+  isLocked: true,
   lessons: [
     {
       id: 221,
@@ -17615,6 +17642,7 @@ export const levelsAndLesson = [
   "levelTitle": "Artificial Intelligence and Future Technologies",
   "levelDescription": "Dive deep into artificial intelligence, quantum computing, robotics, and the governance required to deploy advanced systems safely and at scale.",
   "levelKey": "Advanced",
+  isLocked: true,
   "lessons": [
     {
       "id": 301,
@@ -18004,6 +18032,7 @@ export const levelsAndLesson = [
   "levelTitle": "Astronomy and Space Exploration",
   "levelDescription": "Study advanced topics in astronomy, astrophysics, planetary science, and human exploration of space.",
   "levelKey": "Advanced",
+  isLocked: true,
   "lessons": [
     {
       "id": 601,

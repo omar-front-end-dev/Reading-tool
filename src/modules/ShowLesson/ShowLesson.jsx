@@ -1,4 +1,3 @@
-// ShowLesson.jsx
 import React, { useState, useRef, useEffect, useCallback, useMemo } from "react";
 import PropTypes from "prop-types";
 import {
@@ -27,7 +26,173 @@ const supportsTTS =
 const PREFERRED_VOICE_NAME = "Google UK English Female";
 const PREFERRED_VOICE_LANG = "en-GB";
 
-/* =================== Permission Banner (unchanged logic) =================== */
+/* ========================== Enhanced Pronunciation System ========================== */
+
+// قاموس الاختصارات الشائعة
+const CONTRACTIONS_MAP = {
+  "i'm": "i am",
+  "you're": "you are", 
+  "he's": "he is",
+  "she's": "she is",
+  "it's": "it is",
+  "we're": "we are",
+  "they're": "they are",
+  "i'll": "i will",
+  "you'll": "you will",
+  "he'll": "he will",
+  "she'll": "she will",
+  "we'll": "we will",
+  "they'll": "they will",
+  "i'd": "i would",
+  "you'd": "you would",
+  "he'd": "he would",
+  "she'd": "she would",
+  "we'd": "we would",
+  "they'd": "they would",
+  "i've": "i have",
+  "you've": "you have",
+  "we've": "we have",
+  "they've": "they have",
+  "isn't": "is not",
+  "aren't": "are not",
+  "wasn't": "was not",
+  "weren't": "were not",
+  "haven't": "have not",
+  "hasn't": "has not",
+  "hadn't": "had not",
+  "won't": "will not",
+  "wouldn't": "would not",
+  "don't": "do not",
+  "doesn't": "does not",
+  "didn't": "did not",
+  "can't": "cannot",
+  "couldn't": "could not",
+  "shouldn't": "should not",
+  "mustn't": "must not",
+  "needn't": "need not",
+  "let's": "let us",
+  "that's": "that is",
+  "there's": "there is",
+  "here's": "here is",
+  "where's": "where is",
+  "what's": "what is",
+  "who's": "who is",
+  "how's": "how is"
+};
+
+// دالة تطبيع النص
+const normalizeText = (text) => {
+  if (!text || typeof text !== 'string') return '';
+  
+  let normalized = text
+    .toLowerCase()
+    .trim()
+    // إزالة علامات الترقيم والرموز الخاصة
+    .replace(/[^\w\s']/g, ' ')
+    // معالجة المسافات المتعددة
+    .replace(/\s+/g, ' ')
+    .trim();
+  
+  // استبدال الاختصارات
+  Object.entries(CONTRACTIONS_MAP).forEach(([contraction, expansion]) => {
+    const regex = new RegExp(`\\b${contraction}\\b`, 'gi');
+    normalized = normalized.replace(regex, expansion);
+  });
+  
+  // تنظيف نهائي
+  normalized = normalized
+    .replace(/\s+/g, ' ')
+    .trim();
+    
+  return normalized;
+};
+
+// دالة حساب المسافة بين الكلمات (Levenshtein distance)
+const levenshteinDistance = (str1, str2) => {
+  const matrix = [];
+  const len1 = str1.length;
+  const len2 = str2.length;
+
+  for (let i = 0; i <= len2; i++) {
+    matrix[i] = [i];
+  }
+  for (let j = 0; j <= len1; j++) {
+    matrix[0][j] = j;
+  }
+
+  for (let i = 1; i <= len2; i++) {
+    for (let j = 1; j <= len1; j++) {
+      if (str2.charAt(i - 1) === str1.charAt(j - 1)) {
+        matrix[i][j] = matrix[i - 1][j - 1];
+      } else {
+        matrix[i][j] = Math.min(
+          matrix[i - 1][j - 1] + 1, // استبدال
+          matrix[i][j - 1] + 1,     // إدراج
+          matrix[i - 1][j] + 1      // حذف
+        );
+      }
+    }
+  }
+
+  return matrix[len2][len1];
+};
+
+// دالة حساب التشابه المحسنة
+const calculateSimilarity = (userText, originalText) => {
+  const normalizedUser = normalizeText(userText);
+  const normalizedOriginal = normalizeText(originalText);
+  
+  if (normalizedUser === normalizedOriginal) {
+    return 100;
+  }
+  
+  const userWords = normalizedUser.split(/\s+/).filter(word => word.length > 0);
+  const originalWords = normalizedOriginal.split(/\s+/).filter(word => word.length > 0);
+  
+  if (originalWords.length === 0) return 0;
+  if (userWords.length === 0) return 0;
+  
+  let exactMatches = 0;
+  let partialMatches = 0;
+  
+  for (let i = 0; i < Math.min(userWords.length, originalWords.length); i++) {
+    const userWord = userWords[i];
+    const originalWord = originalWords[i];
+    
+    if (userWord === originalWord) {
+      exactMatches++;
+    } else {
+      const distance = levenshteinDistance(userWord, originalWord);
+      const maxLen = Math.max(userWord.length, originalWord.length);
+      const similarity = maxLen > 0 ? (maxLen - distance) / maxLen : 0;
+      
+      if (similarity >= 0.7) {
+        partialMatches += similarity;
+      }
+    }
+  }
+  
+  const totalScore = (exactMatches + partialMatches) / originalWords.length;
+  const lengthPenalty = Math.abs(userWords.length - originalWords.length) / originalWords.length;
+  
+  const finalScore = Math.max(0, (totalScore - lengthPenalty * 0.3)) * 100;
+  
+  return Math.min(100, Math.round(finalScore));
+};
+
+const evaluatePronunciation = (userText, originalText, confidence) => {
+  const similarity = calculateSimilarity(userText, originalText);
+  const confidenceScore = (confidence || 0) * 100;
+  const overall = similarity * 0.8 + confidenceScore * 0.2;
+  
+  if (overall >= 90) return { level: "excellent", message: "ممتاز! نطق مثالي 🎉", color: "green", score: Math.round(overall) };
+  if (overall >= 75) return { level: "very-good", message: "جيد جداً! نطق واضح 👏", color: "blue", score: Math.round(overall) };
+  if (overall >= 60) return { level: "good", message: "جيد، يمكن تحسينه قليلاً 💪", color: "yellow", score: Math.round(overall) };
+  if (overall >= 40) return { level: "needs-improvement", message: "يحتاج تحسين، حاول مرة أخرى 🔄", color: "orange", score: Math.round(overall) };
+  return { level: "poor", message: "تحتاج إلى ممارسة أكثر 📚", color: "red", score: Math.round(overall) };
+};
+
+/* =================== Permission Banner =================== */
 const MicrophonePermissionAlert = ({ permission, onRequestPermission }) => {
   if (permission !== "denied") return null;
   return (
@@ -62,18 +227,21 @@ MicrophonePermissionAlert.propTypes = {
   onRequestPermission: PropTypes.func.isRequired,
 };
 
-/* ====================== RecordingModal (new UI like screenshot) ====================== */
+/* ====================== RecordingModal ====================== */
 const RecordingModal = ({
   isOpen,
   isRecording,
   isWaitingForRecording,
   recordingResult,
   originalText,
+  sentenceAudioUrl,
   onStartRecording,
   onSkipRecording,
   onContinue,
-  onListen,       // optional
-  onListenSlow,   // optional
+  onRetry,
+  playAudioFile,
+  playRecordedAudio,
+  audioLevels,
 }) => {
   if (!isOpen) return null;
 
@@ -83,14 +251,12 @@ const RecordingModal = ({
     return () => window.removeEventListener("keydown", onKey);
   }, [onSkipRecording]);
 
-  // -------- Title text (Arabic states kept) --------
   const title = isRecording
     ? "جارٍ التسجيل"
     : recordingResult
     ? recordingResult.success ? "نتيجة التقييم" : "خطأ في التسجيل"
     : "سجّل نُطقك الآن";
 
-  // -------- Helper: phonetics fallback (cosmetic) --------
   const tokens = useMemo(() => {
     const words = (originalText || "").trim().split(/\s+/).filter(Boolean);
     const fakePh = (t) =>
@@ -103,7 +269,6 @@ const RecordingModal = ({
     return words.map((w, i) => ({ word: w, phon: fakePh(w) || w.toLowerCase(), id: `${w}-${i}` }));
   }, [originalText]);
 
-  // -------- Result tone --------
   const resultTone =
     recordingResult?.evaluation?.color === "green"
       ? "border-green-500 bg-green-50 text-green-800"
@@ -111,30 +276,82 @@ const RecordingModal = ({
       ? "border-blue-500 bg-blue-50 text-blue-800"
       : recordingResult?.evaluation?.color === "yellow"
       ? "border-yellow-500 bg-yellow-50 text-yellow-800"
+      : recordingResult?.evaluation?.color === "orange"
+      ? "border-orange-500 bg-orange-50 text-orange-800"
       : "border-red-500 bg-red-50 text-red-800";
 
-  // -------- Highlight words diff (same as previous logic) --------
+  // Enhanced word highlighting with smart comparison
   const highlightWords = (orig, user) => {
     if (!orig || !user) return null;
-    const originalWords = orig.trim().split(/\s+/);
-    const userWords = user.trim().split(/\s+/);
-    const items = originalWords.map((ow, i) => {
-      const uw = userWords[i] || "";
-      const cleanO = ow.replace(/[^\w\u0600-\u06FF]/g, "").toLowerCase();
-      const cleanU = uw.replace(/[^\w\u0600-\u06FF]/g, "").toLowerCase();
-      return { word: ow, isCorrect: !!uw && cleanO === cleanU, userWord: uw };
+    
+    const normalizedOriginal = normalizeText(orig);
+    const normalizedUser = normalizeText(user);
+    
+    const originalWords = normalizedOriginal.split(/\s+/).filter(w => w.length > 0);
+    const userWords = normalizedUser.split(/\s+/).filter(w => w.length > 0);
+    
+    const displayOriginalWords = orig.trim().split(/\s+/);
+    
+    const items = displayOriginalWords.map((displayWord, i) => {
+      const normalizedDisplayWord = normalizeText(displayWord);
+      const userWord = userWords[i] || "";
+      
+      let isCorrect = false;
+      let similarity = 0;
+      let matchType = "none";
+      
+      if (userWord && normalizedDisplayWord) {
+        if (normalizedDisplayWord === userWord) {
+          isCorrect = true;
+          similarity = 100;
+          matchType = "exact";
+        } else {
+          const distance = levenshteinDistance(normalizedDisplayWord, userWord);
+          const maxLen = Math.max(normalizedDisplayWord.length, userWord.length);
+          similarity = maxLen > 0 ? ((maxLen - distance) / maxLen) * 100 : 0;
+          
+          if (similarity >= 80) {
+            isCorrect = true;
+            matchType = "close";
+          } else if (similarity >= 60) {
+            isCorrect = false;
+            matchType = "partial";
+          } else {
+            isCorrect = false;
+            matchType = "wrong";
+          }
+        }
+      }
+      
+      return { 
+        word: displayWord, 
+        isCorrect, 
+        userWord, 
+        similarity: Math.round(similarity),
+        matchType,
+        normalizedWord: normalizedDisplayWord
+      };
     });
+    
     return (
       <div className="space-y-2">
         <div className="arabic_font text-lg leading-relaxed" dir="ltr" style={{ textAlign: "left" }}>
           {items.map((it, idx) => (
             <span key={idx}>
               <span
-                className={`inline-block rounded-md font-bold transition-all ${
-                  it.isCorrect ? "text-green-800" : "text-red-800"
+                className={`inline-block rounded-md font-bold transition-all px-1 ${
+                  it.matchType === "exact" 
+                    ? "text-green-800 bg-green-100" 
+                    : it.matchType === "close"
+                    ? "text-blue-800 bg-blue-100"
+                    : it.matchType === "partial"
+                    ? "text-yellow-800 bg-yellow-100"
+                    : "text-red-800 bg-red-100"
                 }`}
                 title={
-                  it.isCorrect ? "نطق صحيح" : `متوقع: ${it.word}، نطقت: ${it.userWord || "لا شيء"}`
+                  it.isCorrect 
+                    ? `نطق صحيح (${it.similarity}%)` 
+                    : `متوقع: ${it.word}، نطقت: ${it.userWord || "لا شيء"} (${it.similarity}%)`
                 }
               >
                 {it.word}
@@ -143,11 +360,31 @@ const RecordingModal = ({
             </span>
           ))}
         </div>
+        
+        {/* مؤشر الألوان */}
+        <div className="flex flex-wrap gap-2 text-xs mt-3 pt-2 border-t border-gray-200">
+          <div className="flex items-center gap-1">
+            <div className="w-3 h-3 rounded bg-green-100 border border-green-300"></div>
+            <span className="text-gray-600">مطابقة تامة</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <div className="w-3 h-3 rounded bg-blue-100 border border-blue-300"></div>
+            <span className="text-gray-600">مطابقة قريبة</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <div className="w-3 h-3 rounded bg-yellow-100 border border-yellow-300"></div>
+            <span className="text-gray-600">مطابقة جزئية</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <div className="w-3 h-3 rounded bg-red-100 border border-red-300"></div>
+            <span className="text-gray-600">غير مطابق</span>
+          </div>
+        </div>
       </div>
     );
   };
 
-  // -------- Fancy meter while recording --------
+  // Recording animation bars
   const BAR_COUNT = 28;
   const [seed, setSeed] = useState(0);
   useEffect(() => {
@@ -186,21 +423,18 @@ const RecordingModal = ({
 
   return (
     <div className="fixed inset-0 z-[60]">
-      {/* overlay */}
       <div className="absolute inset-0 bg-black/50" onClick={onSkipRecording} />
-      {/* sheet */}
       <div
         className="fixed left-0 right-0 bottom-0 mx-auto w-full max-w-xl rounded-t-3xl bg-white shadow-2xl border-t border-gray-100"
         role="dialog"
         aria-modal="true"
       >
-        {/* top banner (like screenshot) */}
         <div className="relative px-5 pt-4 pb-3 border-b">
-          <p className="text-center text-[22px] font-bold text-indigo-600">Your turn!</p>
+          <p className="text-center text-[22px] font-bold text-[var(--secondary-color)]">Your turn!</p>
           <p className="text-center text-sm text-gray-600">
             Press the{" "}
             <span className="inline-flex translate-y-[2px]">
-              <IoIosMic className="text-purple-600" />
+              <IoIosMic className="text-[var(--secondary-color)]" />
             </span>{" "}
             and record your voice.
           </p>
@@ -213,13 +447,11 @@ const RecordingModal = ({
           </button>
         </div>
 
-        {/* dynamic title (Arabic state) */}
         <div className="px-5 pt-3">
           <h3 className="arabic_font text-center text-[15px] text-gray-700">{title}</h3>
         </div>
 
         <div className="px-4 py-5">
-          {/* sentence card with words & phonetics */}
           {originalText && (
             <div className="mx-auto w-full rounded-2xl border border-gray-200 bg-white/60 backdrop-blur-sm shadow-sm p-4">
               <div className="flex flex-wrap items-end justify-center gap-x-2 gap-y-3 select-none">
@@ -240,12 +472,14 @@ const RecordingModal = ({
             </div>
           )}
 
-          {/* controls row like screenshot: Listen | Mic | Listen(slow) */}
           {!recordingResult && (
             <div className="mt-6 flex items-center justify-between">
               <button
-                onClick={onListen}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-800 text-sm font-medium"
+                onClick={() => sentenceAudioUrl && playAudioFile(sentenceAudioUrl, 1)}
+                disabled={!sentenceAudioUrl}
+                className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-gray-800 text-sm font-medium ${
+                  sentenceAudioUrl ? 'bg-gray-100 hover:bg-gray-200' : 'bg-gray-100 opacity-50 cursor-not-allowed'
+                }`}
               >
                 <Volume2 size={16} />
                 Listen
@@ -256,7 +490,7 @@ const RecordingModal = ({
                 className={[
                   "grid place-items-center rounded-full shadow-lg transition-all",
                   "w-[72px] h-[72px]",
-                  isRecording ? "bg-rose-600 text-white hover:bg-rose-700" : "bg-purple-600 text-white hover:bg-purple-700",
+                  isRecording ? "bg-[var(--secondary-color)] text-white hover:bg-[var(--primary-color)]" : "bg-[var(--secondary-color)] text-white hover:bg-[var(--primary-color)]",
                 ].join(" ")}
                 title={isRecording ? "Send" : "Tap to start speaking"}
                 aria-label="Record"
@@ -265,8 +499,11 @@ const RecordingModal = ({
               </button>
 
               <button
-                onClick={onListenSlow}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-800 text-sm font-medium"
+                onClick={() => sentenceAudioUrl && playAudioFile(sentenceAudioUrl, 0.75)}
+                disabled={!sentenceAudioUrl}
+                className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-gray-800 text-sm font-medium ${
+                  sentenceAudioUrl ? 'bg-gray-100 hover:bg-gray-200' : 'bg-gray-100 opacity-50 cursor-not-allowed'
+                }`}
                 title="Listen (slow)"
               >
                 <Turtle size={16} />
@@ -275,7 +512,6 @@ const RecordingModal = ({
             </div>
           )}
 
-          {/* recording capsule + hint */}
           {isRecording && (
             <div className="mt-5 flex flex-col items-center gap-3">
               <div className="w-full max-w-md">
@@ -291,10 +527,10 @@ const RecordingModal = ({
 
                   <div className="flex-1 flex flex-col items-center">
                     <div className="h-8 flex items-center justify-center gap-[2px] w-full max-w-[300px]">
-                      {bars.map((h, idx) => (
+                      {audioLevels.map((h, idx) => (
                         <span
                           key={idx}
-                          className="inline-block w-[3px] rounded-sm bg-white/90 transition-all duration-150"
+                          className="inline-block w-[3px] rounded-sm bg-white/90 transition-all duration-75"
                           style={{ height: `${h}px` }}
                         />
                       ))}
@@ -319,7 +555,6 @@ const RecordingModal = ({
             </div>
           )}
 
-          {/* results view */}
           {recordingResult && (
             <div className="mt-6 space-y-5">
               {recordingResult.success ? (
@@ -342,9 +577,50 @@ const RecordingModal = ({
                   </div>
 
                   <div className="rounded-lg border border-blue-200 p-3 bg-blue-50">
-                    <p className="arabic_font text-xs text-blue-600 mb-1 font-bold">ما قلته:</p>
+                    <div className="flex items-center justify-between mb-2">
+                      <p className="arabic_font text-xs text-blue-600 font-bold">ما قلته:</p>
+                      <button
+                        onClick={() => recordingResult.audioUrl && playRecordedAudio(recordingResult.audioUrl)}
+                        disabled={!recordingResult.audioUrl}
+                        className={`inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-colors ${
+                          recordingResult.audioUrl 
+                            ? 'bg-blue-100 hover:bg-blue-200 text-blue-700 cursor-pointer' 
+                            : 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                        }`}
+                        title={recordingResult.audioUrl ? "استمع لصوتك المسجل" : "التسجيل غير متاح"}
+                      >
+                        <Volume2 size={14} />
+                        استمع لصوتك
+                      </button>
+                    </div>
                     <p className="arabic_font text-left text-blue-900 font-medium">{recordingResult.userText}</p>
                   </div>
+
+                  {/* Retry button for scores below 50% */}
+                  {recordingResult.evaluation.score < 50 ? (
+                    <div className="flex gap-2">
+                      <button
+                        onClick={onRetry}
+                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-orange-500 hover:bg-orange-600 text-white font-medium transition-colors"
+                      >
+                        <RotateCcw size={18} />
+                        <span className="arabic_font">إعادة المحاولة</span>
+                      </button>
+                      <button
+                        onClick={onContinue}
+                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-gray-500 hover:bg-gray-600 text-white font-medium transition-colors"
+                      >
+                        <span className="arabic_font">تخطي والمتابعة</span>
+                      </button>
+                    </div>
+                  ) : (
+                    <button
+                      onClick={onContinue}
+                      className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-green-500 hover:bg-green-600 text-white font-medium transition-colors"
+                    >
+                      <span className="arabic_font">متابعة للجملة التالية</span>
+                    </button>
+                  )}
                 </>
               ) : (
                 <div className="space-y-4">
@@ -372,10 +648,42 @@ const RecordingModal = ({
                     </div>
                     {recordingResult.userText ? (
                       <div className="rounded-lg border border-gray-200 p-3">
-                        <p className="text-xs text-gray-500 mb-1">ما سُمع</p>
+                        <div className="flex items-center justify-between mb-2">
+                          <p className="text-xs text-gray-500">ما سُمع</p>
+                          <button
+                            onClick={() => recordingResult.audioUrl && playRecordedAudio(recordingResult.audioUrl)}
+                            disabled={!recordingResult.audioUrl}
+                            className={`inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-colors ${
+                              recordingResult.audioUrl 
+                                ? 'bg-gray-100 hover:bg-gray-200 text-gray-700 cursor-pointer' 
+                                : 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                            }`}
+                            title={recordingResult.audioUrl ? "استمع لصوتك المسجل" : "التسجيل غير متاح"}
+                          >
+                            <Volume2 size={14} />
+                            استمع لصوتك
+                          </button>
+                        </div>
                         <p className="text-gray-900">{recordingResult.userText}</p>
                       </div>
                     ) : null}
+                  </div>
+
+                  {/* Retry button for failed recording */}
+                  <div className="flex gap-2">
+                    <button
+                      onClick={onRetry}
+                      className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-orange-500 hover:bg-orange-600 text-white font-medium transition-colors"
+                    >
+                      <RotateCcw size={18} />
+                      <span className="arabic_font">إعادة المحاولة</span>
+                    </button>
+                    <button
+                      onClick={onContinue}
+                      className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-gray-500 hover:bg-gray-600 text-white font-medium transition-colors"
+                    >
+                      <span className="arabic_font">تخطي والمتابعة</span>
+                    </button>
                   </div>
                 </div>
               )}
@@ -390,12 +698,14 @@ RecordingModal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   isRecording: PropTypes.bool.isRequired,
   originalText: PropTypes.string.isRequired,
+  sentenceAudioUrl: PropTypes.string,
   isWaitingForRecording: PropTypes.bool.isRequired,
   recordingResult: PropTypes.shape({
     success: PropTypes.bool,
     message: PropTypes.string,
     userText: PropTypes.string,
     originalText: PropTypes.string,
+    audioUrl: PropTypes.string,
     evaluation: PropTypes.shape({
       level: PropTypes.string,
       message: PropTypes.string,
@@ -407,8 +717,10 @@ RecordingModal.propTypes = {
   onStartRecording: PropTypes.func.isRequired,
   onSkipRecording: PropTypes.func.isRequired,
   onContinue: PropTypes.func.isRequired,
-  onListen: PropTypes.func,
-  onListenSlow: PropTypes.func,
+  onRetry: PropTypes.func.isRequired,
+  playAudioFile: PropTypes.func.isRequired,
+  playRecordedAudio: PropTypes.func.isRequired,
+  audioLevels: PropTypes.arrayOf(PropTypes.number).isRequired,
 };
 
 /* ============================== Clickable Word ============================== */
@@ -631,6 +943,7 @@ export function ShowLesson() {
   const [pronunciationEnabled] = useState(true);
   const [pronunciationScores, setPronunciationScores] = useState({});
   const [microphonePermission, setMicrophonePermission] = useState(null);
+  const [audioLevels, setAudioLevels] = useState(Array(28).fill(8));
 
   // audio/voice
   const [voices, setVoices] = useState([]);
@@ -647,6 +960,15 @@ export function ShowLesson() {
   const sentenceRefs = useRef({});
   const recognitionRef = useRef(null);
   const audioRef = useRef(null);
+  const mediaRecorderRef = useRef(null);
+  const audioChunksRef = useRef([]);
+  const recordedAudioRef = useRef(null);
+  const streamRef = useRef(null);
+  const audioContextRef = useRef(null);
+  const analyserRef = useRef(null);
+  const silenceTimeoutRef = useRef(null);
+  const isRecordingActiveRef = useRef(false);
+  const BAR_COUNT = 28;
 
   // --- preload lesson audio metadata
   useEffect(() => {
@@ -820,6 +1142,23 @@ export function ShowLesson() {
           window.speechSynthesis.cancel();
         } catch {}
       }
+      // Clean up audio recording resources
+      isRecordingActiveRef.current = false;
+      if (silenceTimeoutRef.current) {
+        cancelAnimationFrame(silenceTimeoutRef.current);
+      }
+      if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
+        mediaRecorderRef.current.stop();
+      }
+      if (streamRef.current) {
+        streamRef.current.getTracks().forEach(track => track.stop());
+      }
+      if (audioContextRef.current) {
+        audioContextRef.current.close();
+      }
+      if (recordedAudioRef.current) {
+        URL.revokeObjectURL(recordedAudioRef.current);
+      }
     };
   }, [checkMicrophonePermission]);
 
@@ -831,15 +1170,23 @@ export function ShowLesson() {
       recognitionRef.current.interimResults = false;
       recognitionRef.current.lang = "en-US";
       recognitionRef.current.maxAlternatives = 1;
-      recognitionRef.current.onstart = () => setIsRecording(true);
+      recognitionRef.current.onstart = () => {
+        setIsRecording(true);
+        startAudioRecording();
+      };
       recognitionRef.current.onresult = (event) => {
         const transcript = event.results[0][0].transcript.toLowerCase().trim();
         const confidence = event.results[0][0].confidence;
-        handleRecognitionResult(transcript, confidence);
+        
+        // Wait a bit for audio recording to finish
+        setTimeout(() => {
+          handleRecognitionResult(transcript, confidence);
+        }, 200);
       };
       recognitionRef.current.onerror = (event) => {
         setIsRecording(false);
         setIsWaitingForRecording(false);
+        stopAudioRecording();
         if (event.error === "no-speech") {
           setRecordingResult({
             success: false,
@@ -847,13 +1194,160 @@ export function ShowLesson() {
             userText: "",
             originalText:
               currentLesson?.storyData?.content[readingStateRef.current.currentIndex - 1]?.text || "",
+            audioUrl: recordedAudioRef.current,
           });
           setShowRecordingModal(true);
         }
       };
-      recognitionRef.current.onend = () => setIsRecording(false);
+      recognitionRef.current.onend = () => {
+        setIsRecording(false);
+        stopAudioRecording();
+      };
     } else {
       console.log("❌ Speech recognition not supported");
+    }
+  };
+
+  // Start audio recording with MediaRecorder and silence detection
+  const startAudioRecording = async () => {
+    try {
+      audioChunksRef.current = [];
+      if (recordedAudioRef.current) {
+        URL.revokeObjectURL(recordedAudioRef.current);
+        recordedAudioRef.current = null;
+      }
+
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      streamRef.current = stream;
+      isRecordingActiveRef.current = true;
+      
+      const mediaRecorder = new MediaRecorder(stream);
+      mediaRecorderRef.current = mediaRecorder;
+
+      mediaRecorder.ondataavailable = (event) => {
+        if (event.data.size > 0) {
+          audioChunksRef.current.push(event.data);
+        }
+      };
+
+      mediaRecorder.onstop = () => {
+        const audioBlob = new Blob(audioChunksRef.current, { type: 'audio/webm' });
+        const audioUrl = URL.createObjectURL(audioBlob);
+        recordedAudioRef.current = audioUrl;
+        
+        // Clean up stream and audio context
+        if (streamRef.current) {
+          streamRef.current.getTracks().forEach(track => track.stop());
+          streamRef.current = null;
+        }
+        if (audioContextRef.current) {
+          audioContextRef.current.close();
+          audioContextRef.current = null;
+        }
+        isRecordingActiveRef.current = false;
+      };
+
+      mediaRecorder.start();
+
+      // Start silence detection
+      startSilenceDetection(stream);
+    } catch (error) {
+      console.error("Error starting audio recording:", error);
+      isRecordingActiveRef.current = false;
+    }
+  };
+
+  // Silence detection using Web Audio API with real-time waveform
+  const startSilenceDetection = useCallback((stream) => {
+    try {
+      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      audioContextRef.current = audioContext;
+
+      const analyser = audioContext.createAnalyser();
+      analyserRef.current = analyser;
+      analyser.fftSize = 256;
+      analyser.smoothingTimeConstant = 0.3;
+
+      const microphone = audioContext.createMediaStreamSource(stream);
+      microphone.connect(analyser);
+
+      const bufferLength = analyser.frequencyBinCount;
+      const dataArray = new Uint8Array(bufferLength);
+
+      let silenceStart = Date.now();
+      let hasSpoken = false;
+      const SILENCE_THRESHOLD = 20;
+      const SILENCE_DURATION = 2000;
+      const MIN_SPEAKING_TIME = 500;
+
+      const detectSilence = () => {
+        if (!isRecordingActiveRef.current) {
+          setAudioLevels(Array(BAR_COUNT).fill(8));
+          return;
+        }
+
+        analyser.getByteFrequencyData(dataArray);
+        
+        // Calculate average volume
+        const average = dataArray.reduce((sum, value) => sum + value, 0) / bufferLength;
+
+        // Update real-time waveform visualization
+        const waveformData = [];
+        const step = Math.floor(bufferLength / BAR_COUNT);
+        for (let i = 0; i < BAR_COUNT; i++) {
+          const index = i * step;
+          const value = dataArray[index] || 0;
+          // Map value (0-255) to height (8-36px)
+          const height = Math.max(8, Math.min(36, 8 + (value / 255) * 28));
+          waveformData.push(height);
+        }
+        setAudioLevels(waveformData);
+
+        if (average > SILENCE_THRESHOLD) {
+          silenceStart = Date.now();
+          hasSpoken = true;
+        } else if (hasSpoken) {
+          const silenceDuration = Date.now() - silenceStart;
+          const speakingDuration = Date.now() - silenceStart + SILENCE_DURATION;
+
+          if (silenceDuration > SILENCE_DURATION && speakingDuration > MIN_SPEAKING_TIME) {
+            if (recognitionRef.current && isRecordingActiveRef.current) {
+              try {
+                recognitionRef.current.stop();
+              } catch (e) {
+                console.log("Recognition already stopped");
+              }
+            }
+            return;
+          }
+        }
+
+        if (silenceTimeoutRef.current) {
+          cancelAnimationFrame(silenceTimeoutRef.current);
+        }
+        silenceTimeoutRef.current = requestAnimationFrame(detectSilence);
+      };
+
+      detectSilence();
+    } catch (error) {
+      console.error("Error setting up silence detection:", error);
+    }
+  }, [BAR_COUNT]);
+
+  // Stop audio recording
+  const stopAudioRecording = () => {
+    isRecordingActiveRef.current = false;
+    
+    if (silenceTimeoutRef.current) {
+      cancelAnimationFrame(silenceTimeoutRef.current);
+      silenceTimeoutRef.current = null;
+    }
+    
+    // Reset waveform to default
+    setAudioLevels(Array(BAR_COUNT).fill(8));
+    
+    if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
+      mediaRecorderRef.current.stop();
     }
   };
 
@@ -867,28 +1361,6 @@ export function ShowLesson() {
     [autoScroll]
   );
 
-  /* ------------------------ Simple pronunciation eval ----------------------- */
-  const calculateSimilarity = (a, b) => {
-    const c1 = a.toLowerCase().replace(/[^\w\s]/g, "").trim();
-    const c2 = b.toLowerCase().replace(/[^\w\s]/g, "").trim();
-    const w1 = c1.split(/\s+/);
-    const w2 = c2.split(/\s+/);
-    let m = 0;
-    const L = Math.max(w1.length, w2.length);
-    w1.forEach((w, i) => {
-      if (w2[i] && w === w2[i]) m++;
-    });
-    return (m / L) * 100;
-  };
-  const evaluatePronunciation = (userText, originalText, confidence) => {
-    const similarity = calculateSimilarity(userText, originalText);
-    const confidenceScore = confidence * 100;
-    const overall = similarity * 0.6 + confidenceScore * 0.4;
-    if (overall >= 85) return { level: "excellent", message: "ممتاز! نطق رائع 🎉", color: "green", score: Math.round(overall) };
-    if (overall >= 70) return { level: "good", message: "جيد جداً! 👏", color: "blue", score: Math.round(overall) };
-    if (overall >= 50) return { level: "fair", message: "جيد، لكن يمكن تحسينه 💪", color: "yellow", score: Math.round(overall) };
-    return { level: "poor", message: "حاول مرة أخرى 🔄", color: "red", score: Math.round(overall) };
-  };
   const handleRecognitionResult = (transcript, confidence) => {
     const idx = readingStateRef.current.currentIndex - 1;
     const originalSentence = currentLesson.storyData.content[idx];
@@ -900,6 +1372,7 @@ export function ShowLesson() {
         originalText: originalSentence.text,
         evaluation,
         confidence: Math.round(confidence * 100),
+        audioUrl: recordedAudioRef.current,
       });
       setPronunciationScores((prev) => ({ ...prev, [originalSentence.id]: evaluation.score }));
       setShowRecordingModal(true);
@@ -936,17 +1409,41 @@ export function ShowLesson() {
   const skipRecording = () => {
     setIsWaitingForRecording(false);
     setShowRecordingModal(false);
+    // Clean up any recorded audio
+    if (recordedAudioRef.current) {
+      URL.revokeObjectURL(recordedAudioRef.current);
+      recordedAudioRef.current = null;
+    }
     continueToNextSentence();
   };
 
   const continueToNextSentence = () => {
     setShowRecordingModal(false);
     setRecordingResult(null);
+    // Clean up any recorded audio
+    if (recordedAudioRef.current) {
+      URL.revokeObjectURL(recordedAudioRef.current);
+      recordedAudioRef.current = null;
+    }
     if (!readingStateRef.current.shouldStop) {
       readingTimeoutRef.current = setTimeout(() => {
         window.speakNextSentence?.();
       }, 1000);
     }
+  };
+
+  const retryRecording = () => {
+    // Clean up previous recording
+    if (recordedAudioRef.current) {
+      URL.revokeObjectURL(recordedAudioRef.current);
+      recordedAudioRef.current = null;
+    }
+    setRecordingResult(null);
+    setIsWaitingForRecording(false);
+    // Start new recording immediately
+    setTimeout(() => {
+      startRecording();
+    }, 300);
   };
 
   /* ------------------------------- Word Sidebar ------------------------------ */
@@ -1001,6 +1498,57 @@ export function ShowLesson() {
     },
     [playbackRate, sumDurationsBeforeIndex]
   );
+
+  const playAudioFile = useCallback((audioUrl, rate = 1) => {
+    if (!audioUrl) {
+      console.log("No audio file available");
+      return;
+    }
+
+    // Stop any current audio
+    if (audioRef.current) {
+      try {
+        audioRef.current.pause();
+      } catch {}
+    }
+    if (window.speechSynthesis) {
+      try {
+        window.speechSynthesis.cancel();
+      } catch {}
+    }
+
+    // Play audio file at specified rate
+    const audio = new Audio(audioUrl);
+    audioRef.current = audio;
+    try {
+      audio.playbackRate = rate;
+    } catch {}
+    audio.play().catch((err) => console.error("Error playing audio:", err));
+  }, []);
+
+  const playRecordedAudio = useCallback((audioUrl) => {
+    if (!audioUrl) {
+      console.log("No recorded audio available");
+      return;
+    }
+
+    // Stop any current audio
+    if (audioRef.current) {
+      try {
+        audioRef.current.pause();
+      } catch {}
+    }
+    if (window.speechSynthesis) {
+      try {
+        window.speechSynthesis.cancel();
+      } catch {}
+    }
+
+    // Play recorded audio
+    const audio = new Audio(audioUrl);
+    audioRef.current = audio;
+    audio.play().catch((err) => console.error("Error playing recorded audio:", err));
+  }, []);
 
   const playWordAudio = useCallback(
     (word) => {
@@ -1163,6 +1711,9 @@ export function ShowLesson() {
 
   const currentSentenceText =
     currentLesson?.storyData?.content?.[readingStateRef.current.currentIndex - 1]?.text || "";
+  
+  const currentSentenceAudioUrl = 
+    currentLesson?.storyData?.content?.[readingStateRef.current.currentIndex - 1]?.audioUrl || "";
 
   return (
     <div className="min-h-screen">
@@ -1224,10 +1775,13 @@ export function ShowLesson() {
         recordingResult={recordingResult}
         onStartRecording={startRecording}
         originalText={currentSentenceText}
+        sentenceAudioUrl={currentSentenceAudioUrl}
         onSkipRecording={skipRecording}
         onContinue={continueToNextSentence}
-        onListen={() => speak(currentSentenceText, 1)}
-        onListenSlow={() => speak(currentSentenceText, 0.75)}
+        onRetry={retryRecording}
+        playAudioFile={playAudioFile}
+        playRecordedAudio={playRecordedAudio}
+        audioLevels={audioLevels}
       />
 
       {/* Mini Player */}
@@ -1330,15 +1884,14 @@ export function ShowLesson() {
         </div>
       </div>
 
-
-        {/* Quiz FAB */}
-        <Link
-          to={`/level/${levelId}/lesson/${lessonId}/quiz`}
-          className="fixed bottom-20 right-6 bg-[var(--primary-color)] hover:bg-[var(--secondary-color)] text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center"
-          style={{ width: "60px", height: "60px" }}
-        >
-          <PiExam size={30} />
-        </Link>
-      </div>
-    );
-  }
+      {/* Quiz FAB */}
+      <Link
+        to={`/level/${levelId}/lesson/${lessonId}/quiz`}
+        className="fixed bottom-20 right-6 bg-[var(--primary-color)] hover:bg-[var(--secondary-color)] text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center"
+        style={{ width: "60px", height: "60px" }}
+      >
+        <PiExam size={30} />
+      </Link>
+    </div>
+  );
+}
