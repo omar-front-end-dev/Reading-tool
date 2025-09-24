@@ -183,7 +183,19 @@ const calculateSimilarity = (userText, originalText) => {
 const evaluatePronunciation = (userText, originalText, confidence) => {
   const similarity = calculateSimilarity(userText, originalText);
   const confidenceScore = (confidence || 0) * 100;
-  const overall = similarity * 0.8 + confidenceScore * 0.2;
+  
+  // If text is perfectly matched, give 100%
+  if (similarity === 100) {
+    return { 
+      level: "excellent", 
+      message: "ممتاز! نطق مثالي 🎉", 
+      color: "green", 
+      score: 100 
+    };
+  }
+  
+  // Otherwise calculate weighted score
+  const overall = similarity * 0.85 + confidenceScore * 0.15;
   
   if (overall >= 90) return { level: "excellent", message: "ممتاز! نطق مثالي 🎉", color: "green", score: Math.round(overall) };
   if (overall >= 75) return { level: "very-good", message: "جيد جداً! نطق واضح 👏", color: "blue", score: Math.round(overall) };
@@ -365,19 +377,19 @@ const RecordingModal = ({
         <div className="flex flex-wrap gap-2 text-xs mt-3 pt-2 border-t border-gray-200">
           <div className="flex items-center gap-1">
             <div className="w-3 h-3 rounded bg-green-100 border border-green-300"></div>
-            <span className="text-gray-600">مطابقة تامة</span>
+            <span className="text-gray-600 arabic_font">مطابقة تامة</span>
           </div>
           <div className="flex items-center gap-1">
             <div className="w-3 h-3 rounded bg-blue-100 border border-blue-300"></div>
-            <span className="text-gray-600">مطابقة قريبة</span>
+            <span className="text-gray-600 arabic_font">مطابقة قريبة</span>
           </div>
           <div className="flex items-center gap-1">
             <div className="w-3 h-3 rounded bg-yellow-100 border border-yellow-300"></div>
-            <span className="text-gray-600">مطابقة جزئية</span>
+            <span className="text-gray-600 arabic_font">مطابقة جزئية</span>
           </div>
           <div className="flex items-center gap-1">
             <div className="w-3 h-3 rounded bg-red-100 border border-red-300"></div>
-            <span className="text-gray-600">غير مطابق</span>
+            <span className="text-gray-600 arabic_font">غير مطابق</span>
           </div>
         </div>
       </div>
@@ -438,13 +450,7 @@ const RecordingModal = ({
             </span>{" "}
             and record your voice.
           </p>
-          <button
-            onClick={onSkipRecording}
-            className="absolute right-3 top-3 p-2 rounded-full hover:bg-gray-100"
-            aria-label="Close"
-          >
-            <X size={18} />
-          </button>
+          
         </div>
 
         <div className="px-5 pt-3">
@@ -582,7 +588,7 @@ const RecordingModal = ({
                       <button
                         onClick={() => recordingResult.audioUrl && playRecordedAudio(recordingResult.audioUrl)}
                         disabled={!recordingResult.audioUrl}
-                        className={`inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-colors ${
+                        className={`inline-flex arabic_font items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-colors ${
                           recordingResult.audioUrl 
                             ? 'bg-blue-100 hover:bg-blue-200 text-blue-700 cursor-pointer' 
                             : 'bg-gray-100 text-gray-400 cursor-not-allowed'
