@@ -423,7 +423,7 @@ const RecordingModal = ({
 
   return (
     <div className="fixed inset-0 z-[60]">
-      <div className="absolute inset-0 bg-black/50" onClick={onSkipRecording} />
+      <div className="absolute inset-0 bg-black/50" />
       <div
         className="fixed left-0 right-0 bottom-0 mx-auto w-full max-w-xl rounded-t-3xl bg-white shadow-2xl border-t border-gray-100"
         role="dialog"
@@ -526,11 +526,11 @@ const RecordingModal = ({
                   </button>
 
                   <div className="flex-1 flex flex-col items-center">
-                    <div className="h-8 flex items-center justify-center gap-[2px] w-full max-w-[300px]">
+                    <div className="h-10 flex items-center justify-center gap-[3px] w-full max-w-[300px]">
                       {audioLevels.map((h, idx) => (
                         <span
                           key={idx}
-                          className="inline-block w-[3px] rounded-sm bg-white/90 transition-all duration-75"
+                          className="inline-block w-[2.5px] rounded-full bg-white/95 transition-all duration-100 ease-linear shadow-sm"
                           style={{ height: `${h}px` }}
                         />
                       ))}
@@ -605,12 +605,6 @@ const RecordingModal = ({
                       >
                         <RotateCcw size={18} />
                         <span className="arabic_font">إعادة المحاولة</span>
-                      </button>
-                      <button
-                        onClick={onContinue}
-                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-gray-500 hover:bg-gray-600 text-white font-medium transition-colors"
-                      >
-                        <span className="arabic_font">تخطي والمتابعة</span>
                       </button>
                     </div>
                   ) : (
@@ -1265,8 +1259,8 @@ export function ShowLesson() {
 
       const analyser = audioContext.createAnalyser();
       analyserRef.current = analyser;
-      analyser.fftSize = 256;
-      analyser.smoothingTimeConstant = 0.3;
+      analyser.fftSize = 128; // Reduced for faster processing
+      analyser.smoothingTimeConstant = 0; // No smoothing for instant response
 
       const microphone = audioContext.createMediaStreamSource(stream);
       microphone.connect(analyser);
@@ -1297,8 +1291,8 @@ export function ShowLesson() {
         for (let i = 0; i < BAR_COUNT; i++) {
           const index = i * step;
           const value = dataArray[index] || 0;
-          // Map value (0-255) to height (8-36px)
-          const height = Math.max(8, Math.min(36, 8 + (value / 255) * 28));
+          // Map value (0-255) to height (8-36px) with more sensitivity
+          const height = Math.max(8, Math.min(36, 8 + (value / 180) * 28)); // Increased sensitivity
           waveformData.push(height);
         }
         setAudioLevels(waveformData);
