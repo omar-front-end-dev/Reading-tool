@@ -17,21 +17,6 @@ import { Link, useParams } from "react-router-dom";
 import { levelsAndLesson } from "../../config/levelsAndLesson/levelsAndLesson";
 import { PiExam } from "react-icons/pi";
 
-/* ========================== Device Detection ========================== */
-const isAndroid = () => {
-  return /Android/i.test(navigator.userAgent);
-};
-
-const isMobileDevice = () => {
-  return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-};
-
-const getAndroidVersion = () => {
-  const ua = navigator.userAgent;
-  const match = ua.match(/Android (\d+\.?\d*)/);
-  return match ? parseFloat(match[1]) : null;
-};
-
 /* ========================== TTS Support & Voice Pref ========================== */
 const supportsTTS =
   typeof window !== "undefined" &&
@@ -217,49 +202,6 @@ const evaluatePronunciation = (userText, originalText, confidence) => {
   if (overall >= 60) return { level: "good", message: "جيد، يمكن تحسينه قليلاً 💪", color: "yellow", score: Math.round(overall) };
   if (overall >= 40) return { level: "needs-improvement", message: "يحتاج تحسين، حاول مرة أخرى 🔄", color: "orange", score: Math.round(overall) };
   return { level: "poor", message: "تحتاج إلى ممارسة أكثر 📚", color: "red", score: Math.round(overall) };
-};
-
-/* ========================== Android Audio Recording Enhancements ========================== */
-const getMediaRecorderOptions = () => {
-  if (isAndroid()) {
-    // جرب الصيغ المدعومة في الأندرويد حسب الأولوية
-    const androidFormats = [
-      'audio/webm; codecs=opus',
-      'audio/webm',
-      'audio/mp4',
-      'audio/3gpp',
-      'audio/ogg; codecs=opus'
-    ];
-    
-    for (const format of androidFormats) {
-      if (MediaRecorder.isTypeSupported(format)) {
-        return { mimeType: format };
-      }
-    }
-  } else {
-    if (MediaRecorder.isTypeSupported('audio/webm; codecs=opus')) {
-      return { mimeType: 'audio/webm; codecs=opus' };
-    }
-  }
-  return {}; // استخدم الافتراضي
-};
-
-const getAudioConstraints = () => {
-  const baseConstraints = {
-    echoCancellation: true,
-    noiseSuppression: true,
-    autoGainControl: true
-  };
-  
-  if (isAndroid()) {
-    return {
-      ...baseConstraints,
-      sampleRate: 16000,
-      channelCount: 1
-    };
-  }
-  
-  return baseConstraints;
 };
 
 /* =================== Permission Banner =================== */
@@ -462,6 +404,13 @@ const RecordingModal = ({
     const id = setInterval(() => setSeed((n) => (n + 1) % 1e6), 120);
     return () => clearInterval(id);
   }, [isRecording]);
+  const bars = useMemo(() => {
+    const arr = [];
+    for (let i = 0; i < BAR_COUNT; i++) {
+      arr.push(8 + ((i * 37 + seed * 13) % 28));
+    }
+    return arr;
+  }, [seed]);
 
   const [elapsed, setElapsed] = useState(0);
   const startTsRef = useRef(null);
@@ -485,12 +434,10 @@ const RecordingModal = ({
   const fmt = (s) => `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}`;
 
   return (
-    <div className={`fixed inset-0 z-[60] ${isAndroid() ? 'android-modal' : ''}`}>
+    <div className="fixed inset-0 z-[60]">
       <div className="absolute inset-0 bg-black/50" />
       <div
-        className={`fixed left-0 right-0 bottom-0 mx-auto w-full max-w-xl rounded-t-3xl bg-white shadow-2xl border-t border-gray-100 ${
-          isAndroid() ? 'android-optimized' : ''
-        }`}
+        className="fixed left-0 right-0 bottom-0 mx-auto w-full max-w-xl rounded-t-3xl bg-white shadow-2xl border-t border-gray-100"
         role="dialog"
         aria-modal="true"
       >
@@ -548,13 +495,13 @@ const RecordingModal = ({
                 onClick={isRecording ? onContinue : onStartRecording}
                 className={[
                   "grid place-items-center rounded-full shadow-lg transition-all",
-                  isAndroid() ? "w-[80px] h-[80px]" : "w-[72px] h-[72px]",
+                  "w-[72px] h-[72px]",
                   isRecording ? "bg-[var(--secondary-color)] text-white hover:bg-[var(--primary-color)]" : "bg-[var(--secondary-color)] text-white hover:bg-[var(--primary-color)]",
                 ].join(" ")}
                 title={isRecording ? "Send" : "Tap to start speaking"}
                 aria-label="Record"
               >
-                {isRecording ? <Loader2 className="animate-spin" size={isAndroid() ? 30 : 26} /> : <IoIosMic size={isAndroid() ? 34 : 30} />}
+                {isRecording ? <Loader2 className="animate-spin" size={26} /> : <IoIosMic size={30} />}
               </button>
 
               <button
@@ -585,9 +532,7 @@ const RecordingModal = ({
                   </button>
 
                   <div className="flex-1 flex flex-col items-center">
-                    <div className={`flex items-center justify-center gap-[3px] w-full max-w-[300px] ${
-                      isAndroid() ? 'h-12' : 'h-10'
-                    }`}>
+                    <div className="h-10 flex items-center justify-center gap-[3px] w-full max-w-[300px]">
                       {audioLevels.map((h, idx) => (
                         <span
                           key={idx}
@@ -800,9 +745,7 @@ const ClickableWord = ({ word, isLast, onWordClick, activeWord, wordDefinitions,
   return (
     <>
       <span
-        className={`text-black font-semibold hover:bg-blue-100 cursor-pointer rounded transition-all duration-200 ${
-          isAndroid() ? 'text-xl p-2 min-h-[44px] inline-flex items-center' : 'text-xl'
-        } ${
+        className={`text-black font-semibold text-xl hover:bg-blue-100 cursor-pointer rounded transition-all duration-200 ${
           isActive ? "border border-black p-1 bg-blue-50 shadow-sm" : "border border-transparent"
         }`}
         onClick={handleClick}
@@ -831,12 +774,10 @@ const Sentence = React.forwardRef(
       <div ref={ref} className="relative">
         <div className="flex items-center mb-2">
           <p
-            className={`leading-relaxed w-fit text-gray-800 transition-all duration-500 rounded-lg ${
-              isAndroid() ? 'text-lg p-3' : 'text-lg p-2'
-            } ${
+            className={`text-lg leading-relaxed w-fit text-gray-800 transition-all duration-500 rounded-lg ${
               isCurrentlyReading
-                ? "underline underline-offset-8 decoration-4 decoration-red-500 shadow-xl transform scale-[1.02] bg-yellow-50"
-                : "hover:bg-gray-50"
+                ? "underline underline-offset-8 decoration-4 decoration-red-500 shadow-xl transform scale-[1.02] bg-yellow-50 p-2"
+                : "hover:bg-gray-50 p-2"
             }`}
           >
             {words.map((word, index) => (
@@ -855,21 +796,17 @@ const Sentence = React.forwardRef(
           {sentence.audioUrl && (
             <button
               onClick={() => onPlaySentenceAudio(sentence.audioUrl)}
-              className={`ml-2 bg-blue-100 hover:bg-blue-200 rounded-full transition-colors ${
-                isAndroid() ? 'p-3 min-h-[48px] min-w-[48px]' : 'p-2'
-              }`}
+              className="ml-2 p-2 bg-blue-100 hover:bg-blue-200 rounded-full"
               title="تشغيل الجملة"
             >
-              <Volume2 size={isAndroid() ? 20 : 16} className="text-blue-600" />
+              <Volume2 size={16} className="text-blue-600" />
             </button>
           )}
         </div>
 
         {typeof pronunciationScore === "number" && (
           <div
-            className={`absolute -top-2 -right-2 rounded-full flex items-center justify-center text-xs font-bold ${
-              isAndroid() ? 'w-10 h-10' : 'w-8 h-8'
-            } ${
+            className={`absolute -top-2 -right-2 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold ${
               pronunciationScore >= 85
                 ? "bg-green-100 text-green-800"
                 : pronunciationScore >= 70
@@ -920,9 +857,7 @@ const Sidebar = ({ isOpen, selectedWordData, onClose, onPlayWordAudio }) => {
         <div className="flex justify-end p-4 sm:p-x-6">
           <button
             onClick={onClose}
-            className={`rounded-lg hover:bg-gray-200 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-300 hover:rotate-90 transform origin-center ${
-              isAndroid() ? 'p-3 min-h-[48px] min-w-[48px]' : 'p-1.5'
-            }`}
+            className="p-1.5 rounded-lg hover:bg-gray-200 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-300 hover:rotate-90 transform origin-center"
             aria-label="Close sidebar"
           >
             <X size={20} className="text-gray-500" />
@@ -938,9 +873,7 @@ const Sidebar = ({ isOpen, selectedWordData, onClose, onPlayWordAudio }) => {
                   </h2>
                   <button
                     onClick={() => onPlayWordAudio(selectedWordData.word)}
-                    className={`bg-white hover:bg-gray-100 rounded-full shadow-sm transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-200 active:scale-95 ml-2 ${
-                      isAndroid() ? 'p-3 min-h-[48px] min-w-[48px]' : 'p-2'
-                    }`}
+                    className="p-2 bg-white hover:bg-gray-100 rounded-full shadow-sm transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-200 active:scale-95 ml-2"
                     aria-label="Play pronunciation"
                   >
                     <Volume2 size={20} className="text-blue-600" />
@@ -1066,58 +999,6 @@ export function ShowLesson() {
     };
   }, [currentLesson]);
 
-  // Android-specific styles injection
-  useEffect(() => {
-    if (isAndroid()) {
-      const style = document.createElement('style');
-      style.innerHTML = `
-        @media screen and (max-width: 768px) {
-          .android-modal .fixed {
-            position: fixed !important;
-            top: 0 !important;
-            left: 0 !important;
-            right: 0 !important;
-            bottom: 0 !important;
-            z-index: 9999 !important;
-          }
-          
-          .android-optimized {
-            border-radius: 24px 24px 0 0 !important;
-          }
-          
-          .recording-button {
-            min-width: 80px !important;
-            min-height: 80px !important;
-            font-size: 32px !important;
-          }
-          
-          .sentence-text {
-            font-size: 18px !important;
-            line-height: 1.6 !important;
-            -webkit-text-size-adjust: none !important;
-          }
-        }
-        
-        @media (hover: none) and (pointer: coarse) {
-          button {
-            min-height: 44px !important;
-            min-width: 44px !important;
-          }
-          
-          .clickable-word {
-            padding: 8px 4px !important;
-            margin: 2px !important;
-          }
-        }
-      `;
-      document.head.appendChild(style);
-      
-      return () => {
-        document.head.removeChild(style);
-      };
-    }
-  }, []);
-
   const fmt = (s) => {
     if (!Number.isFinite(s)) return "00:00";
     const m = Math.floor(s / 60);
@@ -1216,7 +1097,7 @@ export function ShowLesson() {
     [pickVoice, playbackRate]
   );
 
-  /* -------------------------- Enhanced Microphone permission for Android -------------------------- */
+  /* -------------------------- Microphone permission -------------------------- */
   const checkMicrophonePermission = useCallback(async () => {
     try {
       if (navigator.permissions) {
@@ -1224,7 +1105,6 @@ export function ShowLesson() {
         setMicrophonePermission(permissionStatus.state);
         permissionStatus.onchange = () => setMicrophonePermission(permissionStatus.state);
       } else {
-        // Fallback for browsers without permissions API
         const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
         stream.getTracks().forEach((t) => t.stop());
         setMicrophonePermission("granted");
@@ -1237,13 +1117,11 @@ export function ShowLesson() {
 
   const requestMicrophonePermission = useCallback(async () => {
     try {
-      const constraints = getAudioConstraints();
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: constraints });
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       stream.getTracks().forEach((t) => t.stop());
       setMicrophonePermission("granted");
       return true;
-    } catch (error) {
-      console.error("Microphone permission request failed:", error);
+    } catch {
       setMicrophonePermission("denied");
       return false;
     }
@@ -1288,75 +1166,39 @@ export function ShowLesson() {
     if ("webkitSpeechRecognition" in window || "SpeechRecognition" in window) {
       const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
       recognitionRef.current = new SpeechRecognition();
-      
-      // Enhanced settings for Android
-      recognitionRef.current.continuous = false; // مهم للأندرويد
+      recognitionRef.current.continuous = false;
       recognitionRef.current.interimResults = false;
       recognitionRef.current.lang = "en-US";
       recognitionRef.current.maxAlternatives = 1;
-      
       recognitionRef.current.onstart = () => {
         setIsRecording(true);
-        // للأندرويد: تأخير في بدء تسجيل الصوت
-        if (isAndroid()) {
-          setTimeout(() => {
-            startAudioRecording();
-          }, 150);
-        } else {
-          startAudioRecording();
-        }
+        startAudioRecording();
       };
-      
       recognitionRef.current.onresult = (event) => {
         const transcript = event.results[0][0].transcript.toLowerCase().trim();
         const confidence = event.results[0][0].confidence;
         
-        // انتظار إضافي للأندرويد لإنهاء التسجيل
-        const delay = isAndroid() ? 600 : 200;
+        // Wait a bit for audio recording to finish
         setTimeout(() => {
           handleRecognitionResult(transcript, confidence);
-        }, delay);
+        }, 200);
       };
-      
       recognitionRef.current.onerror = (event) => {
         setIsRecording(false);
         setIsWaitingForRecording(false);
         stopAudioRecording();
-        
-        // Enhanced error handling for Android
-        if (isAndroid() && (event.error === "network" || event.error === "no-speech")) {
-          // في الأندرويد، حاول استخدام التسجيل الصوتي المحفوظ
-          setTimeout(() => {
-            const currentText = currentLesson?.storyData?.content[readingStateRef.current.currentIndex - 1]?.text || "";
-            
-            setRecordingResult({
-              success: false,
-              message: "لم يتم التعرف على الكلام، ولكن تم حفظ التسجيل الصوتي",
-              userText: "",
-              originalText: currentText,
-              audioUrl: recordedAudioRef.current,
-            });
-            setShowRecordingModal(true);
-          }, 400);
-        } else if (event.error === "no-speech") {
+        if (event.error === "no-speech") {
           setRecordingResult({
             success: false,
             message: "لم يتم سماع أي صوت. حاول مرة أخرى.",
             userText: "",
-            originalText: currentLesson?.storyData?.content[readingStateRef.current.currentIndex - 1]?.text || "",
+            originalText:
+              currentLesson?.storyData?.content[readingStateRef.current.currentIndex - 1]?.text || "",
             audioUrl: recordedAudioRef.current,
           });
           setShowRecordingModal(true);
-        } else if (event.error === "aborted") {
-          // User cancelled, don't show error
-          return;
-        } else {
-          console.error("Speech recognition error:", event.error);
-          // Try audio-only recording as fallback
-          startAudioOnlyRecording();
         }
       };
-      
       recognitionRef.current.onend = () => {
         setIsRecording(false);
         stopAudioRecording();
@@ -1366,7 +1208,7 @@ export function ShowLesson() {
     }
   };
 
-  // Enhanced audio recording with Android optimizations
+  // Start audio recording with MediaRecorder and silence detection
   const startAudioRecording = async () => {
     try {
       audioChunksRef.current = [];
@@ -1375,14 +1217,11 @@ export function ShowLesson() {
         recordedAudioRef.current = null;
       }
 
-      const constraints = getAudioConstraints();
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: constraints });
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       streamRef.current = stream;
       isRecordingActiveRef.current = true;
       
-      // استخدام إعدادات محسنة للأندرويد
-      const options = getMediaRecorderOptions();
-      const mediaRecorder = new MediaRecorder(stream, options);
+      const mediaRecorder = new MediaRecorder(stream);
       mediaRecorderRef.current = mediaRecorder;
 
       mediaRecorder.ondataavailable = (event) => {
@@ -1392,13 +1231,11 @@ export function ShowLesson() {
       };
 
       mediaRecorder.onstop = () => {
-        const audioBlob = new Blob(audioChunksRef.current, { 
-          type: options.mimeType || 'audio/webm' 
-        });
+        const audioBlob = new Blob(audioChunksRef.current, { type: 'audio/webm' });
         const audioUrl = URL.createObjectURL(audioBlob);
         recordedAudioRef.current = audioUrl;
         
-        // تنظيف الموارد
+        // Clean up stream and audio context
         if (streamRef.current) {
           streamRef.current.getTracks().forEach(track => track.stop());
           streamRef.current = null;
@@ -1410,25 +1247,17 @@ export function ShowLesson() {
         isRecordingActiveRef.current = false;
       };
 
-      // للأندرويد: ابدأ MediaRecorder أولاً
-      if (isAndroid()) {
-        mediaRecorder.start();
-        // انتظر قليلاً قبل بدء silence detection
-        setTimeout(() => {
-          startSilenceDetection(stream);
-        }, 300);
-      } else {
-        mediaRecorder.start();
-        startSilenceDetection(stream);
-      }
-      
+      mediaRecorder.start();
+
+      // Start silence detection
+      startSilenceDetection(stream);
     } catch (error) {
       console.error("Error starting audio recording:", error);
       isRecordingActiveRef.current = false;
     }
   };
 
-  // Enhanced silence detection for Android
+  // Silence detection using Web Audio API with real-time waveform
   const startSilenceDetection = useCallback((stream) => {
     try {
       const audioContext = new (window.AudioContext || window.webkitAudioContext)();
@@ -1436,8 +1265,8 @@ export function ShowLesson() {
 
       const analyser = audioContext.createAnalyser();
       analyserRef.current = analyser;
-      analyser.fftSize = isAndroid() ? 256 : 128; // Larger for Android
-      analyser.smoothingTimeConstant = 0;
+      analyser.fftSize = 128; // Reduced for faster processing
+      analyser.smoothingTimeConstant = 0; // No smoothing for instant response
 
       const microphone = audioContext.createMediaStreamSource(stream);
       microphone.connect(analyser);
@@ -1447,9 +1276,9 @@ export function ShowLesson() {
 
       let silenceStart = Date.now();
       let hasSpoken = false;
-      const SILENCE_THRESHOLD = isAndroid() ? 15 : 20; // Lower threshold for Android
-      const SILENCE_DURATION = isAndroid() ? 2500 : 2000; // Longer for Android
-      const MIN_SPEAKING_TIME = 600;
+      const SILENCE_THRESHOLD = 20;
+      const SILENCE_DURATION = 2000;
+      const MIN_SPEAKING_TIME = 500;
 
       const detectSilence = () => {
         if (!isRecordingActiveRef.current) {
@@ -1459,7 +1288,7 @@ export function ShowLesson() {
 
         analyser.getByteFrequencyData(dataArray);
         
-        // Calculate average volume with Android optimization
+        // Calculate average volume
         const average = dataArray.reduce((sum, value) => sum + value, 0) / bufferLength;
 
         // Update real-time waveform visualization
@@ -1468,9 +1297,8 @@ export function ShowLesson() {
         for (let i = 0; i < BAR_COUNT; i++) {
           const index = i * step;
           const value = dataArray[index] || 0;
-          // Enhanced sensitivity for Android
-          const sensitivity = isAndroid() ? 220 : 180;
-          const height = Math.max(8, Math.min(36, 8 + (value / sensitivity) * 28));
+          // Map value (0-255) to height (8-36px) with more sensitivity
+          const height = Math.max(8, Math.min(36, 8 + (value / 180) * 28)); // Increased sensitivity
           waveformData.push(height);
         }
         setAudioLevels(waveformData);
@@ -1523,67 +1351,6 @@ export function ShowLesson() {
     }
   };
 
-  // Fallback audio-only recording for Android
-  const startAudioOnlyRecording = async () => {
-    try {
-      setIsRecording(true);
-      setIsWaitingForRecording(true);
-      
-      const constraints = getAudioConstraints();
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: constraints });
-      streamRef.current = stream;
-      
-      const options = getMediaRecorderOptions();
-      const mediaRecorder = new MediaRecorder(stream, options);
-      mediaRecorderRef.current = mediaRecorder;
-      
-      audioChunksRef.current = [];
-      
-      mediaRecorder.ondataavailable = (event) => {
-        if (event.data.size > 0) {
-          audioChunksRef.current.push(event.data);
-        }
-      };
-      
-      mediaRecorder.start();
-      
-      // توقف تلقائيًا بعد 8 ثوان للأندرويد
-      const timeout = isAndroid() ? 8000 : 10000;
-      setTimeout(() => {
-        if (mediaRecorder.state === 'recording') {
-          mediaRecorder.stop();
-          setIsRecording(false);
-          setIsWaitingForRecording(false);
-          
-          setTimeout(() => {
-            const audioBlob = new Blob(audioChunksRef.current, { 
-              type: options.mimeType || 'audio/webm' 
-            });
-            const audioUrl = URL.createObjectURL(audioBlob);
-            recordedAudioRef.current = audioUrl;
-            
-            setRecordingResult({
-              success: false,
-              message: "تم حفظ التسجيل الصوتي. Speech Recognition غير متاح.",
-              userText: "",
-              originalText: currentLesson?.storyData?.content[readingStateRef.current.currentIndex - 1]?.text || "",
-              audioUrl: audioUrl,
-            });
-            setShowRecordingModal(true);
-            
-            // تنظيف
-            stream.getTracks().forEach(track => track.stop());
-          }, 500);
-        }
-      }, timeout);
-      
-    } catch (error) {
-      setIsRecording(false);
-      setIsWaitingForRecording(false);
-      console.error("Audio-only recording failed:", error);
-    }
-  };
-
   /* --------------------------- Scroll to sentence --------------------------- */
   const scrollToCurrentSentence = useCallback(
     (sentenceId) => {
@@ -1613,13 +1380,12 @@ export function ShowLesson() {
     }
   };
 
-  /* ------------------------------ Enhanced Recording API for Android ----------------------------- */
+  /* ------------------------------ Recording API ----------------------------- */
   const startRecording = useCallback(async () => {
     if (!recognitionRef.current) {
       alert("التسجيل الصوتي غير مدعوم في متصفحك. جرب Chrome أو Edge");
       return;
     }
-    
     try {
       if (microphonePermission === "denied") {
         const granted = await requestMicrophonePermission();
@@ -1628,37 +1394,11 @@ export function ShowLesson() {
           return;
         }
       }
-      
       setRecordingResult(null);
-      
-      // للأندرويد: معالجة خاصة
-      if (isAndroid()) {
-        // تنظيف أي تسجيل سابق
-        if (streamRef.current) {
-          streamRef.current.getTracks().forEach(track => track.stop());
-        }
-        if (audioContextRef.current) {
-          audioContextRef.current.close();
-        }
-        
-        // انتظار قصير قبل البدء
-        setTimeout(() => {
-          try {
-            recognitionRef.current.start();
-          } catch (error) {
-            console.error("Speech recognition failed:", error);
-            // fallback: تسجيل صوتي فقط
-            startAudioOnlyRecording();
-          }
-        }, 150);
-      } else {
-        recognitionRef.current.start();
-      }
-      
+      recognitionRef.current.start();
     } catch (error) {
       setIsRecording(false);
       setIsWaitingForRecording(false);
-      
       if (error.name === "NotAllowedError") {
         setMicrophonePermission("denied");
         alert("تم رفض إذن الميكروفون. الرجاء السماح بالوصول للميكروفون.");
@@ -1982,9 +1722,7 @@ export function ShowLesson() {
       <div className="max-w-4xl mx-auto p-6">
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center space-x-3">
-            <Link to="/" className={`text-[var(--secondary-color)] hover:bg-gray-200 rounded-full transition-colors ${
-              isAndroid() ? 'p-3 min-h-[48px] min-w-[48px]' : 'p-2'
-            }`}>
+            <Link to="/" className="p-2 text-[var(--secondary-color)] hover:bg-gray-200 rounded-full transition-colors">
               <X size={29} />
             </Link>
             {isReading && (
@@ -1999,18 +1737,12 @@ export function ShowLesson() {
         </div>
 
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-6 sm:mb-8 p-4 sm:p-0">
-          <div className={`rounded-lg overflow-hidden flex-shrink-0 shadow-md ${
-            isAndroid() ? 'w-20 h-20' : 'w-16 h-16 sm:w-20 sm:h-20'
-          }`}>
+          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg overflow-hidden flex-shrink-0 shadow-md">
             <img src={currentLevel.image} alt={currentLevel.name} className="object-cover w-full h-full" />
           </div>
           <div>
-            <h1 className={`font-semibold text-gray-800 mb-1 ${
-              isAndroid() ? 'text-xl' : 'text-lg sm:text-xl'
-            }`}>{currentLesson.title}</h1>
-            <p className={`text-gray-600 line-clamp-2 ${
-              isAndroid() ? 'text-base' : 'text-sm sm:text-base'
-            }`}>{currentLesson.description}</p>
+            <h1 className="text-lg sm:text-xl font-semibold text-gray-800 mb-1 ">{currentLesson.title}</h1>
+            <p className="text-gray-600 text-sm sm:text-base line-clamp-2">{currentLesson.description}</p>
           </div>
         </div>
 
@@ -2084,52 +1816,42 @@ export function ShowLesson() {
               <div className="flex items-center gap-2">
                 <button
                   onClick={togglePlayPause}
-                  className={`inline-flex items-center justify-center rounded-full bg-[var(--primary-color)] text-white hover:bg-[var(--secondary-color)] transition-colors ${
-                    isAndroid() ? 'w-12 h-12' : 'w-10 h-10'
-                  }`}
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[var(--primary-color)] text-white hover:bg-[var(--secondary-color)] transition-colors"
                   title={isReading ? "إيقاف" : "تشغيل"}
                 >
-                  {isReading ? <Pause size={isAndroid() ? 20 : 18} /> : <Play size={isAndroid() ? 20 : 18} />}
+                  {isReading ? <Pause size={18} /> : <Play size={18} />}
                 </button>
 
                 <button
                   onClick={() => stepSeconds(-5)}
-                  className={`rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 grid place-items-center ${
-                    isAndroid() ? 'w-11 h-11' : 'w-9 h-9'
-                  }`}
+                  className="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 grid place-items-center"
                   title="رجوع 5 ثوانٍ"
                 >
-                  <RotateCcw size={isAndroid() ? 20 : 18} />
+                  <RotateCcw size={18} />
                 </button>
 
                 <button
                   onClick={() => stepSeconds(5)}
-                  className={`rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 grid place-items-center ${
-                    isAndroid() ? 'w-11 h-11' : 'w-9 h-9'
-                  }`}
+                  className="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 grid place-items-center"
                   title="تقديم 5 ثوانٍ"
                 >
-                  <RotateCcw size={isAndroid() ? 20 : 18} className="-scale-x-100" />
+                  <RotateCcw size={18} className="-scale-x-100" />
                 </button>
 
                 <button
                   onClick={() => setLoopEnabled((v) => !v)}
-                  className={`rounded-full grid place-items-center ${
-                    isAndroid() ? 'w-11 h-11' : 'w-9 h-9'
-                  } ${
+                  className={`w-9 h-9 rounded-full grid place-items-center ${
                     loopEnabled ? "bg-emerald-100 text-emerald-700" : "bg-gray-100 text-gray-700"
                   } hover:bg-emerald-100`}
                   title="تكرار الدرس"
                 >
-                  <svg viewBox="0 0 24 24" className={`fill-current ${isAndroid() ? 'w-6 h-6' : 'w-5 h-5'}`}>
+                  <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">
                     <path d="M17 1l4 4-4 4V6H7a3 3 0 00-3 3v2H2V9a5 5 0 015-5h10V1zm-10 22l-4-4 4-4v3h10a3 3 0 003-3v-2h2v2a5 5 0 01-5 5H7v3z" />
                   </svg>
                 </button>
               </div>
 
-              <div className={`flex items-center gap-1 text-gray-600 ${
-                isAndroid() ? 'text-xs' : 'text-[11px]'
-              }`}>
+              <div className="flex items-center gap-1 text-[11px] text-gray-600">
                 <span className="tabular-nums">{lessonTotalDuration ? fmt(lessonElapsed) : fmt(currentTime) || "00:00"} </span>
                 <span className="text-gray-300">/</span>
                 <span className="tabular-nums">
@@ -2139,9 +1861,7 @@ export function ShowLesson() {
 
               <div className="relative flex items-center gap-2">
                 <div className="group relative">
-                  <button className={`rounded-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium ${
-                    isAndroid() ? 'px-4 h-11 text-sm' : 'px-3 h-9 text-sm'
-                  }`} title="السرعة">
+                  <button className="px-3 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-800 text-sm font-medium" title="السرعة">
                     {playbackRate.toFixed(2).replace(/\.00$/, "")}x ▾
                   </button>
                   <div className="absolute -right-2 bottom-9 hidden group-hover:block bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
@@ -2167,14 +1887,10 @@ export function ShowLesson() {
       {/* Quiz FAB */}
       <Link
         to={`/level/${levelId}/lesson/${lessonId}/quiz`}
-        className={`fixed bg-[var(--primary-color)] hover:bg-[var(--secondary-color)] text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center ${
-          isAndroid() 
-            ? 'bottom-24 right-6 w-16 h-16' 
-            : 'bottom-20 right-6 w-[60px] h-[60px]'
-        }`}
-        style={isAndroid() ? {} : { width: "60px", height: "60px" }}
+        className="fixed bottom-20 right-6 bg-[var(--primary-color)] hover:bg-[var(--secondary-color)] text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center"
+        style={{ width: "60px", height: "60px" }}
       >
-        <PiExam size={isAndroid() ? 32 : 30} />
+        <PiExam size={30} />
       </Link>
     </div>
   );
