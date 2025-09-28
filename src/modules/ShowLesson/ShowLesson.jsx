@@ -612,9 +612,7 @@ const RecordingModal = ({
                 <div className="relative w-full rounded-full bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] text-white px-3 py-2 flex items-center shadow-lg">
                   <button
                     onClick={onSkipRecording}
-                    className={`shrink-0 mr-2 rounded-full hover:bg-white/10 ${
-                      isAndroid() ? 'p-2 min-h-[44px] min-w-[44px]' : 'p-1.5'
-                    }`}
+                    className={`shrink-0 mr-2 rounded-full hover:bg-white/10 p-1.5`}
                     title="حذف"
                     aria-label="حذف التسجيل"
                   >
@@ -622,9 +620,8 @@ const RecordingModal = ({
                   </button>
 
                   <div className="flex-1 flex flex-col items-center">
-                    <div className={`flex items-center justify-center gap-[3px] w-full max-w-[300px] ${
-                      isAndroid() ? 'h-12' : 'h-10'
-                    }`}>
+                    <div className={`flex items-center justify-center gap-[3px] w-full max-w-[300px] h-10
+                    `}>
                       {audioLevels.map((h, idx) => (
                         <span
                           key={idx}
@@ -640,9 +637,7 @@ const RecordingModal = ({
 
                   <button
                     onClick={onContinue}
-                    className={`arabic_font flex items-center justify-center shrink-0 ml-2 rounded-full bg-white text-[var(--secondary-color)] hover:bg-white/70 ${
-                      isAndroid() ? 'p-3 min-h-[44px] min-w-[44px]' : 'p-2'
-                    }`}
+                    className={`arabic_font flex items-center justify-center shrink-0 ml-2 rounded-full bg-white text-[var(--secondary-color)] hover:bg-white/70 p-2`}
                     title="إرسال"
                     aria-label="إرسال التسجيل"
                   >
