@@ -959,9 +959,8 @@ const Sentence = React.forwardRef(
       <div ref={ref} className="relative">
         <div className="flex items-center mb-2">
           <p
-            className={`leading-relaxed w-fit text-gray-800 transition-all duration-500 rounded-lg ${
-              isAndroid() ? 'text-lg p-3' : 'text-lg p-2'
-            } ${
+            className={`leading-relaxed w-fit text-gray-800 transition-all duration-500 rounded-lg text-lg p-2
+             ${
               isCurrentlyReading
                 ? "underline underline-offset-8 decoration-4 decoration-red-500 shadow-xl transform scale-[1.02] bg-yellow-50"
                 : "hover:bg-gray-50"
@@ -971,7 +970,7 @@ const Sentence = React.forwardRef(
               <ClickableWord
                 key={index}
                 word={word}
-                isLast={index === words.length - 1}
+                isLast={index == words.length - 1}
                 onWordClick={onWordClick}
                 activeWord={activeWord}
                 wordDefinitions={wordDefinitions}
@@ -983,21 +982,18 @@ const Sentence = React.forwardRef(
           {sentence.audioUrl && (
             <button
               onClick={() => onPlaySentenceAudio(sentence.audioUrl)}
-              className={`ml-2 bg-blue-100 hover:bg-blue-200 rounded-full transition-colors ${
-                isAndroid() ? 'p-3 min-h-[48px] min-w-[48px]' : 'p-2'
-              }`}
+              className={`ml-2 bg-blue-100 hover:bg-blue-200 rounded-full transition-colors p-2`}
               title="تشغيل الجملة"
             >
-              <Volume2 size={isAndroid() ? 20 : 16} className="text-blue-600" />
+              <Volume2 size={16} className="text-blue-600" />
             </button>
           )}
         </div>
 
         {typeof pronunciationScore === "number" && (
           <div
-            className={`absolute -top-2 -right-2 rounded-full flex items-center justify-center text-xs font-bold ${
-              isAndroid() ? 'w-10 h-10' : 'w-8 h-8'
-            } ${
+            className={`absolute -top-2 -right-2 rounded-full flex items-center justify-center text-xs font-bold w-8 h-8
+             ${
               pronunciationScore >= 85
                 ? "bg-green-100 text-green-800"
                 : pronunciationScore >= 70
@@ -1180,30 +1176,6 @@ export function ShowLesson() {
   useEffect(() => {
     if (isAndroid()) {
       const style = document.createElement('style');
-      style.innerHTML = `
-        /* تحسينات بسيطة للأندرويد */
-        @media screen and (max-width: 768px) {
-          .android-modal .fixed {
-            position: fixed !important;
-            top: 0 !important;
-            left: 0 !important;
-            right: 0 !important;
-            bottom: 0 !important;
-            z-index: 9999 !important;
-          }
-          
-          .android-optimized {
-            border-radius: 24px 24px 0 0 !important;
-          }
-        }
-        
-        @media (hover: none) and (pointer: coarse) {
-          button {
-            min-height: 44px !important;
-            min-width: 44px !important;
-          }
-        }
-      `;
       document.head.appendChild(style);
       
       return () => {
@@ -2211,9 +2183,7 @@ export function ShowLesson() {
           <div className="flex items-center space-x-3">
             <Link
               to="/"
-              className={`text-[var(--secondary-color)] hover:bg-gray-200 rounded-full transition-colors ${
-                isAndroid() ? 'p-3 min-h-[48px] min-w-[48px]' : 'p-2'
-              }`}
+              className={`text-[var(--secondary-color)] p-2 hover:bg-gray-200 rounded-full transition-colors`}
             >
               <X size={29} />
             </Link>
@@ -2234,9 +2204,7 @@ export function ShowLesson() {
         </div>
 
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-6 sm:mb-8 p-4 sm:p-0">
-          <div className={`rounded-lg overflow-hidden flex-shrink-0 shadow-md ${
-            isAndroid() ? 'w-20 h-20' : 'w-16 h-16 sm:w-20 sm:h-20'
-          }`}>
+          <div className={`rounded-lg overflow-hidden flex-shrink-0 shadow-md w-16 h-16 sm:w-20 sm:h-20`}>
             <img
               src={currentLevel.image}
               alt={currentLevel.name}
@@ -2244,14 +2212,10 @@ export function ShowLesson() {
             />
           </div>
           <div>
-            <h1 className={`font-semibold text-gray-800 mb-1 ${
-              isAndroid() ? 'text-xl' : 'text-lg sm:text-xl'
-            }`}>
+            <h1 className={`font-semibold text-gray-800 mb-1 text-lg sm:text-xl`}>
               {currentLesson.title}
             </h1>
-            <p className={`text-gray-600 line-clamp-2 ${
-              isAndroid() ? 'text-base' : 'text-sm sm:text-base'
-            }`}>
+            <p className={`text-gray-600 line-clamp-2 text-sm sm:text-base`}>
               {currentLesson.description}
             </p>
           </div>
