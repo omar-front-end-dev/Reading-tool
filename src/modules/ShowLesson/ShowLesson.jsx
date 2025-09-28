@@ -831,14 +831,6 @@ const RecordingModal = ({
                       <RotateCcw size={18} />
                       <span className="arabic_font">إعادة المحاولة</span>
                     </button>
-                    <button
-                      onClick={onContinue}
-                      className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-gray-500 hover:bg-gray-600 text-white font-medium transition-colors ${
-                        isAndroid() ? 'min-h-[48px]' : ''
-                      }`}
-                    >
-                      <span className="arabic_font">تخطي والمتابعة</span>
-                    </button>
                   </div>
                 </div>
               )}
