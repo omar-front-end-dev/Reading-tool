@@ -1441,10 +1441,7 @@ export function ShowLesson() {
       recognitionRef.current.lang = "en-US";
       recognitionRef.current.maxAlternatives = 3; // زيادة البدائل
       
-      // للموبايل: تقليل الحساسية
-      if (isMobileDevice()) {
-        recognitionRef.current.grammars = null;
-      }
+
       
       recognitionRef.current.onstart = () => {
         console.log("🎤 Speech recognition started");
