@@ -476,7 +476,7 @@ export const QuizPage = () => {
                 {/* زر الدرس التالي - يظهر فقط إذا كان هناك درس تالي */}
                 {nextLesson && (
                   <Link
-                    to={`/show-lesson/${levelId}/${nextLesson.id}`}
+                    to={`/show-lesson-first-round/${levelId}/${nextLesson.id}`}
                     onClick={() => playSound("click")}
                     className="arabic_font gap-2 flex items-center justify-center bg-[var(--secondary-color)] hover:bg-[var(--primary-color)] text-white px-6 py-2 rounded-lg transition-colors"
                   >
