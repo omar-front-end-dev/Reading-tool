@@ -480,8 +480,8 @@ export const QuizPage = () => {
                     onClick={() => playSound("click")}
                     className="arabic_font gap-2 flex items-center justify-center bg-[var(--secondary-color)] hover:bg-[var(--primary-color)] text-white px-6 py-2 rounded-lg transition-colors"
                   >
-                    <ChevronRight size={20} className="ml-1" />
                     الدرس التالي: {nextLesson.title}
+                    <ChevronRight size={20} className="ml-1" />
                   </Link>
                 )}
 
