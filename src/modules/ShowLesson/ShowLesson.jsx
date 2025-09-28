@@ -291,7 +291,7 @@ MicrophonePermissionAlert.propTypes = {
   onRequestPermission: PropTypes.func.isRequired,
 };
 
-/* ====================== Enhanced RecordingModal for Android ====================== */
+/* ====================== Enhanced RecordingModal - Fixed Audio Playback & No Skip ====================== */
 const RecordingModal = ({
   isOpen,
   isRecording,
@@ -300,7 +300,6 @@ const RecordingModal = ({
   originalText,
   sentenceAudioUrl,
   onStartRecording,
-  onSkipRecording,
   onContinue,
   onRetry,
   playAudioFile,
@@ -308,12 +307,6 @@ const RecordingModal = ({
   audioLevels,
 }) => {
   if (!isOpen) return null;
-
-  useEffect(() => {
-    const onKey = (e) => e.key === "Escape" && onSkipRecording?.();
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [onSkipRecording]);
 
   const title = isRecording
     ? "جارٍ التسجيل"
@@ -498,6 +491,14 @@ const RecordingModal = ({
   const androidClass = isAndroid() ? 'android-modal' : '';
   const androidOptimizedClass = isAndroid() ? 'android-optimized' : '';
 
+  // تنظيف صوت التسجيل عند إغلاق المودال
+  const handleDeleteRecording = () => {
+    if (recordingResult?.audioUrl) {
+      URL.revokeObjectURL(recordingResult.audioUrl);
+    }
+    onRetry(); // إعادة تسجيل
+  };
+
   return (
     <div className={`fixed inset-0 z-[60] ${androidClass}`}>
       <div className="absolute inset-0 bg-black/50" />
@@ -611,7 +612,7 @@ const RecordingModal = ({
               <div className="w-full max-w-md">
                 <div className="relative w-full rounded-full bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] text-white px-3 py-2 flex items-center shadow-lg">
                   <button
-                    onClick={onSkipRecording}
+                    onClick={handleDeleteRecording}
                     className={`shrink-0 mr-2 rounded-full hover:bg-white/10 p-1.5`}
                     title="حذف"
                     aria-label="حذف التسجيل"
@@ -725,29 +726,40 @@ const RecordingModal = ({
                     </p>
                   </div>
 
-                  {/* Retry button for scores below 50% */}
-                  {recordingResult.evaluation.score < 50 ? (
-                    <div className="flex gap-2">
+                  {/* أزرار المتابعة أو الإعادة حسب النتيجة */}
+                  <div className="flex gap-2">
+                    {recordingResult.evaluation.score < 50 ? (
                       <button
                         onClick={onRetry}
-                        className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-orange-500 hover:bg-orange-600 text-white font-medium transition-colors ${
+                        className={`w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-orange-500 hover:bg-orange-600 text-white font-medium transition-colors ${
                           isAndroid() ? 'min-h-[48px]' : ''
                         }`}
                       >
                         <RotateCcw size={18} />
-                        <span className="arabic_font">إعادة المحاولة</span>
+                        <span className="arabic_font">إعادة المحاولة (مطلوب)</span>
                       </button>
-                    </div>
-                  ) : (
-                    <button
-                      onClick={onContinue}
-                      className={`w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-green-500 hover:bg-green-600 text-white font-medium transition-colors ${
-                        isAndroid() ? 'min-h-[48px]' : ''
-                      }`}
-                    >
-                      <span className="arabic_font">متابعة للجملة التالية</span>
-                    </button>
-                  )}
+                    ) : (
+                      <>
+                        <button
+                          onClick={onRetry}
+                          className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-orange-500 hover:bg-orange-600 text-white font-medium transition-colors ${
+                            isAndroid() ? 'min-h-[48px]' : ''
+                          }`}
+                        >
+                          <RotateCcw size={18} />
+                          <span className="arabic_font">إعادة المحاولة</span>
+                        </button>
+                        <button
+                          onClick={onContinue}
+                          className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-green-500 hover:bg-green-600 text-white font-medium transition-colors ${
+                            isAndroid() ? 'min-h-[48px]' : ''
+                          }`}
+                        >
+                          <span className="arabic_font">متابعة</span>
+                        </button>
+                      </>
+                    )}
+                  </div>
                 </>
               ) : (
                 <div className="space-y-4">
@@ -820,18 +832,16 @@ const RecordingModal = ({
                     ) : null}
                   </div>
 
-                  {/* Retry button for failed recording */}
-                  <div className="flex gap-2">
-                    <button
-                      onClick={onRetry}
-                      className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-orange-500 hover:bg-orange-600 text-white font-medium transition-colors ${
-                        isAndroid() ? 'min-h-[48px]' : ''
-                      }`}
-                    >
-                      <RotateCcw size={18} />
-                      <span className="arabic_font">إعادة المحاولة</span>
-                    </button>
-                  </div>
+                  {/* زر الإعادة فقط - لا يوجد تخطي */}
+                  <button
+                    onClick={onRetry}
+                    className={`w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-orange-500 hover:bg-orange-600 text-white font-medium transition-colors ${
+                      isAndroid() ? 'min-h-[48px]' : ''
+                    }`}
+                  >
+                    <RotateCcw size={18} />
+                    <span className="arabic_font">إعادة المحاولة (مطلوب)</span>
+                  </button>
                 </div>
               )}
             </div>
@@ -863,7 +873,6 @@ RecordingModal.propTypes = {
     confidence: PropTypes.number,
   }),
   onStartRecording: PropTypes.func.isRequired,
-  onSkipRecording: PropTypes.func.isRequired,
   onContinue: PropTypes.func.isRequired,
   onRetry: PropTypes.func.isRequired,
   playAudioFile: PropTypes.func.isRequired,
@@ -1162,6 +1171,19 @@ export function ShowLesson() {
   useEffect(() => {
     if (isAndroid()) {
       const style = document.createElement('style');
+      style.textContent = `
+        .android-modal {
+          -webkit-tap-highlight-color: transparent;
+        }
+        .android-optimized {
+          -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+        }
+        .android-optimized button {
+          -webkit-tap-highlight-color: transparent;
+          touch-action: manipulation;
+        }
+      `;
       document.head.appendChild(style);
       
       return () => {
@@ -1482,7 +1504,11 @@ export function ShowLesson() {
       const mediaRecorder = new MediaRecorder(stream, {
         mimeType: MediaRecorder.isTypeSupported('audio/webm; codecs=opus') 
           ? 'audio/webm; codecs=opus' 
-          : 'audio/webm'
+          : MediaRecorder.isTypeSupported('audio/webm')
+          ? 'audio/webm'
+          : MediaRecorder.isTypeSupported('audio/mp4')
+          ? 'audio/mp4'
+          : ''
       });
       
       const audioChunks = [];
@@ -1494,14 +1520,30 @@ export function ShowLesson() {
       };
       
       mediaRecorder.onstop = () => {
-        const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
-        const audioUrl = URL.createObjectURL(audioBlob);
-        recordedAudioRef.current = audioUrl;
+        const audioBlob = new Blob(audioChunks, { 
+          type: mediaRecorder.mimeType || 'audio/webm' 
+        });
+        
+        // إنشاء URL للصوت المسجل مع معالجة خاصة للموبايل
+        let audioUrl;
+        try {
+          audioUrl = URL.createObjectURL(audioBlob);
+          recordedAudioRef.current = audioUrl;
+        } catch (error) {
+          console.error("Error creating audio URL:", error);
+          recordedAudioRef.current = null;
+        }
         
         // تنظيف
         stream.getTracks().forEach(track => track.stop());
         
         // استدعاء callback
+        if (callback) callback();
+      };
+      
+      mediaRecorder.onerror = (error) => {
+        console.error("MediaRecorder error:", error);
+        stream.getTracks().forEach(track => track.stop());
         if (callback) callback();
       };
       
@@ -1536,7 +1578,11 @@ export function ShowLesson() {
       const mediaRecorder = new MediaRecorder(stream, {
         mimeType: MediaRecorder.isTypeSupported('audio/webm; codecs=opus') 
           ? 'audio/webm; codecs=opus' 
-          : 'audio/webm'
+          : MediaRecorder.isTypeSupported('audio/webm')
+          ? 'audio/webm'
+          : MediaRecorder.isTypeSupported('audio/mp4')
+          ? 'audio/mp4'
+          : ''
       });
       
       const audioChunks = [];
@@ -1548,9 +1594,19 @@ export function ShowLesson() {
       };
       
       mediaRecorder.onstop = () => {
-        const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
-        const audioUrl = URL.createObjectURL(audioBlob);
-        recordedAudioRef.current = audioUrl;
+        const audioBlob = new Blob(audioChunks, { 
+          type: mediaRecorder.mimeType || 'audio/webm' 
+        });
+        
+        // إنشاء URL للصوت المسجل مع معالجة خاصة للموبايل
+        let audioUrl;
+        try {
+          audioUrl = URL.createObjectURL(audioBlob);
+          recordedAudioRef.current = audioUrl;
+        } catch (error) {
+          console.error("Error creating audio URL:", error);
+          audioUrl = null;
+        }
         
         setRecordingResult({
           success: false,
@@ -1564,6 +1620,13 @@ export function ShowLesson() {
         setIsWaitingForRecording(false);
         
         // تنظيف
+        stream.getTracks().forEach(track => track.stop());
+      };
+      
+      mediaRecorder.onerror = (error) => {
+        console.error("MediaRecorder error:", error);
+        setIsRecording(false);
+        setIsWaitingForRecording(false);
         stream.getTracks().forEach(track => track.stop());
       };
       
@@ -1820,17 +1883,6 @@ export function ShowLesson() {
     }
   }, [microphonePermission, requestMicrophonePermission]);
 
-  const skipRecording = () => {
-    setIsWaitingForRecording(false);
-    setShowRecordingModal(false);
-    // Clean up any recorded audio
-    if (recordedAudioRef.current) {
-      URL.revokeObjectURL(recordedAudioRef.current);
-      recordedAudioRef.current = null;
-    }
-    continueToNextSentence();
-  };
-
   const continueToNextSentence = () => {
     setShowRecordingModal(false);
     setRecordingResult(null);
@@ -1871,7 +1923,7 @@ export function ShowLesson() {
     setActiveWord(null);
   };
 
-  /* ------------------------------ Play sentence audio ------------------------------ */
+  /* ------------------------------ Enhanced Audio Playback for Mobile ------------------------------ */
   const playSentenceAudio = useCallback(
     (audioUrl) => {
       if (window.speechSynthesis) {
@@ -1912,7 +1964,29 @@ export function ShowLesson() {
         setDuration(0);
         setCurrentTime(0);
       };
-      audio.play().catch((e) => console.error("Error playing audio:", e));
+      
+      // معالجة خاصة للموبايل
+      if (isMobileDevice()) {
+        // إضافة user interaction للموبايل
+        const playAudio = () => {
+          audio.play().catch((e) => {
+            console.error("Error playing audio:", e);
+            // محاولة تشغيل بدون playbackRate للموبايل
+            if (e.name === 'NotSupportedError') {
+              audio.playbackRate = 1;
+              audio.play().catch(console.error);
+            }
+          });
+        };
+        
+        if (audio.readyState >= 2) {
+          playAudio();
+        } else {
+          audio.addEventListener('canplay', playAudio, { once: true });
+        }
+      } else {
+        audio.play().catch((e) => console.error("Error playing audio:", e));
+      }
     },
     [playbackRate, sumDurationsBeforeIndex]
   );
@@ -1927,6 +2001,7 @@ export function ShowLesson() {
     if (audioRef.current) {
       try {
         audioRef.current.pause();
+        audioRef.current.currentTime = 0;
       } catch {}
     }
     if (window.speechSynthesis) {
@@ -1935,13 +2010,45 @@ export function ShowLesson() {
       } catch {}
     }
 
-    // Play audio file at specified rate
+    // Play audio file at specified rate with mobile optimization
     const audio = new Audio(audioUrl);
     audioRef.current = audio;
-    try {
-      audio.playbackRate = rate;
-    } catch {}
-    audio.play().catch((err) => console.error("Error playing audio:", err));
+    
+    // معالجة خاصة للموبايل
+    if (isMobileDevice()) {
+      // للموبايل: تطبيق المعدل بعد التحميل
+      audio.addEventListener('loadeddata', () => {
+        try {
+          if (rate !== 1 && audio.playbackRate !== undefined) {
+            audio.playbackRate = rate;
+          }
+        } catch (e) {
+          console.warn("Playback rate not supported on this device");
+        }
+      });
+      
+      const playMobileAudio = () => {
+        audio.play().catch((err) => {
+          console.error("Error playing audio on mobile:", err);
+          // محاولة بدون معدل السرعة
+          if (err.name === 'NotSupportedError') {
+            audio.playbackRate = 1;
+            audio.play().catch(console.error);
+          }
+        });
+      };
+      
+      if (audio.readyState >= 2) {
+        playMobileAudio();
+      } else {
+        audio.addEventListener('canplay', playMobileAudio, { once: true });
+      }
+    } else {
+      try {
+        audio.playbackRate = rate;
+      } catch {}
+      audio.play().catch((err) => console.error("Error playing audio:", err));
+    }
   }, []);
 
   const playRecordedAudio = useCallback((audioUrl) => {
@@ -1954,6 +2061,7 @@ export function ShowLesson() {
     if (audioRef.current) {
       try {
         audioRef.current.pause();
+        audioRef.current.currentTime = 0;
       } catch {}
     }
     if (window.speechSynthesis) {
@@ -1962,12 +2070,70 @@ export function ShowLesson() {
       } catch {}
     }
 
-    // Play recorded audio
-    const audio = new Audio(audioUrl);
-    audioRef.current = audio;
-    audio
-      .play()
-      .catch((err) => console.error("Error playing recorded audio:", err));
+    // Enhanced audio playback for mobile
+    const audio = new Audio();
+    
+    // معالجة خاصة للأجهزة المحمولة
+    if (isMobileDevice()) {
+      // للموبايل: تعيين المصدر بعد إنشاء الكائن
+      audio.preload = 'auto';
+      audio.crossOrigin = 'anonymous';
+      
+      // إضافة مستمعين للأحداث قبل تعيين المصدر
+      audio.addEventListener('loadstart', () => {
+        console.log("Loading recorded audio...");
+      });
+      
+      audio.addEventListener('canplay', () => {
+        console.log("Recorded audio can play");
+      });
+      
+      audio.addEventListener('error', (e) => {
+        console.error("Error loading recorded audio:", e);
+        console.error("Audio error details:", {
+          error: audio.error,
+          networkState: audio.networkState,
+          readyState: audio.readyState,
+          src: audioUrl.substring(0, 50) + "..."
+        });
+      });
+      
+      // تعيين المصدر بعد إعداد المستمعين
+      audio.src = audioUrl;
+      
+      // محاولة التشغيل مع معالجة الأخطاء
+      const playMobileRecordedAudio = () => {
+        audio.play().then(() => {
+          console.log("Successfully playing recorded audio on mobile");
+        }).catch((err) => {
+          console.error("Error playing recorded audio on mobile:", err);
+          
+          // محاولة إنشاء audio جديد كـ fallback
+          try {
+            const fallbackAudio = new Audio(audioUrl);
+            fallbackAudio.play().catch((fallbackErr) => {
+              console.error("Fallback audio also failed:", fallbackErr);
+            });
+          } catch (fallbackCreateErr) {
+            console.error("Error creating fallback audio:", fallbackCreateErr);
+          }
+        });
+      };
+      
+      // تشغيل عند الجاهزية أو فوراً
+      if (audio.readyState >= 2) {
+        playMobileRecordedAudio();
+      } else {
+        audio.addEventListener('canplay', playMobileRecordedAudio, { once: true });
+        // احتياط للتحميل
+        audio.load();
+      }
+    } else {
+      // للأجهزة غير المحمولة: الطريقة العادية
+      audio.src = audioUrl;
+      audioRef.current = audio;
+      audio.play().catch((err) => console.error("Error playing recorded audio:", err));
+    }
   }, []);
 
   const playWordAudio = useCallback(
@@ -2242,7 +2408,6 @@ export function ShowLesson() {
         onStartRecording={startRecording}
         originalText={currentSentenceText}
         sentenceAudioUrl={currentSentenceAudioUrl}
-        onSkipRecording={skipRecording}
         onContinue={continueToNextSentence}
         onRetry={retryRecording}
         playAudioFile={playAudioFile}
