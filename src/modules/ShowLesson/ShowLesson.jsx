@@ -32,10 +32,6 @@ const isMobileDevice = () => {
   return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 };
 
-const isIOS = () => {
-  return /iPad|iPhone|iPod/.test(navigator.userAgent);
-};
-
 /* ========================== TTS Support & Voice Pref ========================== */
 const supportsTTS =
   typeof window !== "undefined" &&
@@ -295,7 +291,7 @@ MicrophonePermissionAlert.propTypes = {
   onRequestPermission: PropTypes.func.isRequired,
 };
 
-/* ====================== Enhanced RecordingModal with Mandatory Recording ====================== */
+/* ====================== Enhanced RecordingModal for Android ====================== */
 const RecordingModal = ({
   isOpen,
   isRecording,
@@ -314,15 +310,10 @@ const RecordingModal = ({
   if (!isOpen) return null;
 
   useEffect(() => {
-    const onKey = (e) => {
-      // إزالة إمكانية الإغلاق بـ Escape - التسجيل أصبح إجباري
-      if (e.key === "Escape") {
-        e.preventDefault();
-      }
-    };
+    const onKey = (e) => e.key === "Escape" && onSkipRecording?.();
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, []);
+  }, [onSkipRecording]);
 
   const title = isRecording
     ? "جارٍ التسجيل"
@@ -520,7 +511,11 @@ const RecordingModal = ({
             Your turn!
           </p>
           <p className="text-center text-sm text-gray-600">
-            يجب تسجيل نطقك للمتابعة للجملة التالية
+            Press the{" "}
+            <span className="inline-flex translate-y-[2px]">
+              <IoIosMic className="text-[var(--secondary-color)]" />
+            </span>{" "}
+            and record your voice.
           </p>
         </div>
 
@@ -735,7 +730,7 @@ const RecordingModal = ({
                     </p>
                   </div>
 
-                  {/* إما إعادة المحاولة أو المتابعة - لا يوجد تخطي */}
+                  {/* Retry button for scores below 50% */}
                   {recordingResult.evaluation.score < 50 ? (
                     <div className="flex gap-2">
                       <button
@@ -746,15 +741,6 @@ const RecordingModal = ({
                       >
                         <RotateCcw size={18} />
                         <span className="arabic_font">إعادة المحاولة</span>
-                      </button>
-                      {/* إضافة زر متابعة حتى لو كان الأداء ضعيف */}
-                      <button
-                        onClick={onContinue}
-                        className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-blue-500 hover:bg-blue-600 text-white font-medium transition-colors ${
-                          isAndroid() ? 'min-h-[48px]' : ''
-                        }`}
-                      >
-                        <span className="arabic_font">متابعة</span>
                       </button>
                     </div>
                   ) : (
@@ -839,16 +825,24 @@ const RecordingModal = ({
                     ) : null}
                   </div>
 
-                  {/* فقط إعادة المحاولة - لا يوجد تخطي */}
+                  {/* Retry button for failed recording */}
                   <div className="flex gap-2">
                     <button
                       onClick={onRetry}
-                      className={`w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-orange-500 hover:bg-orange-600 text-white font-medium transition-colors ${
+                      className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-orange-500 hover:bg-orange-600 text-white font-medium transition-colors ${
                         isAndroid() ? 'min-h-[48px]' : ''
                       }`}
                     >
                       <RotateCcw size={18} />
                       <span className="arabic_font">إعادة المحاولة</span>
+                    </button>
+                    <button
+                      onClick={onContinue}
+                      className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-gray-500 hover:bg-gray-600 text-white font-medium transition-colors ${
+                        isAndroid() ? 'min-h-[48px]' : ''
+                      }`}
+                    >
+                      <span className="arabic_font">تخطي والمتابعة</span>
                     </button>
                   </div>
                 </div>
@@ -1121,7 +1115,7 @@ Sidebar.propTypes = {
   onPlayWordAudio: PropTypes.func.isRequired,
 };
 
-/* ================================ Enhanced ShowLesson with Mobile Audio Fix ================================ */
+/* ================================ Enhanced ShowLesson with Android Support ================================ */
 export function ShowLesson() {
   const { levelId, lessonId } = useParams();
   const lessonIdNum = parseInt(lessonId);
@@ -1181,18 +1175,6 @@ export function ShowLesson() {
   useEffect(() => {
     if (isAndroid()) {
       const style = document.createElement('style');
-      style.textContent = `
-        .android-modal {
-          -webkit-transform: translateZ(0);
-          transform: translateZ(0);
-        }
-        .android-optimized {
-          -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-          -webkit-perspective: 1000px;
-          perspective: 1000px;
-        }
-      `;
       document.head.appendChild(style);
       
       return () => {
@@ -1354,7 +1336,7 @@ export function ShowLesson() {
     [pickVoice, playbackRate]
   );
 
-  /* -------------------------- Enhanced Microphone permission for Mobile -------------------------- */
+  /* -------------------------- Enhanced Microphone permission for Android -------------------------- */
   const checkMicrophonePermission = useCallback(async () => {
     try {
       if (navigator.permissions) {
@@ -1428,57 +1410,44 @@ export function ShowLesson() {
     };
   }, [checkMicrophonePermission]);
 
-  // ====================== Enhanced Speech Recognition with Mobile Support ======================
+  // ====================== Enhanced Speech Recognition for Android ======================
   const initializeSpeechRecognition = () => {
     if ("webkitSpeechRecognition" in window || "SpeechRecognition" in window) {
       const SpeechRecognition =
         window.SpeechRecognition || window.webkitSpeechRecognition;
       recognitionRef.current = new SpeechRecognition();
       
-      // إعدادات أساسية محسنة للموبايل
+      // إعدادات أساسية
       recognitionRef.current.continuous = false;
       recognitionRef.current.interimResults = false;
       recognitionRef.current.lang = "en-US";
-      recognitionRef.current.maxAlternatives = 3; // زيادة البدائل
-      
-
+      recognitionRef.current.maxAlternatives = 1;
       
       recognitionRef.current.onstart = () => {
-        console.log("🎤 Speech recognition started");
         setIsRecording(true);
-        
-        // بدء التسجيل الصوتي المتزامن
+        // للأندرويد: لا تبدأ MediaRecorder مع Speech Recognition
         if (!isAndroid()) {
           startAudioRecording();
-        } else {
-          // للأندرويد: تسجيل مبسط
-          startSimpleAudioRecording();
         }
       };
       
       recognitionRef.current.onresult = (event) => {
-        let bestTranscript = "";
-        let bestConfidence = 0;
+        const transcript = event.results[0][0].transcript.toLowerCase().trim();
+        const confidence = event.results[0][0].confidence;
         
-        // اختيار أفضل نتيجة من البدائل
-        for (let i = 0; i < event.results[0].length; i++) {
-          const result = event.results[0][i];
-          if (result.confidence > bestConfidence) {
-            bestTranscript = result.transcript.toLowerCase().trim();
-            bestConfidence = result.confidence;
-          }
+        // بدء تسجيل صوتي منفصل للأندرويد بعد الحصول على النتيجة
+        if (isAndroid()) {
+          startQuickAudioRecording(() => {
+            handleRecognitionResult(transcript, confidence);
+          });
+        } else {
+          setTimeout(() => {
+            handleRecognitionResult(transcript, confidence);
+          }, 200);
         }
-        
-        console.log("🗣️ Recognition result:", bestTranscript, "Confidence:", bestConfidence);
-        
-        // تأخير صغير للسماح للتسجيل الصوتي بالانتهاء
-        setTimeout(() => {
-          handleRecognitionResult(bestTranscript, bestConfidence);
-        }, isAndroid() ? 500 : 200);
       };
       
       recognitionRef.current.onerror = (event) => {
-        console.error("❌ Recognition error:", event.error);
         setIsRecording(false);
         setIsWaitingForRecording(false);
         
@@ -1486,37 +1455,22 @@ export function ShowLesson() {
           stopAudioRecording();
         }
         
-        let errorMessage = "حدث خطأ في التعرف على الصوت";
-        switch (event.error) {
-          case "no-speech":
-            errorMessage = "لم يتم سماع أي صوت. حاول التحدث بوضوح أكبر.";
-            break;
-          case "audio-capture":
-            errorMessage = "لا يمكن الوصول للميكروفون. تحقق من الإعدادات.";
-            break;
-          case "not-allowed":
-            errorMessage = "تم رفض إذن الميكروفون.";
-            setMicrophonePermission("denied");
-            break;
-          case "network":
-            errorMessage = "مشكلة في الاتصال. تحقق من الإنترنت.";
-            break;
-          default:
-            errorMessage = `خطأ: ${event.error}`;
+        if (event.error === "no-speech") {
+          setRecordingResult({
+            success: false,
+            message: "لم يتم سماع أي صوت. حاول مرة أخرى.",
+            userText: "",
+            originalText: currentLesson?.storyData?.content[readingStateRef.current.currentIndex - 1]?.text || "",
+            audioUrl: null,
+          });
+          setShowRecordingModal(true);
+        } else if (event.error === "network" && isAndroid()) {
+          // للأندرويد: ابدأ تسجيل صوتي فقط كـ fallback
+          startAudioOnlyRecording();
         }
-        
-        setRecordingResult({
-          success: false,
-          message: errorMessage,
-          userText: "",
-          originalText: currentLesson?.storyData?.content[readingStateRef.current.currentIndex - 1]?.text || "",
-          audioUrl: recordedAudioRef.current,
-        });
-        setShowRecordingModal(true);
       };
       
       recognitionRef.current.onend = () => {
-        console.log("🔚 Speech recognition ended");
         setIsRecording(false);
         if (!isAndroid()) {
           stopAudioRecording();
@@ -1527,101 +1481,125 @@ export function ShowLesson() {
     }
   };
 
-  // تسجيل صوتي مبسط للأندرويد
-  const startSimpleAudioRecording = async () => {
+  // تسجيل صوتي سريع للأندرويد بعد Speech Recognition
+  const startQuickAudioRecording = async (callback) => {
     try {
-      audioChunksRef.current = [];
-      if (recordedAudioRef.current) {
-        URL.revokeObjectURL(recordedAudioRef.current);
-        recordedAudioRef.current = null;
-      }
-
       const stream = await navigator.mediaDevices.getUserMedia({ 
         audio: {
           echoCancellation: true,
           noiseSuppression: true,
-          autoGainControl: true,
-          sampleRate: 16000,
-          channelCount: 1
+          autoGainControl: true
         } 
       });
       
-      streamRef.current = stream;
-      isRecordingActiveRef.current = true;
-
-      // استخدام MediaRecorder مع إعدادات محسنة للأندرويد
-      const mimeType = MediaRecorder.isTypeSupported('audio/webm; codecs=opus') 
-        ? 'audio/webm; codecs=opus'
-        : MediaRecorder.isTypeSupported('audio/mp4; codecs=aac')
-        ? 'audio/mp4; codecs=aac'
-        : 'audio/webm';
-
       const mediaRecorder = new MediaRecorder(stream, {
-        mimeType: mimeType,
-        audioBitsPerSecond: 128000
+        mimeType: MediaRecorder.isTypeSupported('audio/webm; codecs=opus') 
+          ? 'audio/webm; codecs=opus' 
+          : 'audio/webm'
       });
       
-      mediaRecorderRef.current = mediaRecorder;
-
+      const audioChunks = [];
+      
       mediaRecorder.ondataavailable = (event) => {
         if (event.data.size > 0) {
-          audioChunksRef.current.push(event.data);
+          audioChunks.push(event.data);
         }
       };
-
+      
       mediaRecorder.onstop = () => {
-        const audioBlob = new Blob(audioChunksRef.current, { type: mimeType });
+        const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
         const audioUrl = URL.createObjectURL(audioBlob);
         recordedAudioRef.current = audioUrl;
-
-        // تنظيف الموارد
-        if (streamRef.current) {
-          streamRef.current.getTracks().forEach((track) => track.stop());
-          streamRef.current = null;
-        }
-        isRecordingActiveRef.current = false;
+        
+        // تنظيف
+        stream.getTracks().forEach(track => track.stop());
+        
+        // استدعاء callback
+        if (callback) callback();
       };
-
-      mediaRecorder.start(100); // جمع البيانات كل 100ms
       
-      // بدء الرسوم المتحركة للأمواج
-      startSimpleWaveAnimation();
+      // تسجيل قصير جداً (ثانية واحدة) لحفظ شيء ما
+      mediaRecorder.start();
+      setTimeout(() => {
+        if (mediaRecorder.state === 'recording') {
+          mediaRecorder.stop();
+        }
+      }, 1000);
       
     } catch (error) {
-      console.error("Error starting simple audio recording:", error);
-      isRecordingActiveRef.current = false;
+      console.error("Quick audio recording failed:", error);
+      if (callback) callback();
     }
   };
 
-  // رسوم متحركة مبسطة للأمواج على الأندرويد
-  const startSimpleWaveAnimation = () => {
-    if (!isAndroid()) return;
-    
-    const animateWaves = () => {
-      if (!isRecordingActiveRef.current) {
-        setAudioLevels(Array(BAR_COUNT).fill(8));
-        return;
-      }
+  // تسجيل صوتي فقط للأندرويد (كـ fallback)
+  const startAudioOnlyRecording = async () => {
+    try {
+      setIsRecording(true);
+      setIsWaitingForRecording(true);
       
-      // إنشاء أمواج عشوائية للأندرويد
-      const waveformData = Array(BAR_COUNT).fill(0).map(() => {
-        return Math.max(8, Math.min(36, 8 + Math.random() * 20));
+      const stream = await navigator.mediaDevices.getUserMedia({ 
+        audio: {
+          echoCancellation: true,
+          noiseSuppression: true,
+          autoGainControl: true
+        } 
       });
       
-      setAudioLevels(waveformData);
+      const mediaRecorder = new MediaRecorder(stream, {
+        mimeType: MediaRecorder.isTypeSupported('audio/webm; codecs=opus') 
+          ? 'audio/webm; codecs=opus' 
+          : 'audio/webm'
+      });
       
-      if (silenceTimeoutRef.current) {
-        cancelAnimationFrame(silenceTimeoutRef.current);
-      }
-      silenceTimeoutRef.current = requestAnimationFrame(animateWaves);
-    };
-    
-    animateWaves();
+      const audioChunks = [];
+      
+      mediaRecorder.ondataavailable = (event) => {
+        if (event.data.size > 0) {
+          audioChunks.push(event.data);
+        }
+      };
+      
+      mediaRecorder.onstop = () => {
+        const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+        const audioUrl = URL.createObjectURL(audioBlob);
+        recordedAudioRef.current = audioUrl;
+        
+        setRecordingResult({
+          success: false,
+          message: "تم حفظ التسجيل الصوتي فقط. التعرف على الكلام غير متاح.",
+          userText: "",
+          originalText: currentLesson?.storyData?.content[readingStateRef.current.currentIndex - 1]?.text || "",
+          audioUrl: audioUrl,
+        });
+        setShowRecordingModal(true);
+        setIsRecording(false);
+        setIsWaitingForRecording(false);
+        
+        // تنظيف
+        stream.getTracks().forEach(track => track.stop());
+      };
+      
+      mediaRecorder.start();
+      
+      // وقف تلقائي بعد 5 ثوان
+      setTimeout(() => {
+        if (mediaRecorder.state === 'recording') {
+          mediaRecorder.stop();
+        }
+      }, 5000);
+      
+    } catch (error) {
+      setIsRecording(false);
+      setIsWaitingForRecording(false);
+      console.error("Audio-only recording failed:", error);
+    }
   };
 
-  // تسجيل صوتي متقدم للـ iOS والمتصفحات الأخرى
+  // إزالة تعقيدات الأندرويد من startAudioRecording (للاستخدام مع iOS فقط)
   const startAudioRecording = async () => {
-    if (isAndroid()) return; // استخدام الطريقة المبسطة للأندرويد
+    // هذه الدالة للـ iOS فقط الآن
+    if (isAndroid()) return; // لا تعمل على الأندرويد
     
     try {
       audioChunksRef.current = [];
@@ -1661,6 +1639,7 @@ export function ShowLesson() {
       };
 
       mediaRecorder.start();
+      // بدء silence detection للـ iOS فقط
       startSilenceDetection(stream);
     } catch (error) {
       console.error("Error starting audio recording:", error);
@@ -1668,7 +1647,7 @@ export function ShowLesson() {
     }
   };
 
-  // تحديث دالة silence detection
+  // تحديث دالة silence detection لتعمل مع iOS فقط
   const startSilenceDetection = useCallback((stream) => {
     if (isAndroid()) return; // لا تعمل على الأندرويد
     
@@ -1703,7 +1682,7 @@ export function ShowLesson() {
         
         const average = dataArray.reduce((sum, value) => sum + value, 0) / bufferLength;
 
-        // تحديث الموجات
+        // تحديث الموجات للـ iOS
         const waveformData = [];
         const step = Math.floor(bufferLength / BAR_COUNT);
         for (let i = 0; i < BAR_COUNT; i++) {
@@ -1747,6 +1726,8 @@ export function ShowLesson() {
 
   // تحديث دالة stopAudioRecording
   const stopAudioRecording = () => {
+    if (isAndroid()) return; // لا تعمل على الأندرويد
+    
     isRecordingActiveRef.current = false;
 
     if (silenceTimeoutRef.current) {
@@ -1800,9 +1781,14 @@ export function ShowLesson() {
     }
   };
 
-  /* ------------------------------ Enhanced Recording API for Mobile ----------------------------- */
+  /* ------------------------------ Enhanced Recording API for Android ----------------------------- */
   const startRecording = useCallback(async () => {
     if (!recognitionRef.current) {
+      // للأندرويد: ابدأ تسجيل صوتي فقط
+      if (isAndroid()) {
+        startAudioOnlyRecording();
+        return;
+      }
       alert("التسجيل الصوتي غير مدعوم في متصفحك. جرب Chrome أو Edge");
       return;
     }
@@ -1818,14 +1804,20 @@ export function ShowLesson() {
       
       setRecordingResult(null);
       
-      // تنظيف سريع
-      if (streamRef.current) {
-        streamRef.current.getTracks().forEach(track => track.stop());
-        streamRef.current = null;
+      // للأندرويد: استخدم Speech Recognition فقط (بدون MediaRecorder متزامن)
+      if (isAndroid()) {
+        // تنظيف سريع
+        if (streamRef.current) {
+          streamRef.current.getTracks().forEach(track => track.stop());
+          streamRef.current = null;
+        }
+        
+        // بدء Speech Recognition فقط
+        recognitionRef.current.start();
+      } else {
+        // للأجهزة الأخرى: الطريقة العادية
+        recognitionRef.current.start();
       }
-      
-      // بدء Speech Recognition
-      recognitionRef.current.start();
       
     } catch (error) {
       setIsRecording(false);
@@ -1834,9 +1826,9 @@ export function ShowLesson() {
       if (error.name === "NotAllowedError") {
         setMicrophonePermission("denied");
         alert("تم رفض إذن الميكروفون. الرجاء السماح بالوصول للميكروفون.");
-      } else {
-        console.error("Recording error:", error);
-        alert("حدث خطأ أثناء بدء التسجيل. حاول مرة أخرى.");
+      } else if (isAndroid()) {
+        // للأندرويد: fallback إلى تسجيل صوتي فقط
+        startAudioOnlyRecording();
       }
     }
   }, [microphonePermission, requestMicrophonePermission]);
@@ -1849,7 +1841,7 @@ export function ShowLesson() {
       URL.revokeObjectURL(recordedAudioRef.current);
       recordedAudioRef.current = null;
     }
-    // لا يتم استدعاء continueToNextSentence - التسجيل أصبح إجباري
+    continueToNextSentence();
   };
 
   const continueToNextSentence = () => {
@@ -1892,7 +1884,7 @@ export function ShowLesson() {
     setActiveWord(null);
   };
 
-  /* ------------------------------ Enhanced Audio Playback for Mobile ------------------------------ */
+  /* ------------------------------ Play sentence audio ------------------------------ */
   const playSentenceAudio = useCallback(
     (audioUrl) => {
       if (window.speechSynthesis) {
@@ -1905,25 +1897,15 @@ export function ShowLesson() {
           audioRef.current.pause();
         } catch {}
       }
-      
       const audio = new Audio(audioUrl);
       audioRef.current = audio;
-      
-      // إعدادات محسنة للموبايل
-      audio.preload = "auto";
-      if (isMobileDevice()) {
-        audio.crossOrigin = "anonymous";
-      }
-      
       try {
         audio.playbackRate = playbackRate;
       } catch {}
-      
       audio.onloadedmetadata = () => {
         const d = Number.isFinite(audio.duration) ? audio.duration : 0;
         setDuration(d);
       };
-      
       audio.ontimeupdate = () => {
         const now = Number.isFinite(audio.currentTime) ? audio.currentTime : 0;
         setCurrentTime(now);
@@ -1932,7 +1914,6 @@ export function ShowLesson() {
         );
         setLessonElapsed(base + now);
       };
-      
       audio.onended = () => {
         setCurrentTime(0);
         const base = sumDurationsBeforeIndex(
@@ -1940,28 +1921,11 @@ export function ShowLesson() {
         );
         setLessonElapsed(base);
       };
-      
-      audio.onerror = (e) => {
-        console.error("Audio playback error:", e);
+      audio.onerror = () => {
         setDuration(0);
         setCurrentTime(0);
       };
-      
-      // تشغيل محسن للموبايل
-      const playPromise = audio.play();
-      if (playPromise !== undefined) {
-        playPromise.catch((e) => {
-          console.error("Error playing audio:", e);
-          // محاولة تشغيل مرة أخرى للموبايل
-          if (isMobileDevice()) {
-            setTimeout(() => {
-              audio.play().catch(() => {
-                console.log("Second attempt to play audio failed");
-              });
-            }, 100);
-          }
-        });
-      }
+      audio.play().catch((e) => console.error("Error playing audio:", e));
     },
     [playbackRate, sumDurationsBeforeIndex]
   );
@@ -1987,31 +1951,10 @@ export function ShowLesson() {
     // Play audio file at specified rate
     const audio = new Audio(audioUrl);
     audioRef.current = audio;
-    
-    // إعدادات محسنة للموبايل
-    audio.preload = "auto";
-    if (isMobileDevice()) {
-      audio.crossOrigin = "anonymous";
-    }
-    
     try {
       audio.playbackRate = rate;
     } catch {}
-    
-    const playPromise = audio.play();
-    if (playPromise !== undefined) {
-      playPromise.catch((err) => {
-        console.error("Error playing audio:", err);
-        // محاولة تشغيل مرة أخرى للموبايل
-        if (isMobileDevice()) {
-          setTimeout(() => {
-            audio.play().catch(() => {
-              console.log("Second attempt to play audio failed");
-            });
-          }, 100);
-        }
-      });
-    }
+    audio.play().catch((err) => console.error("Error playing audio:", err));
   }, []);
 
   const playRecordedAudio = useCallback((audioUrl) => {
@@ -2032,64 +1975,12 @@ export function ShowLesson() {
       } catch {}
     }
 
-    // إنشاء عنصر audio جديد لتشغيل التسجيل
-    const audio = new Audio();
-    
-    // إعدادات خاصة للموبايل لتشغيل التسجيلات
-    if (isMobileDevice()) {
-      audio.controls = false;
-      audio.preload = "auto";
-      
-      // للأندرويد: إضافة العنصر للـ DOM مؤقتاً
-      if (isAndroid()) {
-        audio.style.display = 'none';
-        document.body.appendChild(audio);
-      }
-    }
-    
-    // تعيين المصدر
-    audio.src = audioUrl;
-    
-    // إعداد الأحداث
-    audio.onended = () => {
-      console.log("Recorded audio playback ended");
-      // إزالة العنصر من الـ DOM للأندرويد
-      if (isAndroid() && audio.parentNode) {
-        document.body.removeChild(audio);
-      }
-    };
-    
-    audio.onerror = (e) => {
-      console.error("Error playing recorded audio:", e);
-      // إزالة العنصر من الـ DOM للأندرويد
-      if (isAndroid() && audio.parentNode) {
-        document.body.removeChild(audio);
-      }
-    };
-    
-    // محاولة التشغيل
-    const playPromise = audio.play();
-    if (playPromise !== undefined) {
-      playPromise.catch((err) => {
-        console.error("Error playing recorded audio:", err);
-        
-        // للموبايل: محاولة بديلة باستخدام createObjectURL جديد
-        if (isMobileDevice()) {
-          // إنشاء blob جديد من المصدر الحالي
-          fetch(audioUrl)
-            .then(response => response.blob())
-            .then(blob => {
-              const newUrl = URL.createObjectURL(blob);
-              audio.src = newUrl;
-              return audio.play();
-            })
-            .catch(e => {
-              console.error("Fallback audio play failed:", e);
-              alert("لا يمكن تشغيل التسجيل الصوتي على هذا الجهاز");
-            });
-        }
-      });
-    }
+    // Play recorded audio
+    const audio = new Audio(audioUrl);
+    audioRef.current = audio;
+    audio
+      .play()
+      .catch((err) => console.error("Error playing recorded audio:", err));
   }, []);
 
   const playWordAudio = useCallback(
