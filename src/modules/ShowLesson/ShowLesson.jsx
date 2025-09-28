@@ -913,9 +913,8 @@ const ClickableWord = ({
   return (
     <>
       <span
-        className={`text-black font-semibold hover:bg-blue-100 cursor-pointer rounded transition-all duration-200 ${
-          isAndroid() ? 'text-xl p-2 min-h-[44px] inline-flex items-center' : 'text-xl'
-        } ${
+        className={`text-black font-semibold hover:bg-blue-100 cursor-pointer rounded transition-all duration-200 text-xl
+      ${
           isActive
             ? "border border-black p-1 bg-blue-50 shadow-sm"
             : "border border-transparent"
