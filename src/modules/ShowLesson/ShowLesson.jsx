@@ -727,7 +727,7 @@ const RecordingModal = ({
                   </div>
 
                   {/* أزرار المتابعة أو الإعادة حسب النتيجة */}
-                  <div className="flex gap-2">
+                  <div className="flex flex-col gap-2">
                     {recordingResult.evaluation.score < 50 ? (
                       <button
                         onClick={onRetry}
