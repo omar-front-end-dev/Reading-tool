@@ -120,6 +120,7 @@ const normalizeText = (text) => {
   return normalized;
 };
 
+// دالة حساب المسافة بين الكلمات (Levenshtein distance)
 const levenshteinDistance = (str1, str2) => {
   const matrix = [];
   const len1 = str1.length;
