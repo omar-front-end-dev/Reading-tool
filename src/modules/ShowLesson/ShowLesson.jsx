@@ -120,7 +120,6 @@ const normalizeText = (text) => {
   return normalized;
 };
 
-// دالة حساب المسافة بين الكلمات (Levenshtein distance)
 const levenshteinDistance = (str1, str2) => {
   const matrix = [];
   const len1 = str1.length;
@@ -1178,6 +1177,8 @@ export function ShowLesson() {
         .android-optimized {
           -webkit-transform: translateZ(0);
           transform: translateZ(0);
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
         }
         .android-optimized button {
           -webkit-tap-highlight-color: transparent;
@@ -1191,6 +1192,32 @@ export function ShowLesson() {
       };
     }
   }, []);
+
+  // إضافة waveform animation للأندرويد
+  useEffect(() => {
+    if (!isRecording) {
+      setAudioLevels(Array(BAR_COUNT).fill(8));
+      return;
+    }
+
+    let animationId;
+    const animate = () => {
+      if (!isRecording) return;
+      
+      const newLevels = Array(BAR_COUNT).fill(0).map(() => {
+        return Math.max(8, Math.min(36, 8 + Math.random() * 28));
+      });
+      setAudioLevels(newLevels);
+      
+      animationId = requestAnimationFrame(animate);
+    };
+    
+    animate();
+    
+    return () => {
+      if (animationId) cancelAnimationFrame(animationId);
+    };
+  }, [isRecording, BAR_COUNT]);
 
   // --- preload lesson audio metadata
   useEffect(() => {
