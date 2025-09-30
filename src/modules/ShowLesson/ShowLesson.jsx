@@ -29,7 +29,9 @@ const isAndroid = () => {
 };
 
 const isMobileDevice = () => {
-  return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  );
 };
 
 /* ========================== TTS Support & Voice Pref ========================== */
@@ -402,7 +404,7 @@ const RecordingModal = ({
     });
 
     return (
-      <div className="space-y-2">
+      <div>
         <div
           className="arabic_font text-lg leading-relaxed"
           dir="ltr"
@@ -463,7 +465,7 @@ const RecordingModal = ({
   const [elapsed, setElapsed] = useState(0);
   const startTsRef = useRef(null);
   const rafRef = useRef(null);
-  
+
   useEffect(() => {
     if (isRecording) {
       startTsRef.current = performance.now();
@@ -480,7 +482,7 @@ const RecordingModal = ({
       startTsRef.current = null;
     }
   }, [isRecording]);
-  
+
   const fmt = (s) =>
     `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s % 60).padStart(
       2,
@@ -488,8 +490,8 @@ const RecordingModal = ({
     )}`;
 
   // Android optimizations
-  const androidClass = isAndroid() ? 'android-modal' : '';
-  const androidOptimizedClass = isAndroid() ? 'android-optimized' : '';
+  const androidClass = isAndroid() ? "android-modal" : "";
+  const androidOptimizedClass = isAndroid() ? "android-optimized" : "";
 
   // تنظيف صوت التسجيل عند إغلاق المودال
   const handleDeleteRecording = () => {
@@ -503,7 +505,7 @@ const RecordingModal = ({
     <div className={`fixed inset-0 z-[60] ${androidClass}`}>
       <div className="absolute inset-0 bg-black/50" />
       <div
-        className={`fixed left-0 right-0 bottom-0 mx-auto w-full max-w-xl rounded-t-3xl bg-white shadow-2xl border-t border-gray-100 ${androidOptimizedClass}`}
+        className={`fixed max-h-[100vh] overflow-y-auto left-0 right-0 bottom-0 mx-auto w-full max-w-xl rounded-t-3xl bg-white shadow-2xl border-t border-gray-100 ${androidOptimizedClass}`}
         role="dialog"
         aria-modal="true"
       >
@@ -557,7 +559,7 @@ const RecordingModal = ({
                 }
                 disabled={!sentenceAudioUrl}
                 className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-gray-800 text-sm font-medium ${
-                  isAndroid() ? 'min-h-[44px]' : ''
+                  isAndroid() ? "min-h-[44px]" : ""
                 } ${
                   sentenceAudioUrl
                     ? "bg-gray-100 hover:bg-gray-200"
@@ -581,7 +583,10 @@ const RecordingModal = ({
                 aria-label="Record"
               >
                 {isRecording ? (
-                  <Loader2 className="animate-spin" size={isAndroid() ? 30 : 26} />
+                  <Loader2
+                    className="animate-spin"
+                    size={isAndroid() ? 30 : 26}
+                  />
                 ) : (
                   <IoIosMic size={isAndroid() ? 34 : 30} />
                 )}
@@ -593,7 +598,7 @@ const RecordingModal = ({
                 }
                 disabled={!sentenceAudioUrl}
                 className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-gray-800 text-sm font-medium ${
-                  isAndroid() ? 'min-h-[44px]' : ''
+                  isAndroid() ? "min-h-[44px]" : ""
                 } ${
                   sentenceAudioUrl
                     ? "bg-gray-100 hover:bg-gray-200"
@@ -621,8 +626,10 @@ const RecordingModal = ({
                   </button>
 
                   <div className="flex-1 flex flex-col items-center">
-                    <div className={`flex items-center justify-center gap-[3px] w-full max-w-[300px] h-10
-                    `}>
+                    <div
+                      className={`flex items-center justify-center gap-[3px] w-full max-w-[300px] h-10
+                    `}
+                    >
                       {audioLevels.map((h, idx) => (
                         <span
                           key={idx}
@@ -705,7 +712,7 @@ const RecordingModal = ({
                         }
                         disabled={!recordingResult.audioUrl}
                         className={`inline-flex arabic_font items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-colors ${
-                          isAndroid() ? 'min-h-[44px]' : ''
+                          isAndroid() ? "min-h-[44px]" : ""
                         } ${
                           recordingResult.audioUrl
                             ? "bg-blue-100 hover:bg-blue-200 text-blue-700 cursor-pointer"
@@ -732,18 +739,20 @@ const RecordingModal = ({
                       <button
                         onClick={onRetry}
                         className={`w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-orange-500 hover:bg-orange-600 text-white font-medium transition-colors ${
-                          isAndroid() ? 'min-h-[48px]' : ''
+                          isAndroid() ? "min-h-[48px]" : ""
                         }`}
                       >
                         <RotateCcw size={18} />
-                        <span className="arabic_font">إعادة المحاولة (مطلوب)</span>
+                        <span className="arabic_font">
+                          إعادة المحاولة (مطلوب)
+                        </span>
                       </button>
                     ) : (
                       <>
                         <button
                           onClick={onRetry}
                           className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-orange-500 hover:bg-orange-600 text-white font-medium transition-colors ${
-                            isAndroid() ? 'min-h-[48px]' : ''
+                            isAndroid() ? "min-h-[48px]" : ""
                           }`}
                         >
                           <RotateCcw size={18} />
@@ -752,7 +761,7 @@ const RecordingModal = ({
                         <button
                           onClick={onContinue}
                           className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-green-500 hover:bg-green-600 text-white font-medium transition-colors ${
-                            isAndroid() ? 'min-h-[48px]' : ''
+                            isAndroid() ? "min-h-[48px]" : ""
                           }`}
                         >
                           <span className="arabic_font">متابعة</span>
@@ -809,7 +818,7 @@ const RecordingModal = ({
                             }
                             disabled={!recordingResult.audioUrl}
                             className={`inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-colors ${
-                              isAndroid() ? 'min-h-[44px]' : ''
+                              isAndroid() ? "min-h-[44px]" : ""
                             } ${
                               recordingResult.audioUrl
                                 ? "bg-gray-100 hover:bg-gray-200 text-gray-700 cursor-pointer"
@@ -836,7 +845,7 @@ const RecordingModal = ({
                   <button
                     onClick={onRetry}
                     className={`w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-orange-500 hover:bg-orange-600 text-white font-medium transition-colors ${
-                      isAndroid() ? 'min-h-[48px]' : ''
+                      isAndroid() ? "min-h-[48px]" : ""
                     }`}
                   >
                     <RotateCcw size={18} />
@@ -911,10 +920,10 @@ const ClickableWord = ({
       <span
         className={`text-black font-semibold hover:bg-blue-100 cursor-pointer rounded transition-all duration-200 text-xl
       ${
-          isActive
-            ? "border border-black p-1 bg-blue-50 shadow-sm"
-            : "border border-transparent"
-        }`}
+        isActive
+          ? "border border-black p-1 bg-blue-50 shadow-sm"
+          : "border border-transparent"
+      }`}
         onClick={handleClick}
       >
         {cleanWord}
@@ -956,10 +965,10 @@ const Sentence = React.forwardRef(
           <p
             className={`leading-relaxed w-fit text-gray-800 transition-all duration-500 rounded-lg text-lg p-2
              ${
-              isCurrentlyReading
-                ? "underline underline-offset-8 decoration-4 decoration-red-500 shadow-xl transform scale-[1.02] bg-yellow-50"
-                : "hover:bg-gray-50"
-            }`}
+               isCurrentlyReading
+                 ? "underline underline-offset-8 decoration-4 decoration-red-500 shadow-xl transform scale-[1.02] bg-yellow-50"
+                 : "hover:bg-gray-50"
+             }`}
           >
             {words.map((word, index) => (
               <ClickableWord
@@ -989,14 +998,14 @@ const Sentence = React.forwardRef(
           <div
             className={`absolute -top-2 -right-2 rounded-full flex items-center justify-center text-xs font-bold w-8 h-8
              ${
-              pronunciationScore >= 85
-                ? "bg-green-100 text-green-800"
-                : pronunciationScore >= 70
-                ? "bg-blue-100 text-blue-800"
-                : pronunciationScore >= 50
-                ? "bg-yellow-100 text-yellow-800"
-                : "bg-red-100 text-red-800"
-            }`}
+               pronunciationScore >= 85
+                 ? "bg-green-100 text-green-800"
+                 : pronunciationScore >= 70
+                 ? "bg-blue-100 text-blue-800"
+                 : pronunciationScore >= 50
+                 ? "bg-yellow-100 text-yellow-800"
+                 : "bg-red-100 text-red-800"
+             }`}
           >
             {pronunciationScore}
           </div>
@@ -1041,7 +1050,7 @@ const Sidebar = ({ isOpen, selectedWordData, onClose, onPlayWordAudio }) => {
           <button
             onClick={onClose}
             className={`rounded-lg hover:bg-gray-200 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-300 hover:rotate-90 transform origin-center ${
-              isAndroid() ? 'p-3 min-h-[48px] min-w-[48px]' : 'p-1.5'
+              isAndroid() ? "p-3 min-h-[48px] min-w-[48px]" : "p-1.5"
             }`}
             aria-label="Close sidebar"
           >
@@ -1059,7 +1068,7 @@ const Sidebar = ({ isOpen, selectedWordData, onClose, onPlayWordAudio }) => {
                   <button
                     onClick={() => onPlayWordAudio(selectedWordData.word)}
                     className={`bg-white hover:bg-gray-100 rounded-full shadow-sm transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-200 active:scale-95 ml-2 ${
-                      isAndroid() ? 'p-3 min-h-[48px] min-w-[48px]' : 'p-2'
+                      isAndroid() ? "p-3 min-h-[48px] min-w-[48px]" : "p-2"
                     }`}
                     aria-label="Play pronunciation"
                   >
@@ -1170,7 +1179,7 @@ export function ShowLesson() {
   // Android-specific styles injection
   useEffect(() => {
     if (isAndroid()) {
-      const style = document.createElement('style');
+      const style = document.createElement("style");
       style.textContent = `
         .android-modal {
           -webkit-tap-highlight-color: transparent;
@@ -1185,7 +1194,7 @@ export function ShowLesson() {
         }
       `;
       document.head.appendChild(style);
-      
+
       return () => {
         document.head.removeChild(style);
       };
@@ -1425,13 +1434,13 @@ export function ShowLesson() {
       const SpeechRecognition =
         window.SpeechRecognition || window.webkitSpeechRecognition;
       recognitionRef.current = new SpeechRecognition();
-      
+
       // إعدادات أساسية
       recognitionRef.current.continuous = false;
       recognitionRef.current.interimResults = false;
       recognitionRef.current.lang = "en-US";
       recognitionRef.current.maxAlternatives = 1;
-      
+
       recognitionRef.current.onstart = () => {
         setIsRecording(true);
         // للأندرويد: لا تبدأ MediaRecorder مع Speech Recognition
@@ -1439,11 +1448,11 @@ export function ShowLesson() {
           startAudioRecording();
         }
       };
-      
+
       recognitionRef.current.onresult = (event) => {
         const transcript = event.results[0][0].transcript.toLowerCase().trim();
         const confidence = event.results[0][0].confidence;
-        
+
         // بدء تسجيل صوتي منفصل للأندرويد بعد الحصول على النتيجة
         if (isAndroid()) {
           startQuickAudioRecording(() => {
@@ -1455,21 +1464,24 @@ export function ShowLesson() {
           }, 200);
         }
       };
-      
+
       recognitionRef.current.onerror = (event) => {
         setIsRecording(false);
         setIsWaitingForRecording(false);
-        
+
         if (!isAndroid()) {
           stopAudioRecording();
         }
-        
+
         if (event.error === "no-speech") {
           setRecordingResult({
             success: false,
             message: "لم يتم سماع أي صوت. حاول مرة أخرى.",
             userText: "",
-            originalText: currentLesson?.storyData?.content[readingStateRef.current.currentIndex - 1]?.text || "",
+            originalText:
+              currentLesson?.storyData?.content[
+                readingStateRef.current.currentIndex - 1
+              ]?.text || "",
             audioUrl: null,
           });
           setShowRecordingModal(true);
@@ -1478,7 +1490,7 @@ export function ShowLesson() {
           startAudioOnlyRecording();
         }
       };
-      
+
       recognitionRef.current.onend = () => {
         setIsRecording(false);
         if (!isAndroid()) {
@@ -1493,37 +1505,37 @@ export function ShowLesson() {
   // تسجيل صوتي سريع للأندرويد بعد Speech Recognition
   const startQuickAudioRecording = async (callback) => {
     try {
-      const stream = await navigator.mediaDevices.getUserMedia({ 
+      const stream = await navigator.mediaDevices.getUserMedia({
         audio: {
           echoCancellation: true,
           noiseSuppression: true,
-          autoGainControl: true
-        } 
+          autoGainControl: true,
+        },
       });
-      
+
       const mediaRecorder = new MediaRecorder(stream, {
-        mimeType: MediaRecorder.isTypeSupported('audio/webm; codecs=opus') 
-          ? 'audio/webm; codecs=opus' 
-          : MediaRecorder.isTypeSupported('audio/webm')
-          ? 'audio/webm'
-          : MediaRecorder.isTypeSupported('audio/mp4')
-          ? 'audio/mp4'
-          : ''
+        mimeType: MediaRecorder.isTypeSupported("audio/webm; codecs=opus")
+          ? "audio/webm; codecs=opus"
+          : MediaRecorder.isTypeSupported("audio/webm")
+          ? "audio/webm"
+          : MediaRecorder.isTypeSupported("audio/mp4")
+          ? "audio/mp4"
+          : "",
       });
-      
+
       const audioChunks = [];
-      
+
       mediaRecorder.ondataavailable = (event) => {
         if (event.data.size > 0) {
           audioChunks.push(event.data);
         }
       };
-      
+
       mediaRecorder.onstop = () => {
-        const audioBlob = new Blob(audioChunks, { 
-          type: mediaRecorder.mimeType || 'audio/webm' 
+        const audioBlob = new Blob(audioChunks, {
+          type: mediaRecorder.mimeType || "audio/webm",
         });
-        
+
         // إنشاء URL للصوت المسجل مع معالجة خاصة للموبايل
         let audioUrl;
         try {
@@ -1533,28 +1545,27 @@ export function ShowLesson() {
           console.error("Error creating audio URL:", error);
           recordedAudioRef.current = null;
         }
-        
+
         // تنظيف
-        stream.getTracks().forEach(track => track.stop());
-        
+        stream.getTracks().forEach((track) => track.stop());
+
         // استدعاء callback
         if (callback) callback();
       };
-      
+
       mediaRecorder.onerror = (error) => {
         console.error("MediaRecorder error:", error);
-        stream.getTracks().forEach(track => track.stop());
+        stream.getTracks().forEach((track) => track.stop());
         if (callback) callback();
       };
-      
+
       // تسجيل قصير جداً (ثانية واحدة) لحفظ شيء ما
       mediaRecorder.start();
       setTimeout(() => {
-        if (mediaRecorder.state === 'recording') {
+        if (mediaRecorder.state === "recording") {
           mediaRecorder.stop();
         }
       }, 1000);
-      
     } catch (error) {
       console.error("Quick audio recording failed:", error);
       if (callback) callback();
@@ -1566,38 +1577,38 @@ export function ShowLesson() {
     try {
       setIsRecording(true);
       setIsWaitingForRecording(true);
-      
-      const stream = await navigator.mediaDevices.getUserMedia({ 
+
+      const stream = await navigator.mediaDevices.getUserMedia({
         audio: {
           echoCancellation: true,
           noiseSuppression: true,
-          autoGainControl: true
-        } 
+          autoGainControl: true,
+        },
       });
-      
+
       const mediaRecorder = new MediaRecorder(stream, {
-        mimeType: MediaRecorder.isTypeSupported('audio/webm; codecs=opus') 
-          ? 'audio/webm; codecs=opus' 
-          : MediaRecorder.isTypeSupported('audio/webm')
-          ? 'audio/webm'
-          : MediaRecorder.isTypeSupported('audio/mp4')
-          ? 'audio/mp4'
-          : ''
+        mimeType: MediaRecorder.isTypeSupported("audio/webm; codecs=opus")
+          ? "audio/webm; codecs=opus"
+          : MediaRecorder.isTypeSupported("audio/webm")
+          ? "audio/webm"
+          : MediaRecorder.isTypeSupported("audio/mp4")
+          ? "audio/mp4"
+          : "",
       });
-      
+
       const audioChunks = [];
-      
+
       mediaRecorder.ondataavailable = (event) => {
         if (event.data.size > 0) {
           audioChunks.push(event.data);
         }
       };
-      
+
       mediaRecorder.onstop = () => {
-        const audioBlob = new Blob(audioChunks, { 
-          type: mediaRecorder.mimeType || 'audio/webm' 
+        const audioBlob = new Blob(audioChunks, {
+          type: mediaRecorder.mimeType || "audio/webm",
         });
-        
+
         // إنشاء URL للصوت المسجل مع معالجة خاصة للموبايل
         let audioUrl;
         try {
@@ -1607,38 +1618,40 @@ export function ShowLesson() {
           console.error("Error creating audio URL:", error);
           audioUrl = null;
         }
-        
+
         setRecordingResult({
           success: false,
           message: "تم حفظ التسجيل الصوتي فقط. التعرف على الكلام غير متاح.",
           userText: "",
-          originalText: currentLesson?.storyData?.content[readingStateRef.current.currentIndex - 1]?.text || "",
+          originalText:
+            currentLesson?.storyData?.content[
+              readingStateRef.current.currentIndex - 1
+            ]?.text || "",
           audioUrl: audioUrl,
         });
         setShowRecordingModal(true);
         setIsRecording(false);
         setIsWaitingForRecording(false);
-        
+
         // تنظيف
-        stream.getTracks().forEach(track => track.stop());
+        stream.getTracks().forEach((track) => track.stop());
       };
-      
+
       mediaRecorder.onerror = (error) => {
         console.error("MediaRecorder error:", error);
         setIsRecording(false);
         setIsWaitingForRecording(false);
-        stream.getTracks().forEach(track => track.stop());
+        stream.getTracks().forEach((track) => track.stop());
       };
-      
+
       mediaRecorder.start();
-      
+
       // وقف تلقائي بعد 5 ثوان
       setTimeout(() => {
-        if (mediaRecorder.state === 'recording') {
+        if (mediaRecorder.state === "recording") {
           mediaRecorder.stop();
         }
       }, 5000);
-      
     } catch (error) {
       setIsRecording(false);
       setIsWaitingForRecording(false);
@@ -1650,7 +1663,7 @@ export function ShowLesson() {
   const startAudioRecording = async () => {
     // هذه الدالة للـ iOS فقط الآن
     if (isAndroid()) return; // لا تعمل على الأندرويد
-    
+
     try {
       audioChunksRef.current = [];
       if (recordedAudioRef.current) {
@@ -1672,7 +1685,9 @@ export function ShowLesson() {
       };
 
       mediaRecorder.onstop = () => {
-        const audioBlob = new Blob(audioChunksRef.current, { type: "audio/webm" });
+        const audioBlob = new Blob(audioChunksRef.current, {
+          type: "audio/webm",
+        });
         const audioUrl = URL.createObjectURL(audioBlob);
         recordedAudioRef.current = audioUrl;
 
@@ -1698,86 +1713,95 @@ export function ShowLesson() {
   };
 
   // تحديث دالة silence detection لتعمل مع iOS فقط
-  const startSilenceDetection = useCallback((stream) => {
-    if (isAndroid()) return; // لا تعمل على الأندرويد
-    
-    try {
-      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-      audioContextRef.current = audioContext;
+  const startSilenceDetection = useCallback(
+    (stream) => {
+      if (isAndroid()) return; // لا تعمل على الأندرويد
 
-      const analyser = audioContext.createAnalyser();
-      analyserRef.current = analyser;
-      analyser.fftSize = 128;
-      analyser.smoothingTimeConstant = 0;
+      try {
+        const audioContext = new (window.AudioContext ||
+          window.webkitAudioContext)();
+        audioContextRef.current = audioContext;
 
-      const microphone = audioContext.createMediaStreamSource(stream);
-      microphone.connect(analyser);
+        const analyser = audioContext.createAnalyser();
+        analyserRef.current = analyser;
+        analyser.fftSize = 128;
+        analyser.smoothingTimeConstant = 0;
 
-      const bufferLength = analyser.frequencyBinCount;
-      const dataArray = new Uint8Array(bufferLength);
+        const microphone = audioContext.createMediaStreamSource(stream);
+        microphone.connect(analyser);
 
-      let silenceStart = Date.now();
-      let hasSpoken = false;
-      const SILENCE_THRESHOLD = 20;
-      const SILENCE_DURATION = 2000;
-      const MIN_SPEAKING_TIME = 500;
+        const bufferLength = analyser.frequencyBinCount;
+        const dataArray = new Uint8Array(bufferLength);
 
-      const detectSilence = () => {
-        if (!isRecordingActiveRef.current) {
-          setAudioLevels(Array(BAR_COUNT).fill(8));
-          return;
-        }
+        let silenceStart = Date.now();
+        let hasSpoken = false;
+        const SILENCE_THRESHOLD = 20;
+        const SILENCE_DURATION = 2000;
+        const MIN_SPEAKING_TIME = 500;
 
-        analyser.getByteFrequencyData(dataArray);
-        
-        const average = dataArray.reduce((sum, value) => sum + value, 0) / bufferLength;
-
-        // تحديث الموجات للـ iOS
-        const waveformData = [];
-        const step = Math.floor(bufferLength / BAR_COUNT);
-        for (let i = 0; i < BAR_COUNT; i++) {
-          const index = i * step;
-          const value = dataArray[index] || 0;
-          const height = Math.max(8, Math.min(36, 8 + (value / 180) * 28));
-          waveformData.push(height);
-        }
-        setAudioLevels(waveformData);
-
-        if (average > SILENCE_THRESHOLD) {
-          silenceStart = Date.now();
-          hasSpoken = true;
-        } else if (hasSpoken) {
-          const silenceDuration = Date.now() - silenceStart;
-          const speakingDuration = Date.now() - silenceStart + SILENCE_DURATION;
-
-          if (silenceDuration > SILENCE_DURATION && speakingDuration > MIN_SPEAKING_TIME) {
-            if (recognitionRef.current && isRecordingActiveRef.current) {
-              try {
-                recognitionRef.current.stop();
-              } catch (e) {
-                console.log("Recognition already stopped");
-              }
-            }
+        const detectSilence = () => {
+          if (!isRecordingActiveRef.current) {
+            setAudioLevels(Array(BAR_COUNT).fill(8));
             return;
           }
-        }
 
-        if (silenceTimeoutRef.current) {
-          cancelAnimationFrame(silenceTimeoutRef.current);
-        }
-        silenceTimeoutRef.current = requestAnimationFrame(detectSilence);
-      };
+          analyser.getByteFrequencyData(dataArray);
 
-      detectSilence();
-    } catch (error) {
-      console.error("Error setting up silence detection:", error);
-    }
-  }, [BAR_COUNT]);
+          const average =
+            dataArray.reduce((sum, value) => sum + value, 0) / bufferLength;
+
+          // تحديث الموجات للـ iOS
+          const waveformData = [];
+          const step = Math.floor(bufferLength / BAR_COUNT);
+          for (let i = 0; i < BAR_COUNT; i++) {
+            const index = i * step;
+            const value = dataArray[index] || 0;
+            const height = Math.max(8, Math.min(36, 8 + (value / 180) * 28));
+            waveformData.push(height);
+          }
+          setAudioLevels(waveformData);
+
+          if (average > SILENCE_THRESHOLD) {
+            silenceStart = Date.now();
+            hasSpoken = true;
+          } else if (hasSpoken) {
+            const silenceDuration = Date.now() - silenceStart;
+            const speakingDuration =
+              Date.now() - silenceStart + SILENCE_DURATION;
+
+            if (
+              silenceDuration > SILENCE_DURATION &&
+              speakingDuration > MIN_SPEAKING_TIME
+            ) {
+              if (recognitionRef.current && isRecordingActiveRef.current) {
+                try {
+                  recognitionRef.current.stop();
+                } catch (e) {
+                  console.log("Recognition already stopped");
+                }
+              }
+              return;
+            }
+          }
+
+          if (silenceTimeoutRef.current) {
+            cancelAnimationFrame(silenceTimeoutRef.current);
+          }
+          silenceTimeoutRef.current = requestAnimationFrame(detectSilence);
+        };
+
+        detectSilence();
+      } catch (error) {
+        console.error("Error setting up silence detection:", error);
+      }
+    },
+    [BAR_COUNT]
+  );
 
   // تحديث دالة stopAudioRecording
   const stopAudioRecording = () => {
     if (isAndroid()) return; // لا تعمل على الأندرويد
-    
+
     isRecordingActiveRef.current = false;
 
     if (silenceTimeoutRef.current) {
@@ -1787,7 +1811,10 @@ export function ShowLesson() {
 
     setAudioLevels(Array(BAR_COUNT).fill(8));
 
-    if (mediaRecorderRef.current && mediaRecorderRef.current.state !== "inactive") {
+    if (
+      mediaRecorderRef.current &&
+      mediaRecorderRef.current.state !== "inactive"
+    ) {
       mediaRecorderRef.current.stop();
     }
   };
@@ -1842,7 +1869,7 @@ export function ShowLesson() {
       alert("التسجيل الصوتي غير مدعوم في متصفحك. جرب Chrome أو Edge");
       return;
     }
-    
+
     try {
       if (microphonePermission === "denied") {
         const granted = await requestMicrophonePermission();
@@ -1851,28 +1878,27 @@ export function ShowLesson() {
           return;
         }
       }
-      
+
       setRecordingResult(null);
-      
+
       // للأندرويد: استخدم Speech Recognition فقط (بدون MediaRecorder متزامن)
       if (isAndroid()) {
         // تنظيف سريع
         if (streamRef.current) {
-          streamRef.current.getTracks().forEach(track => track.stop());
+          streamRef.current.getTracks().forEach((track) => track.stop());
           streamRef.current = null;
         }
-        
+
         // بدء Speech Recognition فقط
         recognitionRef.current.start();
       } else {
         // للأجهزة الأخرى: الطريقة العادية
         recognitionRef.current.start();
       }
-      
     } catch (error) {
       setIsRecording(false);
       setIsWaitingForRecording(false);
-      
+
       if (error.name === "NotAllowedError") {
         setMicrophonePermission("denied");
         alert("تم رفض إذن الميكروفون. الرجاء السماح بالوصول للميكروفون.");
@@ -1964,7 +1990,7 @@ export function ShowLesson() {
         setDuration(0);
         setCurrentTime(0);
       };
-      
+
       // معالجة خاصة للموبايل
       if (isMobileDevice()) {
         // إضافة user interaction للموبايل
@@ -1972,17 +1998,17 @@ export function ShowLesson() {
           audio.play().catch((e) => {
             console.error("Error playing audio:", e);
             // محاولة تشغيل بدون playbackRate للموبايل
-            if (e.name === 'NotSupportedError') {
+            if (e.name === "NotSupportedError") {
               audio.playbackRate = 1;
               audio.play().catch(console.error);
             }
           });
         };
-        
+
         if (audio.readyState >= 2) {
           playAudio();
         } else {
-          audio.addEventListener('canplay', playAudio, { once: true });
+          audio.addEventListener("canplay", playAudio, { once: true });
         }
       } else {
         audio.play().catch((e) => console.error("Error playing audio:", e));
@@ -2013,11 +2039,11 @@ export function ShowLesson() {
     // Play audio file at specified rate with mobile optimization
     const audio = new Audio(audioUrl);
     audioRef.current = audio;
-    
+
     // معالجة خاصة للموبايل
     if (isMobileDevice()) {
       // للموبايل: تطبيق المعدل بعد التحميل
-      audio.addEventListener('loadeddata', () => {
+      audio.addEventListener("loadeddata", () => {
         try {
           if (rate !== 1 && audio.playbackRate !== undefined) {
             audio.playbackRate = rate;
@@ -2026,22 +2052,22 @@ export function ShowLesson() {
           console.warn("Playback rate not supported on this device");
         }
       });
-      
+
       const playMobileAudio = () => {
         audio.play().catch((err) => {
           console.error("Error playing audio on mobile:", err);
           // محاولة بدون معدل السرعة
-          if (err.name === 'NotSupportedError') {
+          if (err.name === "NotSupportedError") {
             audio.playbackRate = 1;
             audio.play().catch(console.error);
           }
         });
       };
-      
+
       if (audio.readyState >= 2) {
         playMobileAudio();
       } else {
-        audio.addEventListener('canplay', playMobileAudio, { once: true });
+        audio.addEventListener("canplay", playMobileAudio, { once: true });
       }
     } else {
       try {
@@ -2073,50 +2099,53 @@ export function ShowLesson() {
     // Create audio with explicit user interaction
     const audio = new Audio();
     audioRef.current = audio;
-    
+
     // معالجة خاصة للأندرويد
     if (isAndroid()) {
       // للأندرويد: استخدام طريقة مباشرة أكثر
-      audio.preload = 'auto';
-      
+      audio.preload = "auto";
+
       // معالجة الأخطاء
-      audio.addEventListener('error', (e) => {
+      audio.addEventListener("error", (e) => {
         console.error("Android audio error:", e);
         const errorCodes = {
-          1: 'MEDIA_ERR_ABORTED',
-          2: 'MEDIA_ERR_NETWORK',
-          3: 'MEDIA_ERR_DECODE',
-          4: 'MEDIA_ERR_SRC_NOT_SUPPORTED'
+          1: "MEDIA_ERR_ABORTED",
+          2: "MEDIA_ERR_NETWORK",
+          3: "MEDIA_ERR_DECODE",
+          4: "MEDIA_ERR_SRC_NOT_SUPPORTED",
         };
-        console.error("Error type:", errorCodes[audio.error?.code] || 'Unknown');
-        
+        console.error(
+          "Error type:",
+          errorCodes[audio.error?.code] || "Unknown"
+        );
+
         // محاولة fallback: تحويل blob إلى data URL
         fetch(audioUrl)
-          .then(res => res.blob())
-          .then(blob => {
+          .then((res) => res.blob())
+          .then((blob) => {
             const reader = new FileReader();
             reader.onloadend = () => {
               const dataUrl = reader.result;
               const fallbackAudio = new Audio(dataUrl);
-              fallbackAudio.play().catch(err => {
+              fallbackAudio.play().catch((err) => {
                 console.error("Data URL fallback failed:", err);
                 alert("عذراً، حدث خطأ في تشغيل التسجيل");
               });
             };
             reader.readAsDataURL(blob);
           })
-          .catch(err => console.error("Blob conversion failed:", err));
+          .catch((err) => console.error("Blob conversion failed:", err));
       });
-      
+
       // تعيين المصدر وتحميله
       audio.src = audioUrl;
       audio.load();
-      
+
       // التشغيل بعد التحميل مباشرة
       const playWhenReady = () => {
         // محاولة التشغيل الفوري (يعمل لأنها ضمن user gesture)
         const playPromise = audio.play();
-        
+
         if (playPromise !== undefined) {
           playPromise
             .then(() => {
@@ -2126,37 +2155,37 @@ export function ShowLesson() {
               console.error("Android play failed:", err);
               // إعادة المحاولة بعد وقت قصير
               setTimeout(() => {
-                audio.play().catch(e => console.error("Retry failed:", e));
+                audio.play().catch((e) => console.error("Retry failed:", e));
               }, 100);
             });
         }
       };
-      
+
       if (audio.readyState >= 3) {
         playWhenReady();
       } else {
-        audio.addEventListener('canplay', playWhenReady, { once: true });
+        audio.addEventListener("canplay", playWhenReady, { once: true });
       }
-      
     } else if (isMobileDevice()) {
       // للأجهزة المحمولة الأخرى (iOS)
-      audio.preload = 'auto';
+      audio.preload = "auto";
       audio.src = audioUrl;
       audio.load();
-      
+
       const playIOS = () => {
-        audio.play()
+        audio
+          .play()
           .then(() => console.log("iOS audio playing"))
           .catch((err) => {
             console.error("iOS play failed:", err);
             setTimeout(() => audio.play().catch(console.error), 100);
           });
       };
-      
+
       if (audio.readyState >= 2) {
         playIOS();
       } else {
-        audio.addEventListener('canplay', playIOS, { once: true });
+        audio.addEventListener("canplay", playIOS, { once: true });
       }
     } else {
       // للأجهزة غير المحمولة
@@ -2385,7 +2414,9 @@ export function ShowLesson() {
         </div>
 
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-6 sm:mb-8 p-4 sm:p-0">
-          <div className={`rounded-lg overflow-hidden flex-shrink-0 shadow-md w-16 h-16 sm:w-20 sm:h-20`}>
+          <div
+            className={`rounded-lg overflow-hidden flex-shrink-0 shadow-md w-16 h-16 sm:w-20 sm:h-20`}
+          >
             <img
               src={currentLevel.image}
               alt={currentLevel.name}
@@ -2393,7 +2424,9 @@ export function ShowLesson() {
             />
           </div>
           <div>
-            <h1 className={`font-semibold text-gray-800 mb-1 text-lg sm:text-xl`}>
+            <h1
+              className={`font-semibold text-gray-800 mb-1 text-lg sm:text-xl`}
+            >
               {currentLesson.title}
             </h1>
             <p className={`text-gray-600 line-clamp-2 text-sm sm:text-base`}>
