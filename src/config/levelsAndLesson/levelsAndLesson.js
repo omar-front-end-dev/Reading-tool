@@ -390,7 +390,7 @@ export const levelsAndLesson = [
       },
       {
         id: 2,
-        title: "2 - At School",
+        title: "At School",
         description: "Anna's day at school and her favorite subjects.",
         storyData: {
           content: [
