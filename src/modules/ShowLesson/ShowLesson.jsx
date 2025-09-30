@@ -505,10 +505,12 @@ const RecordingModal = ({
     <div className={`fixed inset-0 z-[60] ${androidClass}`}>
       <div className="absolute inset-0 bg-black/50" />
       <div
-        className={`fixed max-h-[100vh] overflow-y-auto left-0 right-0 bottom-0 mx-auto w-full max-w-xl rounded-t-3xl bg-white shadow-2xl border-t border-gray-100 ${androidOptimizedClass}`}
+        className={`fixed left-0 right-0 bottom-0 mx-auto w-full max-w-xl rounded-t-3xl bg-white shadow-2xl border-t border-gray-100 ${androidOptimizedClass}`}
         role="dialog"
         aria-modal="true"
       >
+        <div className={`max-h-[95vh] overflow-y-auto`}>
+
         <div className="relative px-5 pt-4 pb-3 border-b">
           <p className="text-center text-[22px] font-bold text-[var(--secondary-color)]">
             Your turn!
@@ -855,6 +857,7 @@ const RecordingModal = ({
               )}
             </div>
           )}
+        </div>
         </div>
       </div>
     </div>
@@ -2099,53 +2102,50 @@ export function ShowLesson() {
     // Create audio with explicit user interaction
     const audio = new Audio();
     audioRef.current = audio;
-
+    
     // معالجة خاصة للأندرويد
     if (isAndroid()) {
       // للأندرويد: استخدام طريقة مباشرة أكثر
-      audio.preload = "auto";
-
+      audio.preload = 'auto';
+      
       // معالجة الأخطاء
-      audio.addEventListener("error", (e) => {
+      audio.addEventListener('error', (e) => {
         console.error("Android audio error:", e);
         const errorCodes = {
-          1: "MEDIA_ERR_ABORTED",
-          2: "MEDIA_ERR_NETWORK",
-          3: "MEDIA_ERR_DECODE",
-          4: "MEDIA_ERR_SRC_NOT_SUPPORTED",
+          1: 'MEDIA_ERR_ABORTED',
+          2: 'MEDIA_ERR_NETWORK',
+          3: 'MEDIA_ERR_DECODE',
+          4: 'MEDIA_ERR_SRC_NOT_SUPPORTED'
         };
-        console.error(
-          "Error type:",
-          errorCodes[audio.error?.code] || "Unknown"
-        );
-
+        console.error("Error type:", errorCodes[audio.error?.code] || 'Unknown');
+        
         // محاولة fallback: تحويل blob إلى data URL
         fetch(audioUrl)
-          .then((res) => res.blob())
-          .then((blob) => {
+          .then(res => res.blob())
+          .then(blob => {
             const reader = new FileReader();
             reader.onloadend = () => {
               const dataUrl = reader.result;
               const fallbackAudio = new Audio(dataUrl);
-              fallbackAudio.play().catch((err) => {
+              fallbackAudio.play().catch(err => {
                 console.error("Data URL fallback failed:", err);
                 alert("عذراً، حدث خطأ في تشغيل التسجيل");
               });
             };
             reader.readAsDataURL(blob);
           })
-          .catch((err) => console.error("Blob conversion failed:", err));
+          .catch(err => console.error("Blob conversion failed:", err));
       });
-
+      
       // تعيين المصدر وتحميله
       audio.src = audioUrl;
       audio.load();
-
+      
       // التشغيل بعد التحميل مباشرة
       const playWhenReady = () => {
         // محاولة التشغيل الفوري (يعمل لأنها ضمن user gesture)
         const playPromise = audio.play();
-
+        
         if (playPromise !== undefined) {
           playPromise
             .then(() => {
@@ -2155,37 +2155,37 @@ export function ShowLesson() {
               console.error("Android play failed:", err);
               // إعادة المحاولة بعد وقت قصير
               setTimeout(() => {
-                audio.play().catch((e) => console.error("Retry failed:", e));
+                audio.play().catch(e => console.error("Retry failed:", e));
               }, 100);
             });
         }
       };
-
+      
       if (audio.readyState >= 3) {
         playWhenReady();
       } else {
-        audio.addEventListener("canplay", playWhenReady, { once: true });
+        audio.addEventListener('canplay', playWhenReady, { once: true });
       }
+      
     } else if (isMobileDevice()) {
       // للأجهزة المحمولة الأخرى (iOS)
-      audio.preload = "auto";
+      audio.preload = 'auto';
       audio.src = audioUrl;
       audio.load();
-
+      
       const playIOS = () => {
-        audio
-          .play()
+        audio.play()
           .then(() => console.log("iOS audio playing"))
           .catch((err) => {
             console.error("iOS play failed:", err);
             setTimeout(() => audio.play().catch(console.error), 100);
           });
       };
-
+      
       if (audio.readyState >= 2) {
         playIOS();
       } else {
-        audio.addEventListener("canplay", playIOS, { once: true });
+        audio.addEventListener('canplay', playIOS, { once: true });
       }
     } else {
       // للأجهزة غير المحمولة
@@ -2348,6 +2348,17 @@ export function ShowLesson() {
       }
     };
   }, []);
+
+   useEffect(() => {
+      if (showRecordingModal) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "";
+      }
+      return () => {
+        document.body.style.overflow = "";
+      };
+    }, [showRecordingModal]);
 
   /* ---------------------------------- UI ---------------------------------- */
   if (!currentLesson) {
