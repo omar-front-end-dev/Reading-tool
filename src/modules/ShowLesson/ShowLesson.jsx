@@ -2070,69 +2070,98 @@ export function ShowLesson() {
       } catch {}
     }
 
-    // Enhanced audio playback for mobile
+    // Create audio with explicit user interaction
     const audio = new Audio();
+    audioRef.current = audio;
     
-    // معالجة خاصة للأجهزة المحمولة
-    if (isMobileDevice()) {
-      // للموبايل: تعيين المصدر بعد إنشاء الكائن
+    // معالجة خاصة للأندرويد
+    if (isAndroid()) {
+      // للأندرويد: استخدام طريقة مباشرة أكثر
       audio.preload = 'auto';
-      audio.crossOrigin = 'anonymous';
       
-      // إضافة مستمعين للأحداث قبل تعيين المصدر
-      audio.addEventListener('loadstart', () => {
-        console.log("Loading recorded audio...");
-      });
-      
-      audio.addEventListener('canplay', () => {
-        console.log("Recorded audio can play");
-      });
-      
+      // معالجة الأخطاء
       audio.addEventListener('error', (e) => {
-        console.error("Error loading recorded audio:", e);
-        console.error("Audio error details:", {
-          error: audio.error,
-          networkState: audio.networkState,
-          readyState: audio.readyState,
-          src: audioUrl.substring(0, 50) + "..."
-        });
+        console.error("Android audio error:", e);
+        const errorCodes = {
+          1: 'MEDIA_ERR_ABORTED',
+          2: 'MEDIA_ERR_NETWORK',
+          3: 'MEDIA_ERR_DECODE',
+          4: 'MEDIA_ERR_SRC_NOT_SUPPORTED'
+        };
+        console.error("Error type:", errorCodes[audio.error?.code] || 'Unknown');
+        
+        // محاولة fallback: تحويل blob إلى data URL
+        fetch(audioUrl)
+          .then(res => res.blob())
+          .then(blob => {
+            const reader = new FileReader();
+            reader.onloadend = () => {
+              const dataUrl = reader.result;
+              const fallbackAudio = new Audio(dataUrl);
+              fallbackAudio.play().catch(err => {
+                console.error("Data URL fallback failed:", err);
+                alert("عذراً، حدث خطأ في تشغيل التسجيل");
+              });
+            };
+            reader.readAsDataURL(blob);
+          })
+          .catch(err => console.error("Blob conversion failed:", err));
       });
       
-      // تعيين المصدر بعد إعداد المستمعين
+      // تعيين المصدر وتحميله
       audio.src = audioUrl;
+      audio.load();
       
-      // محاولة التشغيل مع معالجة الأخطاء
-      const playMobileRecordedAudio = () => {
-        audio.play().then(() => {
-          console.log("Successfully playing recorded audio on mobile");
-        }).catch((err) => {
-          console.error("Error playing recorded audio on mobile:", err);
-          
-          // محاولة إنشاء audio جديد كـ fallback
-          try {
-            const fallbackAudio = new Audio(audioUrl);
-            fallbackAudio.play().catch((fallbackErr) => {
-              console.error("Fallback audio also failed:", fallbackErr);
+      // التشغيل بعد التحميل مباشرة
+      const playWhenReady = () => {
+        // محاولة التشغيل الفوري (يعمل لأنها ضمن user gesture)
+        const playPromise = audio.play();
+        
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => {
+              console.log("Android audio playing successfully");
+            })
+            .catch((err) => {
+              console.error("Android play failed:", err);
+              // إعادة المحاولة بعد وقت قصير
+              setTimeout(() => {
+                audio.play().catch(e => console.error("Retry failed:", e));
+              }, 100);
             });
-          } catch (fallbackCreateErr) {
-            console.error("Error creating fallback audio:", fallbackCreateErr);
-          }
-        });
+        }
       };
       
-      // تشغيل عند الجاهزية أو فوراً
-      if (audio.readyState >= 2) {
-        playMobileRecordedAudio();
+      if (audio.readyState >= 3) {
+        playWhenReady();
       } else {
-        audio.addEventListener('canplay', playMobileRecordedAudio, { once: true });
-        // احتياط للتحميل
-        audio.load();
+        audio.addEventListener('canplay', playWhenReady, { once: true });
+      }
+      
+    } else if (isMobileDevice()) {
+      // للأجهزة المحمولة الأخرى (iOS)
+      audio.preload = 'auto';
+      audio.src = audioUrl;
+      audio.load();
+      
+      const playIOS = () => {
+        audio.play()
+          .then(() => console.log("iOS audio playing"))
+          .catch((err) => {
+            console.error("iOS play failed:", err);
+            setTimeout(() => audio.play().catch(console.error), 100);
+          });
+      };
+      
+      if (audio.readyState >= 2) {
+        playIOS();
+      } else {
+        audio.addEventListener('canplay', playIOS, { once: true });
       }
     } else {
-      // للأجهزة غير المحمولة: الطريقة العادية
+      // للأجهزة غير المحمولة
       audio.src = audioUrl;
-      audioRef.current = audio;
-      audio.play().catch((err) => console.error("Error playing recorded audio:", err));
+      audio.play().catch((err) => console.error("Desktop play failed:", err));
     }
   }, []);
 
