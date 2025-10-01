@@ -16,7 +16,7 @@ export function Layout() {
   }, [location.pathname]);
 
   return (
-    <div className="bg-[var(--main-bg-color)]">
+    <div className="bg-gray-50">
       <header>
         <NavBar />
       </header>

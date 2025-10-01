@@ -510,354 +510,351 @@ const RecordingModal = ({
         aria-modal="true"
       >
         <div className={`max-h-[95vh] overflow-y-auto`}>
+          <div className="relative px-5 pt-4 pb-3 border-b">
+            <p className="text-center text-[22px] font-bold text-[var(--secondary-color)]">
+              Your turn!
+            </p>
+            <p className="text-center text-sm text-gray-600">
+              Press the{" "}
+              <span className="inline-flex translate-y-[2px]">
+                <IoIosMic className="text-[var(--secondary-color)]" />
+              </span>{" "}
+              and record your voice.
+            </p>
+          </div>
 
-        <div className="relative px-5 pt-4 pb-3 border-b">
-          <p className="text-center text-[22px] font-bold text-[var(--secondary-color)]">
-            Your turn!
-          </p>
-          <p className="text-center text-sm text-gray-600">
-            Press the{" "}
-            <span className="inline-flex translate-y-[2px]">
-              <IoIosMic className="text-[var(--secondary-color)]" />
-            </span>{" "}
-            and record your voice.
-          </p>
-        </div>
+          <div className="px-5 pt-3">
+            <h3 className="arabic_font text-center text-[15px] text-gray-700">
+              {title}
+            </h3>
+          </div>
 
-        <div className="px-5 pt-3">
-          <h3 className="arabic_font text-center text-[15px] text-gray-700">
-            {title}
-          </h3>
-        </div>
-
-        <div className="px-4 py-5">
-          {originalText && (
-            <div className="mx-auto w-full rounded-2xl border border-gray-200 bg-white/60 backdrop-blur-sm shadow-sm p-4">
-              <div className="flex flex-wrap items-end justify-center gap-x-2 gap-y-3 select-none">
-                {tokens.map((t, i) => (
-                  <div key={t.id} className="text-center">
-                    <div className="px-1">
-                      <span className="text-[20px] font-semibold text-gray-900 border-b-2 border-dotted border-gray-400">
-                        {t.word}
-                      </span>
-                    </div>
-                    <div className="mt-1 text-[12px] leading-none text-gray-500 flex items-center justify-center gap-1">
-                      {i === tokens.length - 1 && (
-                        <Globe2 size={12} className="opacity-70" />
-                      )}
-                      <span className="font-medium">{t.phon}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {!recordingResult && (
-            <div className="mt-6 flex items-center justify-between">
-              <button
-                onClick={() =>
-                  sentenceAudioUrl && playAudioFile(sentenceAudioUrl, 1)
-                }
-                disabled={!sentenceAudioUrl}
-                className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-gray-800 text-sm font-medium ${
-                  isAndroid() ? "min-h-[44px]" : ""
-                } ${
-                  sentenceAudioUrl
-                    ? "bg-gray-100 hover:bg-gray-200"
-                    : "bg-gray-100 opacity-50 cursor-not-allowed"
-                }`}
-              >
-                <Volume2 size={16} />
-                Listen
-              </button>
-
-              <button
-                onClick={isRecording ? onContinue : onStartRecording}
-                className={[
-                  "grid place-items-center rounded-full shadow-lg transition-all",
-                  isAndroid() ? "w-[80px] h-[80px]" : "w-[72px] h-[72px]",
-                  isRecording
-                    ? "bg-[var(--secondary-color)] text-white hover:bg-[var(--primary-color)]"
-                    : "bg-[var(--secondary-color)] text-white hover:bg-[var(--primary-color)]",
-                ].join(" ")}
-                title={isRecording ? "Send" : "Tap to start speaking"}
-                aria-label="Record"
-              >
-                {isRecording ? (
-                  <Loader2
-                    className="animate-spin"
-                    size={isAndroid() ? 30 : 26}
-                  />
-                ) : (
-                  <IoIosMic size={isAndroid() ? 34 : 30} />
-                )}
-              </button>
-
-              <button
-                onClick={() =>
-                  sentenceAudioUrl && playAudioFile(sentenceAudioUrl, 0.75)
-                }
-                disabled={!sentenceAudioUrl}
-                className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-gray-800 text-sm font-medium ${
-                  isAndroid() ? "min-h-[44px]" : ""
-                } ${
-                  sentenceAudioUrl
-                    ? "bg-gray-100 hover:bg-gray-200"
-                    : "bg-gray-100 opacity-50 cursor-not-allowed"
-                }`}
-                title="Listen (slow)"
-              >
-                <Turtle size={16} />
-                Listen (slow)
-              </button>
-            </div>
-          )}
-
-          {isRecording && (
-            <div className="mt-5 flex flex-col items-center gap-3">
-              <div className="w-full max-w-md">
-                <div className="relative w-full rounded-full bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] text-white px-3 py-2 flex items-center shadow-lg">
-                  <button
-                    onClick={handleDeleteRecording}
-                    className={`shrink-0 mr-2 rounded-full hover:bg-white/10 p-1.5`}
-                    title="حذف"
-                    aria-label="حذف التسجيل"
-                  >
-                    <Trash2 size={18} />
-                  </button>
-
-                  <div className="flex-1 flex flex-col items-center">
-                    <div
-                      className={`flex items-center justify-center gap-[3px] w-full max-w-[300px] h-10
-                    `}
-                    >
-                      {audioLevels.map((h, idx) => (
-                        <span
-                          key={idx}
-                          className="inline-block w-[2.5px] rounded-full bg-white/95 transition-all duration-100 ease-linear shadow-sm"
-                          style={{ height: `${h}px` }}
-                        />
-                      ))}
-                    </div>
-                    <div className="arabic_font text-[11px] mt-1 opacity-90 tracking-wider font-mono">
-                      {fmt(elapsed)}
-                    </div>
-                  </div>
-
-                  <button
-                    onClick={onContinue}
-                    className={`arabic_font flex items-center justify-center shrink-0 ml-2 rounded-full bg-white text-[var(--secondary-color)] hover:bg-white/70 p-2`}
-                    title="إرسال"
-                    aria-label="إرسال التسجيل"
-                  >
-                    <IoIosSend size={20} className="flex" />
-                  </button>
-                </div>
-              </div>
-
-              <p className="text-gray-700 text-sm arabic_font font-medium">
-                🎤 جارٍ التسجيل... تحدث بوضوح
-              </p>
-            </div>
-          )}
-
-          {recordingResult && (
-            <div className="mt-6 space-y-5">
-              {recordingResult.success ? (
-                <>
-                  <div className={`mb-1 p-4 rounded-xl border-2 ${resultTone}`}>
-                    <div className="flex items-start gap-3">
-                      <svg
-                        className="w-5 h-5 mt-0.5 flex-shrink-0"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M20 6L9 17l-5-5"
-                        />
-                      </svg>
-                      <div>
-                        <p className="text-base font-bold arabic_font">
-                          {recordingResult.evaluation.message}
-                        </p>
-                        <p className="text-sm mt-1 arabic_font">
-                          التشابه: {recordingResult.evaluation.score}%
-                        </p>
+          <div className="px-4 py-5">
+            {originalText && (
+              <div className="mx-auto w-full rounded-2xl border border-gray-200 bg-white/60 backdrop-blur-sm shadow-sm p-4">
+                <div className="flex flex-wrap items-end justify-center gap-x-2 gap-y-3 select-none">
+                  {tokens.map((t, i) => (
+                    <div key={t.id} className="text-center">
+                      <div className="px-1">
+                        <span className="text-[20px] font-semibold text-gray-900 border-b-2 border-dotted border-gray-400">
+                          {t.word}
+                        </span>
+                      </div>
+                      <div className="mt-1 text-[12px] leading-none text-gray-500 flex items-center justify-center gap-1">
+                        {i === tokens.length - 1 && (
+                          <Globe2 size={12} className="opacity-70" />
+                        )}
+                        <span className="font-medium">{t.phon}</span>
                       </div>
                     </div>
-                  </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
-                  <div className="rounded-lg border border-gray-200 p-4 bg-gray-50">
-                    <p className="arabic_font text-sm text-gray-600 mb-3 font-bold">
-                      تحليل الكلمات:
-                    </p>
-                    {highlightWords(
-                      recordingResult.originalText,
-                      recordingResult.userText
-                    )}
-                  </div>
+            {!recordingResult && (
+              <div className="mt-6 flex items-center justify-between">
+                <button
+                  onClick={() =>
+                    sentenceAudioUrl && playAudioFile(sentenceAudioUrl, 1)
+                  }
+                  disabled={!sentenceAudioUrl}
+                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-gray-800 text-sm font-medium ${
+                    isAndroid() ? "min-h-[44px]" : ""
+                  } ${
+                    sentenceAudioUrl
+                      ? "bg-gray-100 hover:bg-gray-200"
+                      : "bg-gray-100 opacity-50 cursor-not-allowed"
+                  }`}
+                >
+                  <Volume2 size={16} />
+                  Listen
+                </button>
+                {!isRecording && (
+                  <button
+                    onClick={onStartRecording}
+                    className={[
+                      "grid place-items-center rounded-full shadow-lg transition-all",
+                      isAndroid() ? "w-[80px] h-[80px]" : "w-[72px] h-[72px]",
+                      isRecording
+                        ? "bg-[var(--secondary-color)] text-white hover:bg-[var(--primary-color)]"
+                        : "bg-[var(--secondary-color)] text-white hover:bg-[var(--primary-color)]",
+                    ].join(" ")}
+                    title={isRecording ? "Send" : "Tap to start speaking"}
+                    aria-label="Record"
+                  >
+                    <IoIosMic size={isAndroid() ? 34 : 30} />
+                  </button>
+                )}
 
-                  <div className="rounded-lg border border-blue-200 p-3 bg-blue-50">
-                    <div className="flex items-center justify-between mb-2">
-                      <p className="arabic_font text-xs text-blue-600 font-bold">
-                        ما قلته:
-                      </p>
-                      <button
-                        onClick={() =>
-                          recordingResult.audioUrl &&
-                          playRecordedAudio(recordingResult.audioUrl)
-                        }
-                        disabled={!recordingResult.audioUrl}
-                        className={`inline-flex arabic_font items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-colors ${
-                          isAndroid() ? "min-h-[44px]" : ""
-                        } ${
-                          recordingResult.audioUrl
-                            ? "bg-blue-100 hover:bg-blue-200 text-blue-700 cursor-pointer"
-                            : "bg-gray-100 text-gray-400 cursor-not-allowed"
-                        }`}
-                        title={
-                          recordingResult.audioUrl
-                            ? "استمع لصوتك المسجل"
-                            : "التسجيل غير متاح"
-                        }
+                <button
+                  onClick={() =>
+                    sentenceAudioUrl && playAudioFile(sentenceAudioUrl, 0.75)
+                  }
+                  disabled={!sentenceAudioUrl}
+                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-gray-800 text-sm font-medium ${
+                    isAndroid() ? "min-h-[44px]" : ""
+                  } ${
+                    sentenceAudioUrl
+                      ? "bg-gray-100 hover:bg-gray-200"
+                      : "bg-gray-100 opacity-50 cursor-not-allowed"
+                  }`}
+                  title="Listen (slow)"
+                >
+                  <Turtle size={16} />
+                  Listen (slow)
+                </button>
+              </div>
+            )}
+
+            {isRecording && (
+              <div className="mt-5 flex flex-col items-center gap-3">
+                <div className="w-full max-w-md">
+                  <div className="relative w-full rounded-full bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] text-white px-3 py-2 flex items-center shadow-lg">
+                    <button
+                      onClick={handleDeleteRecording}
+                      className={`shrink-0 mr-2 rounded-full hover:bg-white/10 p-1.5`}
+                      title="حذف"
+                      aria-label="حذف التسجيل"
+                    >
+                      <Trash2 size={18} />
+                    </button>
+
+                    <div className="flex-1 flex flex-col items-center">
+                      <div
+                        className={`flex items-center justify-center gap-[3px] w-full max-w-[300px] h-10
+                    `}
                       >
-                        <Volume2 size={14} />
-                        استمع لصوتك
-                      </button>
+                        {audioLevels.map((h, idx) => (
+                          <span
+                            key={idx}
+                            className="inline-block w-[2.5px] rounded-full bg-white/95 transition-all duration-100 ease-linear shadow-sm"
+                            style={{ height: `${h}px` }}
+                          />
+                        ))}
+                      </div>
+                      <div className="arabic_font text-[11px] mt-1 opacity-90 tracking-wider font-mono">
+                        {fmt(elapsed)}
+                      </div>
                     </div>
-                    <p className="arabic_font text-left text-blue-900 font-medium">
-                      {recordingResult.userText}
-                    </p>
-                  </div>
 
-                  {/* أزرار المتابعة أو الإعادة حسب النتيجة */}
-                  <div className="flex flex-col gap-2">
-                    {recordingResult.evaluation.score < 50 ? (
-                      <button
-                        onClick={onRetry}
-                        className={`w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-orange-500 hover:bg-orange-600 text-white font-medium transition-colors ${
-                          isAndroid() ? "min-h-[48px]" : ""
-                        }`}
-                      >
-                        <RotateCcw size={18} />
-                        <span className="arabic_font">
-                          إعادة المحاولة (مطلوب)
-                        </span>
-                      </button>
-                    ) : (
-                      <>
+                    <button
+                      onClick={onContinue}
+                      className={`arabic_font flex items-center justify-center shrink-0 ml-2 rounded-full bg-white text-[var(--secondary-color)] hover:bg-white/70 p-2`}
+                      title="إرسال"
+                      aria-label="إرسال التسجيل"
+                    >
+                      <IoIosSend size={20} className="flex" />
+                    </button>
+                  </div>
+                </div>
+
+                <p className="text-gray-700 text-sm arabic_font font-medium">
+                  🎤 جارٍ التسجيل... تحدث بوضوح
+                </p>
+              </div>
+            )}
+
+            {recordingResult && (
+              <div className="mt-6 space-y-5">
+                {recordingResult.success ? (
+                  <>
+                    <div
+                      className={`mb-1 p-4 rounded-xl border-2 ${resultTone}`}
+                    >
+                      <div className="flex items-start gap-3">
+                        <svg
+                          className="w-5 h-5 mt-0.5 flex-shrink-0"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M20 6L9 17l-5-5"
+                          />
+                        </svg>
+                        <div>
+                          <p className="text-base font-bold arabic_font">
+                            {recordingResult.evaluation.message}
+                          </p>
+                          <p className="text-sm mt-1 arabic_font">
+                            التشابه: {recordingResult.evaluation.score}%
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="rounded-lg border border-gray-200 p-4 bg-gray-50">
+                      <p className="arabic_font text-sm text-gray-600 mb-3 font-bold">
+                        تحليل الكلمات:
+                      </p>
+                      {highlightWords(
+                        recordingResult.originalText,
+                        recordingResult.userText
+                      )}
+                    </div>
+
+                    <div className="rounded-lg border border-blue-200 p-3 bg-blue-50">
+                      <div className="flex items-center justify-between mb-2">
+                        <p className="arabic_font text-xs text-blue-600 font-bold">
+                          ما قلته:
+                        </p>
+                        <button
+                          onClick={() =>
+                            recordingResult.audioUrl &&
+                            playRecordedAudio(recordingResult.audioUrl)
+                          }
+                          disabled={!recordingResult.audioUrl}
+                          className={`inline-flex arabic_font items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-colors ${
+                            isAndroid() ? "min-h-[44px]" : ""
+                          } ${
+                            recordingResult.audioUrl
+                              ? "bg-blue-100 hover:bg-blue-200 text-blue-700 cursor-pointer"
+                              : "bg-gray-100 text-gray-400 cursor-not-allowed"
+                          }`}
+                          title={
+                            recordingResult.audioUrl
+                              ? "استمع لصوتك المسجل"
+                              : "التسجيل غير متاح"
+                          }
+                        >
+                          <Volume2 size={14} />
+                          استمع لصوتك
+                        </button>
+                      </div>
+                      <p className="arabic_font text-left text-blue-900 font-medium">
+                        {recordingResult.userText}
+                      </p>
+                    </div>
+
+                    {/* أزرار المتابعة أو الإعادة حسب النتيجة */}
+                    <div className="flex flex-col gap-2">
+                      {recordingResult.evaluation.score < 50 ? (
                         <button
                           onClick={onRetry}
-                          className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-orange-500 hover:bg-orange-600 text-white font-medium transition-colors ${
+                          className={`w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-orange-500 hover:bg-orange-600 text-white font-medium transition-colors ${
                             isAndroid() ? "min-h-[48px]" : ""
                           }`}
                         >
                           <RotateCcw size={18} />
-                          <span className="arabic_font">إعادة المحاولة</span>
+                          <span className="arabic_font">
+                            إعادة المحاولة (مطلوب)
+                          </span>
                         </button>
-                        <button
-                          onClick={onContinue}
-                          className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-green-500 hover:bg-green-600 text-white font-medium transition-colors ${
-                            isAndroid() ? "min-h-[48px]" : ""
-                          }`}
-                        >
-                          <span className="arabic_font">متابعة</span>
-                        </button>
-                      </>
-                    )}
-                  </div>
-                </>
-              ) : (
-                <div className="space-y-4">
-                  <div className="p-4 rounded-xl border-2 border-red-500 bg-red-50 text-red-800">
-                    <div className="flex items-start gap-3">
-                      <svg
-                        className="w-5 h-5 mt-0.5 flex-shrink-0"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M12 9v4m0 4h.01M10.29 3.86l-8.48 14.7A2 2 0 003.53 22h16.94a2 2 0 001.72-3.44l-8.48-14.7a2 2 0 00-3.42 0z"
-                        />
-                      </svg>
-                      <div>
-                        <p className="font-semibold arabic_font">
-                          لم يتم تسجيل نطق صالح
-                        </p>
-                        <p className="text-sm mt-1 arabic_font">
-                          {recordingResult.message}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="grid gap-3">
-                    <div className="rounded-lg border border-gray-200 p-3 bg-gray-50">
-                      <p className="text-xs arabic_font text-gray-500 mb-1">
-                        الجملة الأصلية
-                      </p>
-                      <p className="text-gray-900">
-                        {recordingResult.originalText}
-                      </p>
-                    </div>
-                    {recordingResult.userText ? (
-                      <div className="rounded-lg border border-gray-200 p-3">
-                        <div className="flex items-center justify-between mb-2">
-                          <p className="text-xs text-gray-500">ما سُمع</p>
+                      ) : (
+                        <>
                           <button
-                            onClick={() =>
-                              recordingResult.audioUrl &&
-                              playRecordedAudio(recordingResult.audioUrl)
-                            }
-                            disabled={!recordingResult.audioUrl}
-                            className={`inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-colors ${
-                              isAndroid() ? "min-h-[44px]" : ""
-                            } ${
-                              recordingResult.audioUrl
-                                ? "bg-gray-100 hover:bg-gray-200 text-gray-700 cursor-pointer"
-                                : "bg-gray-100 text-gray-400 cursor-not-allowed"
+                            onClick={onRetry}
+                            className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-orange-500 hover:bg-orange-600 text-white font-medium transition-colors ${
+                              isAndroid() ? "min-h-[48px]" : ""
                             }`}
-                            title={
-                              recordingResult.audioUrl
-                                ? "استمع لصوتك المسجل"
-                                : "التسجيل غير متاح"
-                            }
                           >
-                            <Volume2 size={14} />
-                            استمع لصوتك
+                            <RotateCcw size={18} />
+                            <span className="arabic_font">إعادة المحاولة</span>
                           </button>
+                          <button
+                            onClick={onContinue}
+                            className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-green-500 hover:bg-green-600 text-white font-medium transition-colors ${
+                              isAndroid() ? "min-h-[48px]" : ""
+                            }`}
+                          >
+                            <span className="arabic_font">متابعة</span>
+                          </button>
+                        </>
+                      )}
+                    </div>
+                  </>
+                ) : (
+                  <div className="space-y-4">
+                    <div className="p-4 rounded-xl border-2 border-red-500 bg-red-50 text-red-800">
+                      <div className="flex items-start gap-3">
+                        <svg
+                          className="w-5 h-5 mt-0.5 flex-shrink-0"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M12 9v4m0 4h.01M10.29 3.86l-8.48 14.7A2 2 0 003.53 22h16.94a2 2 0 001.72-3.44l-8.48-14.7a2 2 0 00-3.42 0z"
+                          />
+                        </svg>
+                        <div>
+                          <p className="font-semibold arabic_font">
+                            لم يتم تسجيل نطق صالح
+                          </p>
+                          <p className="text-sm mt-1 arabic_font">
+                            {recordingResult.message}
+                          </p>
                         </div>
+                      </div>
+                    </div>
+
+                    <div className="grid gap-3">
+                      <div className="rounded-lg border border-gray-200 p-3 bg-gray-50">
+                        <p className="text-xs arabic_font text-gray-500 mb-1">
+                          الجملة الأصلية
+                        </p>
                         <p className="text-gray-900">
-                          {recordingResult.userText}
+                          {recordingResult.originalText}
                         </p>
                       </div>
-                    ) : null}
-                  </div>
+                      {recordingResult.userText ? (
+                        <div className="rounded-lg border border-gray-200 p-3">
+                          <div className="flex items-center justify-between mb-2">
+                            <p className="text-xs text-gray-500">ما سُمع</p>
+                            <button
+                              onClick={() =>
+                                recordingResult.audioUrl &&
+                                playRecordedAudio(recordingResult.audioUrl)
+                              }
+                              disabled={!recordingResult.audioUrl}
+                              className={`inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-colors ${
+                                isAndroid() ? "min-h-[44px]" : ""
+                              } ${
+                                recordingResult.audioUrl
+                                  ? "bg-gray-100 hover:bg-gray-200 text-gray-700 cursor-pointer"
+                                  : "bg-gray-100 text-gray-400 cursor-not-allowed"
+                              }`}
+                              title={
+                                recordingResult.audioUrl
+                                  ? "استمع لصوتك المسجل"
+                                  : "التسجيل غير متاح"
+                              }
+                            >
+                              <Volume2 size={14} />
+                              استمع لصوتك
+                            </button>
+                          </div>
+                          <p className="text-gray-900">
+                            {recordingResult.userText}
+                          </p>
+                        </div>
+                      ) : null}
+                    </div>
 
-                  {/* زر الإعادة فقط - لا يوجد تخطي */}
-                  <button
-                    onClick={onRetry}
-                    className={`w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-orange-500 hover:bg-orange-600 text-white font-medium transition-colors ${
-                      isAndroid() ? "min-h-[48px]" : ""
-                    }`}
-                  >
-                    <RotateCcw size={18} />
-                    <span className="arabic_font">إعادة المحاولة (مطلوب)</span>
-                  </button>
-                </div>
-              )}
-            </div>
-          )}
-        </div>
+                    {/* زر الإعادة فقط - لا يوجد تخطي */}
+                    <button
+                      onClick={onRetry}
+                      className={`w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-orange-500 hover:bg-orange-600 text-white font-medium transition-colors ${
+                        isAndroid() ? "min-h-[48px]" : ""
+                      }`}
+                    >
+                      <RotateCcw size={18} />
+                      <span className="arabic_font">
+                        إعادة المحاولة (مطلوب)
+                      </span>
+                    </button>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>
@@ -1152,7 +1149,7 @@ export function ShowLesson() {
 
   // audio/voice
   const [voices, setVoices] = useState([]);
-  const [playbackRate, setPlaybackRate] = useState(1);
+  const [playbackRate, setPlaybackRate] = useState(0.75);
   const [loopEnabled, setLoopEnabled] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -1243,16 +1240,6 @@ export function ShowLesson() {
     const m = Math.floor(s / 60);
     const ss = Math.floor(s % 60);
     return `${String(m).padStart(2, "0")}:${String(ss).padStart(2, "0")}`;
-  };
-
-  const stepSeconds = (delta) => {
-    if (audioRef.current && Number.isFinite(audioRef.current.currentTime)) {
-      const next = Math.max(
-        0,
-        Math.min((audioRef.current.currentTime || 0) + delta, duration || 0)
-      );
-      audioRef.current.currentTime = next;
-    }
   };
 
   const togglePlayPause = () =>
@@ -2102,50 +2089,53 @@ export function ShowLesson() {
     // Create audio with explicit user interaction
     const audio = new Audio();
     audioRef.current = audio;
-    
+
     // معالجة خاصة للأندرويد
     if (isAndroid()) {
       // للأندرويد: استخدام طريقة مباشرة أكثر
-      audio.preload = 'auto';
-      
+      audio.preload = "auto";
+
       // معالجة الأخطاء
-      audio.addEventListener('error', (e) => {
+      audio.addEventListener("error", (e) => {
         console.error("Android audio error:", e);
         const errorCodes = {
-          1: 'MEDIA_ERR_ABORTED',
-          2: 'MEDIA_ERR_NETWORK',
-          3: 'MEDIA_ERR_DECODE',
-          4: 'MEDIA_ERR_SRC_NOT_SUPPORTED'
+          1: "MEDIA_ERR_ABORTED",
+          2: "MEDIA_ERR_NETWORK",
+          3: "MEDIA_ERR_DECODE",
+          4: "MEDIA_ERR_SRC_NOT_SUPPORTED",
         };
-        console.error("Error type:", errorCodes[audio.error?.code] || 'Unknown');
-        
+        console.error(
+          "Error type:",
+          errorCodes[audio.error?.code] || "Unknown"
+        );
+
         // محاولة fallback: تحويل blob إلى data URL
         fetch(audioUrl)
-          .then(res => res.blob())
-          .then(blob => {
+          .then((res) => res.blob())
+          .then((blob) => {
             const reader = new FileReader();
             reader.onloadend = () => {
               const dataUrl = reader.result;
               const fallbackAudio = new Audio(dataUrl);
-              fallbackAudio.play().catch(err => {
+              fallbackAudio.play().catch((err) => {
                 console.error("Data URL fallback failed:", err);
                 alert("عذراً، حدث خطأ في تشغيل التسجيل");
               });
             };
             reader.readAsDataURL(blob);
           })
-          .catch(err => console.error("Blob conversion failed:", err));
+          .catch((err) => console.error("Blob conversion failed:", err));
       });
-      
+
       // تعيين المصدر وتحميله
       audio.src = audioUrl;
       audio.load();
-      
+
       // التشغيل بعد التحميل مباشرة
       const playWhenReady = () => {
         // محاولة التشغيل الفوري (يعمل لأنها ضمن user gesture)
         const playPromise = audio.play();
-        
+
         if (playPromise !== undefined) {
           playPromise
             .then(() => {
@@ -2155,40 +2145,39 @@ export function ShowLesson() {
               console.error("Android play failed:", err);
               // إعادة المحاولة بعد وقت قصير
               setTimeout(() => {
-                audio.play().catch(e => console.error("Retry failed:", e));
+                audio.play().catch((e) => console.error("Retry failed:", e));
               }, 100);
             });
         }
       };
-      
+
       if (audio.readyState >= 3) {
         playWhenReady();
       } else {
-        audio.addEventListener('canplay', playWhenReady, { once: true });
+        audio.addEventListener("canplay", playWhenReady, { once: true });
       }
-      
     } else if (isMobileDevice()) {
       // للأجهزة المحمولة الأخرى (iOS)
-      audio.preload = 'auto';
+      audio.preload = "auto";
       audio.src = audioUrl;
       audio.load();
-      
+
       const playIOS = () => {
-        audio.play()
+        audio
+          .play()
           .then(() => console.log("iOS audio playing"))
           .catch((err) => {
             console.error("iOS play failed:", err);
             setTimeout(() => audio.play().catch(console.error), 100);
           });
       };
-      
+
       if (audio.readyState >= 2) {
         playIOS();
       } else {
-        audio.addEventListener('canplay', playIOS, { once: true });
+        audio.addEventListener("canplay", playIOS, { once: true });
       }
     } else {
-      // للأجهزة غير المحمولة
       audio.src = audioUrl;
       audio.play().catch((err) => console.error("Desktop play failed:", err));
     }
@@ -2349,16 +2338,16 @@ export function ShowLesson() {
     };
   }, []);
 
-   useEffect(() => {
-      if (showRecordingModal) {
-        document.body.style.overflow = "hidden";
-      } else {
-        document.body.style.overflow = "";
-      }
-      return () => {
-        document.body.style.overflow = "";
-      };
-    }, [showRecordingModal]);
+  useEffect(() => {
+    if (showRecordingModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [showRecordingModal]);
 
   /* ---------------------------------- UI ---------------------------------- */
   if (!currentLesson) {
@@ -2539,22 +2528,6 @@ export function ShowLesson() {
                 </button>
 
                 <button
-                  onClick={() => stepSeconds(-5)}
-                  className="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 grid place-items-center"
-                  title="رجوع 5 ثوانٍ"
-                >
-                  <RotateCcw size={18} />
-                </button>
-
-                <button
-                  onClick={() => stepSeconds(5)}
-                  className="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 grid place-items-center"
-                  title="تقديم 5 ثوانٍ"
-                >
-                  <RotateCcw size={18} className="-scale-x-100" />
-                </button>
-
-                <button
                   onClick={() => setLoopEnabled((v) => !v)}
                   className={`w-9 h-9 rounded-full grid place-items-center ${
                     loopEnabled
@@ -2594,7 +2567,7 @@ export function ShowLesson() {
                     {playbackRate.toFixed(2).replace(/\.00$/, "")}x ▾
                   </button>
                   <div className="absolute -right-2 bottom-9 hidden group-hover:block bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
-                    {[0.75, 1, 1.25, 1.5, 1.75].map((r) => (
+                    {[0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75].map((r) => (
                       <button
                         key={r}
                         onClick={() => handleSpeedChange(r)}
@@ -2618,10 +2591,30 @@ export function ShowLesson() {
       {/* Quiz FAB */}
       <Link
         to={`/level/${levelId}/lesson/${lessonId}/quiz`}
-        className="fixed bottom-20 right-6 bg-[var(--primary-color)] hover:bg-[var(--secondary-color)] text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center"
-        style={{ width: "60px", height: "60px" }}
+        className="fixed bottom-20 md:bottom-24 right-4 md:right-6 group z-50"
       >
-        <PiExam size={30} />
+        {/* Mobile: Extended button with text */}
+        <div className="md:hidden bg-[var(--primary-color)] hover:bg-[var(--secondary-color)] text-white rounded-full shadow-xl transition-all duration-300 flex items-center gap-2 px-3 py-1 animate-pulse hover:animate-none">
+          <PiExam size={24} />
+          <span className="arabic_font text-[11px] font-semibold">اختبار</span>
+        </div>
+
+        {/* Desktop: Round button with always visible tooltip */}
+        <div className="hidden md:flex bg-[var(--primary-color)] hover:bg-[var(--secondary-color)] text-white rounded-full shadow-xl hover:shadow-2xl transition-all animate-none duration-300 items-center justify-center relative hover:animate-none w-[50px] h-[50px]">
+          <PiExam size={25} />
+
+          {/* Ripple Effect */}
+          <span className="absolute inset-0 rounded-full border-2 border-[var(--primary-color)] animate-ping opacity-75"></span>
+
+          {/* Floating Label - Always visible on Desktop */}
+          <div className="absolute arabic_font right-full top-1/2 -translate-y-1/2 mr-3 bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap shadow-lg animate-none">
+            🎯 ابدأ الاختبار الآن
+            {/* Arrow */}
+            <div className="absolute left-full top-1/2 -translate-y-1/2 -ml-1">
+              <div className="w-0 h-0 border-t-4 border-t-transparent border-b-4 border-b-transparent border-r-4 border-r-gray-900 rotate-180"></div>
+            </div>
+          </div>
+        </div>
       </Link>
     </div>
   );
