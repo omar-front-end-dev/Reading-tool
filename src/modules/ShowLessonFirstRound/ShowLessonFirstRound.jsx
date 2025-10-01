@@ -450,12 +450,19 @@ export function ShowLessonFirstRound() {
       </div>
 
       {/* Next round button */}
-      <Link
-        to={NEXT_ROUND_URL}
-        className="fixed bottom-6 right-6 arabic_font text-sm font-medium px-5 py-3 rounded-full bg-[var(--primary-color)] text-white hover:bg-[var(--secondary-color)] active:scale-[.98] transition shadow-xl"
-      >
-        الذهاب إلى الجولة التالية
-      </Link>
+      <div className="fixed bottom-6 right-6">
+        {/* Glowing ring */}
+        <div className="absolute inset-0 rounded-full bg-[var(--primary-color)] blur-lg opacity-60 animate-pulse"></div>
+
+        {/* Button */}
+        <Link
+          to={NEXT_ROUND_URL}
+          className="relative arabic_font text-sm font-medium px-5 py-3 rounded-full bg-[var(--primary-color)] text-white hover:bg-[var(--secondary-color)] active:scale-[.98] transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 flex items-center gap-2"
+        >
+          <span className="arabic_font">الذهاب إلى الجولة التالية</span>
+          <span className="inline-block animate-bounce">👉</span>
+        </Link>
+      </div>
     </div>
   );
 }

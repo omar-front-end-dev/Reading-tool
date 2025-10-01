@@ -1161,7 +1161,7 @@ export function ShowLessonSecondRound() {
                     {playbackRate.toFixed(2).replace(/\.00$/, "")}x ▾
                   </button>
                   <div className="absolute -right-2 bottom-9 hidden group-hover:block bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
-                    {[0.75, 1, 1.25, 1.5, 1.75].map((r) => (
+                    {[0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75].map((r) => (
                       <button
                         key={r}
                         onClick={() => handleSpeedChange(r)}
