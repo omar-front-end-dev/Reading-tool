@@ -307,6 +307,7 @@ const RecordingModal = ({
   playAudioFile,
   playRecordedAudio,
   audioLevels,
+  recognitionRef, // ⬅️ أضف هذا الـ prop
 }) => {
   if (!isOpen) return null;
 
@@ -345,7 +346,6 @@ const RecordingModal = ({
       ? "border-orange-500 bg-orange-50 text-orange-800"
       : "border-red-500 bg-red-50 text-red-800";
 
-  // Enhanced word highlighting with smart comparison
   const highlightWords = (orig, user) => {
     if (!orig || !user) return null;
 
@@ -437,7 +437,6 @@ const RecordingModal = ({
           ))}
         </div>
 
-        {/* مؤشر الألوان */}
         <div className="flex flex-wrap gap-2 text-xs mt-3 pt-2 border-t border-gray-200">
           <div className="flex items-center gap-1">
             <div className="w-3 h-3 rounded bg-green-100 border border-green-300"></div>
@@ -460,7 +459,6 @@ const RecordingModal = ({
     );
   };
 
-  // Recording animation bars
   const BAR_COUNT = 28;
   const [elapsed, setElapsed] = useState(0);
   const startTsRef = useRef(null);
@@ -489,21 +487,34 @@ const RecordingModal = ({
       "0"
     )}`;
 
-  // Android optimizations
   const androidClass = isAndroid() ? "android-modal" : "";
   const androidOptimizedClass = isAndroid() ? "android-optimized" : "";
 
-  // تنظيف صوت التسجيل عند إغلاق المودال
   const handleDeleteRecording = () => {
     if (recordingResult?.audioUrl) {
       URL.revokeObjectURL(recordingResult.audioUrl);
     }
-    onRetry(); // إعادة تسجيل
+    onRetry();
+  };
+
+  // ⬅️ الدالة الجديدة لإيقاف التسجيل فقط
+  const handleStopRecording = () => {
+    if (recognitionRef?.current) {
+      try {
+        recognitionRef.current.stop();
+      } catch (e) {
+        console.log("Recognition already stopped");
+      }
+    }
   };
 
   return (
     <div className={`fixed inset-0 z-[60] ${androidClass}`}>
-      <div className="absolute inset-0 bg-black/50" />
+      {/* لا يمكن إغلاق المودال */}
+      <div 
+        className="absolute inset-0 bg-black/50"
+        onClick={(e) => e.stopPropagation()}
+      />
       <div
         className={`fixed left-0 right-0 bottom-0 mx-auto w-full max-w-xl rounded-t-3xl bg-white shadow-2xl border-t border-gray-100 ${androidOptimizedClass}`}
         role="dialog"
@@ -552,7 +563,7 @@ const RecordingModal = ({
               </div>
             )}
 
-            {!recordingResult && (
+            {!recordingResult && !isRecording && (
               <div className="mt-6 flex items-center justify-between">
                 <button
                   onClick={() =>
@@ -570,22 +581,19 @@ const RecordingModal = ({
                   <Volume2 size={16} />
                   Listen
                 </button>
-                {!isRecording && (
-                  <button
-                    onClick={onStartRecording}
-                    className={[
-                      "grid place-items-center rounded-full shadow-lg transition-all",
-                      isAndroid() ? "w-[80px] h-[80px]" : "w-[72px] h-[72px]",
-                      isRecording
-                        ? "bg-[var(--secondary-color)] text-white hover:bg-[var(--primary-color)]"
-                        : "bg-[var(--secondary-color)] text-white hover:bg-[var(--primary-color)]",
-                    ].join(" ")}
-                    title={isRecording ? "Send" : "Tap to start speaking"}
-                    aria-label="Record"
-                  >
-                    <IoIosMic size={isAndroid() ? 34 : 30} />
-                  </button>
-                )}
+
+                <button
+                  onClick={onStartRecording}
+                  className={[
+                    "grid place-items-center rounded-full shadow-lg transition-all",
+                    isAndroid() ? "w-[80px] h-[80px]" : "w-[72px] h-[72px]",
+                    "bg-[var(--secondary-color)] text-white hover:bg-[var(--primary-color)]",
+                  ].join(" ")}
+                  title="Tap to start speaking"
+                  aria-label="Record"
+                >
+                  <IoIosMic size={isAndroid() ? 34 : 30} />
+                </button>
 
                 <button
                   onClick={() =>
@@ -621,10 +629,7 @@ const RecordingModal = ({
                     </button>
 
                     <div className="flex-1 flex flex-col items-center">
-                      <div
-                        className={`flex items-center justify-center gap-[3px] w-full max-w-[300px] h-10
-                    `}
-                      >
+                      <div className={`flex items-center justify-center gap-[3px] w-full max-w-[300px] h-10`}>
                         {audioLevels.map((h, idx) => (
                           <span
                             key={idx}
@@ -638,10 +643,16 @@ const RecordingModal = ({
                       </div>
                     </div>
 
+                    {/* ⬅️ الزر المعدل - يوقف التسجيل فقط */}
                     <button
-                      onClick={onContinue}
-                      className={`arabic_font flex items-center justify-center shrink-0 ml-2 rounded-full bg-white text-[var(--secondary-color)] hover:bg-white/70 p-2`}
-                      title="إرسال"
+                      onClick={handleStopRecording}
+                      disabled={elapsed < 1}
+                      className={`arabic_font flex items-center justify-center shrink-0 ml-2 rounded-full p-2 transition-all ${
+                        elapsed < 1
+                          ? "bg-white/50 text-gray-400 cursor-not-allowed"
+                          : "bg-white text-[var(--secondary-color)] hover:bg-white/70"
+                      }`}
+                      title={elapsed < 1 ? "سجل لمدة ثانية على الأقل" : "إرسال"}
                       aria-label="إرسال التسجيل"
                     >
                       <IoIosSend size={20} className="flex" />
@@ -659,9 +670,7 @@ const RecordingModal = ({
               <div className="mt-6 space-y-5">
                 {recordingResult.success ? (
                   <>
-                    <div
-                      className={`mb-1 p-4 rounded-xl border-2 ${resultTone}`}
-                    >
+                    <div className={`mb-1 p-4 rounded-xl border-2 ${resultTone}`}>
                       <div className="flex items-start gap-3">
                         <svg
                           className="w-5 h-5 mt-0.5 flex-shrink-0"
@@ -730,7 +739,6 @@ const RecordingModal = ({
                       </p>
                     </div>
 
-                    {/* أزرار المتابعة أو الإعادة حسب النتيجة */}
                     <div className="flex flex-col gap-2">
                       {recordingResult.evaluation.score < 50 ? (
                         <button
@@ -755,14 +763,17 @@ const RecordingModal = ({
                             <RotateCcw size={18} />
                             <span className="arabic_font">إعادة المحاولة</span>
                           </button>
-                          <button
-                            onClick={onContinue}
-                            className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-green-500 hover:bg-green-600 text-white font-medium transition-colors ${
-                              isAndroid() ? "min-h-[48px]" : ""
-                            }`}
-                          >
-                            <span className="arabic_font">متابعة</span>
-                          </button>
+                          {/* زر المتابعة يظهر فقط مع تسجيل صوتي */}
+                          {recordingResult.audioUrl && (
+                            <button
+                              onClick={onContinue}
+                              className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-green-500 hover:bg-green-600 text-white font-medium transition-colors ${
+                                isAndroid() ? "min-h-[48px]" : ""
+                              }`}
+                            >
+                              <span className="arabic_font">متابعة</span>
+                            </button>
+                          )}
                         </>
                       )}
                     </div>
@@ -804,7 +815,7 @@ const RecordingModal = ({
                           {recordingResult.originalText}
                         </p>
                       </div>
-                      {recordingResult.userText ? (
+                      {recordingResult.userText && (
                         <div className="rounded-lg border border-gray-200 p-3">
                           <div className="flex items-center justify-between mb-2">
                             <p className="text-xs text-gray-500">ما سُمع</p>
@@ -835,10 +846,9 @@ const RecordingModal = ({
                             {recordingResult.userText}
                           </p>
                         </div>
-                      ) : null}
+                      )}
                     </div>
 
-                    {/* زر الإعادة فقط - لا يوجد تخطي */}
                     <button
                       onClick={onRetry}
                       className={`w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-orange-500 hover:bg-orange-600 text-white font-medium transition-colors ${
@@ -847,7 +857,7 @@ const RecordingModal = ({
                     >
                       <RotateCcw size={18} />
                       <span className="arabic_font">
-                        إعادة المحاولة (مطلوب)
+                        إعادة المحاولة (مطلوب للمتابعة)
                       </span>
                     </button>
                   </div>
