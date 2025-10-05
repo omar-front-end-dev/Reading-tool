@@ -392,7 +392,7 @@ export function ShowLessonFirstRound() {
     );
   }
 
-  const NEXT_ROUND_URL = `/show-lesson-second-round/${levelId}/${lessonId}`;
+  const NEXT_ROUND_URL = `/reading/show-lesson-second-round/${levelId}/${lessonId}`;
 
   return (
     <div className="min-h-screen bg-white">

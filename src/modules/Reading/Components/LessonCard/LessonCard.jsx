@@ -10,7 +10,7 @@ export const LessonCard = ({
 }) => {
   return (
     <Link
-      to={`show-lesson-first-round/${levelId}/${lesson.id}`}
+      to={`/reading/show-lesson-first-round/${levelId}/${lesson.id}`}
       className="block bg-white rounded-xl shadow-sm border border-gray-100 p-3 hover:shadow-md transition-shadow"
     >
       <div className="flex md:items-center flex-col md:flex-row items-start gap-4">

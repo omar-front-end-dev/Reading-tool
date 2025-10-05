@@ -1,24 +1,14 @@
+import { Link } from "react-router-dom";
 import logoImage from "/assets/images/logo.png";
 
 export const NavBar = () => {
   return (
-    <nav className={`py-[15px] bg-white border-[#e5e7eb]`}>
-      <div className="container container-xxl">
-        <div className="flex items-center justify-center">
-          <div>
-            <img className="h-10" src={logoImage} alt="logo" />
-          </div>
-        </div>
-      </div>
-    </nav>
+    <>
+      <header className="flex bg-white items-center justify-center px-4 md:px-6 py-3 md:py-4 border-b-[1px] border-[var(--primary-color)]-1/20">
+        <Link to="/" className="w-48">
+          <img className="w-full" src={logoImage} alt="logo" />
+        </Link>
+      </header>
+    </>
   );
 };
-
-{
-  /* <NavLink
-            to={"/sets"}
-            className="text-sm font-medium text-[var(--main-text-color)] px-2 leading-[1.5] nav_link"
-          >
-            Sets
-          </NavLink> */
-}

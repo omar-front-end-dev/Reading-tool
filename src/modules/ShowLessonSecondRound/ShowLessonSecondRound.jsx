@@ -375,7 +375,7 @@ export function ShowLessonSecondRound() {
   const [noPauseBetween, setNoPauseBetween] = useState(true);
 
   // set the required next-round URL
-  const NEXT_ROUND_URL = `/show-lesson/${levelId}/${lessonId}`;
+  const NEXT_ROUND_URL = `/reading/show-lesson/${levelId}/${lessonId}`;
 
   /* ---------------- Preload audio durations ---------------- */
   useEffect(() => {

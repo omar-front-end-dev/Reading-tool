@@ -4,7 +4,7 @@ import { levelsAndLesson } from "../../config/levelsAndLesson/levelsAndLesson";
 import { SectionTitle } from "../../components/index";
 // import { HeroSection } from "./Components/HeroSection/HeroSection";
 
-export const HomePage = () => {
+export const Reading = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedLevels, setSelectedLevels] = useState([]);
 

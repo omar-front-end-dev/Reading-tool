@@ -229,7 +229,7 @@ export const ProgressTracker = () => {
         <div className="flex items-center justify-between">
           <SectionTitle title={"تقدمك في التعلم"} />
           <Link
-            to="/"
+            to="/reading"
             className="arabic_font inline-flex items-center text-white bg-[var(--primary-color)] hover:bg-[var(--secondary-color)] px-4 py-2 rounded-lg transition-colors"
           >
             الرئيسية

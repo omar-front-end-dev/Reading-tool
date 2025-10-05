@@ -2600,7 +2600,7 @@ export function ShowLesson() {
 
       {/* Quiz FAB */}
       <Link
-        to={`/level/${levelId}/lesson/${lessonId}/quiz`}
+        to={`/reading/level/${levelId}/lesson/${lessonId}/quiz`}
         className="fixed bottom-20 md:bottom-24 right-4 md:right-6 group z-50"
       >
         {/* Mobile: Extended button with text */}

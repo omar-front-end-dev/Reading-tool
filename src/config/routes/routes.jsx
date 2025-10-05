@@ -1,6 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Layout } from "../../layouts/Layout";
-import { ErrorPage, HomePage, ProgressTracker, QuizPage, ShowLesson, ShowLessonFirstRound, ShowLessonSecondRound } from "../../modules/index";
+import {
+  ErrorPage,
+  Reading,
+  ProgressTracker,
+  QuizPage,
+  ShowLesson,
+  ShowLessonFirstRound,
+  ShowLessonSecondRound,
+  Home,
+} from "../../modules/index";
 
 export const Routes = createBrowserRouter([
   {
@@ -10,26 +19,30 @@ export const Routes = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <HomePage />,
+        element: <Home />,
       },
       {
-        path: "show-lesson/:levelId/:lessonId",
+        path: "reading",
+        element: <Reading />,
+      },
+      {
+        path: "reading/show-lesson/:levelId/:lessonId",
         element: <ShowLesson />,
       },
       {
-        path: "show-lesson-first-round/:levelId/:lessonId",
+        path: "reading/show-lesson-first-round/:levelId/:lessonId",
         element: <ShowLessonFirstRound />,
       },
       {
-        path: "show-lesson-second-round/:levelId/:lessonId",
+        path: "reading/show-lesson-second-round/:levelId/:lessonId",
         element: <ShowLessonSecondRound />,
       },
       {
-        path: "level/:levelId/lesson/:lessonId/quiz",
+        path: "reading/level/:levelId/lesson/:lessonId/quiz",
         element: <QuizPage />,
       },
       {
-        path: "progress",
+        path: "reading/progress",
         element: <ProgressTracker />,
       },
     ],

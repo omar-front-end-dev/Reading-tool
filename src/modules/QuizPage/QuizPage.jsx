@@ -278,7 +278,7 @@ export const QuizPage = () => {
           <h2 className="arabic_font text-2xl font-semibold text-gray-700 mb-2">
             الدرس غير موجود
           </h2>
-          <Link to="/" className="arabic_font text-blue-500 hover:underline">
+          <Link to="/reading" className="arabic_font text-blue-500 hover:underline">
             العودة للصفحة الرئيسية
           </Link>
         </div>
@@ -330,7 +330,7 @@ export const QuizPage = () => {
         <div className="container mx-auto px-4 max-w-2xl">
           <div className="flex items-center justify-between">
             <Link
-              to={`/show-lesson/${levelId}/${lessonId}`}
+              to={`/reading/show-lesson/${levelId}/${lessonId}`}
               className="arabic_font flex items-center justify-end text-lg text-[var(--secondary-color)] hover:text-teal-700 mb-6"
             >
               <ArrowLeft size={20} className="ml-1" />
@@ -466,7 +466,7 @@ export const QuizPage = () => {
 
               <div className="flex flex-col justify-center gap-4">
                 <Link
-                  to={`/show-lesson/${levelId}/${lessonId}`}
+                  to={`/reading/show-lesson/${levelId}/${lessonId}`}
                   onClick={() => playSound("click")}
                   className="arabic_font bg-[var(--primary-color)] hover:bg-[var(--secondary-color)] text-white px-6 py-2 rounded-lg transition-colors"
                 >
@@ -476,7 +476,7 @@ export const QuizPage = () => {
                 {/* زر الدرس التالي - يظهر فقط إذا كان هناك درس تالي */}
                 {nextLesson && (
                   <Link
-                    to={`/show-lesson-first-round/${levelId}/${nextLesson.id}`}
+                    to={`/reading/show-lesson-first-round/${levelId}/${nextLesson.id}`}
                     onClick={() => playSound("click")}
                     className="arabic_font gap-2 flex items-center justify-center bg-[var(--secondary-color)] hover:bg-[var(--primary-color)] text-white px-6 py-2 rounded-lg transition-colors"
                   >
@@ -486,7 +486,7 @@ export const QuizPage = () => {
                 )}
 
                 <Link
-                  to="/progress"
+                  to="/reading/progress"
                   onClick={() => playSound("click")}
                   className="arabic_font gap-2 flex items-center justify-center text-gray-700 hover:text-gray-900 px-4 py-2 rounded-lg border border-gray-300 hover:border-gray-400 transition-colors"
                 >

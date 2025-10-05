@@ -16,11 +16,16 @@ export function Layout() {
   }, [location.pathname]);
 
   return (
-    <div className="bg-gray-50">
-      <header>
-        <NavBar />
-      </header>
-      {/* className="min-h-[calc(100vh-52px)]" */}
+    <div className="bg-white">
+      {location.pathname.includes("/reading") && (
+        <>
+          {location.pathname !== "/" && (
+            <header>
+              <NavBar />
+            </header>
+          )}
+        </>
+      )}
       <main className="min-h-[100vh]">
         <Outlet />
       </main>

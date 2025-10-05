@@ -169,7 +169,7 @@ export function LevelCard({ level }) {
         </div>
       ) : (
         <Link
-          to={`show-lesson-first-round/${level?.id}/${level?.lessons[0]?.id}`}
+          to={`/reading/show-lesson-first-round/${level?.id}/${level?.lessons[0]?.id}`}
           className="block px-3 py-3 group/link"
         >
           <div className="flex items-start justify-between mb-3">
