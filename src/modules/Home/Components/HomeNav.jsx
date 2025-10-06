@@ -1,4 +1,3 @@
-import { Trophy } from "lucide-react";
 import logoImage from "/assets/images/logo.png";
 import homeIcon from "/assets/images/icons/fbe0c187341c280e161f76fb4cbda1d7.svg";
 import readingIcon from "/assets/images/icons/234635.png";
@@ -82,7 +81,7 @@ export const HomeNav = () => {
         </div>
       </aside>
       {/* Bottom Navigation - Mobile Only */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white z-50">
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white z-30">
         <div className="flex items-center justify-between p-2">
           {navItems.map((item, idx) => {
             return (
