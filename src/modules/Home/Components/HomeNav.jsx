@@ -82,7 +82,7 @@ export const HomeNav = () => {
         </div>
       </aside>
       {/* Bottom Navigation - Mobile Only */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white z-50">
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-[var(--primary-color)] z-50">
         <div className="flex items-center justify-between p-2">
           {navItems.map((item, idx) => {
             return (
