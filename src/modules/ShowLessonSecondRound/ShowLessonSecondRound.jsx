@@ -1,6 +1,14 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import PropTypes from "prop-types";
-import { X, Play, Pause, RotateCcw, Volume2, BookOpen, Languages } from "lucide-react";
+import {
+  X,
+  Play,
+  Pause,
+  RotateCcw,
+  Volume2,
+  BookOpen,
+  Languages,
+} from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 import { levelsAndLesson } from "../../config/levelsAndLesson/levelsAndLesson";
 
@@ -276,7 +284,9 @@ const Sentence = React.forwardRef(
         {arabicLine && (
           <div
             className={`overflow-hidden transition-all duration-300 ease-in-out ${
-              showTranslation ? "max-h-20 opacity-100 mb-2" : "max-h-0 opacity-0"
+              showTranslation
+                ? "max-h-20 opacity-100 mb-2"
+                : "max-h-0 opacity-0"
             }`}
           >
             <p className="arabic_font text-base text-gray-700 pr-1">
@@ -971,13 +981,13 @@ export function ShowLessonSecondRound() {
               <X size={29} />
             </Link>
           </div>
-          
+
           {/* Translation Toggle Button */}
           <button
             onClick={() => setShowTranslations(!showTranslations)}
             className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-200 ${
-              showTranslations 
-                ? "bg-[var(--primary-color)] text-white shadow-lg" 
+              showTranslations
+                ? "bg-[var(--primary-color)] text-white shadow-lg"
                 : "bg-gray-100 text-gray-700 hover:bg-gray-200"
             }`}
             title={showTranslations ? "إخفاء الترجمة" : "إظهار الترجمة"}
@@ -1111,13 +1121,15 @@ export function ShowLessonSecondRound() {
             <div className="flex items-center justify-between px-4 py-2">
               {/* Left: play / skip */}
               <div className="flex items-center gap-2">
-                <button
-                  onClick={togglePlayPause}
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[var(--primary-color)] text-white hover:bg-[var(--secondary-color)] transition-colors"
-                  title={isReading ? "إيقاف" : "تشغيل"}
-                >
-                  {isReading ? <Pause size={18} /> : <Play size={18} />}
-                </button>
+                <div className={`tooltip tooltip-success animate-pulse tooltip-open arabic_font`} data-tip={`${isReading ? "إيقاف" : "ابدأ الاستماع"}`}>
+                  <button
+                    onClick={togglePlayPause}
+                    className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[var(--primary-color)] text-white hover:bg-[var(--secondary-color)] transition-colors"
+                    title={isReading ? "إيقاف" : "تشغيل"}
+                  >
+                    {isReading ? <Pause size={18} /> : <Play size={18} />}
+                  </button>
+                </div>
 
                 <button
                   onClick={() => stepSeconds(-5)}

@@ -48,7 +48,7 @@ export const HomeNav = () => {
   return (
     <>
       {/* Right Sidebar - Hidden on mobile */}
-      <aside className="hidden md:block w-64 p-4 sticky top-0 right-0 h-screen bottom border-l-2 border-gray-100">
+      <aside className="hidden bg-white md:block w-64 p-4 sticky top-0 right-0 h-screen bottom border-l-2 border-gray-100">
         <div className="flex justify-center">
           <Link to="/" className="w-44 my-8 block">
             <img className="w-full" src={logoImage} alt="logo" />

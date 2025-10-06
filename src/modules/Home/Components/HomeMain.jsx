@@ -15,7 +15,7 @@ export const HomeMain = () => {
       id: 1,
       icon: Volume2,
       title: "Pronunciation Tool",
-      titleAr: "أداة النطق",
+      titleAr: "النطق",
       description:
         "Master perfect pronunciation with AI-powered feedback and real-time correction",
       descriptionAr:
@@ -27,7 +27,7 @@ export const HomeMain = () => {
       id: 2,
       icon: Headphones,
       title: "Listening Tool",
-      titleAr: "أداة الاستماع",
+      titleAr: "الاستماع",
       description:
         "Enhance your listening skills with native speakers and adaptive content",
       descriptionAr: "حسّن مهارات الاستماع مع متحدثين أصليين ومحتوى تفاعلي",
@@ -38,7 +38,7 @@ export const HomeMain = () => {
       id: 3,
       icon: PenTool,
       title: "Writing Tool",
-      titleAr: "أداة الكتابة",
+      titleAr: "الكتابة",
       description:
         "Improve your writing with intelligent grammar checking and style suggestions",
       descriptionAr: "طوّر كتابتك مع فحص القواعد الذكي واقتراحات الأسلوب",
@@ -49,7 +49,7 @@ export const HomeMain = () => {
       id: 4,
       icon: BookOpen,
       title: "Reading Tool",
-      titleAr: "أداة القراءة",
+      titleAr: "القراءة",
       description:
         "Build reading fluency with leveled content and interactive comprehension",
       descriptionAr: "ابنِ طلاقة القراءة مع محتوى متدرج وفهم تفاعلي",
@@ -59,13 +59,13 @@ export const HomeMain = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#63a29b] via-[#275151] to-slate-900 p-8">
+    <div className="min-h-screen p-4 sm:p-6 md:p-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-4">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4 px-4">
             Language Learning Tools
           </h1>
-          <p className="text-xl text-purple-200 arabic_font">
+          <p className="text-lg sm:text-xl arabic_font text-purple-200">
             أدوات احترافية لإتقان اللغة
           </p>
         </div>
@@ -76,74 +76,60 @@ export const HomeMain = () => {
             return (
               <div
                 key={tool.id}
-                className="relative group mb-6"
+                className="relative group mb-5 sm:mb-10 last:mb-0"
                 onMouseEnter={() => setHoveredCard(tool.id)}
                 onMouseLeave={() => setHoveredCard(null)}
               >
                 <div
-                  className={`
-                  relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 
-                  border border-white/20 transition-all duration-300
-                  ${
+                  className={`relative bg-white/10 backdrop-blur-lg rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 border border-white/20 transition-all duration-300 ${
                     hoveredCard === tool.id
                       ? "transform scale-100 shadow-2xl"
                       : "shadow-xl"
-                  }
-                `}
+                  }`}
                 >
                   <div
-                    className={`
-                    absolute inset-0 bg-gradient-to-br ${tool.color} 
-                    opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300
-                  `}
+                    className={`absolute inset-0 bg-gradient-to-br ${tool.color} opacity-0 group-hover:opacity-10 rounded-xl sm:rounded-2xl transition-opacity duration-300`}
                   />
 
                   <div className="relative z-10">
                     <div
-                      className={`
-                      inline-flex p-4 rounded-xl bg-gradient-to-br ${
+                      className={`inline-flex p-3 sm:p-4 rounded-lg sm:rounded-xl bg-gradient-to-br ${
                         tool.color
-                      } 
-                      mb-6 transform transition-transform duration-300
-                      ${hoveredCard === tool.id ? "rotate-6 scale-110" : ""}
-                    `}
+                      } mb-4 sm:mb-6 transform transition-transform duration-300 ${
+                        hoveredCard === tool.id ? "rotate-6 scale-110" : ""
+                      }`}
                     >
-                      <Icon className="w-8 h-8 text-white" />
+                      <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                     </div>
 
-                    <h2 className="text-3xl font-bold text-white mb-2">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
                       {tool.title}
                     </h2>
-                    <p className="text-lg arabic_font text-purple-200 mb-4 font-arabic">
+                    <p className="text-base arabic_font sm:text-lg text-purple-200 mb-3 sm:mb-4">
                       {tool.titleAr}
                     </p>
 
-                    <p className="text-gray-300 mb-4 leading-relaxed">
+                    <p className="text-sm sm:text-base text-gray-300 mb-3 sm:mb-4 leading-relaxed">
                       {tool.description}
                     </p>
-                    <p className="text-purple-200 arabic_font mb-6 leading-relaxed font-arabic">
+                    <p className="text-sm arabic_font sm:text-base text-purple-200 mb-4 sm:mb-6 leading-relaxed">
                       {tool.descriptionAr}
                     </p>
 
-                    <div className="space-y-2 mb-6">
+                    <div className="space-y-2 mb-4 sm:mb-6">
                       {tool.features.map((feature, idx) => (
                         <div
                           key={idx}
                           className="flex items-center text-gray-300"
                         >
-                          <ChevronRight className="w-4 h-4 mr-2 text-purple-400" />
-                          <span className="text-sm">{feature}</span>
+                          <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-purple-400 flex-shrink-0" />
+                          <span className="text-xs sm:text-sm">{feature}</span>
                         </div>
                       ))}
                     </div>
 
                     <button
-                      className={`
-                      w-full py-3 px-6 rounded-xl font-semibold
-                      bg-gradient-to-r ${tool.color}
-                      text-white transform transition-all duration-300
-                      hover:shadow-lg hover:scale-105
-                    `}
+                      className={`w-full py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg sm:rounded-xl font-semibold text-sm sm:text-base bg-gradient-to-r ${tool.color} text-white transform transition-all duration-300 hover:shadow-lg hover:scale-105 active:scale-95`}
                     >
                       Get Started
                     </button>

@@ -8,7 +8,7 @@ export function Home() {
   const [xp, setXp] = useState(10);
 
   return (
-    <div className="min-h-screen pb-20 md:pb-0">
+    <div className="min-h-screen pb-20 md:pb-0 bg-gradient-to-br from-[#63a29b] via-[#275151] to-slate-900">
       <div className="flex">
         {/* Left Sidebar - Hidden on mobile */}
         <aside className="hidden lg:block w-80 ">
@@ -16,7 +16,7 @@ export function Home() {
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1 mx-auto">
+        <main className="flex-1 mx-auto bg-gradient-to-br from-[#63a29b] via-[#275151] to-slate-900">
           <HomeMain />
         </main>
 
