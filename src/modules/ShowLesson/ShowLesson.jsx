@@ -2402,7 +2402,7 @@ export function ShowLesson() {
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center space-x-3">
             <Link
-              to="/"
+              to="/reading"
               className={`text-[var(--secondary-color)] p-2 hover:bg-gray-200 rounded-full transition-colors`}
             >
               <X size={29} />

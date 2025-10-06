@@ -13,7 +13,7 @@ export const ModalShowLessons = ({ level }) => {
       setIsOpen={setIsOpen}
       btnText={<IoIosArrowDown />}
       btnClassName={
-        "text-2xl btn-circle bg-white hover:bg-white text-black hover:scale-[1.07] btn-sm flex items-center justify-center"
+        "text-2xl animate-pulse btn-circle bg-white hover:bg-white text-black hover:scale-[1.07] btn-sm flex items-center justify-center"
       }
       classNameModalStyle={"max-w-[1050px] w-full"}
     >

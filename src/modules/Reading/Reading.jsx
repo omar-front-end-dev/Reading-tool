@@ -2,7 +2,6 @@ import { useState, useMemo } from "react";
 import { LevelList } from "./Components/LevelList/LevelList";
 import { levelsAndLesson } from "../../config/levelsAndLesson/levelsAndLesson";
 import { SectionTitle } from "../../components/index";
-// import { HeroSection } from "./Components/HeroSection/HeroSection";
 
 export const Reading = () => {
   const [searchTerm, setSearchTerm] = useState("");
