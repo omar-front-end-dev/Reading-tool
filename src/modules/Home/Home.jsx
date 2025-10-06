@@ -9,11 +9,11 @@ export function Home() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <div className="min-h-screen pb-20 md:pb-0 bg-gradient-to-br from-[#63a29b] via-[#275151] to-slate-900">
+    <div className="min-h-screen pb-20 md:pb-0 bg-gradient-to-br">
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-        className="lg:hidden fixed top-4 left-4 z-50 p-3 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 text-white hover:bg-white/20 transition-all"
+        className="lg:hidden fixed top-4 left-4 z-50 p-3 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 text-black hover:bg-white/20 transition-all"
         aria-label="Toggle menu"
       >
         {isSidebarOpen ? (
@@ -36,7 +36,7 @@ export function Home() {
         <aside
           className={`
             fixed lg:sticky top-0 left-0 h-screen w-80 z-40
-            bg-gradient-to-br from-[#63a29b] via-[#275151] to-slate-900
+            bg-gradient-to-br
             transform transition-transform duration-300 ease-in-out
             lg:transform-none
             ${
@@ -51,7 +51,7 @@ export function Home() {
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1 mx-auto bg-gradient-to-br from-[#63a29b] via-[#275151] to-slate-900">
+        <main className="flex-1 mx-auto bg-gradient-to-br">
           <HomeMain />
         </main>
 
