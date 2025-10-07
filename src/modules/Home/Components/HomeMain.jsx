@@ -23,7 +23,7 @@ export const HomeMain = () => {
         "أتقن النطق الصحيح مع تعليقات الذكاء الاصطناعي والتصحيح الفوري",
       color: "from-blue-500 to-cyan-500",
       features: ["Voice Recognition", "Accent Analysis", "Progress Tracking"],
-      link: "/reading"
+      link: "/reading",
     },
     {
       id: 2,
@@ -35,7 +35,7 @@ export const HomeMain = () => {
       descriptionAr: "حسّن مهارات الاستماع مع متحدثين أصليين ومحتوى تفاعلي",
       color: "from-purple-500 to-pink-500",
       features: ["Native Audio", "Speed Control", "Comprehension Tests"],
-      link: "/listening/home"
+      link: "/listening/home",
     },
     {
       id: 3,
@@ -47,7 +47,7 @@ export const HomeMain = () => {
       descriptionAr: "طوّر كتابتك مع فحص القواعد الذكي واقتراحات الأسلوب",
       color: "from-orange-500 to-red-500",
       features: ["Grammar Check", "Style Tips", "Vocabulary Builder"],
-      link: "/reading"
+      link: "/reading",
     },
     {
       id: 4,
@@ -59,7 +59,7 @@ export const HomeMain = () => {
       descriptionAr: "ابنِ طلاقة القراءة مع محتوى متدرج وفهم تفاعلي",
       color: "from-green-500 to-teal-500",
       features: ["Adaptive Levels", "Instant Translation", "Reading Analytics"],
-      link: "/reading"
+      link: "/reading",
     },
   ];
 
@@ -128,7 +128,9 @@ export const HomeMain = () => {
                           className="flex items-center text-gray-700"
                         >
                           <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-[#63a29b] flex-shrink-0" />
-                          <span className="text-xs sm:text-sm font-medium">{feature}</span>
+                          <span className="text-xs sm:text-sm font-medium">
+                            {feature}
+                          </span>
                         </div>
                       ))}
                     </div>
