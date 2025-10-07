@@ -27,7 +27,7 @@ export const HomeNav = () => {
       label: "الاستماع",
       color: "text-yellow-400",
       width: "31px",
-      linkTo: "/reading",
+      linkTo: "/listening/home",
     },
     {
       icon: pronunciationIcon,
@@ -81,7 +81,10 @@ export const HomeNav = () => {
         </div>
       </aside>
       {/* Bottom Navigation - Mobile Only */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white z-30">
+      <nav
+        style={{ boxShadow: "0px 0px 12px 0px #0000008f" }}
+        className="md:hidden fixed bottom-0 left-0 right-0 bg-white z-30"
+      >
         <div className="flex items-center justify-between p-2">
           {navItems.map((item, idx) => {
             return (

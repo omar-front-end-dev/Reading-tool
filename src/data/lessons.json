@@ -1,0 +1,747 @@
+{
+  "lessons": [
+    {
+      "id": 1,
+      "title": "Basic Pronunciation - Vowel Sounds",
+      "description": "Master fundamental English vowel sounds with clear pronunciation practice",
+      "duration": "12 minutes",
+      "difficulty": "Beginner",
+      "youtubeVideoId": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      "exercises": [
+        {
+          "id": 1,
+          "text": "The cat sat on the mat.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%201/pronounce%201.mp3",
+          "choices": [
+            "The cat sat on the mat.",
+            "The cat sit on the mat.",
+            "The cat sat on the rug.",
+            "A cat sat on the mat."
+          ]
+        },
+        {
+          "id": 2,
+          "text": "She likes to read books in the evening.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%201/pronounce%202.mp3",
+          "choices": [
+            "She likes to read books in the evening.",
+            "She like to read books in the evening.",
+            "She likes to read book in the evening.",
+            "She likes to read books in the morning."
+          ]
+        },
+        {
+          "id": 3,
+          "text": "The sun shines bright in the sky.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%201/pronounce%203.mp3",
+          "choices": [
+            "The sun shines bright in the sky.",
+            "The sun shine bright in the sky.",
+            "The sun shines bright in the sky.",
+            "The sun shines brightly in the sky."
+          ]
+        },
+        {
+          "id": 4,
+          "text": "I have a red car and a blue bike.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%201/pronounce%204.mp3",
+          "choices": [
+            "I have a red car and a blue bike.",
+            "I has a red car and a blue bike.",
+            "I have a red car and a blue bicycle.",
+            "I have red car and blue bike."
+          ]
+        },
+        {
+          "id": 5,
+          "text": "The dog runs fast in the park.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%201/pronounce%205.mp3",
+          "choices": [
+            "The dog runs fast in the park.",
+            "The dog run fast in the park.",
+            "The dog runs fast in the garden.",
+            "The dogs run fast in the park."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Common Phrases and Greetings",
+      "description": "Learn essential English greetings and everyday phrases for daily communication",
+      "duration": "15 minutes",
+      "difficulty": "Beginner",
+      "youtubeVideoId": "https://www.youtube.com/watch?v=jNQXAC9IVRw",
+      "thumbnail": "https://img.youtube.com/vi/jNQXAC9IVRw/maxresdefault.jpg",
+      "exercises": [
+        {
+          "id": 6,
+          "text": "Good morning, how are you today?",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%201/pronounce%201.mp3",
+          "choices": [
+            "Good morning, how are you today?",
+            "Good morning, how is you today?",
+            "Good morning, how are you today?",
+            "Good morning, how are you to day?"
+          ]
+        },
+        {
+          "id": 7,
+          "text": "Nice to meet you, my name is Sarah.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%201/pronounce%201.mp3",
+          "choices": [
+            "Nice to meet you, my name is Sarah.",
+            "Nice to meet you, my name are Sarah.",
+            "Nice to meet you, my name is Sara.",
+            "Nice to meet you, my name is Sarah."
+          ]
+        },
+        {
+          "id": 8,
+          "text": "Thank you very much for your help.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%201/pronounce%201.mp3",
+          "choices": [
+            "Thank you very much for your help.",
+            "Thank you very much for you help.",
+            "Thank you very much for your helps.",
+            "Thanks you very much for your help."
+          ]
+        },
+        {
+          "id": 9,
+          "text": "Excuse me, where is the bathroom?",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%201/pronounce%201.mp3",
+          "choices": [
+            "Excuse me, where is the bathroom?",
+            "Excuse me, where are the bathroom?",
+            "Excuse me, where is the restroom?",
+            "Excuse me, where is bathroom?"
+          ]
+        },
+        {
+          "id": 10,
+          "text": "Have a great day and see you later!",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%201/pronounce%201.mp3",
+          "choices": [
+            "Have a great day and see you later!",
+            "Have a great day and see you latter!",
+            "Have a great day and see you later.",
+            "Have a great day and see you soon!"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Numbers and Time",
+      "description": "Master English numbers, telling time, and basic mathematical expressions",
+      "duration": "18 minutes",
+      "difficulty": "Beginner",
+      "youtubeVideoId": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      "exercises": [
+        {
+          "id": 11,
+          "text": "It's three thirty in the afternoon.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%203/time%201.mp3",
+          "choices": [
+            "It's three thirty in the afternoon.",
+            "It's three thirty in the morning.",
+            "It's three thirty in the evening.",
+            "It's three thirty in the night."
+          ]
+        },
+        {
+          "id": 12,
+          "text": "I have twenty-five books on my shelf.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%203/numbers%201.mp3",
+          "choices": [
+            "I have twenty-five books on my shelf.",
+            "I have twenty five books on my shelf.",
+            "I have twenty-five book on my shelf.",
+            "I have twenty-five books on my shelfs."
+          ]
+        },
+        {
+          "id": 13,
+          "text": "The meeting starts at nine o'clock sharp.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%203/time%202.mp3",
+          "choices": [
+            "The meeting starts at nine o'clock sharp.",
+            "The meeting start at nine o'clock sharp.",
+            "The meeting starts at nine o'clock sharp.",
+            "The meeting starts at nine o'clock sharply."
+          ]
+        },
+        {
+          "id": 14,
+          "text": "She was born on the fifteenth of March.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%203/date%201.mp3",
+          "choices": [
+            "She was born on the fifteenth of March.",
+            "She was born on the fifteen of March.",
+            "She was born on the fifteenth of march.",
+            "She was born on fifteenth of March."
+          ]
+        },
+        {
+          "id": 15,
+          "text": "The train leaves at half past seven.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%203/time%203.mp3",
+          "choices": [
+            "The train leaves at half past seven.",
+            "The train leave at half past seven.",
+            "The train leaves at half past seven.",
+            "The train leaves at half past seven o'clock."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Family and Relationships",
+      "description": "Learn vocabulary and expressions related to family members and relationships",
+      "duration": "20 minutes",
+      "difficulty": "Beginner",
+      "youtubeVideoId": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      "exercises": [
+        {
+          "id": 16,
+          "text": "My grandmother lives with us in the same house.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%204/family%201.mp3",
+          "choices": [
+            "My grandmother lives with us in the same house.",
+            "My grandmother live with us in the same house.",
+            "My grandmother lives with us in the same home.",
+            "My grandmother lives with we in the same house."
+          ]
+        },
+        {
+          "id": 17,
+          "text": "My brother is older than my sister by two years.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%204/family%202.mp3",
+          "choices": [
+            "My brother is older than my sister by two years.",
+            "My brother is older than my sister by two year.",
+            "My brother are older than my sister by two years.",
+            "My brother is older than my sister for two years."
+          ]
+        },
+        {
+          "id": 18,
+          "text": "We visit our relatives every Christmas holiday.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%204/family%203.mp3",
+          "choices": [
+            "We visit our relatives every Christmas holiday.",
+            "We visit our relative every Christmas holiday.",
+            "We visit our relatives every Christmas holidays.",
+            "We visits our relatives every Christmas holiday."
+          ]
+        },
+        {
+          "id": 19,
+          "text": "My uncle works as a doctor in the hospital.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%204/family%204.mp3",
+          "choices": [
+            "My uncle works as a doctor in the hospital.",
+            "My uncle work as a doctor in the hospital.",
+            "My uncle works as a doctor in the hospital.",
+            "My uncle works as doctor in the hospital."
+          ]
+        },
+        {
+          "id": 20,
+          "text": "I have a close relationship with my cousins.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%204/family%205.mp3",
+          "choices": [
+            "I have a close relationship with my cousins.",
+            "I have a close relationship with my cousin.",
+            "I have close relationship with my cousins.",
+            "I has a close relationship with my cousins."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Food and Dining",
+      "description": "Essential vocabulary for ordering food, describing meals, and dining experiences",
+      "duration": "22 minutes",
+      "difficulty": "Beginner",
+      "youtubeVideoId": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      "exercises": [
+        {
+          "id": 21,
+          "text": "I would like to order the grilled chicken with vegetables.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%205/food%201.mp3",
+          "choices": [
+            "I would like to order the grilled chicken with vegetables.",
+            "I would like to order the grilled chicken with vegetable.",
+            "I would like to order grilled chicken with vegetables.",
+            "I would like to order the grill chicken with vegetables."
+          ]
+        },
+        {
+          "id": 22,
+          "text": "The soup tastes delicious and very hot.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%205/food%202.mp3",
+          "choices": [
+            "The soup tastes delicious and very hot.",
+            "The soup taste delicious and very hot.",
+            "The soup tastes delicious and very heat.",
+            "The soup tastes delicious and very warm."
+          ]
+        },
+        {
+          "id": 23,
+          "text": "Could you please bring me the dessert menu?",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%205/food%203.mp3",
+          "choices": [
+            "Could you please bring me the dessert menu?",
+            "Could you please bring me the desert menu?",
+            "Could you please bring me dessert menu?",
+            "Could you please bring me the dessert menus?"
+          ]
+        },
+        {
+          "id": 24,
+          "text": "I'm allergic to nuts and dairy products.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%205/food%204.mp3",
+          "choices": [
+            "I'm allergic to nuts and dairy products.",
+            "I'm allergic to nuts and dairy product.",
+            "I'm allergic to nut and dairy products.",
+            "I'm allergic to nuts and diary products."
+          ]
+        },
+        {
+          "id": 25,
+          "text": "The bill comes to forty-five dollars and fifty cents.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%205/food%205.mp3",
+          "choices": [
+            "The bill comes to forty-five dollars and fifty cents.",
+            "The bill come to forty-five dollars and fifty cents.",
+            "The bill comes to forty five dollars and fifty cents.",
+            "The bill comes to forty-five dollar and fifty cents."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Intermediate Listening - Business Communication",
+      "description": "Professional communication skills for workplace environments and business contexts",
+      "duration": "25 minutes",
+      "difficulty": "Intermediate",
+      "youtubeVideoId": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      "exercises": [
+        {
+          "id": 26,
+          "text": "The quarterly report will be presented to the board of directors next Friday.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%206/business%201.mp3",
+          "choices": [
+            "The quarterly report will be presented to the board of directors next Friday.",
+            "The quarterly report will be present to the board of directors next Friday.",
+            "The quarterly report will be presented to the board of director next Friday.",
+            "The quarterly report will be presenting to the board of directors next Friday."
+          ]
+        },
+        {
+          "id": 27,
+          "text": "We need to schedule a meeting to discuss the project timeline.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%206/business%202.mp3",
+          "choices": [
+            "We need to schedule a meeting to discuss the project timeline.",
+            "We need to schedule a meeting to discuss the project time line.",
+            "We need to schedule a meeting to discuss the project timelines.",
+            "We need to schedule meeting to discuss the project timeline."
+          ]
+        },
+        {
+          "id": 28,
+          "text": "The client requested several modifications to the original proposal.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%206/business%203.mp3",
+          "choices": [
+            "The client requested several modifications to the original proposal.",
+            "The client request several modifications to the original proposal.",
+            "The client requested several modification to the original proposal.",
+            "The client requested several modifications to the original proposals."
+          ]
+        },
+        {
+          "id": 29,
+          "text": "Our team achieved a significant increase in productivity this month.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%206/business%204.mp3",
+          "choices": [
+            "Our team achieved a significant increase in productivity this month.",
+            "Our team achieve a significant increase in productivity this month.",
+            "Our team achieved a significant increase in productivities this month.",
+            "Our team achieved significant increase in productivity this month."
+          ]
+        },
+        {
+          "id": 30,
+          "text": "The deadline for submitting the final report is next Wednesday.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%206/business%205.mp3",
+          "choices": [
+            "The deadline for submitting the final report is next Wednesday.",
+            "The deadline for submit the final report is next Wednesday.",
+            "The deadline for submitting the final reports is next Wednesday.",
+            "The deadline for submitting the final report is next Wednesday."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Academic English - Research and Study",
+      "description": "Formal academic language for research, studies, and scholarly communication",
+      "duration": "28 minutes",
+      "difficulty": "Intermediate",
+      "youtubeVideoId": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      "exercises": [
+        {
+          "id": 31,
+          "text": "The research methodology employed in this study follows established scientific protocols.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%207/academic%201.mp3",
+          "choices": [
+            "The research methodology employed in this study follows established scientific protocols.",
+            "The research methodology employ in this study follows established scientific protocols.",
+            "The research methodology employed in this study follow established scientific protocols.",
+            "The research methodology employed in this study follows establish scientific protocols."
+          ]
+        },
+        {
+          "id": 32,
+          "text": "The hypothesis was supported by the experimental data collected over six months.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%207/academic%202.mp3",
+          "choices": [
+            "The hypothesis was supported by the experimental data collected over six months.",
+            "The hypothesis were supported by the experimental data collected over six months.",
+            "The hypothesis was support by the experimental data collected over six months.",
+            "The hypothesis was supported by the experimental data collect over six months."
+          ]
+        },
+        {
+          "id": 33,
+          "text": "The literature review revealed significant gaps in current research.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%207/academic%203.mp3",
+          "choices": [
+            "The literature review revealed significant gaps in current research.",
+            "The literature review reveal significant gaps in current research.",
+            "The literature review revealed significant gap in current research.",
+            "The literature review revealed significant gaps in current researches."
+          ]
+        },
+        {
+          "id": 34,
+          "text": "Students must demonstrate critical thinking skills in their assignments.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%207/academic%204.mp3",
+          "choices": [
+            "Students must demonstrate critical thinking skills in their assignments.",
+            "Students must demonstrate critical thinking skill in their assignments.",
+            "Students must demonstrate critical thinking skills in their assignment.",
+            "Students must demonstrate critical thinking skills in they assignments."
+          ]
+        },
+        {
+          "id": 35,
+          "text": "The professor emphasized the importance of proper citation methods.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%207/academic%205.mp3",
+          "choices": [
+            "The professor emphasized the importance of proper citation methods.",
+            "The professor emphasize the importance of proper citation methods.",
+            "The professor emphasized the importance of proper citation method.",
+            "The professor emphasized the importance of proper citations methods."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Advanced Conversation - Current Events",
+      "description": "Complex discussions about current events, politics, and social issues",
+      "duration": "30 minutes",
+      "difficulty": "Advanced",
+      "youtubeVideoId": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      "exercises": [
+        {
+          "id": 36,
+          "text": "The implementation of new policies requires careful consideration of all stakeholders.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%208/advanced%201.mp3",
+          "choices": [
+            "The implementation of new policies requires careful consideration of all stakeholders.",
+            "The implementation of new policies require careful consideration of all stakeholders.",
+            "The implementation of new policy requires careful consideration of all stakeholders.",
+            "The implementation of new policies requires careful consideration of all stake holders."
+          ]
+        },
+        {
+          "id": 37,
+          "text": "Environmental sustainability has become a critical concern for modern businesses.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%208/advanced%202.mp3",
+          "choices": [
+            "Environmental sustainability has become a critical concern for modern businesses.",
+            "Environmental sustainability have become a critical concern for modern businesses.",
+            "Environmental sustainability has became a critical concern for modern businesses.",
+            "Environmental sustainability has become a critical concern for modern business."
+          ]
+        },
+        {
+          "id": 38,
+          "text": "The economic implications of this decision cannot be underestimated.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%208/advanced%203.mp3",
+          "choices": [
+            "The economic implications of this decision cannot be underestimated.",
+            "The economic implication of this decision cannot be underestimated.",
+            "The economic implications of this decision cannot be underestimate.",
+            "The economic implications of this decisions cannot be underestimated."
+          ]
+        },
+        {
+          "id": 39,
+          "text": "Technological advancement has revolutionized modern communication methods.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%208/advanced%204.mp3",
+          "choices": [
+            "Technological advancement has revolutionized modern communication methods.",
+            "Technological advancement have revolutionized modern communication methods.",
+            "Technological advancement has revolutionize modern communication methods.",
+            "Technological advancement has revolutionized modern communication method."
+          ]
+        },
+        {
+          "id": 40,
+          "text": "International cooperation is essential for addressing global challenges.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%208/advanced%205.mp3",
+          "choices": [
+            "International cooperation is essential for addressing global challenges.",
+            "International cooperation are essential for addressing global challenges.",
+            "International cooperation is essential for address global challenges.",
+            "International cooperation is essential for addressing global challenge."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Medical English - Healthcare Communication",
+      "description": "Specialized vocabulary and expressions for healthcare professionals and medical contexts",
+      "duration": "32 minutes",
+      "difficulty": "Advanced",
+      "youtubeVideoId": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      "exercises": [
+        {
+          "id": 41,
+          "text": "The patient's symptoms indicate a possible allergic reaction to the medication.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%209/medical%201.mp3",
+          "choices": [
+            "The patient's symptoms indicate a possible allergic reaction to the medication.",
+            "The patient's symptom indicate a possible allergic reaction to the medication.",
+            "The patient's symptoms indicate a possible allergic reaction to the medications.",
+            "The patient symptoms indicate a possible allergic reaction to the medication."
+          ]
+        },
+        {
+          "id": 42,
+          "text": "The surgical procedure was performed successfully without complications.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%209/medical%202.mp3",
+          "choices": [
+            "The surgical procedure was performed successfully without complications.",
+            "The surgical procedure was perform successfully without complications.",
+            "The surgical procedure was performed successful without complications.",
+            "The surgical procedures was performed successfully without complications."
+          ]
+        },
+        {
+          "id": 43,
+          "text": "The diagnosis requires further examination and laboratory tests.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%209/medical%203.mp3",
+          "choices": [
+            "The diagnosis requires further examination and laboratory tests.",
+            "The diagnosis require further examination and laboratory tests.",
+            "The diagnosis requires further examinations and laboratory tests.",
+            "The diagnoses requires further examination and laboratory tests."
+          ]
+        },
+        {
+          "id": 44,
+          "text": "The treatment protocol includes both medication and physical therapy.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%209/medical%204.mp3",
+          "choices": [
+            "The treatment protocol includes both medication and physical therapy.",
+            "The treatment protocol include both medication and physical therapy.",
+            "The treatment protocol includes both medications and physical therapy.",
+            "The treatment protocols includes both medication and physical therapy."
+          ]
+        },
+        {
+          "id": 45,
+          "text": "The patient's recovery depends on following the prescribed rehabilitation program.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%209/medical%205.mp3",
+          "choices": [
+            "The patient's recovery depends on following the prescribed rehabilitation program.",
+            "The patient's recovery depend on following the prescribed rehabilitation program.",
+            "The patient's recovery depends on follow the prescribed rehabilitation program.",
+            "The patient's recoveries depend on following the prescribed rehabilitation program."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Legal English - Professional Communication",
+      "description": "Formal legal language and professional communication for legal contexts",
+      "duration": "35 minutes",
+      "difficulty": "Advanced",
+      "youtubeVideoId": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      "exercises": [
+        {
+          "id": 46,
+          "text": "The contract stipulates that both parties must fulfill their obligations within the specified timeframe.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%2010/legal%201.mp3",
+          "choices": [
+            "The contract stipulates that both parties must fulfill their obligations within the specified timeframe.",
+            "The contract stipulate that both parties must fulfill their obligations within the specified timeframe.",
+            "The contract stipulates that both parties must fulfill their obligation within the specified timeframe.",
+            "The contract stipulates that both party must fulfill their obligations within the specified timeframe."
+          ]
+        },
+        {
+          "id": 47,
+          "text": "The court proceedings will commence at nine o'clock in the morning.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%2010/legal%202.mp3",
+          "choices": [
+            "The court proceedings will commence at nine o'clock in the morning.",
+            "The court proceeding will commence at nine o'clock in the morning.",
+            "The court proceedings will commence at nine o'clock in the morning.",
+            "The court proceedings will commence at nine o'clock in morning."
+          ]
+        },
+        {
+          "id": 48,
+          "text": "The defendant's attorney presented compelling evidence during the trial.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%2010/legal%203.mp3",
+          "choices": [
+            "The defendant's attorney presented compelling evidence during the trial.",
+            "The defendant's attorney present compelling evidence during the trial.",
+            "The defendant's attorney presented compelling evidences during the trial.",
+            "The defendants attorney presented compelling evidence during the trial."
+          ]
+        },
+        {
+          "id": 49,
+          "text": "The settlement agreement requires mutual consent from all involved parties.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%2010/legal%204.mp3",
+          "choices": [
+            "The settlement agreement requires mutual consent from all involved parties.",
+            "The settlement agreement require mutual consent from all involved parties.",
+            "The settlement agreement requires mutual consent from all involve parties.",
+            "The settlement agreements requires mutual consent from all involved parties."
+          ]
+        },
+        {
+          "id": 50,
+          "text": "The legal precedent established by this case will influence future decisions.",
+          "audio": "https://cdn13674550.b-cdn.net/SNA-audio/lesson%2010/legal%205.mp3",
+          "choices": [
+            "The legal precedent established by this case will influence future decisions.",
+            "The legal precedent establish by this case will influence future decisions.",
+            "The legal precedent established by this case will influence future decision.",
+            "The legal precedents established by this case will influence future decisions."
+          ]
+        }
+      ]
+    }
+  ],
+  "tipsDatabase": {
+    "listening": [
+      {
+        "title": "Listen Multiple Times",
+        "content": "Don't worry if you don't understand everything on the first listen. Play the audio 2-3 times to catch all the details.",
+        "icon": "🔄"
+      },
+      {
+        "title": "Focus on Key Words",
+        "content": "Pay attention to stressed syllables and important words. These usually carry the main meaning of the sentence.",
+        "icon": "🎯"
+      },
+      {
+        "title": "Use Headphones",
+        "content": "Good quality headphones can help you hear subtle pronunciation differences and background sounds more clearly.",
+        "icon": "🎧"
+      },
+      {
+        "title": "Adjust Playback Speed",
+        "content": "Use the speed control to slow down audio if you're a beginner, or speed it up as you improve.",
+        "icon": "⚡"
+      },
+      {
+        "title": "Listen for Rhythm",
+        "content": "English has natural rhythm patterns. Try to identify where speakers pause and which words they emphasize.",
+        "icon": "🎵"
+      }
+    ],
+    "writing": [
+      {
+        "title": "Don't Edit While Typing",
+        "content": "Write what you hear first, then go back to check for mistakes. Editing while listening can distract you.",
+        "icon": "✏️"
+      },
+      {
+        "title": "Focus on Sounds, Not Spelling",
+        "content": "Sometimes what sounds right is more important than perfect spelling. Focus on capturing the sounds you hear.",
+        "icon": "🔤"
+      },
+      {
+        "title": "Use Punctuation Clues",
+        "content": "Listen for pauses that indicate commas, and falling intonation that suggests periods.",
+        "icon": "📖"
+      },
+      {
+        "title": "Practice Common Words",
+        "content": "The most frequently used English words should become automatic. Practice writing them without thinking.",
+        "icon": "📚"
+      },
+      {
+        "title": "Don't Panic on Mistakes",
+        "content": "Making mistakes is part of learning. Each error teaches you something new about English sounds and patterns.",
+        "icon": "😌"
+      }
+    ],
+    "general": [
+      {
+        "title": "Practice Daily",
+        "content": "Even 15 minutes of daily practice is more effective than longer, infrequent sessions.",
+        "icon": "📅"
+      },
+      {
+        "title": "Set Realistic Goals",
+        "content": "Start with easier sentences and gradually increase difficulty. Celebrate small improvements!",
+        "icon": "🎯"
+      },
+      {
+        "title": "Learn from Mistakes",
+        "content": "Review your errors to identify patterns. Are you missing certain sounds or word types?",
+        "icon": "📝"
+      },
+      {
+        "title": "Stay Motivated",
+        "content": "Track your progress and reward yourself for achieving milestones. Learning takes time!",
+        "icon": "💪"
+      },
+      {
+        "title": "Use Multiple Resources",
+        "content": "Combine dictation practice with reading, speaking, and listening to various English content.",
+        "icon": "🌟"
+      }
+    ]
+  }
+}

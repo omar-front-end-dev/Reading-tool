@@ -10,6 +10,8 @@ import {
   ShowLessonSecondRound,
   Home,
 } from "../../modules/index";
+import { ListeningHome } from "../../pages/ListeningHome";
+import { ListeningLessonPage } from "../../pages/ListeningLessonPage";
 
 export const Routes = createBrowserRouter([
   {
@@ -45,6 +47,14 @@ export const Routes = createBrowserRouter([
         path: "reading/progress",
         element: <ProgressTracker />,
       },
+      {
+        path: "listening/home",
+        element: <ListeningHome />,
+      },
+      {
+        path: "listening/lesson/:id",
+        element: <ListeningLessonPage />,
+      }
     ],
   },
 ]);

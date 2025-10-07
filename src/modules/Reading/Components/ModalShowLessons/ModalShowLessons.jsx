@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Modal } from "../../../../components/Modal/Modal";
+import { Modal } from "../../../../components/ReadingTool/Modal/Modal";
 import PropTypes from "prop-types";
 import { IoIosArrowDown } from "react-icons/io";
 import { LessonList } from "../LessonList/LessonList";

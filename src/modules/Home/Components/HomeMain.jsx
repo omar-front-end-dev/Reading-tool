@@ -64,7 +64,7 @@ export const HomeMain = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100 p-4 sm:p-6 md:p-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100 p-4 sm:p-6 md:p-8 pt-16">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 px-4">
@@ -101,7 +101,7 @@ export const HomeMain = () => {
                       className={`inline-flex p-3 sm:p-4 rounded-lg sm:rounded-xl bg-gradient-to-br ${
                         tool.color
                       } mb-4 sm:mb-6 transform transition-transform duration-300 ${
-                        hoveredCard === tool.id ? "rotate-6 scale-110" : ""
+                        hoveredCard === tool.id ? "scale-105" : ""
                       }`}
                     >
                       <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
