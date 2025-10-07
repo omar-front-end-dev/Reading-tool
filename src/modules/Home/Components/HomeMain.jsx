@@ -35,7 +35,7 @@ export const HomeMain = () => {
       descriptionAr: "حسّن مهارات الاستماع مع متحدثين أصليين ومحتوى تفاعلي",
       color: "from-purple-500 to-pink-500",
       features: ["Native Audio", "Speed Control", "Comprehension Tests"],
-      link: "/reading"
+      link: "/listening/home"
     },
     {
       id: 3,
