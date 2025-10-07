@@ -21,7 +21,7 @@ import { SectionTitle } from "../../components";
  * - Stats count only known catalog lessons; activity shows all
  */
 
-export const ProgressTracker = () => {
+export const ReadingProgressTracker = () => {
   const [progress, setProgress] = useState({});
   const [viewMode, setViewMode] = useState("timeline"); // "timeline" | "grid" | "table"
 

@@ -13,6 +13,11 @@ import { Link } from "react-router-dom";
 export const SideHome = () => {
   const [activeCard, setActiveCard] = useState(null);
   const [progress, setProgress] = useState({});
+  const [listeningProgress, setListeningProgress] = useState({
+    progress: 0,
+    completedLessons: 0,
+    totalLessons: 10
+  });
 
   // Load progress from localStorage
   useEffect(() => {
@@ -23,6 +28,28 @@ export const SideHome = () => {
     } catch (error) {
       console.error("Error loading progress:", error);
       setProgress({});
+    }
+  }, []);
+
+  // Load Listening progress from localStorage
+  useEffect(() => {
+    try {
+      const storedData = localStorage.getItem('sna-lesson-progress');
+      if (storedData) {
+        const lessons = JSON.parse(storedData);
+        const total = lessons.length;
+        const completed = lessons.filter(lesson => lesson.isCompleted).length;
+        const totalProgress = lessons.reduce((sum, lesson) => sum + lesson.progress, 0);
+        const avgProgress = total > 0 ? Math.round(totalProgress / total) : 0;
+        
+        setListeningProgress({
+          progress: avgProgress,
+          completedLessons: completed,
+          totalLessons: total
+        });
+      }
+    } catch (error) {
+      console.error('Error loading listening progress:', error);
     }
   }, []);
 
@@ -101,10 +128,11 @@ export const SideHome = () => {
       titleAr: "الاستماع",
       brief: "Native speaker content",
       briefAr: "محتوى من متحدثين أصليين",
-      progress: 45,
-      completedLessons: 9,
-      totalLessons: 20,
+      progress: listeningProgress.progress,
+      completedLessons: listeningProgress.completedLessons,
+      totalLessons: listeningProgress.totalLessons,
       color: "from-purple-500 to-pink-500",
+      link: "/listening/progress",
     },
     {
       id: 3,

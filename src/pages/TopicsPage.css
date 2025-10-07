@@ -1,0 +1,570 @@
+/* Topics Page - Clean & Simple Version */
+
+/* CSS Variables */
+:root {
+  --sna-primary: #63a29b;
+  --sna-primary-light: #8abdb7;
+  --sna-primary-lighter: #b1d7d3;
+  --text-dark: #2c3e50;
+  --text-muted: #6c757d;
+  --background-white: #ffffff;
+  --background-light: #f4f7f6;
+  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Body styling */
+.topics-page {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  min-height: 100vh;
+  font-family: "Nunito", sans-serif;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/* Gaming Background Canvas */
+#gamingBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Main container */
+.topics-page .main-container {
+  padding: 2rem 1rem;
+  max-width: 1400px; /* Increased from 1200px for larger desktop screens */
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  min-height: calc(100vh - 200px);
+}
+
+/* Desktop-specific main container improvements */
+@media (min-width: 1024px) {
+  .topics-page .main-container {
+    max-width: 1600px; /* Even larger for very wide screens */
+    padding: 3rem 2rem; /* More generous padding */
+  }
+}
+
+/* Lesson Header */
+.topics-page .lesson-header {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+/* Desktop-specific lesson header improvements */
+@media (min-width: 1024px) {
+  .topics-page .lesson-header {
+    padding: 3rem; /* More generous padding for desktop */
+    margin-bottom: 3rem; /* More spacing */
+    border-radius: 20px; /* Larger border radius */
+  }
+}
+
+.topics-page .lesson-header-back-button {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  margin-top: -0.5rem;
+  user-select: none;
+}
+
+.topics-page .lesson-header-back-button:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.topics-page .lesson-header-back-button:active {
+  transform: scale(1.05);
+}
+
+.topics-page .lesson-header-content {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: -60px;
+}
+
+.topics-page .lesson-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+/* Desktop-specific lesson header text improvements */
+@media (min-width: 1024px) {
+  .topics-page .lesson-header h2 {
+    font-size: 2.5rem; /* Larger title for desktop */
+  }
+}
+
+.topics-page .lesson-header p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Desktop-specific lesson header subtitle improvements */
+@media (min-width: 1024px) {
+  .topics-page .lesson-header p {
+    font-size: 1.3rem; /* Larger subtitle for desktop */
+  }
+}
+
+.topics-page .lesson-progress span {
+  font-size: 0.9rem;
+  color: var(--sna-primary);
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Topics Container */
+.topics-page .topics-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+/* Desktop-specific topics container improvements */
+@media (min-width: 1024px) {
+  .topics-page .topics-container {
+    gap: 2rem; /* More spacing between topic cards */
+  }
+}
+
+/* Topic Cards */
+.topics-page .topic-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+/* Desktop-specific topic card improvements */
+@media (min-width: 1024px) {
+  .topics-page .topic-card {
+    border-radius: 20px; /* Larger border radius for desktop */
+    margin-bottom: 1.5rem; /* More spacing */
+  }
+}
+
+.topics-page .topic-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.topics-page .topic-card.locked {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.topics-page .topic-card.completed {
+  border-left: 4px solid var(--sna-primary);
+}
+
+.topics-page .topic-card.available {
+  border-left: 4px solid var(--sna-primary-light);
+}
+
+/* Topic Header */
+.topics-page .topic-header {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+/* Desktop-specific topic header improvements */
+@media (min-width: 1024px) {
+  .topics-page .topic-header {
+    padding: 2rem; /* More generous padding for desktop */
+    gap: 1.5rem; /* More spacing between elements */
+  }
+}
+
+.topics-page .topic-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--sna-primary) 0%, #275151 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* Desktop-specific topic icon improvements */
+@media (min-width: 1024px) {
+  .topics-page .topic-icon {
+    width: 60px; /* Larger icons for desktop */
+    height: 60px;
+    border-radius: 16px; /* Larger border radius */
+    font-size: 1.4rem; /* Larger icon text */
+  }
+}
+
+.topics-page .topic-info {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Simple Topic Text Styles - NO COMPLEX CSS */
+.simple-topic-title {
+  color: var(--text-dark);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+  text-align: left;
+}
+
+/* Desktop-specific topic title improvements */
+@media (min-width: 1024px) {
+  .simple-topic-title {
+    font-size: 1.5rem; /* Larger title for desktop */
+    margin-bottom: 0.75rem; /* More spacing */
+  }
+}
+
+.simple-topic-description {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin: 0;
+  line-height: 1.4;
+  text-align: left;
+}
+
+/* Desktop-specific topic description improvements */
+@media (min-width: 1024px) {
+  .simple-topic-description {
+    font-size: 1.1rem; /* Larger description for desktop */
+  }
+}
+
+.topics-page .topic-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.topics-page .arrow-icon {
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  transition: transform 0.3s ease;
+}
+
+.topics-page .lock-icon {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+/* Topic Content */
+.topics-page .topic-content {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+/* Desktop-specific topic content improvements */
+@media (min-width: 1024px) {
+  .topics-page .topic-content {
+    padding: 0 2rem 2rem 2rem; /* More generous padding for desktop */
+  }
+}
+
+.topics-page .topic-content.expanded {
+  display: block;
+}
+
+.topics-page .conversations-header {
+  margin-bottom: 1rem;
+}
+
+.topics-page .conversations-count {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.topics-page .conversations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Conversation Items */
+.topics-page .conversation-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: var(--background-light);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  gap: 1rem;
+}
+
+/* Desktop-specific conversation item improvements */
+@media (min-width: 1024px) {
+  .topics-page .conversation-item {
+    padding: 1.5rem; /* More generous padding for desktop */
+    border-radius: 16px; /* Larger border radius */
+    gap: 1.5rem; /* More spacing between elements */
+  }
+}
+
+.topics-page .conversation-item:hover {
+  background: var(--sna-primary-lighter);
+  transform: translateX(4px);
+}
+
+.topics-page .conversation-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--sna-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* Desktop-specific conversation icon improvements */
+@media (min-width: 1024px) {
+  .topics-page .conversation-icon {
+    width: 50px; /* Larger icons for desktop */
+    height: 50px;
+    border-radius: 12px; /* Larger border radius */
+    font-size: 1.2rem; /* Larger icon text */
+  }
+}
+
+.topics-page .conversation-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.topics-page .conversation-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 0.25rem 0;
+}
+
+/* Desktop-specific conversation title improvements */
+@media (min-width: 1024px) {
+  .topics-page .conversation-title {
+    font-size: 1.2rem; /* Larger title for desktop */
+    margin-bottom: 0.5rem; /* More spacing */
+  }
+}
+
+.topics-page .conversation-description {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Desktop-specific conversation description improvements */
+@media (min-width: 1024px) {
+  .topics-page .conversation-description {
+    font-size: 1rem; /* Larger description for desktop */
+  }
+}
+
+.topics-page .conversation-status {
+  display: flex;
+  align-items: center;
+}
+
+.topics-page .completed-icon {
+  color: var(--sna-primary);
+  font-size: 1.2rem;
+}
+
+.topics-page .play-icon {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+}
+
+/* Progress Bar */
+.topics-page .topic-progress {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.topics-page .progress-bar {
+  flex: 1;
+  height: 8px;
+  background: var(--background-light);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.topics-page .progress-fill {
+  height: 100%;
+  background: linear-gradient(135deg, var(--sna-primary) 0%, #275151 100%);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.topics-page .progress-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  min-width: 60px;
+}
+
+/* Loading & No Topics */
+.loading-indicator,
+.no-topics {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.loading-indicator i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* Hide Footer */
+.footer {
+  display: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .header {
+    display: none !important;
+  }
+
+  .topics-page .main-container {
+    padding: 2rem 0.5rem 1rem 0.5rem;
+    min-height: 100vh;
+  }
+
+  .topics-page .lesson-header {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    gap: 0.75rem;
+  }
+
+  .topics-page .lesson-header-back-button {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    margin-top: 0;
+  }
+
+  .topics-page .lesson-header-content {
+    margin-left: -48px;
+  }
+
+  .topics-page .lesson-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .topics-page .topic-header {
+    padding: 1rem;
+  }
+
+  .topics-page .topic-content {
+    padding: 0 1rem 1rem 1rem;
+  }
+
+  .topics-page .conversation-item {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+
+  .topics-page .conversation-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+
+  .simple-topic-title {
+    font-size: 1.1rem;
+  }
+
+  .simple-topic-description {
+    font-size: 0.85rem;
+  }
+
+  .topics-page .conversation-title {
+    font-size: 0.95rem;
+  }
+
+  .topics-page .conversation-description {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .topics-page .lesson-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .simple-topic-title {
+    font-size: 1rem;
+  }
+
+  .simple-topic-description {
+    font-size: 0.8rem;
+  }
+
+  .topics-page .topic-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .topics-page .conversation-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+}

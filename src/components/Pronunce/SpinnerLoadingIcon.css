@@ -1,0 +1,204 @@
+/* Spinner Loading Icon Styles */
+.spinner-loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 90px;
+  height: 90px;
+}
+
+.spinner-circle {
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  position: relative;
+  background: linear-gradient(135deg, #63a29b 0%, #275151 100%);
+  box-shadow: 0 10px 30px rgba(99, 162, 155, 0.2),
+    0 5px 15px rgba(99, 162, 155, 0.1), inset 0 0 0 1px rgba(99, 162, 155, 0.05);
+  animation: spinnerRotate 1.5s linear infinite;
+}
+
+.spinner-circle::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #63a29b 0%, #275151 100%);
+  z-index: -1;
+}
+
+.spinner-dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  animation: spinnerDotsRotate 1.2s linear infinite;
+}
+
+.spinner-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  animation: spinnerDotPulse 1.2s ease-in-out infinite;
+}
+
+/* Position dots in C-shape pattern around the circle */
+.spinner-dot:nth-child(1) {
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-delay: 0s;
+}
+
+.spinner-dot:nth-child(2) {
+  top: 15px;
+  right: 15px;
+  animation-delay: 0.15s;
+}
+
+.spinner-dot:nth-child(3) {
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  animation-delay: 0.3s;
+}
+
+.spinner-dot:nth-child(4) {
+  bottom: 15px;
+  right: 15px;
+  animation-delay: 0.45s;
+}
+
+.spinner-dot:nth-child(5) {
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-delay: 0.6s;
+}
+
+.spinner-dot:nth-child(6) {
+  bottom: 15px;
+  left: 15px;
+  animation-delay: 0.75s;
+}
+
+.spinner-dot:nth-child(7) {
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  animation-delay: 0.9s;
+}
+
+.spinner-dot:nth-child(8) {
+  top: 15px;
+  left: 15px;
+  animation-delay: 1.05s;
+}
+
+/* Animations */
+@keyframes spinnerRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinnerDotsRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes spinnerDotPulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Hover effects */
+.spinner-loading-container:hover .spinner-circle {
+  box-shadow: 0 15px 35px rgba(99, 162, 155, 0.25),
+    0 8px 20px rgba(99, 162, 155, 0.15), inset 0 0 0 1px rgba(99, 162, 155, 0.1);
+}
+
+/* Screen reader only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Responsive sizing */
+@media (max-width: 768px) {
+  .spinner-loading-container {
+    width: 60px;
+    height: 60px;
+  }
+
+  .spinner-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .spinner-dot:nth-child(1) {
+    top: 6px;
+  }
+
+  .spinner-dot:nth-child(2) {
+    top: 12px;
+    right: 12px;
+  }
+
+  .spinner-dot:nth-child(3) {
+    right: 6px;
+  }
+
+  .spinner-dot:nth-child(4) {
+    bottom: 12px;
+    right: 12px;
+  }
+
+  .spinner-dot:nth-child(5) {
+    bottom: 6px;
+  }
+
+  .spinner-dot:nth-child(6) {
+    bottom: 12px;
+    left: 12px;
+  }
+
+  .spinner-dot:nth-child(7) {
+    left: 6px;
+  }
+
+  .spinner-dot:nth-child(8) {
+    top: 12px;
+    left: 12px;
+  }
+}

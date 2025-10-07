@@ -2,9 +2,10 @@ import { Reading } from "./Reading/Reading";
 import { ErrorPage } from "./ErrorPage/ErrorPage";
 import { ShowLesson } from "./ShowLesson/ShowLesson";
 import { QuizPage } from "./QuizPage/QuizPage";
-import { ProgressTracker } from "./ProgressTracker/ProgressTracker";
+import { ReadingProgressTracker } from "./ReadingProgressTracker/ReadingProgressTracker";
 import { ShowLessonFirstRound } from "./ShowLessonFirstRound/ShowLessonFirstRound";
 import { ShowLessonSecondRound } from "./ShowLessonSecondRound/ShowLessonSecondRound";
+import { ListeningProgressTracker } from "./ListeningProgressTracker/ListeningProgressTracker";
 import { Home } from "./Home/Home";
 
 export {
@@ -13,7 +14,8 @@ export {
   ErrorPage,
   ShowLesson,
   QuizPage,
-  ProgressTracker,
+  ReadingProgressTracker,
   ShowLessonFirstRound,
   ShowLessonSecondRound,
+  ListeningProgressTracker,
 };

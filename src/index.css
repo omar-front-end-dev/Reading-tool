@@ -245,3 +245,739 @@ a {
     border: 2px solid #3b82f6;
   }
 }
+
+
+/* Mobile Practice Overlay Styles */
+.mobile-practice-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  padding: 0;
+  pointer-events: none;
+}
+
+.mobile-practice-overlay.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.practice-card {
+  background: white;
+  border-radius: 24px 24px 0 0;
+  padding: 32px 28px 40px 28px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 -4px 32px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 320px;
+}
+
+.mobile-practice-overlay.show .practice-card {
+  transform: translateY(0);
+}
+
+/* Header Styles */
+.practice-header {
+  margin-bottom: 32px;
+}
+
+.practice-header h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #4b9b94;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.practice-header p {
+  font-size: 17px;
+  color: #6c757d;
+  margin: 0;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.practice-header .fas.fa-microphone {
+  color: #4b9b94;
+  font-size: 18px;
+}
+
+/* Sentence Styles */
+.practice-sentence {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 24px;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.sentence-text {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.sentence-phonetic {
+  font-size: 16px;
+  color: #8a8a8a;
+  font-style: italic;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+/* Processing State Styles */
+.processing-state {
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
+
+.processing-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.processing-spinner {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.processing-spinner span {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #63a29b;
+  border-radius: 50%;
+  animation: processing-dots 1.4s linear infinite;
+}
+
+.processing-spinner span:nth-child(1) {
+  animation-delay: 0s;
+  transform: rotate(0deg) translateX(20px);
+}
+
+.processing-spinner span:nth-child(2) {
+  animation-delay: -0.175s;
+  transform: rotate(45deg) translateX(20px);
+}
+
+.processing-spinner span:nth-child(3) {
+  animation-delay: -0.35s;
+  transform: rotate(90deg) translateX(20px);
+}
+
+.processing-spinner span:nth-child(4) {
+  animation-delay: -0.525s;
+  transform: rotate(135deg) translateX(20px);
+}
+
+.processing-spinner span:nth-child(5) {
+  animation-delay: -0.7s;
+  transform: rotate(180deg) translateX(20px);
+}
+
+.processing-spinner span:nth-child(6) {
+  animation-delay: -0.875s;
+  transform: rotate(225deg) translateX(20px);
+}
+
+.processing-spinner span:nth-child(7) {
+  animation-delay: -1.05s;
+  transform: rotate(270deg) translateX(20px);
+}
+
+.processing-spinner span:nth-child(8) {
+  animation-delay: -1.225s;
+  transform: rotate(315deg) translateX(20px);
+}
+
+@keyframes processing-dots {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg) translateX(20px);
+  }
+  100% {
+    opacity: 0.2;
+    transform: rotate(360deg) translateX(20px);
+  }
+}
+
+.processing-text {
+  font-size: 16px;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.phonetic-text-processing {
+  font-size: 16px;
+  color: #8a8a8a;
+  font-style: italic;
+  margin-bottom: 30px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* Processing Controls */
+.processing-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.processing-mic-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+}
+
+.circular-loading-spinner {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner-ring {
+  position: absolute;
+  border: 3px solid transparent;
+  border-top: 3px solid #63a29b;
+  border-radius: 50%;
+  animation: spin-ring 1.5s linear infinite;
+}
+
+.spinner-ring:nth-child(1) {
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+}
+
+.spinner-ring:nth-child(2) {
+  width: 45px;
+  height: 45px;
+  animation-delay: -0.5s;
+  border-top-color: rgba(99, 162, 155, 0.7);
+}
+
+.spinner-ring:nth-child(3) {
+  width: 30px;
+  height: 30px;
+  animation-delay: -1s;
+  border-top-color: rgba(99, 162, 155, 0.4);
+}
+
+@keyframes spin-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Control Buttons */
+.practice-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  margin-top: 5px;
+}
+
+.control-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 16px 20px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  color: linear-gradient(135deg, rgb(99, 162, 155) 0%, rgb(39, 81, 81) 100%);
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 70px;
+}
+
+.control-btn:hover {
+  background: rgba(75, 155, 148, 0.08);
+  transform: translateY(-1px);
+}
+
+.control-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.control-btn .fas {
+  font-size: 24px;
+  margin-bottom: 2px;
+}
+
+.listen-btn .fas {
+  color: linear-gradient(135deg, rgb(99, 162, 155) 0%, rgb(39, 81, 81) 100%);
+}
+
+.listen-slow-btn .fas {
+  color: linear-gradient(135deg, rgb(99, 162, 155) 0%, rgb(39, 81, 81) 100%);
+}
+
+/* Mic Button */
+.mic-btn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgb(99, 162, 155) 0%,
+    rgb(39, 81, 81) 100%
+  );
+  border: none;
+  color: white;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(99, 162, 155, 0.4);
+  position: relative;
+}
+
+.mic-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 32px rgba(75, 155, 148, 0.35);
+}
+
+.mic-btn:active {
+  transform: scale(0.98);
+}
+
+.mic-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  animation: none;
+}
+
+.mic-btn.processing {
+  background: linear-gradient(135deg, #4b9b94 0%, #2c7873 100%);
+  animation: none;
+}
+
+.mic-btn .processing-spinner {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Close Button */
+.practice-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.08);
+  border: none;
+  color: #666;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.practice-close-btn:hover {
+  background: rgba(0, 0, 0, 0.15);
+  color: #2c3e50;
+  transform: scale(1.05);
+}
+
+/* Mobile Recording UI */
+.mobile-recording-ui {
+  width: 100%;
+}
+
+.mobile-waveform-container {
+  background: linear-gradient(
+    135deg,
+    rgb(99, 162, 155) 0%,
+    rgb(39, 81, 81) 100%
+  );
+  border-radius: 50px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: var(--shadow-primary);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* iOS Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0 auto;
+  max-width: 90%;
+  min-height: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mobile-waveform-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  pointer-events: none;
+}
+
+.mobile-pause-btn,
+.mobile-send-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1;
+  -webkit-tap-highlight-color: transparent; /* Remove iOS tap highlight */
+  touch-action: manipulation; /* Improve touch responsiveness */
+}
+
+.mobile-pause-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.mobile-pause-btn:hover,
+.mobile-pause-btn:active {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.mobile-send-btn {
+  background: white;
+  color: #4b9b94;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-send-btn:hover,
+.mobile-send-btn:active {
+  background: #f8f9fa;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-waveform-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 0 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.mobile-waveform-bars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 3px;
+  height: 36px;
+  padding: 4px 0;
+}
+
+.mobile-waveform-bar {
+  width: 4px;
+  min-height: 4px;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 1)
+  );
+  border-radius: 2px;
+  transition: height 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+}
+
+.mobile-waveform-bar.active {
+  background: linear-gradient(to top, #ffffff, #f0f8ff);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6),
+    0 0 16px rgba(255, 255, 255, 0.3);
+  animation: waveformPulse 0.6s ease-in-out infinite;
+}
+
+.mobile-recording-timer {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.recording-indicator {
+  color: #ff4444;
+  font-size: 8px;
+  animation: recordingBlink 1s ease-in-out infinite;
+}
+
+@keyframes recordingBlink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes waveformPulse {
+  0%,
+  100% {
+    opacity: 0.8;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1.1);
+  }
+}
+
+/* Mobile Results Dialog styles moved to MobileResultsDialog.css */
+
+/* Animations */
+@keyframes gentle-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 8px 24px rgba(75, 155, 148, 0.25);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 10px 28px rgba(75, 155, 148, 0.35);
+  }
+}
+
+@keyframes recording-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 8px 24px rgba(255, 107, 107, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 12px 32px rgba(255, 107, 107, 0.5);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .practice-card {
+    padding: 28px 24px 36px 24px;
+    border-radius: 20px 20px 0 0;
+    min-height: 300px;
+  }
+
+  .practice-header h3 {
+    font-size: 28px;
+  }
+
+  .practice-header p {
+    font-size: 16px;
+  }
+
+  .sentence-text {
+    font-size: 22px;
+  }
+
+  .sentence-phonetic {
+    font-size: 15px;
+  }
+
+  .practice-controls {
+    padding: 0 10px;
+  }
+
+  .control-btn {
+    padding: 14px 16px;
+    font-size: 13px;
+    min-width: 65px;
+  }
+
+  .control-btn .fas {
+    font-size: 22px;
+  }
+
+  .mic-btn {
+    width: 75px;
+    height: 75px;
+    font-size: 30px;
+  }
+
+  .mobile-dialog-content {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .mobile-dialog-header h4 {
+    font-size: 18px;
+  }
+
+  .mobile-score-percentage {
+    font-size: 20px;
+  }
+
+  .mobile-waveform-container {
+    padding: 12px 16px;
+    margin: 16px 0;
+    max-width: 95%;
+  }
+
+  .mobile-waveform-bars {
+    gap: 2px;
+    height: 32px;
+  }
+
+  .mobile-waveform-bar {
+    width: 3px;
+  }
+
+  .mobile-pause-btn,
+  .mobile-send-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .practice-card {
+    padding: 24px 20px 32px 20px;
+  }
+
+  .practice-header h3 {
+    font-size: 26px;
+  }
+
+  .sentence-text {
+    font-size: 20px;
+  }
+
+  .practice-controls {
+    padding: 0 8px;
+  }
+
+  .control-btn {
+    padding: 12px 14px;
+    min-width: 60px;
+  }
+
+  .mic-btn {
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+  }
+
+  .mobile-dialog-controls {
+    gap: 8px;
+  }
+
+  .mobile-control-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
+  }
+}
+
+/* iOS Safari specific optimizations */
+@supports (-webkit-touch-callout: none) {
+  .mobile-waveform-container {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .mobile-waveform-bar {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: height;
+  }
+
+  .mobile-pause-btn,
+  .mobile-send-btn {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
+
+/* iOS Safari audio context fix */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .mobile-waveform-container {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+

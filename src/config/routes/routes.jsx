@@ -3,15 +3,20 @@ import { Layout } from "../../layouts/Layout";
 import {
   ErrorPage,
   Reading,
-  ProgressTracker,
+  ReadingProgressTracker,
   QuizPage,
   ShowLesson,
   ShowLessonFirstRound,
   ShowLessonSecondRound,
   Home,
+  ListeningProgressTracker,
 } from "../../modules/index";
 import { ListeningHome } from "../../pages/ListeningHome";
 import { ListeningLessonPage } from "../../pages/ListeningLessonPage";
+import { PronounceHomePage } from "../../pages/PronounceHomePage";
+import { TopicsPage } from "../../pages/TopicsPage";
+import { MobileLessonPage } from "../../pages/MobileLessonPage";
+import { DesktopConversationPage } from "../../pages/DesktopConversationPage";
 
 export const Routes = createBrowserRouter([
   {
@@ -45,7 +50,11 @@ export const Routes = createBrowserRouter([
       },
       {
         path: "reading/progress",
-        element: <ProgressTracker />,
+        element: <ReadingProgressTracker />,
+      },
+      {
+        path: "listening/progress",
+        element: <ListeningProgressTracker />,
       },
       {
         path: "listening/home",
@@ -54,7 +63,23 @@ export const Routes = createBrowserRouter([
       {
         path: "listening/lesson/:id",
         element: <ListeningLessonPage />,
-      }
+      },
+      {
+        path: "pronounce/home",
+        element: <PronounceHomePage />,
+      },
+      {
+        path: "pronounce/topics/:lessonNumber",
+        element: <TopicsPage />,
+      },
+      {
+        path: "pronounce/mobile/:lessonNumber/:topicId/:conversationId",
+        element: <MobileLessonPage />,
+      },
+      {
+        path: "pronounce/desktop/:lessonNumber/:topicId/:conversationId",
+        element: <DesktopConversationPage />,
+      },
     ],
   },
 ]);

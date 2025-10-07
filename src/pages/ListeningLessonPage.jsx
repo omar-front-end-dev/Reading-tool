@@ -19,12 +19,12 @@ export const ListeningLessonPage = () => {
       // Check if lesson is unlocked
       if (!dataService.isLessonUnlocked(parseInt(id))) {
         alert("This lesson is locked. Complete the previous lesson first!");
-        navigate("/");
+        navigate("/listening/home");
         return;
       }
       setLesson(foundLesson);
     } else {
-      navigate("/");
+      navigate("/listening/home");
     }
   }, [id, navigate]);
 
@@ -44,7 +44,7 @@ export const ListeningLessonPage = () => {
   const handleLessonComplete = () => {
     dataService.completeLesson(parseInt(id));
     alert("Congratulations! You have completed this lesson!");
-    navigate("/");
+    navigate("/listening/home");
   };
 
   return (
