@@ -400,7 +400,7 @@ export const MobileLessonPage = () => {
   }, [isMobile]);
 
   const handleBackClick = () => {
-    navigate(`/topics/${lessonNumber}`);
+    navigate(`/pronounce/topics/${lessonNumber}`);
   };
 
   const handleVideoEnd = () => {
@@ -559,7 +559,7 @@ export const MobileLessonPage = () => {
     if (lesson && topic && conversation) {
       // Progress is already saved through the ProgressContext
     }
-    navigate(`/topics/${lessonNumber}`);
+    navigate(`/pronounce/topics/${lessonNumber}`);
   };
 
   const showAlertMessage = (message) => {

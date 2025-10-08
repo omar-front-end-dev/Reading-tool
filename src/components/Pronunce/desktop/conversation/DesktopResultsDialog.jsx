@@ -40,12 +40,12 @@ const DesktopResultsDialog = ({
       setTimeout(() => {
         if (score < 50) {
           // Play error sound for scores less than 50%
-          const audio = new Audio("/wrong-answer-sfx.wav");
+          const audio = new Audio("/assets/audio/wrong answer SFX.wav");
           audio.volume = 0.5;
           audio.play().catch(() => {});
         } else {
           // Play success sound for scores 50% and above
-          const audio = new Audio("/right-answer-sfx.wav");
+          const audio = new Audio("/assets/audio/right answer SFX.wav");
           audio.volume = 0.5;
           audio.play().catch(() => {});
         }

@@ -420,7 +420,7 @@ export const PronounceHomePage = () => {
       lessonNode.style.top = `${position.y}px`;
       lessonNode.onclick = () => {
         if (!lesson.locked) {
-          navigate(`/topics/${lesson.lessonNumber}`);
+          navigate(`/pronounce/topics/${lesson.lessonNumber}`);
         }
       };
 
@@ -500,7 +500,7 @@ export const PronounceHomePage = () => {
         e.stopPropagation();
 
         if (!lesson.locked) {
-          navigate(`/topics/${lesson.lessonNumber}`);
+          navigate(`/pronounce/topics/${lesson.lessonNumber}`);
         }
       });
 
@@ -572,7 +572,7 @@ export const PronounceHomePage = () => {
         e.preventDefault();
 
         if (!lesson.locked) {
-          navigate(`/topics/${lesson.lessonNumber}`);
+          navigate(`/pronounce/topics/${lesson.lessonNumber}`);
         }
 
         setTimeout(removeHoverEffect, 200);
@@ -584,7 +584,7 @@ export const PronounceHomePage = () => {
         e.stopPropagation();
 
         if (!lesson.locked) {
-          navigate(`/topics/${lesson.lessonNumber}`);
+          navigate(`/pronounce/topics/${lesson.lessonNumber}`);
         }
       });
 

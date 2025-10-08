@@ -23,7 +23,7 @@ export const HomeMain = () => {
         "أتقن النطق الصحيح مع تعليقات الذكاء الاصطناعي والتصحيح الفوري",
       color: "from-blue-500 to-cyan-500",
       features: ["Voice Recognition", "Accent Analysis", "Progress Tracking"],
-      link: "/reading",
+      link: "/pronounce/home",
     },
     {
       id: 2,

@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState } from "react";
 
 // Progress Management System for Pronunciation Master
 // Handles localStorage operations and lesson state management - Exact copy from progress-manager.js

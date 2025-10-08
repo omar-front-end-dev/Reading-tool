@@ -93,8 +93,8 @@ const MobilePracticeOverlay = ({
     } catch (error) {
       // Fallback: Use existing audio with different settings
       try {
-        const audio1 = new Audio("/right-answer-sfx.wav");
-        const audio2 = new Audio("/right-answer-sfx.wav");
+        const audio1 = new Audio("/assets/audio/right answer SFX.wav");
+        const audio2 = new Audio("/assets/audio/right answer SFX.wav");
 
         audio1.volume = 0.2;
         audio1.playbackRate = 1.2;

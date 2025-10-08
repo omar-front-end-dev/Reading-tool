@@ -34,7 +34,7 @@ export const HomeNav = () => {
       label: "النطق",
       color: "text-yellow-400",
       width: "31px",
-      linkTo: "/reading",
+      linkTo: "/pronounce/home",
     },
     {
       icon: writingIcon,

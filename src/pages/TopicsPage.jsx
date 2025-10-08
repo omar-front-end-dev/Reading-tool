@@ -190,11 +190,11 @@ export const TopicsPage = () => {
     const isMobile = window.innerWidth <= 768;
     if (isMobile) {
       navigate(
-        `/mobile/${currentLesson.lessonNumber}/${topicId}/${conversationId}`
+        `/pronounce/mobile/${currentLesson.lessonNumber}/${topicId}/${conversationId}`
       );
     } else {
       navigate(
-        `/desktop/${currentLesson.lessonNumber}/${topicId}/${conversationId}`
+        `/pronounce/desktop/${currentLesson.lessonNumber}/${topicId}/${conversationId}`
       );
     }
   };

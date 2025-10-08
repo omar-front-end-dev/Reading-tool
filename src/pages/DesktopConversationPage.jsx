@@ -352,9 +352,10 @@ export const DesktopConversationPage = () => {
       playTone(300, currentTime + 0.12, 0.1); // Second beep - lower pitch, slightly delayed
     } catch (error) {
       // Fallback: Use existing audio with different settings
+      console.log.error("❌ Error playing cancellation sound:", error);
       try {
-        const audio1 = new Audio("/right-answer-sfx.wav");
-        const audio2 = new Audio("/right-answer-sfx.wav");
+        const audio1 = new Audio("/assets/audio/right answer SFX.wav");
+        const audio2 = new Audio("/assets/audio/right answer SFX.wav");
 
         audio1.volume = 0.2;
         audio1.playbackRate = 1.2;
@@ -406,8 +407,9 @@ export const DesktopConversationPage = () => {
       playTone(784, currentTime + 0.1, 0.2, 0.2); // G5 - final note (longer)
     } catch (error) {
       // Fallback: Use existing audio with different settings
+      console.log.error("❌ Error playing submission sound:", error);
       try {
-        const audio = new Audio("/right-answer-sfx.wav");
+        const audio = new Audio("/assets/audio/right answer SFX.wav");
         audio.volume = 0.25;
         audio.playbackRate = 1.0; // Normal speed for submission
         audio.play();
@@ -459,13 +461,13 @@ export const DesktopConversationPage = () => {
 
   // Handle back to topics
   const handleBackToTopics = () => {
-    navigate(`/topics/${lessonNumber}`);
+    navigate(`/pronounce/topics/${lessonNumber}`);
   };
 
   // Handle close completion modal
   const handleCloseCompletionModal = () => {
     setShowCompletionModal(false);
-    navigate(`/topics/${lessonNumber}`);
+    navigate(`/pronounce/topics/${lessonNumber}`);
   };
 
   // Cleanup on unmount
