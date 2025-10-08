@@ -2,6 +2,9 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { useProgress } from "../contexts/ProgressContext";
 import GamingBackground from "../components/Pronunce/GamingBackground";
+import { BiLoaderCircle } from "react-icons/bi";
+import { IoIosArrowForward } from "react-icons/io";
+
 import "./PronounceHomePage.css";
 
 export const PronounceHomePage = () => {
@@ -490,7 +493,7 @@ export const PronounceHomePage = () => {
       if (lesson.completed) {
         const checkmark = document.createElement("div");
         checkmark.className = "lesson-checkmark";
-        checkmark.innerHTML = '<i class="fas fa-check"></i>';
+        checkmark.innerHTML = '<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path></svg>';
         circle.appendChild(checkmark);
       }
 
@@ -512,7 +515,9 @@ export const PronounceHomePage = () => {
           <h3 class="lesson-title">Lesson ${lesson.lessonNumber}</h3>
           <p class="lesson-subtitle">${lesson.title}</p>
         </div>
-        <i class="fas fa-chevron-right lesson-arrow"></i>
+      <svg class="lesson-arrow" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="30px" width="30px" xmlns="http://www.w3.org/2000/svg"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path></svg>
+  </svg>
+
       `;
 
       // Add hover effects manually
@@ -628,7 +633,10 @@ export const PronounceHomePage = () => {
         <GamingBackground />
         <main className="main-container">
           <div className="loading-indicator">
-            <i className="fas fa-spinner fa-spin"></i>
+            <BiLoaderCircle
+              size={43}
+              className={"animate-spin text-[var(--primary-color)]"}
+            />
             <p>Loading lessons...</p>
           </div>
         </main>

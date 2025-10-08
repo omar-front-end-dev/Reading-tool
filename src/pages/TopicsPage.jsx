@@ -87,61 +87,61 @@ export const TopicsPage = () => {
       const style = document.createElement("style");
       style.id = "force-topic-styles";
       style.innerHTML = `
-        .simple-topic-title {
-          display: block !important;
-          visibility: visible !important;
-          opacity: 1 !important;
-          color: #2c3e50 !important;
-          font-size: 1.3rem !important;
-          font-weight: 600 !important;
-          margin: 0 0 0.5rem 0 !important;
-          line-height: 1.4 !important;
-          text-align: left !important;
-          font-family: inherit !important;
-          background: transparent !important;
-          border: none !important;
-          padding: 0 !important;
-          text-decoration: none !important;
-          text-transform: none !important;
-          letter-spacing: normal !important;
-          word-spacing: normal !important;
-          white-space: normal !important;
-          position: static !important;
-          z-index: auto !important;
-          width: auto !important;
-          height: auto !important;
-          max-width: none !important;
-          max-height: none !important;
-          overflow: visible !important;
-        }
-        
-        .simple-topic-description {
-          display: block !important;
-          visibility: visible !important;
-          opacity: 1 !important;
-          color: #6c757d !important;
-          font-size: 0.9rem !important;
-          font-weight: normal !important;
-          margin: 0 !important;
-          line-height: 1.4 !important;
-          text-align: left !important;
-          font-family: inherit !important;
-          background: transparent !important;
-          border: none !important;
-          padding: 0 !important;
-          text-decoration: none !important;
-          text-transform: none !important;
-          letter-spacing: normal !important;
-          word-spacing: normal !important;
-          white-space: normal !important;
-          position: static !important;
-          z-index: auto !important;
-          width: auto !important;
-          height: auto !important;
-          max-width: none !important;
-          max-height: none !important;
-          overflow: visible !important;
-        }
+          .simple-topic-title {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            color: #2c3e50 !important;
+            font-size: 1.3rem !important;
+            font-weight: 600 !important;
+            margin: 0 0 0.5rem 0 !important;
+            line-height: 1.4 !important;
+            text-align: left !important;
+            font-family: inherit !important;
+            background: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+            text-decoration: none !important;
+            text-transform: none !important;
+            letter-spacing: normal !important;
+            word-spacing: normal !important;
+            white-space: normal !important;
+            position: static !important;
+            z-index: auto !important;
+            width: auto !important;
+            height: auto !important;
+            max-width: none !important;
+            max-height: none !important;
+            overflow: visible !important;
+          }
+          
+          .simple-topic-description {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            color: #6c757d !important;
+            font-size: 0.9rem !important;
+            font-weight: normal !important;
+            margin: 0 !important;
+            line-height: 1.4 !important;
+            text-align: left !important;
+            font-family: inherit !important;
+            background: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+            text-decoration: none !important;
+            text-transform: none !important;
+            letter-spacing: normal !important;
+            word-spacing: normal !important;
+            white-space: normal !important;
+            position: static !important;
+            z-index: auto !important;
+            width: auto !important;
+            height: auto !important;
+            max-width: none !important;
+            max-height: none !important;
+            overflow: visible !important;
+          }
       `;
 
       document.head.appendChild(style);

@@ -59,7 +59,7 @@ body {
   height: 100%;
   z-index: -1;
   background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
-  opacity: 0.8;
+  opacity: 0.96;
   transition: opacity 0.3s ease;
 }
 
@@ -241,7 +241,6 @@ body {
   border: 2px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   background: transparent; /* Remove background */
-  overflow: hidden; /* Ensure avatar doesn't overflow */
 }
 
 /* Desktop-specific lesson circle improvements */
@@ -710,13 +709,13 @@ body {
 
   /* Extra small screen lesson adjustments - larger for better touch interaction */
   .lesson-circle {
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
   }
 
   .lesson-avatar {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
   }
 
   /* Enhanced lesson info for small screens - larger for better usability */
